@@ -173,7 +173,7 @@ Ext.onReady(function(){
 		height: 27,
 		xtype: 'toolbar',
 		items: [{
-			html: '<strong>HTML5 Open Reference</strong>',
+			html: '<strong>HTML5 Open Reference Guide - BETA</strong>',
 			handler: function(e){
 				e.disable();
 			}
@@ -309,21 +309,29 @@ Ext.onReady(function(){
 			activeOnTop: true
 		},
 		items: [{
-			title: '콘텐츠 타입 분류',
-			id: 'flowArea',
-			html: '테스트1'
+			title: '스펙 명세',
+			id: 'referArea',
+			html: '테스트3',
+			autoHeight: true,
+			autoScroll: true
 		},{
-			title: '메모',
-			id: 'memoArea',
-			html: '테스트2'
+			title: '콘텐츠 분류 타입',
+			id: 'flowArea',
+			html: '테스트1',
+			autoHeight: true,
+			autoScroll: true
 		},{
 			title: '참조',
-			id: 'referArea',
-			html: '테스트3'
+			id: 'memoArea',
+			html: '테스트2',
+			autoHeight: true,
+			autoScroll: true
 		},{
-			title: '관련 요소',
+			title: '관련 요소 레벨',
 			id: 'relatedArea',
-			html: '테스트4'
+			html: '테스트4',
+			autoHeight: true,
+			autoScroll: true
 		}]
 	};
 

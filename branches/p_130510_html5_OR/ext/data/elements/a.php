@@ -10,19 +10,22 @@
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
 </head>
 <body>
-<article class="content_desc">
+<article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
+		<div>
 		<h2 class="s_tit">a 요소: (Anchor)</h2>
 
-		<dl>
+		<dl class="definition">
 		<dt>정의</dt>
 		<dd>a 태그는 현재 웹페이지에서 다른 웹페이지로 이동하거나 현재 웹페이지 내의 특정 부분 이동시에 사용되고 <a href="http://ko.wikipedia.org/wiki/테스트" target="new">하이퍼링크</a>라고 합니다.</dd>
 		</dl>
 
+		<h3 class="s_tit">요소 레벨</h3>
+		<p>Inline-level 엘리먼트</p>
 
 		<h3 class="s_tit">마크업 규칙</h3>
-		<ul>
+		<ul class="markup_rule">
 		<li>플로우 컨텐츠이자 대화형 컨텐츠입니다. 그리고, 자손 요소로 구문 컨텐츠만 있다면 구문 컨텐츠에 속합니다.</li>
 		<li>a 요소는 두 군데에 위치할 수 있습니다.
 			<ul>
@@ -38,18 +41,19 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<a href="@hyperlink">다른페이지로 이동</a>
-			<a href="@hyperlink">
+			<a href="example.co.kr">
 				<span>제목</span>
 				<strong>구문 컨텐츠</strong>
 			</a>
+			<a href="#bookmark">책갈피</a>
+			<a href="mailto:example.com">mail@example.com</a>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
 	<!-- 속성 설명 -->
 	<section>
 		<h3 class="s_tit">속성</h3>
-		<table>
+		<table class="tb_attr">
 		<caption>태그 속성 목록 표</caption>
 		<thead>
 		<tr>

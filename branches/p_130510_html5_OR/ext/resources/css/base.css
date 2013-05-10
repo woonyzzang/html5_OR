@@ -10,21 +10,14 @@ blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
 table{width:100%;border-collapse:collapse;border-spacing:0}
 */
 
+/* =Common */
+body{font-family:NanumGothic,'나눔고딕',MalgunGothic,'맑은고딕',Dotum,'돋움',Gulim,'굴림',AppleGothic,Helvetica,sans-serif;font-size:14px}
+
+/* =Set Class */
+.blind{visibility:hidden;overflow:hidden;position:absolute;z-index:-1;width:0;height:0;font-size:0;line-height:0}
+
 /* =Syntaxhighlighter */
 .syntaxhighlighter{margin:0 !important}
-
-/* =Content */
-.content_desc{padding:15px}
-.content_desc section{margin-top:30px;padding-top:20px;border-top:1px dotted #999}
-.content_desc section:first-child{margin-top:0;padding-top:0;border-top:0}
-.content_desc .s_tit{margin-top:30px;padding-left:8px;font-weight:bold;font-size:24px;color:#081f5c;border-left:5px solid}
-.content_desc .s_tit:first-child{margin-top:0}
-.content_desc dl{padding:15px;border:1px solid #888;background-color:#eee}
-.content_desc dt{font-weight:bold;color:#137ca5}
-.content_desc dd{margin:5px 0 0 10px;font-size:14px}
-.content_desc dd a{color:#08990e}
-.content_desc ul{}
-.content_desc li{line-height:1.8}
 
 /* =Content Flow */
 .svg text{position:absolute;top:0;left:-10000em;font-size:10px;font-family:arial;color:#fff;fill:#000;opacity:.5}
@@ -37,3 +30,33 @@ table{width:100%;border-collapse:collapse;border-spacing:0}
 .svg .on{opacity:.8 !important}
 .svg .cate_metadata.on+text,.svg .cate_phrasing.on+text{fill:#fff}
 .svg .cate_metadata,.svg .cate_phrasing{fill:#000888;stroke:#000064;stroke-width:1px;opacity:.1}
+
+/* =Content Desc */
+#content_desc{padding:15px}
+#content_desc a{color:#08990e}
+#content_desc section{margin-top:30px;padding-top:20px;border-top:1px dotted #999}
+#content_desc section:first-child{margin-top:0;padding-top:0;border-top:0}
+#content_desc .s_tit{margin-top:30px;padding-left:8px;font-weight:bold;font-size:18px;color:#081f5c;border-left:5px solid #06a}/*#081f5c*/
+#content_desc .s_tit:first-child{margin-top:0}
+#content_desc .definition{padding:15px;background-color:#eef;border-radius:10px}
+#content_desc .definition dt{font-weight:bold;color:#137ca5}
+#content_desc .definition dd{margin:5px 0 0 10px}
+#content_desc .markup_rule{}
+#content_desc .markup_rule li{line-height:1.8}
+#content_desc .tb_attr{border-spacing:0;border-collapse:collapse}
+#content_desc .tb_attr caption{visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-height:0}
+#content_desc .tb_attr th,#content_desc .tb_attr td{padding:5px 15px;border:1px solid #ccc}
+#content_desc .tb_attr th{background-color:#eee}
+#content_desc .tb_attr td{background-color:#f7f7f7}
+
+/* =Refer */
+#refer{padding:0 10px}
+#refer dt{margin-top:10px;font-weight:bold}
+#refer dt.first{margin-top:0}
+#refer dd{margin-left:0;padding:5px 10px}
+#refer ul{margin:0;padding-left:20px}
+#refer pre{margin:0}
+
+/* =Flow */
+#flow{}
+#flow ul{padding-left:25px;line-height:1.6}
