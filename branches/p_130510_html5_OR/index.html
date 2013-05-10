@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>HTML5 Open Reference Guide</title>
+<link rel="stylesheet" href="ext/resources/css/ext-all.css">
+<link rel="stylesheet" href="ext/resources/css/base.css">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+<script src="ext/ext-all-debug.js"></script>
+<script src="ext/locale/ext-lang-ko.js"></script>
+</head>
+<body>
+
+<script>
+Ext.onReady(function(){
+	var dataPath = '';
+
+	var elementsStore = Ext.create('Ext.data.TreeStore', {
+		root: {
+			expanded: true,
+			animate: true,
+			children: [
+				{text: 'A', expanded: true, children: [
+					{text: 'a', leaf: true, href: ['ext/data/elements/a.php', 'ext/data/elements/a_desc.php']},
+					{text: 'abbr', leaf: true},
+					{text: 'address', leaf: true},
+					{text: 'area', leaf: true},
+					{text: 'artcle', leaf: true},
+					{text: 'aside', leaf: true},
+					{text: 'audio', leaf: true}
+				]},
+				{text: 'B', expanded: true, children: [
+					{text: 'b', leaf: true},
+					{text: 'base', leaf: true},
+					{text: 'bdi', leaf: true},
+					{text: 'dbo', leaf: true},
+					{text: 'blockquote', leaf: true},
+					{text: 'body', leaf: true},
+					{text: 'br', leaf: true},
+					{text: 'button', leaf: true}
+				]},
+				{text: 'C', expanded: true, children: [
+					{text: 'canvas', leaf: true},
+					{text: 'caption', leaf: true},
+					{text: 'cite', leaf: true},
+					{text: 'code', leaf: true},
+					{text: 'col', leaf: true},
+					{text: 'colgroup', leaf: true},
+					{text: 'command', leaf: true}
+				]},
+				{text: 'D', expanded: true, children: [
+					{text: 'datalist', leaf: true},
+					{text: 'dd', leaf: true},
+					{text: 'del', leaf: true},
+					{text: 'details', leaf: true},
+					{text: 'dfn', leaf: true},
+					{text: 'div', leaf: true},
+					{text: 'dl', leaf: true},
+					{text: 'dotype', leaf: true},
+					{text: 'dt', leaf: true}
+				]},
+				{text: 'E', expanded: true, children: [
+					{text: 'em', leaf: true},
+					{text: 'embed', leaf: true}
+				]},
+				{text: 'F', expanded: true, children: [
+					{text: 'fieldset', leaf: true},
+					{text: 'figcaption', leaf: true},
+					{text: 'figure', leaf: true},
+					{text: 'footer', leaf: true},
+					{text: 'form', leaf: true}
+				]},
+				{text: 'H', expanded: true, children: [
+					{text: 'h1 ,h2, h3, h4, h5, h6', leaf: true},
+					{text: 'head', leaf: true},
+					{text: 'header', leaf: true},
+					{text: 'hgroup', leaf: true},
+					{text: 'hr', leaf: true},
+					{text: 'html', leaf: true}
+				]},
+				{text: 'I', expanded: true, children: [
+					{text: 'i', leaf: true},
+					{text: 'iframe', leaf: true},
+					{text: 'img', leaf: true},
+					{text: 'input', leaf: true},
+					{text: 'ins', leaf: true},
+				]},
+				{text: 'K', expanded: true, children: [
+					{text: 'kbd', leaf: true},
+					{text: 'keygen', leaf: true}
+				]},
+				{text: 'L', expanded: true, children: [
+					{text: 'label', leaf: true},
+					{text: 'legend', leaf: true},
+					{text: 'li', leaf: true},
+					{text: 'link', leaf: true}
+				]},
+				{text: 'M', expanded: true, children: [
+					{text: 'map', leaf: true},
+					{text: 'mark', leaf: true},
+					{text: 'menu', leaf: true},
+					{text: 'meta', leaf: true},
+					{text: 'meter', leaf: true}
+				]},
+				{text: 'N', expanded: true, children: [
+					{text: 'nav', leaf: true},
+					{text: 'noscript', leaf: true}
+				]},
+				{text: 'O', expanded: true, children: [
+					{text: 'object', leaf: true},
+					{text: 'ol', leaf: true},
+					{text: 'optgroup', leaf: true},
+					{text: 'option', leaf: true},
+					{text: 'output', leaf: true}
+				]},
+				{text: 'P', expanded: true, children: [
+					{text: 'p', leaf: true},
+					{text: 'param', leaf: true},
+					{text: 'pre', leaf: true},
+					{text: 'progress', leaf: true}
+				]},
+				{text: 'Q', expanded: true, children: [
+					{text: 'q', leaf: true}
+				]},
+				{text: 'R', expanded: true, children: [
+					{text: 'rp', leaf: true},
+					{text: 'rt', leaf: true},
+					{text: 'ruby', leaf: true}
+				]},
+				{text: 'S', expanded: true, children: [
+					{text: 'samp', leaf: true},
+					{text: 'script', leaf: true},
+					{text: 'section', leaf: true},
+					{text: 'select', leaf: true},
+					{text: 'small', leaf: true},
+					{text: 'source', leaf: true},
+					{text: 'span', leaf: true},
+					{text: 'strong', leaf: true},
+					{text: 'style', leaf: true},
+					{text: 'sub&frasl;sup', leaf: true},
+					{text: 'summary', leaf: true}
+				]},
+				{text: 'T', expanded: true, children: [
+					{text: 'table', leaf: true},
+					{text: 'tbody', leaf: true},
+					{text: 'td', leaf: true},
+					{text: 'textarea', leaf: true},
+					{text: 'tfoot', leaf: true},
+					{text: 'th', leaf: true},
+					{text: 'thead', leaf: true},
+					{text: 'time', leaf: true},
+					{text: 'title', leaf: true},
+					{text: 'tr', leaf: true},
+					{text: 'track', leaf: true}
+				]},
+				{text: 'U', expanded: true, children: [
+					{text: 'ul', leaf: true}
+				]},
+				{text: 'V', expanded: true, children: [
+					{text: 'var', leaf: true},
+					{text: 'video', leaf: true}
+				]},
+				{text: 'W', expanded: true, children: [
+					{text: 'wbr', leaf: true}
+				]}
+			]
+		}
+	});
+
+	var toolbarConfig = {
+		region: 'north',
+		height: 27,
+		xtype: 'toolbar',
+		items: [{
+			html: '<strong>HTML5 Open Reference</strong>',
+			handler: function(e){
+				e.disable();
+			}
+		},'->',{
+			xtype: 'button',
+			text: '메뉴 버튼',
+			menu: [{
+				text: '나음'
+			},{
+				text: '좋음'
+			},{
+				text: '최고'
+			}]
+		},'-','검색', {
+			xtype : 'combo',
+			width: 80
+		},'-',{
+			xtype: 'textfield',
+			emptyText: '검색어 입력',
+			width: 150
+		}]
+	};
+
+	var elemMenu = {
+		region: 'west',
+		title: '요소 메뉴',
+		collapsible: true,
+		width: 220,
+		layout: {
+			type: 'hbox',
+			align: 'stretch'
+		},
+		items: [/*{
+			title: '&nbsp;',
+			width: 30,
+			items: [{
+				html: 'All',
+				border: false
+			},{
+				html: 'A',
+				border: false
+			}]
+		},*/{
+			xtype: 'tabpanel',
+			flex: 1,
+			activeTab: 0,
+			items: [{
+				xtype: 'treepanel',
+				title: 'Elements',
+				store: elementsStore,
+				rootVisible: false,
+				viewConfig: {
+					plugins: {ptype: 'treeviewdragdrop'}
+				},
+				listeners : {
+					itemclick : function($this, record, item, index, e, eOpts){
+						var path = record.data.href,
+							arr = ['flowArea', 'memoArea', 'referArea', 'relatedArea'];
+
+						function ajaxLoad(con, idx){
+							$('#'+con).load(path[1] + ' #' + idx);
+						}
+
+						if(path){
+							/*
+							$.ajax({
+								url: path,
+								type: 'html'
+							}).done(function(data){
+								Ext.get('detailDsc-innerCt').update(data);
+							});
+							*/
+							Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
+
+							for(var i=0,len=arr.length; i<len; i++){
+								var idx = arr[i].replace('Area','');
+								ajaxLoad(arr[i] + '-innerCt', idx);
+							}
+						}else{
+							return false;
+						}
+
+						e.preventDefault();
+					}
+				}
+			},{
+				title: 'Attributes',
+				html: '내용2',
+				border: false
+			},{
+				title: 'Events',
+				html: '내용3',
+				border: false
+			}],
+			listeners: {
+				tabchange: function(tabPanel, newCard, oldCard, eOpts){
+					var textVal = '';
+
+					switch(newCard.title){
+						case 'Elements':
+							textVal = '태그';
+							break;
+						case 'Attributes':
+							textVal = '속성';
+							break;
+						case 'Events':
+							textVal = '이벤트';
+							break;
+						default:break;
+					}
+
+					Ext.DomQuery.selectNode('#detailDsc_header_hd-textEl').innerHTML = textVal + ' 설명';
+				}
+			}
+		}]
+	};
+
+	var contents = {
+		region: 'center',
+		title: '설명',
+		id : 'detailDsc'
+	};
+
+	var side = {
+		region: 'east',
+		title: '상세 설명',
+		collapsible: true,
+		width: 300,
+		layout: {
+			type: 'accordion',
+			titleCollapse: false,
+			animate: true,
+			activeOnTop: true
+		},
+		items: [{
+			title: '콘텐츠 타입 분류',
+			id: 'flowArea',
+			html: '테스트1'
+		},{
+			title: '메모',
+			id: 'memoArea',
+			html: '테스트2'
+		},{
+			title: '참조',
+			id: 'referArea',
+			html: '테스트3'
+		},{
+			title: '관련 요소',
+			id: 'relatedArea',
+			html: '테스트4'
+		}]
+	};
+
+	var foot = {
+		region: 'south',
+		title: 'South Panel',
+		collapsible: true,
+		html: 'Information goes here',
+		height: 100,
+		minHeight: 100
+	};
+
+	var viewport = Ext.create('Ext.Viewport', {
+		layout: {
+            type: 'border',
+            padding: 3
+        },
+		defaults: {
+            split: true
+        },
+		items: [toolbarConfig, elemMenu, contents, side, foot]
+	});
+});
+</script>
+</body>
+</html>

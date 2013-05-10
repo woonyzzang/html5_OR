@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+/* =Reset
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1.4}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{width:100%;border-collapse:collapse;border-spacing:0}
+*/
+
+/* =Syntaxhighlighter */
+.syntaxhighlighter{margin:0 !important}
+
+/* =Content */
+.content_desc{padding:15px}
+.content_desc section{margin-top:30px;padding-top:20px;border-top:1px dotted #999}
+.content_desc section:first-child{margin-top:0;padding-top:0;border-top:0}
+.content_desc .s_tit{margin-top:30px;padding-left:8px;font-weight:bold;font-size:24px;color:#081f5c;border-left:5px solid}
+.content_desc .s_tit:first-child{margin-top:0}
+.content_desc dl{padding:15px;border:1px solid #888;background-color:#eee}
+.content_desc dt{font-weight:bold;color:#137ca5}
+.content_desc dd{margin:5px 0 0 10px;font-size:14px}
+.content_desc dd a{color:#08990e}
+.content_desc ul{}
+.content_desc li{line-height:1.8}
+
+/* =Content Flow */
+.svg text{position:absolute;top:0;left:-10000em;font-size:10px;font-family:arial;color:#fff;fill:#000;opacity:.5}
+.svg .cate_flow{fill:#c86432;stroke:#000064;stroke-width:1px;opacity:.1}
+.svg .cate_interactive{fill:#00e700;stroke:#000064;stroke-width:1px;opacity:.1}
+.svg .cate_embedded{fill:#ed9b00;stroke:#000064;stroke-width:1px;opacity:.1}
+.svg .cate_heading{fill:#00f;stroke:#000064;stroke-width:1px;opacity:.1}
+.svg .cate_sectioning{fill:#ff4201;stroke:#000064;stroke-width:1px;opacity:.1}
+.svg .on+text{font-weight:700;font-size:12px;fill:#000;opacity:1px}
+.svg .on{opacity:.8 !important}
+.svg .cate_metadata.on+text,.svg .cate_phrasing.on+text{fill:#fff}
+.svg .cate_metadata,.svg .cate_phrasing{fill:#000888;stroke:#000064;stroke-width:1px;opacity:.1}
