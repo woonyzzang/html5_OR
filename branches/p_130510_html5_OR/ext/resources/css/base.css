@@ -40,7 +40,7 @@ body{font-family:NanumGothic,'나눔고딕',MalgunGothic,'맑은고딕',Dotum,'�
 #content_desc .s_tit:first-child{margin-top:0}
 #content_desc .definition{padding:15px;background-color:#eef;border-radius:10px}
 #content_desc .definition dt{font-weight:bold;color:#137ca5}
-#content_desc .definition dd{margin:5px 0 0 10px}
+#content_desc .definition dd{margin:5px 0 0 10px;line-height:1.6}
 #content_desc .markup_rule{}
 #content_desc .markup_rule li{line-height:1.8}
 #content_desc .tb_attr{border-spacing:0;border-collapse:collapse}
@@ -60,3 +60,22 @@ body{font-family:NanumGothic,'나눔고딕',MalgunGothic,'맑은고딕',Dotum,'�
 /* =Flow */
 #flow{}
 #flow ul{padding-left:25px;line-height:1.6}
+
+/* =Memo */
+#memo{padding:10px}
+#memo ul{margin:0;padding-left:20px;line-height:1.6}
+#memo a{color:#08990e}
+
+/* =Related */
+#related{padding:10px}
+#related a{color:#08990e;line-height:1.4}
+
+/* =Browser */
+#browser{padding:2px 15px}
+#browser p{display:inline-block;vertical-align:middle}
+#browser p img{margin-left:5px}
+#browser p img:first-child{margin-left:0}
+#browser em{margin-left:8px}
+
+/* =GridAttr 
+#gridAttr{max-width:695px} */

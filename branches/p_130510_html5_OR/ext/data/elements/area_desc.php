@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>a 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>area 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -10,23 +10,25 @@
 	<!-- 스펙 명세 -->
 	<section id="refer">
 		<h3 class="blind">스펙 명세</h3>
-		<!-- <p><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element" target="_blank">최신 명세 바로가기</a></p> -->
 		<dl>
 		<dt class="first">[요소가 속하는 범주]</dt>
 		<dd>
 			<ul>
 			<li>플로우 컨텐츠</li>
-			<li>요소가 구문 컨텐츠만 포함한다면 구문 컨텐츠</li>
+			<li>구문 컨텐츠</li>
 			</ul>
 		</dd>
 		<dt>[이 요소가 사용될 수 있는 문맥]</dt>
-		<dd>요소가 구문 컨텐츠만 포함한다면 구문 컨텐츠가 올 수 있는 곳, 아니라면 플로우 컨텐츠가 올 수 있는 곳</dd>
+		<dd>구문 컨텐츠가 올 수 있는 곳. 하지만 map 요소를 조상으로 가져야 합니다.</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>투명한 요소, 하지만 대화형 컨텐츠를 포함할 수는 없습니다.</dd>
+		<dd>이 요소는 비어 있어야 합니다.</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
+			<li>alt</li>
+			<li>coords</li>
+			<li>shape</li>
 			<li>href</li>
 			<li>target</li>
 			<li>rel</li>
@@ -38,7 +40,10 @@
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-interface HTMLAnchorElement : HTMLElement {
+interface HTMLAreaElement : HTMLElement {
+           attribute DOMString alt;
+           attribute DOMString coords;
+           attribute DOMString shape;
   stringifier attribute DOMString href;
            attribute DOMString target;
            attribute DOMString rel;
@@ -46,8 +51,6 @@ interface HTMLAnchorElement : HTMLElement {
            attribute DOMString media;
            attribute DOMString hreflang;
            attribute DOMString type;
-
-           attribute DOMString text;
 
   // URL decomposition IDL attributes
            attribute DOMString protocol;
@@ -67,24 +70,20 @@ interface HTMLAnchorElement : HTMLElement {
 	<section id="flow">
 		<h3 class="blind">콘텐츠 분류 타입</h3>
 		<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg">
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#flow-content-0" target="_blank"><ellipse cx="150" cy="100" rx="130" ry="80" class="cate_flow on"></ellipse><text x="140" y="40">Flow</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#interactive-content-0" target="_blank"><ellipse cx="85" cy="80" rx="50" ry="30" class="cate_interactive on"></ellipse><text x="55" y="80">Interactive</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#metadata-content-0" target="_blank"><ellipse cx="80" cy="150" rx="60" ry="30" class="cate_metadata"></ellipse><text x="55" y="155">Metadata</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#phrasing-content-0" target="_blank"><ellipse cx="120" cy="100" rx="50" ry="50" class="cate_phrasing"></ellipse><text x="100" y="75">Phrasing</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#embedded-content-0" target="_blank"><ellipse cx="120" cy="100" rx="40" ry="20" class="cate_embedded"></ellipse><text x="97" y="102">Embedded</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#heading-content-0" target="_blank"><ellipse cx="220" cy="75" rx="40" ry="20" class="cate_heading"></ellipse><text x="203" y="78">Heading</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#sectioning-content-0" target="_blank"><ellipse cx="220" cy="125" rx="40" ry="20" class="cate_sectioning"></ellipse><text x="195" y="127">Sectioning</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#flow-content-0" target="_blank"><ellipse cx="150" cy="100" rx="130" ry="80" class="cate_flow on" title="Flow"></ellipse><text x="140" y="40">Flow</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#interactive-content-0" target="_blank"><ellipse cx="85" cy="80" rx="50" ry="30" class="cate_interactive" title="Interactive"></ellipse><text x="55" y="80">Interactive</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#metadata-content-0" target="_blank"><ellipse cx="80" cy="150" rx="60" ry="30" class="cate_metadata" title="Metadata"></ellipse><text x="55" y="155">Metadata</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#phrasing-content-0" target="_blank"><ellipse cx="120" cy="100" rx="50" ry="50" class="cate_phrasing on" title="Phrasing"></ellipse><text x="100" y="75">Phrasing</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#embedded-content-0" target="_blank"><ellipse cx="120" cy="100" rx="40" ry="20" class="cate_embedded" title="Embedded"></ellipse><text x="97" y="102">Embedded</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#heading-content-0" target="_blank"><ellipse cx="220" cy="75" rx="40" ry="20" class="cate_heading" title="Heading"></ellipse><text x="203" y="78">Heading</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#sectioning-content-0" target="_blank"><ellipse cx="220" cy="125" rx="40" ry="20" class="cate_sectioning" title="Sectioning"></ellipse><text x="195" y="127">Sectioning</text></a>
 		</svg>
 
 		<ul>
-		<li>플로우 컨텐츠이자 대화형 컨텐츠입니다. 그리고, 자손 요소로 구문 컨텐츠만 있다면 구문 컨텐츠에 속합니다.</li>
-		<li>a 요소는 두 군데에 위치할 수 있습니다.
-			<ul>
-			<li>자식 요소에 구문 컨텐츠만 있으면 구문 컨텐츠의 위치에 올 수 있습니다.</li>
-			<li>자식 요소에 구문 컨텐츠를 포함하지 않으면 플로우 컨텐츠의 위치에 올 수 있습니다.</li>
-			</ul>
-		</li>
-		<li>자식 요소에 투명한 요소가 있으면 대화형 컨텐츠는 포함할 수 없습니다.</li>
+		<li>플로우 컨텐츠와 구문 컨텐츠에 속합니다.</li>
+		<li>구문 컨텐츠의 위치에 사용할 수 있습니다. 단, 부모 요소가 map 요소이여야 합니다.</li>
+		<li>href 속성이 있으면, 요소는 하이퍼링크를 나타냅니다. href 속성이 있으면 반드시 alt 속성도 함께 써야 합니다.</li>
+		<li>href 속성이 없으면 target 속성, rel 속성, media 속성, hreflang 속성, type 속성을 사용할 수 없습니다.</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -92,9 +91,8 @@ interface HTMLAnchorElement : HTMLElement {
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>방문하지 않은 링크는 파란색 밑줄(underline)<br>방문한 링크는 보라색 밑줄(underline)<br>활성화된 링크는 빨간색 밑줄(underline)</li>
-		<li><a href="#" title="html5:attribute:media_hyperlink">media 속성</a>, <a href="#" title="html5:attribute:type_hyperlink">type 속성</a>은 HTML5에서 추가된 속성입니다.</li>
-		<li>charset 속성, coords 속성, name 속성, rev 속성, shape 속성은 폐기된 속성입니다.</li>
+		<li><a href="#" title="html5:attribute:rel">rel 속성</a>, <a href="#" title="html5:attribute:media_hyperlink"></a>media 속성</a>, <a href="#" title="html5:attribute:hreflang">hreflang 속성</a>, <a href="#" title="html5:attribute:type_hyperlink">type 속성</a>은 HTML5에서 추가된 속성입니다.</li>
+		<li>nohref 속성은 폐기된 속성입니다.</li>
 		<li>HTML5에서는 <a href="#" title="html5:attribute:href_hyperlink">href 속성</a>을 생략된 형태로 사용할 수 있습니다.</li>
 		</ul>
 	</section>

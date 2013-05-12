@@ -23,17 +23,17 @@ Ext.onReady(function(){
 			children: [
 				{text: 'A', expanded: true, children: [
 					{text: 'a', leaf: true, href: ['ext/data/elements/a.php', 'ext/data/elements/a_desc.php']},
-					{text: 'abbr', leaf: true},
-					{text: 'address', leaf: true},
-					{text: 'area', leaf: true},
-					{text: 'artcle', leaf: true},
-					{text: 'aside', leaf: true},
-					{text: 'audio', leaf: true}
+					{text: 'abbr', leaf: true, href: ['ext/data/elements/abbr.php', 'ext/data/elements/abbr_desc.php']},
+					{text: 'address', leaf: true, href: ['ext/data/elements/address.php', 'ext/data/elements/address_desc.php']},
+					{text: 'area', leaf: true, href: ['ext/data/elements/area.php', 'ext/data/elements/area_desc.php']},
+					{text: 'article', leaf: true, href: ['ext/data/elements/article.php', 'ext/data/elements/article_desc.php']},
+					{text: 'aside', leaf: true, href: ['ext/data/elements/aside.php', 'ext/data/elements/aside_desc.php']},
+					{text: 'audio', leaf: true, href: ['ext/data/elements/audio.php', 'ext/data/elements/audio_desc.php']}
 				]},
 				{text: 'B', expanded: true, children: [
-					{text: 'b', leaf: true},
-					{text: 'base', leaf: true},
-					{text: 'bdi', leaf: true},
+					{text: 'b', leaf: true, href: ['ext/data/elements/b.php', 'ext/data/elements/b_desc.php']},
+					{text: 'base', leaf: true, href: ['ext/data/elements/base.php', 'ext/data/elements/base_desc.php']},
+					{text: 'bdi', leaf: true, href: ['ext/data/elements/bdi.php', 'ext/data/elements/bdi_desc.php']},
 					{text: 'dbo', leaf: true},
 					{text: 'blockquote', leaf: true},
 					{text: 'body', leaf: true},
@@ -230,11 +230,10 @@ Ext.onReady(function(){
 				},
 				listeners : {
 					itemclick : function($this, record, item, index, e, eOpts){
-						var path = record.data.href,
-							arr = ['flowArea', 'memoArea', 'referArea', 'relatedArea'];
+						var path = record.data.href;
 
 						function ajaxLoad(con, idx){
-							$('#'+con).load(path[1] + ' #' + idx);
+							$('#' + con).load(path[1] + ' #' + idx);
 						}
 
 						if(path){
@@ -248,14 +247,17 @@ Ext.onReady(function(){
 							*/
 							Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
 
-							for(var i=0,len=arr.length; i<len; i++){
-								var idx = arr[i].replace('Area','');
-								ajaxLoad(arr[i] + '-innerCt', idx);
+							for(var i=0,len=side.items.length; i<len; i++){
+								var obj = side.items[i],
+									idx = obj.id.replace('Area','');
+
+								ajaxLoad(obj.id + '-innerCt', idx);
 							}
 						}else{
 							return false;
 						}
 
+						ajaxLoad('support-innerCt', 'browser');
 						e.preventDefault();
 					}
 				}
@@ -337,11 +339,12 @@ Ext.onReady(function(){
 
 	var foot = {
 		region: 'south',
-		title: 'South Panel',
+		title: '지원 브라우저',
+		id: 'support',
 		collapsible: true,
-		html: 'Information goes here',
-		height: 100,
-		minHeight: 100
+		html: 'Support Browser',
+		height: 80,
+		minHeight: 80
 	};
 
 	var viewport = Ext.create('Ext.Viewport', {
