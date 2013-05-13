@@ -111,10 +111,17 @@ Uses HTMLElement.
 	<section id="browser">
 		<h3 class="blind">지원 브라우저</h3>
 		<p>
+			<img src="ext/resources/css/images/custom/ico_support_ie6_none.png" width="25" height="25" alt="IE6 지원 안함">
+			<img src="ext/resources/css/images/custom/ico_support_ie7_none.png" width="25" height="25" alt="IE7 지원 인함">
+			<img src="ext/resources/css/images/custom/ico_support_ie8_none.png" width="25" height="25" alt="IE8 지원 안함">
+			<img src="ext/resources/css/images/custom/ico_support_ie9_none.png" width="25" height="25" alt="IE9 지원 안함">
+			<img src="ext/resources/css/images/custom/ico_support_ie10_none.png" width="25" height="25" alt="IE10 지원 안함">
 			<img src="ext/resources/css/images/custom/ico_support_chrome.png" width="25" height="25" alt="Chrome 지원">
 			<img src="ext/resources/css/images/custom/ico_support_firefox.png" width="25" height="25" alt="Firefox 지원">
+			<img src="ext/resources/css/images/custom/ico_support_opera_none.png" width="25" height="25" alt="Opera 지원 안함">
+			<img src="ext/resources/css/images/custom/ico_support_safari_none.png" width="25" height="25" alt="Safari 지원 안함">
 		</p>
-		<em>크롬, 파이어폭스 브라우저에서 지원됩니다.</em>
+		<em>크롬, 파이어폭스 브라우저에서 지원 합니다.</em>
 	</section>
 	<!-- //지원 브라우저 -->
 </article>

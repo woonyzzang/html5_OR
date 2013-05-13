@@ -76,6 +76,7 @@ body{font-family:NanumGothic,'나눔고딕',MalgunGothic,'맑은고딕',Dotum,'�
 #browser p img{margin-left:5px}
 #browser p img:first-child{margin-left:0}
 #browser em{margin-left:8px}
+#browser strong{margin-left:5px}
 
-/* =GridAttr 
+/* =GridAttr
 #gridAttr{max-width:695px} */

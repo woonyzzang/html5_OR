@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>address 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>blockquote 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -15,23 +15,27 @@
 		<dd>
 			<ul>
 			<li>플로우 컨텐츠</li>
-			<li>formatBlock이 될 수 있는 요소</li>
+			<li>섹션 루트</li>
+			<li>formatBlock이 될 수 있는 요소.</li>
 			</ul>
 		</dd>
 		<dt>[이 요소가 사용될 수 있는 문맥]</dt>
 		<dd>플로우 컨텐츠가 올 수 있는 곳</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>플로우 컨텐츠. 하지만 자손 요소로 제목 컨텐츠와 섹션 컨텐츠, header, footer, address 요소는 가질 수 없습니다.</dd>
+		<dd>플로우 컨텐츠</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
+			<li>cite</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-Uses HTMLElement.
+interface HTMLQuoteElement : HTMLElement {
+           attribute DOMString cite;
+};
 			</pre>
 		</dd>
 		</dl>
@@ -51,8 +55,9 @@ Uses HTMLElement.
 		</svg>
 
 		<ul>
+		<li>플로우 컨텐츠, 섹션루트에 속합니다.</li>
 		<li>플로우 컨텐츠의 위치에 사용할 수 있습니다.</li>
-		<li>자식 요소로 제목 컨텐츠, 섹션 컨텐츠, header 요소, footer 요소, address 요소를 제외하고 플로우 컨텐츠를 포함할 수 있습니다.</li>
+		<li>플로우 컨텐츠를 자식 요소로 포함할 수 있습니다.</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -60,7 +65,7 @@ Uses HTMLElement.
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>기본적으로 모든 브라우저에 italic체로 렌더링 됩니다.</li>
+		<li>질문에 답변할 때 질문 인용으로 사용할 수 있지만 대화를 나타내는데 blockquote 요소를 마크업하는 것은 적절하지 못합니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->

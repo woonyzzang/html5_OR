@@ -92,7 +92,8 @@ Uses HTMLElement.
 			<img src="ext/resources/css/images/custom/ico_support_opera.png" width="25" height="25" alt="Opera 지원">
 			<img src="ext/resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
 		</p>
-		<em>IE9이하 제외 최신 브라우저에서 지원</em>
+		<em>최신 브라우저에서 지원 합니다.</em>
+		<strong>(참고: IE8 및 이전 버전, aside 요소를 지원하지 않습니다.)</strong>
 	</section>
 	<!-- //지원 브라우저 -->
 </article>

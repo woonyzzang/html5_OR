@@ -124,7 +124,7 @@ interface HTMLBaseElement : HTMLElement {
 			<img src="ext/resources/css/images/custom/ico_support_opera.png" width="25" height="25" alt="Opera 지원">
 			<img src="ext/resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
 		</p>
-		<em>IE9이하 제외 최신 브라우저에서 지원</em>
+		<em>모든 주요 브라우저에서 지원 합니다.</em>
 	</section>
 	<!-- //지원 브라우저 -->
 </article>
