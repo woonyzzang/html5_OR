@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>b 요소 : HTML5 Open Reference Guide</title>
+<title>dfn 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,11 +19,12 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">b 요소: (bold)</h2>
+		<h2 class="s_tit">dfn 요소: (defining instance)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>b 요소는 폰트와 관련된 요소이며 단순히 글자를 굵게 볼드체로 표현하는 텍스트에 사용합니다.</dd>
+		<dd>dfn 요소는 문서내에서 개념(단어)의 대한 용어 정의를 나타내는 요소입니다. dfn 요소의 가장 가까운 조상 요소(문단, 정의 목록 그룹, 섹션)는 dfn 요소를 사용한 개념(단어)에 대한 설명을 포함해야 됩니다.</dd>
+		<dd>&#39;정의되는 개념(단어)&#39;은 마크업에 따라 결정됩니다. (title 속성이 없고 자식 노드로 텍스트 노드가 없으며 자식 요소로 abbr 요소를 사용할 경우 : abbr 요소의 title 속성의 값)</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
@@ -37,14 +38,14 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<article>
-				<h1>요구르트 라면 조리법</h1>
-				<ol>
-				<li>먼저 <b>면</b>을 익힌 후 물기를 빼서 차게 식힙니다.</li>
-				<li><b>복숭아맛 떠먹는 요구르트</b>를 붓습니다.</li>
-				<li>기호에 따라 <b>오이</b>, <b>피망</b> 등 신선한 야채를 넣으면 더욱 좋습니다.</li>
-				</ol>
-			</article>
+			<!-- @dfn 요소에 title 속성이 없으면 textContent인 'HTML'이 정의되는 개념(단어)이 됩니다. -->
+			<p><dfn>HTML</dfn>는 웹 페이지를 위한 마크업 언어입니다.</p>
+
+			<!-- @텍스트 노드가 없으며 자식 요소로 title 속성이 있는 abbr 요소를 사용 하면 abbr 요소의 title 속성값인 'HyperText Markup Language'이 정의되는 개념(단어)입니다. -->
+			<p><dfn><abbr title="HyperText Markup Language">HTML</abbr></dfn>은 웹 페이지를 위한 마크업 언어입니다.</p>
+
+			<!-- @dfn 요소에 title 속성이 있으면 title 속성 값인 'HyperText Markup Language'이 정의되는 개념(단어)입니다. -->
+			<p><dfn title="HyperText Markup Language">HTML</dfn>은 웹 페이지를 위한 마크업 언어입니다.</p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -62,7 +63,8 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'}
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'title', desc:'dfn 태그로 마크업된 요소의 개념을 정의합니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

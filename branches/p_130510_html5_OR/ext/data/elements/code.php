@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>b 요소 : HTML5 Open Reference Guide</title>
+<title>code 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,11 +19,11 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">b 요소: (bold)</h2>
+		<h2 class="s_tit">code 요소: (code fragment)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>b 요소는 폰트와 관련된 요소이며 단순히 글자를 굵게 볼드체로 표현하는 텍스트에 사용합니다.</dd>
+		<dd>code 요소는 컴퓨터 코드의 일부분을 정의합니다. XML 요소 이름, 파일이름, 컴퓨터 프로그램, 기타 컴퓨터가 인식할 수 있는 것을 포함합니다. 마크업하는 컴퓨터 코드의 언어를 나타내는 정형화된 방법이 없지만, code 요소로 컴퓨터 언어를 마크업하고자 하는 경우 - 예를 들어, 구문 강조 스크립트가 제대로 동작하기를 원하는 경우 - code 요소에 language- 전치사로 시작하는 클래스명을 부여할 수 있습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
@@ -37,14 +37,8 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<article>
-				<h1>요구르트 라면 조리법</h1>
-				<ol>
-				<li>먼저 <b>면</b>을 익힌 후 물기를 빼서 차게 식힙니다.</li>
-				<li><b>복숭아맛 떠먹는 요구르트</b>를 붓습니다.</li>
-				<li>기호에 따라 <b>오이</b>, <b>피망</b> 등 신선한 야채를 넣으면 더욱 좋습니다.</li>
-				</ol>
-			</article>
+			<p><code class="language-pascal">code</code> 요소는 컴퓨터 코드의 조각을 나타냅니다.</p>
+			<p><code>robotSnowman</code> 객체에서 <code>activate()</code> 메서드를호출하면 로봇의 눈에 불이 켜집니다.</p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

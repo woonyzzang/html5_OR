@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>article 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>canvas 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -15,24 +15,34 @@
 		<dd>
 			<ul>
 			<li>플로우 컨텐츠</li>
-			<li>섹션 컨텐츠</li>
-			<li>formatBlock이 될 수 있는 요소</li>
+			<li>구문 컨텐츠</li>
+			<li>대화형 컨텐츠</li>
+			<li>포함된 컨텐츠</li>
 			</ul>
 		</dd>
 		<dt>[이 요소가 사용될 수 있는 문맥]</dt>
-		<dd>플로우 컨텐츠가 올 수 있는 곳</dd>
+		<dd>포함된 컨텐츠가 올 수 있는 곳</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>플로우 컨텐츠</dd>
+		<dd>투명한 내용</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
+			<li>width</li>
+			<li>height</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-Uses HTMLElement.
+interface HTMLCanvasElement : HTMLElement {
+           attribute unsigned long width;
+           attribute unsigned long height;
+
+  DOMString toDataURL(in optional DOMString type, in any... args);
+
+  object getContext(in DOMString contextId, in any... args);
+};
 			</pre>
 		</dd>
 		</dl>
@@ -43,20 +53,19 @@ Uses HTMLElement.
 		<h3 class="blind">콘텐츠 분류 타입</h3>
 		<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg">
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#flow-content-0" target="_blank"><ellipse cx="150" cy="100" rx="130" ry="80" class="cate_flow on" title="Flow"></ellipse><text x="140" y="40">Flow</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#interactive-content-0" target="_blank"><ellipse cx="85" cy="80" rx="50" ry="30" class="cate_interactive" title="Interactive"></ellipse><text x="55" y="80">Interactive</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#metadata-content-0" target="_blank"><ellipse cx="80" cy="150" rx="60" ry="30" class="cate_metadata" title="Metadata"></ellipse><text x="55" y="155">Metadata</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#phrasing-content-0" target="_blank"><ellipse cx="120" cy="100" rx="50" ry="50" class="cate_phrasing" title="Phrasing"></ellipse><text x="100" y="75">Phrasing</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#embedded-content-0" target="_blank"><ellipse cx="120" cy="100" rx="40" ry="20" class="cate_embedded" title="Embedded"></ellipse><text x="97" y="102">Embedded</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#heading-content-0" target="_blank"><ellipse cx="220" cy="75" rx="40" ry="20" class="cate_heading" title="Heading"></ellipse><text x="203" y="78">Heading</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#sectioning-content-0" target="_blank"><ellipse cx="220" cy="125" rx="40" ry="20" class="cate_sectioning on" title="Sectioning"></ellipse><text x="195" y="127">Sectioning</text></a>
 		</svg>
 
 		<ul>
-		<li>플로우 컨텐츠, 섹션 컨텐츠, 전체 선택이 가능한 요소에 속합니다.</li>
-		<li>플로우 컨텐츠의 위치에 사용할 수 있습니다.</li>
-		<li>플로우 컨텐츠를 자식 요소로 포함할 수 있습니다.</li>
-		<li>인용구, 광고, 네비게이션 용도로 사용할 수 있지만, 단순한 삽입구를 위해 사용하는 것은 적합하지 않습니다.</li>
-		<li>article 요소가 중첩되었다면, 내부의 article 요소는 원칙적으로 외부 article 요소의 내용과 관련이 있어야 합니다. 예를 들어, 블로그 글을 나타내는 article 요소 내부에 블로그 방문자 댓글이나 의견을article 요소로 넣을 수 있습니다.</li>
+		<li>플로우 컨텐츠, 구문 컨텐츠, 포함된 컨텐츠에 속합니다.</li>
+		<li>포함된 컨텐츠가 올 수 있는 곳에 사용될 수 있습니다.</li>
+		<li>그래프, 게임 그래픽, 기타 비주얼 이미지를 즉석에서 그려내는 용도로 사용될 수 있습니다.</li>
+		<li>좀 더 적절한 요소가 있으면 canvas 요소를 문서에 사용하는 것은 피해야 합니다.</li>
+		<li>t핵심적인 면에서 비트맵 캔버스와 같은 기능이나 목적을 갖는 대체 내용을 함께 제공해야 합니다.</li>
+		<li>스크립트가 차단된 시각적 매체나 canvas 요소가 지원되지 않을 때는 요소의 폴백 컨텐츠를 나타냅니다.</li>
+		<li>좌표 공간에서의 크기를 조절하는 두가지 속성은 유효한 양의 정수값이어야 합니다.</li>
+		<li>canvas 요소에 동적인 작업을 하려면 스크립트 언어를 사용해야 합니다.</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -65,19 +74,22 @@ Uses HTMLElement.
 		<h3 class="blind">참조</h3>
 		<ul>
 		<li>HTML5에서 추가된 요소입니다.</li>
-		<li>IE8 및 이전 버전, article 요소를 지원하지 않습니다.</li>
+		<li>canvas 요소만 사용하여 width 속성과 height 속성값을 주어도 브라우저에는 아무것도 나타나지 않으며 실제 그래픽을 표현하기 위해서는 javascript를 함께 사용해야 합니다.</li>
+		<li>IE8 및 이전 버전, canvas 요소를 지원하지 않습니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
 	<!-- 관련 요소 레벨 -->
 	<section id="related">
 		<h3 class="blind">관련 요소 레벨</h3>
-		<a href="#">article 요소</a>,
-		<a href="#">aside 요소</a>,
-		<a href="#">footer 요소</a>,
-		<a href="#">header 요소</a>,
-		<a href="#">nav 요소</a>,
-		<a href="#">section 요소</a>
+		<a href="#">audio 요소</a>,
+		<a href="#">canvas 요소</a>,
+		<a href="#">embed 요소</a>,
+		<a href="#">img 요소</a>,
+		<a href="#">math 요소</a>,
+		<a href="#">object 요소</a>,
+		<a href="#">svg 요소</a>,
+		<a href="#">video 요소</a>
 	</section>
 	<!--//관련 요소 레벨 -->
 	<!-- 지원 브라우저 -->

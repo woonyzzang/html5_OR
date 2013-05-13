@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>abbr 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>col 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -14,25 +14,26 @@
 		<dt class="first">[요소가 속하는 범주]</dt>
 		<dd>
 			<ul>
-			<li>플로우 컨텐츠</li>
-			<li>구문 컨텐츠</li>
+			<li>없음</li>
 			</ul>
 		</dd>
 		<dt>[이 요소가 사용될 수 있는 문맥]</dt>
-		<dd>구문 컨텐츠를 쓸 수 있는 곳</dd>
+		<dd>span 속성이 없는 colgroup 요소 내부</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>구문 컨텐츠</dd>
+		<dd>이 요소는 비어 있어야 합니다.</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
-			<li>title 속성은 이 요소에서 특별한 의미를 가집니다.</li>
+			<li>span</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-Uses HTMLElement.
+interface HTMLTableColElement : HTMLElement {
+           attribute unsigned long span;
+};
 			</pre>
 		</dd>
 		</dl>
@@ -45,21 +46,15 @@ Uses HTMLElement.
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#flow-content-0" target="_blank"><ellipse cx="150" cy="100" rx="130" ry="80" class="cate_flow on" title="Flow"></ellipse><text x="140" y="40">Flow</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#interactive-content-0" target="_blank"><ellipse cx="85" cy="80" rx="50" ry="30" class="cate_interactive" title="Interactive"></ellipse><text x="55" y="80">Interactive</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#metadata-content-0" target="_blank"><ellipse cx="80" cy="150" rx="60" ry="30" class="cate_metadata" title="Metadata"></ellipse><text x="55" y="155">Metadata</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#phrasing-content-0" target="_blank"><ellipse cx="120" cy="100" rx="50" ry="50" class="cate_phrasing on" title="Phrasing"></ellipse><text x="100" y="75">Phrasing</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#phrasing-content-0" target="_blank"><ellipse cx="120" cy="100" rx="50" ry="50" class="cate_phrasing" title="Phrasing"></ellipse><text x="100" y="75">Phrasing</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#embedded-content-0" target="_blank"><ellipse cx="120" cy="100" rx="40" ry="20" class="cate_embedded" title="Embedded"></ellipse><text x="97" y="102">Embedded</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#heading-content-0" target="_blank"><ellipse cx="220" cy="75" rx="40" ry="20" class="cate_heading" title="Heading"></ellipse><text x="203" y="78">Heading</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#sectioning-content-0" target="_blank"><ellipse cx="220" cy="125" rx="40" ry="20" class="cate_sectioning" title="Sectioning"></ellipse><text x="195" y="127">Sectioning</text></a>
 		</svg>
 
 		<ul>
-		<li>플로우 컨텐츠, 구문 컨텐츠에 속합니다.</li>
-		<li>구문 컨텐츠의 위치에 사용할 수 있습니다.</li>
-		<li>구문 컨텐츠를 자식 요소로 포함할 수 있습니다.</li>
-		<li>약어를 반드시 abbr 요소로 마크업할 필요는 없습니다.
-			<ul>
-			<li>abbr 요소 없이 약어 다음에 괄호로 원형을 표기하기도 하며 일반적이지 않은 약어라면 처음 나온 곳에서 원형을 인라인으로 표기할 수도 있습니다.</li>
-			</ul>
-		</li>
+		<li>span 속성을 갖지 않는 colgroup 요소 내부에 사용될 수 있습니다.</li>
+		<li>자식 요소가 없는 빈 요소입니다.</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -67,56 +62,30 @@ Uses HTMLElement.
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>HTML5에서 acronym 요소가 폐기되고 abbr만 사용 됩니다.</li>
-		<li>abbr 요소는 IE6 이하 버전에서는 지원하지 않습니다.</li>
+		<li>HTML5에서 align, char, charoff, valign, width 속성들은 폐기 되었습니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
 	<!-- 관련 요소 레벨 -->
 	<section id="related">
 		<h3 class="blind">관련 요소 레벨</h3>
-		<a href="#">em 요소</a>,
-		<a href="#">strong 요소</a>,
-		<a href="#">small 요소</a>,
-		<a href="#">s 요소</a>,
-		<a href="#">cite 요소</a>,
-		<a href="#">q 요소</a>,
-		<a href="#">dfn 요소</a>,
-		<a href="#">abbr 요소</a>,
-		<a href="#">time 요소</a>,
-		<a href="#">code 요소</a>,
-		<a href="#">var 요소</a>,
-		<a href="#">samp 요소</a>,
-		<a href="#">kbd 요소</a>,
-		<a href="#">sub 요소</a>,
-		<a href="#">sup 요소</a>,
-		<a href="#">i 요소</a>,
-		<a href="#">b 요소</a>,
-		<a href="#">mark 요소</a>,
-		<a href="#">ruby 요소</a>,
-		<a href="#">rt 요소</a>,
-		<a href="#">rp 요소</a>,
-		<a href="#">bdi 요소</a>,
-		<a href="#">bdo 요소</a>,
-		<a href="#">span 요소</a>,
-		<a href="#">br 요소</a>,
-		<a href="#">wbr 요소</a>,
-		<a href="#">ins 요소</a>,
-		<a href="#">del 요소</a>,
-		<a href="#">iframe 요소</a>,
-		<a href="#">param 요소</a>,
-		<a href="#">source 요소</a>,
-		<a href="#">map 요소</a>,
-		<a href="#">area 요소</a>,
-		<a href="#">summary 요소</a>,
-		<a href="#">command 요소</a>
+		<a href="#">table 요소</a>,
+		<a href="#">caption 요소</a>,
+		<a href="#">colgroup 요소</a>,
+		<a href="#">col 요소</a>,
+		<a href="#">tbody 요소</a>,
+		<a href="#">thead 요소</a>,
+		<a href="#">tfoot 요소</a>,
+		<a href="#">tr 요소</a>,
+		<a href="#">td 요소</a>,
+		<a href="#">th 요소</a>
 	</section>
 	<!--//관련 요소 레벨 -->
 	<!-- 지원 브라우저 -->
 	<section id="browser">
 		<h3 class="blind">지원 브라우저</h3>
 		<p>
-			<img src="ext/resources/css/images/custom/ico_support_ie6_none.png" width="25" height="25" alt="IE6 지원 안함">
+			<img src="ext/resources/css/images/custom/ico_support_ie6.png" width="25" height="25" alt="IE6 지원">
 			<img src="ext/resources/css/images/custom/ico_support_ie7.png" width="25" height="25" alt="IE7 지원">
 			<img src="ext/resources/css/images/custom/ico_support_ie8.png" width="25" height="25" alt="IE8 지원">
 			<img src="ext/resources/css/images/custom/ico_support_ie9.png" width="25" height="25" alt="IE9 지원">
@@ -127,7 +96,6 @@ Uses HTMLElement.
 			<img src="ext/resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
 		</p>
 		<em>모든 주요 브라우저에서 지원 합니다.</em>
-		<strong>(참고: abbr 태그는 IE6 또는 이전 버전에서는 지원되지 않습니다.)</strong>
 	</section>
 	<!-- //지원 브라우저 -->
 </article>

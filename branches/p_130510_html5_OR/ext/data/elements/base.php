@@ -30,7 +30,7 @@
 		<p>Inline-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>MetaData</p>
+		<p>Meta Info</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
@@ -38,7 +38,7 @@
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
 			&lt;head&gt;
-			&lt;title&gt;HTML5 Open Reference Guide&lt;/title&gt;
+			&lt;title&gt;문서의 제목&lt;/title&gt;
 			<base href="index.html" target="_self">
 			&lt;/head&gt;
 		</pre>
@@ -58,7 +58,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통영역', href:'http://naver.com'},
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'href', desc:'문서의 기준이 되는 URL을 지정합니다', href:'http://naver.com'},
 			{tit:'target', desc:'하이퍼링크의 대상이 되는 브라우징 콘텍스트 이름이나 키워드를 지정합니다', href:'http://naver.com'}
 		]},

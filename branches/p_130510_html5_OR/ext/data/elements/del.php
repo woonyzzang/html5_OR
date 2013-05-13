@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>b 요소 : HTML5 Open Reference Guide</title>
+<title>del 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,11 +19,11 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">b 요소: (bold)</h2>
+		<h2 class="s_tit">del 요소: (deleted text)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>b 요소는 폰트와 관련된 요소이며 단순히 글자를 굵게 볼드체로 표현하는 텍스트에 사용합니다.</dd>
+		<dd>del 요소는 문서로부터 삭제된 텍스트내용을 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
@@ -37,14 +37,7 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<article>
-				<h1>요구르트 라면 조리법</h1>
-				<ol>
-				<li>먼저 <b>면</b>을 익힌 후 물기를 빼서 차게 식힙니다.</li>
-				<li><b>복숭아맛 떠먹는 요구르트</b>를 붓습니다.</li>
-				<li>기호에 따라 <b>오이</b>, <b>피망</b> 등 신선한 야채를 넣으면 더욱 좋습니다.</li>
-				</ol>
-			</article>
+			<p><del datetime="2009-10-11T01:25-07:00">XHTML1.1</del>에는 문서형정의(DTD)가 한 가지밖에 없습니다.</p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -62,7 +55,9 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'}
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'cite', desc:'del 요소의 변화를 설명하는 문서의 위치를 명시합니다.', href:'http://naver.com'},
+			{tit:'datetime', desc:'삭제한 날짜와 시간입니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

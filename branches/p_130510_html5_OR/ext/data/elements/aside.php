@@ -23,14 +23,14 @@
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>article 요소는 주위 요소의 내용과 접점을 이루는 섹션으로, 주 콘텐츠와 어느정도 연관성이 있는 부수적인 콘텐츠를 표시할 때 사용되며, 주로 article 태그나 section 태그 같은 중심 콘텐츠의 사이드바(side bar) 형태로 표현됩니다.﻿</dd>
+		<dd>article 요소는 주위 요소의 내용과 접점을 이루는 섹션으로, 주 콘텐츠와 어느정도 연관성이 있는 부수적인 콘텐츠를 표시할 때 사용되며, 주로 article 요소나 section 요소 같은 중심 콘텐츠의 사이드바(side bar) 형태로 표현됩니다.﻿</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Sectioning</p>
+		<p>Structural Elements</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
@@ -62,7 +62,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통영역', href:'http://naver.com'},
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
 		]},
 		proxy : {
 			type: 'memory',

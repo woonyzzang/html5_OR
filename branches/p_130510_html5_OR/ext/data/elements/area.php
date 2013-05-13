@@ -60,7 +60,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통영역', href:'http://naver.com'},
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'alt', desc:'링크의 목적을 설명합니다.', href:'naver.com'},
 			{tit:'coords', desc:'shape에서 정의한 모양의 좌표를 정의합니다.', href:'naver.com'},
 			{tit:'shape', desc:'circle, dafault, poly, rect 키워드로 속성을 정의합니다.', href:'naver.com'},

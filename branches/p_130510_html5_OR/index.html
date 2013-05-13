@@ -21,7 +21,7 @@ Ext.onReady(function(){
 			expanded: true,
 			animate: true,
 			children: [
-				{text: 'A', expanded: true, children: [
+				{text: 'A', expanded: false, children: [
 					{text: 'a', leaf: true, href: ['ext/data/elements/a.php', 'ext/data/elements/a_desc.php']},
 					{text: 'abbr', leaf: true, href: ['ext/data/elements/abbr.php', 'ext/data/elements/abbr_desc.php']},
 					{text: 'address', leaf: true, href: ['ext/data/elements/address.php', 'ext/data/elements/address_desc.php']},
@@ -30,35 +30,35 @@ Ext.onReady(function(){
 					{text: 'aside', leaf: true, href: ['ext/data/elements/aside.php', 'ext/data/elements/aside_desc.php']},
 					{text: 'audio', leaf: true, href: ['ext/data/elements/audio.php', 'ext/data/elements/audio_desc.php']}
 				]},
-				{text: 'B', expanded: true, children: [
+				{text: 'B', expanded: false, children: [
 					{text: 'b', leaf: true, href: ['ext/data/elements/b.php', 'ext/data/elements/b_desc.php']},
 					{text: 'base', leaf: true, href: ['ext/data/elements/base.php', 'ext/data/elements/base_desc.php']},
 					{text: 'bdi', leaf: true, href: ['ext/data/elements/bdi.php', 'ext/data/elements/bdi_desc.php']},
 					{text: 'dbo', leaf: true, href: ['ext/data/elements/bdo.php', 'ext/data/elements/bdo_desc.php']},
 					{text: 'blockquote', leaf: true, href: ['ext/data/elements/blockquote.php', 'ext/data/elements/blockquote_desc.php']},
-					{text: 'body', leaf: true},
-					{text: 'br', leaf: true},
-					{text: 'button', leaf: true}
+					{text: 'body', leaf: true, href: ['ext/data/elements/body.php', 'ext/data/elements/body_desc.php']},
+					{text: 'br', leaf: true, href: ['ext/data/elements/br.php', 'ext/data/elements/br_desc.php']},
+					{text: 'button', leaf: true, href: ['ext/data/elements/button.php', 'ext/data/elements/button_desc.php']}
 				]},
-				{text: 'C', expanded: true, children: [
-					{text: 'canvas', leaf: true},
-					{text: 'caption', leaf: true},
-					{text: 'cite', leaf: true},
-					{text: 'code', leaf: true},
-					{text: 'col', leaf: true},
-					{text: 'colgroup', leaf: true},
-					{text: 'command', leaf: true}
+				{text: 'C', expanded: false, children: [
+					{text: 'canvas', leaf: true, href: ['ext/data/elements/canvas.php', 'ext/data/elements/canvas_desc.php']},
+					{text: 'caption', leaf: true, href: ['ext/data/elements/caption.php', 'ext/data/elements/caption_desc.php']},
+					{text: 'cite', leaf: true, href: ['ext/data/elements/cite.php', 'ext/data/elements/cite_desc.php']},
+					{text: 'code', leaf: true, href: ['ext/data/elements/code.php', 'ext/data/elements/code_desc.php']},
+					{text: 'col', leaf: true, href: ['ext/data/elements/col.php', 'ext/data/elements/col_desc.php']},
+					{text: 'colgroup', leaf: true, href: ['ext/data/elements/colgroup.php', 'ext/data/elements/colgroup_desc.php']},
+					{text: 'command', leaf: true, href: ['ext/data/elements/command.php', 'ext/data/elements/command_desc.php']}
 				]},
-				{text: 'D', expanded: true, children: [
-					{text: 'datalist', leaf: true},
-					{text: 'dd', leaf: true},
-					{text: 'del', leaf: true},
-					{text: 'details', leaf: true},
-					{text: 'dfn', leaf: true},
-					{text: 'div', leaf: true},
-					{text: 'dl', leaf: true},
-					{text: 'dotype', leaf: true},
-					{text: 'dt', leaf: true}
+				{text: 'D', expanded: false, children: [
+					{text: 'datalist', leaf: true, href: ['ext/data/elements/datalist.php', 'ext/data/elements/datalist_desc.php']},
+					{text: 'dd', leaf: true, href: ['ext/data/elements/dd.php', 'ext/data/elements/dd_desc.php']},
+					{text: 'del', leaf: true, href: ['ext/data/elements/del.php', 'ext/data/elements/del_desc.php']},
+					{text: 'details', leaf: true, href: ['ext/data/elements/details.php', 'ext/data/elements/details_desc.php']},
+					{text: 'dfn', leaf: true, href: ['ext/data/elements/dfn.php', 'ext/data/elements/dfn_desc.php']},
+					{text: 'div', leaf: true, href: ['ext/data/elements/div.php', 'ext/data/elements/div_desc.php']},
+					{text: 'dl', leaf: true, href: ['ext/data/elements/dl.php', 'ext/data/elements/dl_desc.php']},
+					{text: 'doctype', leaf: true, href: ['ext/data/elements/doctype.php', 'ext/data/elements/doctype_desc.php']},
+					{text: 'dt', leaf: true, href: ['ext/data/elements/dt.php', 'ext/data/elements/dt_desc.php']}
 				]},
 				{text: 'E', expanded: true, children: [
 					{text: 'em', leaf: true},
@@ -303,6 +303,8 @@ Ext.onReady(function(){
 		region: 'east',
 		title: '상세 설명',
 		collapsible: true,
+		collapsed: true,
+		//collapseMode: 'mini',
 		width: 300,
 		layout: {
 			type: 'accordion',
@@ -339,9 +341,10 @@ Ext.onReady(function(){
 
 	var foot = {
 		region: 'south',
-		title: '지원 브라우저',
+		title: '브라우저 지원',
 		id: 'support',
 		collapsible: true,
+		collapsed: true,
 		html: 'Support Browser',
 		height: 80,
 		minHeight: 80

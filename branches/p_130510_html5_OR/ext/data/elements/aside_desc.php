@@ -64,6 +64,7 @@ Uses HTMLElement.
 		<h3 class="blind">참조</h3>
 		<ul>
 		<li>HTML5에서 추가된 요소입니다.</li>
+		<li>IE8 및 이전 버전, aside 요소를 지원하지 않습니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
@@ -93,7 +94,6 @@ Uses HTMLElement.
 			<img src="ext/resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
 		</p>
 		<em>최신 브라우저에서 지원 합니다.</em>
-		<strong>(참고: IE8 및 이전 버전, aside 요소를 지원하지 않습니다.)</strong>
 	</section>
 	<!-- //지원 브라우저 -->
 </article>

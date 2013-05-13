@@ -84,6 +84,7 @@ interface HTMLAudioElement : HTMLMediaElement {};
 		<ul>
 		<li>HTML5에서 추가된 요소입니다.</li>
 		<li>요소 내부에 제공한 컨텐츠는 접근성과는 관계가 없습니다. 청각, 기타 장애를 가진 사람들이 오디오 컨텐츠를 사용하려면 대체 요소, 즉 미디어 스트림이나 자막 같은 접근성 도구를 미디어 스트림에 병합하는 방법을 고려해야 합니다.</li>
+		<li>IE8 및 이전 버전, audio 요소를 지원하지 않습니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
@@ -115,7 +116,6 @@ interface HTMLAudioElement : HTMLMediaElement {};
 			<img src="ext/resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
 		</p>
 		<em>최신 브라우저에서 지원 합니다.</em>
-		<strong>(참고: IE8 및 이전 버전, audio 요소를 지원하지 않습니다.)</strong>
 	</section>
 	<!-- //지원 브라우저 -->
 </article>

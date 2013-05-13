@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>b 요소 : HTML5 Open Reference Guide</title>
+<title>command 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,32 +19,30 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">b 요소: (bold)</h2>
+		<h2 class="s_tit">command 요소: (command)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>b 요소는 폰트와 관련된 요소이며 단순히 글자를 굵게 볼드체로 표현하는 텍스트에 사용합니다.</dd>
+		<dd>command 요소는 사용자가 실행할 수 있는 명령(라디오 버튼, 체크 박스, 또는 명령 단추)을 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Inline-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Text formatting</p>
+		<p>Meta info</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<article>
-				<h1>요구르트 라면 조리법</h1>
-				<ol>
-				<li>먼저 <b>면</b>을 익힌 후 물기를 빼서 차게 식힙니다.</li>
-				<li><b>복숭아맛 떠먹는 요구르트</b>를 붓습니다.</li>
-				<li>기호에 따라 <b>오이</b>, <b>피망</b> 등 신선한 야채를 넣으면 더욱 좋습니다.</li>
-				</ol>
-			</article>
+			<menu type="toolbar">
+				<command type="radio" radiogroup="alignment" checked="checked" label="왼쪽정렬" icon="icons/alL.png" onclick="setAlign('left')">
+				<command type="radio" radiogroup="alignment" label="가운데정렬" icon="icons/alC.png" onclick="setAlign('center')">
+				<command type="radio" radiogroup="alignment" label="오른쪽정렬" icon="icons/alR.png" onclick="setAlign('right')">
+				<command type="command" disabled="disabled" label="발행" icon="icons/pub.png" onclick="publish()">
+			</menu>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -62,7 +60,14 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'}
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'type', desc:'명령의 종류를 정의합니다. radio, checkbox, command를 지정할 수 있습니다. 기본값은 command입니다.', href:'http://naver.com'},
+			{tit:'label', desc:'command의 이름을 지정합니다. 값으로 빈 문자열을 쓸 수 없습니다.', href:'http://naver.com'},
+			{tit:'title', desc:'사용자에게 도움이 될 만한 설명이나 힌트를 제공합니다.', href:'http://naver.com'},
+			{tit:'icon', desc:'command 요소에 보일 아이콘을 지정합니다. 유효한 URL 값이여야 합니다.', href:'http://naver.com'},
+			{tit:'disabled', desc:'이 속성이 선언되면 사용 불가능함을 나타냅니다.', href:'http://naver.com'},
+			{tit:'checked', desc:'type 속성이 checkbox나 radio일 때 checked 속성을 선언하면 선택된 상태로 나타납니다.', href:'http://naver.com'},
+			{tit:'radiogroup', desc:'type 속성이 radio 일 때 토글된 커맨드의 이름을 지정할 수있는 속성입니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

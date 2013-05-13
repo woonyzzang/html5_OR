@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>b 요소 : HTML5 Open Reference Guide</title>
+<title>button 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,32 +19,25 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">b 요소: (bold)</h2>
+		<h2 class="s_tit">button 요소: (line break)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>b 요소는 폰트와 관련된 요소이며 단순히 글자를 굵게 볼드체로 표현하는 텍스트에 사용합니다.</dd>
+		<dd>button 요소는 버튼을 나타냅니다. 이 요소는 input요소로 생성하는 버튼과 같지만, 이미지나 텍스트등을 포함할 수 있습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Inline-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Text formatting</p>
+		<p>Form</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<article>
-				<h1>요구르트 라면 조리법</h1>
-				<ol>
-				<li>먼저 <b>면</b>을 익힌 후 물기를 빼서 차게 식힙니다.</li>
-				<li><b>복숭아맛 떠먹는 요구르트</b>를 붓습니다.</li>
-				<li>기호에 따라 <b>오이</b>, <b>피망</b> 등 신선한 야채를 넣으면 더욱 좋습니다.</li>
-				</ol>
-			</article>
+			<button type="button">확인</button>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -62,7 +55,18 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'}
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'autofocus', desc:'페이지를 로드할 때 자동으로 포커스가 요소에 위치합니다.', href:'http://naver.com'},
+			{tit:'disabled', desc:'요소를 비활성화시킵니다.', href:'http://naver.com'},
+			{tit:'form', desc:'연결되는 폼 소유자를 가리킵니다.', href:'http://naver.com'},
+			{tit:'formaction', desc:'폼 제출할 서버의 url입니다.', href:'http://naver.com'},
+			{tit:'formenctype', desc:'제출하는 폼 데이터를 인코딩합니다.', href:'http://naver.com'},
+			{tit:'formmethod', desc:'폼 제출시 사용 되는 HTTP 메서드입니다.', href:'http://naver.com'},
+			{tit:'formnovalidate', desc:'폼 제출시 데이터의 유효성 검사여부 결정합니다.', href:'http://naver.com'},
+			{tit:'formtarget', desc:'폼 제출 후 결과를 표시할 브라우징을 정의합니다.', href:'http://naver.com'},
+			{tit:'name', desc:'폼 제출시에 사용되는 폼 컨트롤의 이름을 나타냅니다.', href:'http://naver.com'},
+			{tit:'type', desc:'동작을 제어합니다.', href:'http://naver.com'},
+			{tit:'value', desc:'폼 제출시 사용되게 되는 이름입니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

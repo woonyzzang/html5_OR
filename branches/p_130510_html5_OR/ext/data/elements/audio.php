@@ -30,7 +30,7 @@
 		<p>Inline-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Embedded</p>
+		<p>Image &amp; media</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
@@ -55,7 +55,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통영역', href:'http://naver.com'},
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'src', desc:'미디어 자원의 주소를 제공합니다.', href:'http://naver.com'},
 			{tit:'autoplay', desc:'미디어를 자동 재생합니다.', href:'http://naver.com'},
 			{tit:'loop', desc:'미디어를 반복 재생합니다.', href:'http://naver.com'},

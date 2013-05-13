@@ -30,7 +30,7 @@
 		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Sectioning</p>
+		<p>Structural Elements</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
@@ -39,10 +39,10 @@
 		<pre class="brush:html">
 		<article>
 			<header>
-			<h1>산은 산이요 물은 물이로다</h1>
-				<p><time pubdate datetime="2009-10-09T14:28-08:00"></time></p>
+				<h1>인터넷 익스플로러 9</h1>
+				<p><time pubdate="pubdate" datetime="2009-10-09T14:28-08:00"></time></p>
 			</header>
-			<p>3월인데도 여전히 춥습니다. 심지어 눈까지 내려 저희집 뒷산이 설산이 되었네요..</p>
+			<p>윈도우 인터넷 익스플로러 9(IE9)가 발표되었습니다.</p>
 			<footer>
 				<a href="#">이 글에 대한 댓글...</a>
 			</footer>
@@ -64,7 +64,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통영역', href:'http://naver.com'},
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
 		]},
 		proxy : {
 			type: 'memory',

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>b 요소 : HTML5 Open Reference Guide</title>
+<title>cite 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,11 +19,11 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">b 요소: (bold)</h2>
+		<h2 class="s_tit">cite 요소: (cited title of a work)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>b 요소는 폰트와 관련된 요소이며 단순히 글자를 굵게 볼드체로 표현하는 텍스트에 사용합니다.</dd>
+		<dd>cite 요소는 작품의 제목(예: 책, 음악, 영화, TV 쇼, 회화, 조각 등)을 정의합니다. 이러한 작품은 인용되었거나 자세하게 참조(citation)되었을 수 있고, 혹은 지나가면서 간략히 언급한 것일 수 있습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
@@ -37,14 +37,11 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<article>
-				<h1>요구르트 라면 조리법</h1>
-				<ol>
-				<li>먼저 <b>면</b>을 익힌 후 물기를 빼서 차게 식힙니다.</li>
-				<li><b>복숭아맛 떠먹는 요구르트</b>를 붓습니다.</li>
-				<li>기호에 따라 <b>오이</b>, <b>피망</b> 등 신선한 야채를 넣으면 더욱 좋습니다.</li>
-				</ol>
-			</article>
+			<p>
+				내가 제일 좋아하는 책은 피터 F. 해밀턴의 <cite>현실 부전</cite>입니다.
+				내가 제일 좋아하는 만화는 스테판 패스티스의 <cite>돼지 목에 진주목걸이</cite> 입니다.
+				내가 가장 좋아하는 트랙은 <cite>자이브 삼바</cite>의 캐논볼 애덜리 육중창주 입니다.
+			</p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
