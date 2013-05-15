@@ -30,7 +30,7 @@
 		<p>Inline-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Meta info</p>
+		<p>Structural Elements</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->

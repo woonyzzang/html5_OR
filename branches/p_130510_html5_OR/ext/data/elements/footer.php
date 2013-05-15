@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>datalist 요소 : HTML5 Open Reference Guide</title>
+<title>footer 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,15 +19,15 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">datalist 요소: (predefined options for other controls)</h2>
+		<h2 class="s_tit">footer 요소: (footer for a section or page)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>datalist 요소는 다른 컨트롤에서 사용할 수 있도록 input 요소에 대해 미리 정의된 옵션 집합을 나타냅니다. 요소의 내용은 미리 정의된 옵션을 나타내는 option 요소와 섞여서 자동 완성기능을 제공하며 입력 데이터로 사용자는 미리 정의 된 옵션의 드롭 다운 목록이 표시됩니다.</dd>
+		<dd>footer 요소는 문서나 섹션(section)의 하단부분(footer)에 해당 콘텐츠의 정보를 요약 정의하는 역할을 합니다. 보통 작성자, 연관된 문서에 대한 링크, 저작권 정보, 기타 흡사한 정보를 담습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
 		<p>Structural Elements</p>
@@ -37,14 +37,10 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<input type="text" list="browsers">
-			<datalist id="browsers">
-			<option value="Internet Explorer">인터넷 익스플로러</option>
-			<option value="Firefox">파이어 폭스</option>
-			<option value="Chrome">구글 크롬</option>
-			<option value="Opera">오페라</option>
-			<option value="Safari">사파리</option>
-			</datalist>
+			<footer>
+				<p>Posted by: woonyzzang</p>
+				<p><time pubdate datetime="2013-06-28"></time></p>
+			</footer>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

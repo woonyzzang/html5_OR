@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>datalist 요소 : HTML5 Open Reference Guide</title>
+<title>hr 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,15 +19,16 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">datalist 요소: (predefined options for other controls)</h2>
+		<h2 class="s_tit">hr 요소: (thematic break)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>datalist 요소는 다른 컨트롤에서 사용할 수 있도록 input 요소에 대해 미리 정의된 옵션 집합을 나타냅니다. 요소의 내용은 미리 정의된 옵션을 나타내는 option 요소와 섞여서 자동 완성기능을 제공하며 입력 데이터로 사용자는 미리 정의 된 옵션의 드롭 다운 목록이 표시됩니다.</dd>
+		<dd>hr 요소는 문단 레벨에서 주제의 분리를 나타냅니다. 이 요소는 단순히 문단의 구분이 아닌 전체 문서의 흐름에서 주제가 확연히 다른 영역끼리의 구분을 위해 사용합니다.</dd>
+		<dd>섹션 사이에는 hr 요소가 필요하지 않습니다. section 요소와 h1 요소가 테마의 변화를 암시하고 있기 때문입니다. 또한, hr 요소는 문서의 개요에는 영향을 미치지 않습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Blank 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
 		<p>Structural Elements</p>
@@ -37,14 +38,9 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<input type="text" list="browsers">
-			<datalist id="browsers">
-			<option value="Internet Explorer">인터넷 익스플로러</option>
-			<option value="Firefox">파이어 폭스</option>
-			<option value="Chrome">구글 크롬</option>
-			<option value="Opera">오페라</option>
-			<option value="Safari">사파리</option>
-			</datalist>
+			<p>HTML은 웹 페이지를 기술하기위한 언어입니다...</p>
+			<hr>
+			<p>CSS가 HTML 요소를 표시하는 방법을 정의합니다...</p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

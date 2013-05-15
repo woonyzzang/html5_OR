@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>datalist 요소 : HTML5 Open Reference Guide</title>
+<title>html 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,32 +19,30 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">datalist 요소: (predefined options for other controls)</h2>
+		<h2 class="s_tit">html 요소: (root element)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>datalist 요소는 다른 컨트롤에서 사용할 수 있도록 input 요소에 대해 미리 정의된 옵션 집합을 나타냅니다. 요소의 내용은 미리 정의된 옵션을 나타내는 option 요소와 섞여서 자동 완성기능을 제공하며 입력 데이터로 사용자는 미리 정의 된 옵션의 드롭 다운 목록이 표시됩니다.</dd>
+		<dd>html 요소는 HTML문서의 기본을 나타냅니다. 이 요소는 문서의 기본 요소이며, 모든 내용을 포함하는 가장 바깥 요소이자 최상위 요소로 사용 됩니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Structural Elements</p>
+		<p>HTML Basic</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<input type="text" list="browsers">
-			<datalist id="browsers">
-			<option value="Internet Explorer">인터넷 익스플로러</option>
-			<option value="Firefox">파이어 폭스</option>
-			<option value="Chrome">구글 크롬</option>
-			<option value="Opera">오페라</option>
-			<option value="Safari">사파리</option>
-			</datalist>
+			&lt;html&gt;
+			&lt;head&gt;
+			&lt;title&gt;HTML5 Open References&lt;/title&gt;
+			&lt;/head&gt;
+			&lt;body&gt;HTML5 오픈 레퍼런스 내용입니다.&lt;/body&gt;
+			&lt;/html&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -62,7 +60,8 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'}
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'manifest', desc:'문서의 애플리케이션 캐시 매니페스트 주소를 나타냅니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

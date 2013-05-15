@@ -60,24 +60,24 @@ Ext.onReady(function(){
 					{text: 'doctype', leaf: true, href: ['ext/data/elements/doctype.php', 'ext/data/elements/doctype_desc.php']},
 					{text: 'dt', leaf: true, href: ['ext/data/elements/dt.php', 'ext/data/elements/dt_desc.php']}
 				]},
-				{text: 'E', expanded: true, children: [
-					{text: 'em', leaf: true},
-					{text: 'embed', leaf: true}
+				{text: 'E', expanded: false, children: [
+					{text: 'em', leaf: true, href: ['ext/data/elements/em.php', 'ext/data/elements/em_desc.php']},
+					{text: 'embed', leaf: true, href: ['ext/data/elements/embed.php', 'ext/data/elements/embed_desc.php']}
 				]},
-				{text: 'F', expanded: true, children: [
-					{text: 'fieldset', leaf: true},
-					{text: 'figcaption', leaf: true},
-					{text: 'figure', leaf: true},
-					{text: 'footer', leaf: true},
-					{text: 'form', leaf: true}
+				{text: 'F', expanded: false, children: [
+					{text: 'fieldset', leaf: true, href: ['ext/data/elements/fieldset.php', 'ext/data/elements/fieldset_desc.php']},
+					{text: 'figcaption', leaf: true, href: ['ext/data/elements/figcaption.php', 'ext/data/elements/figcaption_desc.php']},
+					{text: 'figure', leaf: true, href: ['ext/data/elements/figure.php', 'ext/data/elements/figure_desc.php']},
+					{text: 'footer', leaf: true, href: ['ext/data/elements/footer.php', 'ext/data/elements/footer_desc.php']},
+					{text: 'form', leaf: true, href: ['ext/data/elements/form.php', 'ext/data/elements/form_desc.php']}
 				]},
-				{text: 'H', expanded: true, children: [
-					{text: 'h1 ,h2, h3, h4, h5, h6', leaf: true},
-					{text: 'head', leaf: true},
-					{text: 'header', leaf: true},
-					{text: 'hgroup', leaf: true},
-					{text: 'hr', leaf: true},
-					{text: 'html', leaf: true}
+				{text: 'H', expanded: false, children: [
+					{text: 'h1, h2, h3, h4, h5, h6', leaf: true, href: ['ext/data/elements/h1toh6.php', 'ext/data/elements/h1toh6_desc.php']},
+					{text: 'head', leaf: true, href: ['ext/data/elements/head.php', 'ext/data/elements/head_desc.php']},
+					{text: 'header', leaf: true, href: ['ext/data/elements/header.php', 'ext/data/elements/header_desc.php']},
+					{text: 'hgroup', leaf: true, href: ['ext/data/elements/hgroup.php', 'ext/data/elements/hgroup_desc.php']},
+					{text: 'hr', leaf: true, href: ['ext/data/elements/hr.php', 'ext/data/elements/hr_desc.php']},
+					{text: 'html', leaf: true, href: ['ext/data/elements/html.php', 'ext/data/elements/html_desc.php']}
 				]},
 				{text: 'I', expanded: true, children: [
 					{text: 'i', leaf: true},
@@ -305,6 +305,7 @@ Ext.onReady(function(){
 		collapsible: true,
 		collapsed: true,
 		//collapseMode: 'mini',
+		//hidden: true,
 		width: 300,
 		layout: {
 			type: 'accordion',

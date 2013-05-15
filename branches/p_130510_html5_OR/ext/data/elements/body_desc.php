@@ -14,7 +14,7 @@
 		<dt class="first">[요소가 속하는 범주]</dt>
 		<dd>
 			<ul>
-			<li>Sectioning root.</li>
+			<li>섹션 루트</li>
 			</ul>
 		</dd>
 		<dt>[이 요소가 사용될 수 있는 문맥]</dt>

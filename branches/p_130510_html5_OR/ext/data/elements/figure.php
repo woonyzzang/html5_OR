@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>datalist 요소 : HTML5 Open Reference Guide</title>
+<title>figure 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,15 +19,15 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">datalist 요소: (predefined options for other controls)</h2>
+		<h2 class="s_tit">figure 요소: (figure caption)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>datalist 요소는 다른 컨트롤에서 사용할 수 있도록 input 요소에 대해 미리 정의된 옵션 집합을 나타냅니다. 요소의 내용은 미리 정의된 옵션을 나타내는 option 요소와 섞여서 자동 완성기능을 제공하며 입력 데이터로 사용자는 미리 정의 된 옵션의 드롭 다운 목록이 표시됩니다.</dd>
+		<dd>figure 요소는 문서안의 독집적인 이미지, 비디오, 일러스트레이션, 다이어그램, 사진, 코드 등과 같은 플로우 컨텐츠를 문서에 포함합니다. 이 요소는 보통 문서의 흐름에서 단일 요소로 참조되어 제거되더라도 문서의 주된 흐름에 영향을 미치지 않습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
 		<p>Structural Elements</p>
@@ -37,14 +37,9 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<input type="text" list="browsers">
-			<datalist id="browsers">
-			<option value="Internet Explorer">인터넷 익스플로러</option>
-			<option value="Firefox">파이어 폭스</option>
-			<option value="Chrome">구글 크롬</option>
-			<option value="Opera">오페라</option>
-			<option value="Safari">사파리</option>
-			</datalist>
+			<figure>
+				<img src="@이미지파일" alt="W3C Logo">
+			</figure>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

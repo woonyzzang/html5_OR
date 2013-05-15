@@ -27,7 +27,7 @@
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Blank 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
 		<p>Structural Elements</p>

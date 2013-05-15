@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>datalist 요소 : HTML5 Open Reference Guide</title>
+<title>form 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,32 +19,29 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">datalist 요소: (predefined options for other controls)</h2>
+		<h2 class="s_tit">form 요소: (user-submittable form)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>datalist 요소는 다른 컨트롤에서 사용할 수 있도록 input 요소에 대해 미리 정의된 옵션 집합을 나타냅니다. 요소의 내용은 미리 정의된 옵션을 나타내는 option 요소와 섞여서 자동 완성기능을 제공하며 입력 데이터로 사용자는 미리 정의 된 옵션의 드롭 다운 목록이 표시됩니다.</dd>
+		<dd>form 요소는 폼과 관련된 요소의 집합을 나타냅니다. 그중 일부는 서버에 전송하여 처리할 변경 가능 한 값을 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Structural Elements</p>
+		<p>Form</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<input type="text" list="browsers">
-			<datalist id="browsers">
-			<option value="Internet Explorer">인터넷 익스플로러</option>
-			<option value="Firefox">파이어 폭스</option>
-			<option value="Chrome">구글 크롬</option>
-			<option value="Opera">오페라</option>
-			<option value="Safari">사파리</option>
-			</datalist>
+			<form action="#" target="_self" method="get">
+				First name: <input type="text" name="fname">
+				Last name: <input type="text" name="lname">
+				<input type="submit" value="Submit">
+			</form>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -62,7 +59,15 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'}
+			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'accept-charset', desc:'폼을 전송할 때 사용할 문자 인코딩 방법입니다. utf-8, euc-kr… 등을 값을 가집니다.', href:'http://naver.com'},
+			{tit:'name', desc:'폼 제출 시에 사용되는 폼 컨트롤의 이름을 나타냅니다.', href:'http://naver.com'},
+			{tit:'autocomplete', desc:'폼 내부 요소의 자동완성 기능을 명시합니다.', href:'http://naver.com'},
+			{tit:'action', desc:'폼을 전송할 URL을 입력합니다.', href:'http://naver.com'},
+			{tit:'enctype', desc:'폼을 전송할 때 사용할 인코딩 방법을 정의합니다.', href:'http://naver.com'},
+			{tit:'method', desc:'폼을 전송할 방식을 지정합니다.', href:'http://naver.com'},
+			{tit:'novalidate', desc:'폼을 전송하기 전에 유효성검사를 할 것인지 명시합니다.', href:'http://naver.com'},
+			{tit:'target', desc:'action 속성의 URL을 열 위치를 지정합니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

@@ -11,7 +11,7 @@ table{width:100%;border-collapse:collapse;border-spacing:0}
 */
 
 /* =Common */
-body{font-family:NanumGothic,'나눔고딕',MalgunGothic,'맑은고딕',Dotum,'돋움',Gulim,'굴림',AppleGothic,Helvetica,sans-serif;font-size:14px}
+.x-body{font-family:NanumGothic,'나눔고딕',MalgunGothic,'맑은고딕',Dotum,'돋움',Gulim,'굴림',AppleGothic,Helvetica,sans-serif;font-size:14px}
 
 /* =Set Class */
 .blind{visibility:hidden;overflow:hidden;position:absolute;z-index:-1;width:0;height:0;font-size:0;line-height:0}
@@ -68,7 +68,7 @@ body{font-family:NanumGothic,'나눔고딕',MalgunGothic,'맑은고딕',Dotum,'�
 
 /* =Related */
 #related{padding:10px}
-#related a{color:#08990e;line-height:1.4}
+#related a{color:#08990e;line-height:1.8}
 
 /* =Browser */
 #browser{padding:2px 15px}
