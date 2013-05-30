@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>base 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>noscript 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -15,27 +15,27 @@
 		<dd>
 			<ul>
 			<li>메타데이터</li>
+			<li>플로우 컨텐츠</li>
+			<li>구문 컨텐츠</li>
 			</ul>
 		</dd>
-		<dt>[이 요소가 사용될 수 있는 문맥]</dt>
-		<dd>head 요소 내부에서, 다른 base 요소 없이 단독으로.</dd>
+		<dt>[이 사용될 수 있는요소가 문맥]</dt>
+		<dd>HTML 문서의 head 요소 내부. 단, noscript 요소 내부는 안됩니다.</dd>
+		<dd>HTML 문서에서 구문 컨텐츠가 나타날 수 있는 곳. 단, noscript 요소 내부는 안됩니다.</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>이 요소는 비어 있어야 합니다.</dd>
+		<dd>스크립팅이 비활성화되었을 때 head 요소 내부에 있으면: link, style, meta 요소를 순서나 개수에 무관하게 포함할 수 있습니다.</dd>
+		<dd>스크립팅이 비활성화되었을 때 head 요소 내부에 없으면: 투명한 요소. 하지만, noscript 요소는 포함할 수 없습니다.</dd>
+		<dd>그렇지 않으면: 아래에서 주어진 요구사항을 만족하는 텍스트를 포함할 수 있습니다.</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
-			<li>href</li>
-			<li>target</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-interface HTMLBaseElement : HTMLElement {
-           attribute DOMString href;
-           attribute DOMString target;
-};
+Uses HTMLElement.
 			</pre>
 		</dd>
 		</dl>
@@ -55,10 +55,9 @@ interface HTMLBaseElement : HTMLElement {
 		</svg>
 
 		<ul>
-		<li>플로우 컨텐츠구문 컨텐츠에 속합니다.</li>
-		<li>구문 컨텐츠의 위치에 사용할 수 있습니다.</li>
-		<li>구문 컨텐츠를 자식 요소로 포함할 수 있습니다.</li>
-		<li>대체 가능한 요소가 있다면, 되도록 그것을 사용합니다.</li>
+		<li>메타데이터, 플로우 컨텐츠이면서 구문 컨텐츠에 속합니다.</li>
+		<li>head 요소 내부와 구문 컨텐츠가 나타날 수 있는 곳에 위치할 수 있습니다. 단, 두가지 경우에도 noscript 요소를 중첩해서 사용할 수 없습니다.</li>
+		<li>스크립트가 비활성화되어 있을 때 head 요소 내부에 있으면, link, style 요소, meta 요소를 포함할 수 있고, head 요소 내부에 없으면 투명한 요소가 됩니다. 단, noscript 요소는 중첩될 수 없습니다.</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -66,48 +65,24 @@ interface HTMLBaseElement : HTMLElement {
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>base요소는 head요소 안에 위치해야 합니다.</li>
+		<li>이 요소는 스크립트를 사용할 수 없는 브라우저를 가진 사용자나 클라이언트 스크립팅을 지원하지 않는 브라우저를 가진 사용자를 위해 대체 콘텐트를 제공할때 사용합니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
 	<!-- 관련 요소 레벨 -->
 	<section id="related">
 		<h3 class="blind">관련 요소 레벨</h3>
-		<a href="#">em 요소</a>,
-		<a href="#">strong 요소</a>,
-		<a href="#">small 요소</a>,
-		<a href="#">s 요소</a>,
-		<a href="#">cite 요소</a>,
-		<a href="#">q 요소</a>,
-		<a href="#">dfn 요소</a>,
-		<a href="#">abbr 요소</a>,
-		<a href="#">time 요소</a>,
-		<a href="#">code 요소</a>,
-		<a href="#">var 요소</a>,
-		<a href="#">samp 요소</a>,
-		<a href="#">kbd 요소</a>,
-		<a href="#">sub 요소</a>,
-		<a href="#">sup 요소</a>,
-		<a href="#">i 요소</a>,
-		<a href="#">b 요소</a>,
-		<a href="#">mark 요소</a>,
-		<a href="#">ruby 요소</a>,
-		<a href="#">rt 요소</a>,
-		<a href="#">rp 요소</a>,
-		<a href="#">bdi 요소</a>,
-		<a href="#">bdo 요소</a>,
-		<a href="#">span 요소</a>,
-		<a href="#">br 요소</a>,
-		<a href="#">wbr 요소</a>,
-		<a href="#">ins 요소</a>,
-		<a href="#">del 요소</a>,
-		<a href="#">iframe 요소</a>,
-		<a href="#">param 요소</a>,
-		<a href="#">source 요소</a>,
-		<a href="#">map 요소</a>,
-		<a href="#">area 요소</a>,
-		<a href="#">summary 요소</a>,
-		<a href="#">command 요소</a>
+		<a href="#">doctype</a>,
+		<a href="#">html 요소</a>,
+		<a href="#">head 요소</a>,
+		<a href="#">title 요소</a>,
+		<a href="#">base 요소</a>,
+		<a href="#">link 요소</a>,
+		<a href="#">meta 요소</a>,
+		<a href="#">style 요소</a>,
+		<a href="#">body 요소</a>,
+		<a href="#">noscript 요소</a>,
+		<a href="#">script 요소</a>
 	</section>
 	<!--//관련 요소 레벨 -->
 	<!-- 지원 브라우저 -->

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>base 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>meta 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -17,24 +17,31 @@
 			<li>메타데이터</li>
 			</ul>
 		</dd>
-		<dt>[이 요소가 사용될 수 있는 문맥]</dt>
-		<dd>head 요소 내부에서, 다른 base 요소 없이 단독으로.</dd>
+		<dt>[이 사용될 수 있는요소가 문맥]</dt>
+		<dd>charset 속성이 있거나 요소의 http-equiv 속성이 인코딩 선언 상태일 때 : head 요소 내부</dd>
+		<dd>http-equiv 속성이 있지만 인코딩 선언 상태는 아닐 때 : head 요소 내부</dd>
+		<dd>http-equiv 속성이 있지만 인코딩 선언 상태는 아닐 때 : head 요소의 자식 요소인 noscript 요소 내부</dd>
+		<dd>name 속성이 있을 때 : 메타데이터를 쓸 수 있는 곳</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
 		<dd>이 요소는 비어 있어야 합니다.</dd>
+		<dd>또는, 플로우 컨텐츠</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
-			<li>href</li>
-			<li>target</li>
+			<li>name</li>
+			<li>http-equiv</li>
+			<li>content</li>
+			<li>charset</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-interface HTMLBaseElement : HTMLElement {
-           attribute DOMString href;
-           attribute DOMString target;
+interface HTMLMetaElement : HTMLElement {
+           attribute DOMString name;
+           attribute DOMString httpEquiv;
+           attribute DOMString content;
 };
 			</pre>
 		</dd>
@@ -55,10 +62,9 @@ interface HTMLBaseElement : HTMLElement {
 		</svg>
 
 		<ul>
-		<li>플로우 컨텐츠구문 컨텐츠에 속합니다.</li>
-		<li>구문 컨텐츠의 위치에 사용할 수 있습니다.</li>
-		<li>구문 컨텐츠를 자식 요소로 포함할 수 있습니다.</li>
-		<li>대체 가능한 요소가 있다면, 되도록 그것을 사용합니다.</li>
+		<li>name 속성, http-equiv 속성, charset 속성 중 하나를 반드시 써야 합니다.</li>
+		<li>name 속성이나 http-equiv 속성을 썼다면 content 속성도 써야 합니다. 아니라면, 반드시 생략해야 합니다.</li>
+		<li>http-equiv 속성을 썼다면 meta 요소는 반드시 head 요소 내에 써야 합니다. http-equiv 속성이 없는 meta 요소는 head 요소 또는 head 요소의 자식 요소인 noscript 요소 내부에 써야 합니다.</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -66,48 +72,26 @@ interface HTMLBaseElement : HTMLElement {
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>base요소는 head요소 안에 위치해야 합니다.</li>
+		<li>이 요소는 head 요소에서만 사용 되며, 항상 key&frasl;value 값으로 전달됩니다.</li>
+		<li>한 문서에서 charset속성을 가진 하나의 meta 속성만 사용할 수 있습니다.</li>
+		<li>name이나 http-equiv중 하나를 사용했다면 반드시 content속성을 사용해야 합니다. 그렇지 않으면 그것들은 생략되어야 합니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
 	<!-- 관련 요소 레벨 -->
 	<section id="related">
 		<h3 class="blind">관련 요소 레벨</h3>
-		<a href="#">em 요소</a>,
-		<a href="#">strong 요소</a>,
-		<a href="#">small 요소</a>,
-		<a href="#">s 요소</a>,
-		<a href="#">cite 요소</a>,
-		<a href="#">q 요소</a>,
-		<a href="#">dfn 요소</a>,
-		<a href="#">abbr 요소</a>,
-		<a href="#">time 요소</a>,
-		<a href="#">code 요소</a>,
-		<a href="#">var 요소</a>,
-		<a href="#">samp 요소</a>,
-		<a href="#">kbd 요소</a>,
-		<a href="#">sub 요소</a>,
-		<a href="#">sup 요소</a>,
-		<a href="#">i 요소</a>,
-		<a href="#">b 요소</a>,
-		<a href="#">mark 요소</a>,
-		<a href="#">ruby 요소</a>,
-		<a href="#">rt 요소</a>,
-		<a href="#">rp 요소</a>,
-		<a href="#">bdi 요소</a>,
-		<a href="#">bdo 요소</a>,
-		<a href="#">span 요소</a>,
-		<a href="#">br 요소</a>,
-		<a href="#">wbr 요소</a>,
-		<a href="#">ins 요소</a>,
-		<a href="#">del 요소</a>,
-		<a href="#">iframe 요소</a>,
-		<a href="#">param 요소</a>,
-		<a href="#">source 요소</a>,
-		<a href="#">map 요소</a>,
-		<a href="#">area 요소</a>,
-		<a href="#">summary 요소</a>,
-		<a href="#">command 요소</a>
+		<a href="#">doctype</a>,
+		<a href="#">html 요소</a>,
+		<a href="#">head 요소</a>,
+		<a href="#">title 요소</a>,
+		<a href="#">base 요소</a>,
+		<a href="#">link 요소</a>,
+		<a href="#">meta 요소</a>,
+		<a href="#">style 요소</a>,
+		<a href="#">body 요소</a>,
+		<a href="#">noscript 요소</a>,
+		<a href="#">script 요소</a>
 	</section>
 	<!--//관련 요소 레벨 -->
 	<!-- 지원 브라우저 -->
