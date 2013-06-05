@@ -59,7 +59,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'accept-charset', desc:'폼을 전송할 때 사용할 문자 인코딩 방법입니다. utf-8, euc-kr… 등을 값을 가집니다.', href:'http://naver.com'},
 			{tit:'name', desc:'폼 제출 시에 사용되는 폼 컨트롤의 이름을 나타냅니다.', href:'http://naver.com'},
 			{tit:'autocomplete', desc:'폼 내부 요소의 자동완성 기능을 명시합니다.', href:'http://naver.com'},

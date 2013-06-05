@@ -55,7 +55,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'alt', desc:'이미지로 전달하려고 했던 문장 또는 구절입니다. 이미지가 표시되지 않을 때 대신 사용됩니다.', href:'http://naver.com'},
 			{tit:'src', desc:'이미지의 주소입니다. (필수 속성입니다.)', href:'http://naver.com'},
 			{tit:'usemap', desc:'이 이미지와 연관된 이미지 맵이 있음을 나타냅니다.', href:'http://naver.com'},

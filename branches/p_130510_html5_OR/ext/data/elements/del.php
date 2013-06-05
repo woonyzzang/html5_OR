@@ -55,7 +55,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'cite', desc:'del 요소의 변화를 설명하는 문서의 위치를 명시합니다.', href:'http://naver.com'},
 			{tit:'datetime', desc:'삭제한 날짜와 시간입니다.', href:'http://naver.com'}
 		]},

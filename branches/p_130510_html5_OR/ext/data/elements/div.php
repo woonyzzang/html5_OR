@@ -30,7 +30,7 @@
 		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Structural Elements</p>
+		<p>Layout</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
@@ -58,7 +58,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'}
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

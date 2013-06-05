@@ -58,7 +58,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'href', desc:'문서의 기준이 되는 URL을 지정합니다', href:'http://naver.com'},
 			{tit:'target', desc:'하이퍼링크의 대상이 되는 브라우징 콘텍스트 이름이나 키워드를 지정합니다', href:'http://naver.com'}
 		]},

@@ -37,12 +37,12 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-		<img src="planets.gif" usemap="#planetmap" alt="Planets">
-		<map name="planetmap">
-			<area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
-			<area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
-			<area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
-		</map>
+			<img src="planets.gif" usemap="#planetmap" alt="Planets">
+			<map name="planetmap">
+				<area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+				<area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+				<area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
+			</map>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -60,7 +60,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'alt', desc:'링크의 목적을 설명합니다.', href:'naver.com'},
 			{tit:'coords', desc:'shape에서 정의한 모양의 좌표를 정의합니다.', href:'naver.com'},
 			{tit:'shape', desc:'circle, dafault, poly, rect 키워드로 속성을 정의합니다.', href:'naver.com'},

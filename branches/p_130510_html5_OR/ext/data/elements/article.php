@@ -37,16 +37,16 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-		<article>
-			<header>
-				<h1>인터넷 익스플로러 9</h1>
-				<p><time pubdate="pubdate" datetime="2009-10-09T14:28-08:00"></time></p>
-			</header>
-			<p>윈도우 인터넷 익스플로러 9(IE9)가 발표되었습니다.</p>
-			<footer>
-				<a href="#">이 글에 대한 댓글...</a>
-			</footer>
-		</article>
+			<article>
+				<header>
+					<h1>인터넷 익스플로러 9</h1>
+					<p><time pubdate="pubdate" datetime="2009-10-09T14:28-08:00"></time></p>
+				</header>
+				<p>윈도우 인터넷 익스플로러 9(IE9)가 발표되었습니다.</p>
+				<footer>
+					<a href="#">이 글에 대한 댓글...</a>
+				</footer>
+			</article>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -64,7 +64,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

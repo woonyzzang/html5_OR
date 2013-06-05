@@ -60,7 +60,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'type', desc:'명령의 종류를 정의합니다. radio, checkbox, command를 지정할 수 있습니다. 기본값은 command입니다.', href:'http://naver.com'},
 			{tit:'label', desc:'command의 이름을 지정합니다. 값으로 빈 문자열을 쓸 수 없습니다.', href:'http://naver.com'},
 			{tit:'title', desc:'사용자에게 도움이 될 만한 설명이나 힌트를 제공합니다.', href:'http://naver.com'},

@@ -58,7 +58,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'dir', desc:'자식 요소의 텍스트 방향을 강제로 지정합니다. 오른쪽에서 왼쪽으로 지정한다면 \'rtl\' 값을 지정합니다.', href:'http://naver.com'}
 		]},
 		proxy : {

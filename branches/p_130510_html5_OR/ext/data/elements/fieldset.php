@@ -59,7 +59,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'disabled', desc:'이 속성을 작성하면 자식 요소를 비활성화합니다.', href:'http://naver.com'},
 			{tit:'form', desc:'폼 소유자와 명시적으로 연관시키기 위해 사용됩니다.', href:'http://naver.com'},
 			{tit:'name', desc:'폼 제출시에 사용되는 폼 컨트롤의 이름을 나타냅니다.', href:'http://naver.com'}

@@ -60,7 +60,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'manifest', desc:'문서의 애플리케이션 캐시 매니페스트 주소를 나타냅니다.', href:'http://naver.com'}
 		]},
 		proxy : {

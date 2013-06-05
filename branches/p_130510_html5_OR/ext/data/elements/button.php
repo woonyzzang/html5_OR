@@ -55,7 +55,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'autofocus', desc:'페이지를 로드할 때 자동으로 포커스가 요소에 위치합니다.', href:'http://naver.com'},
 			{tit:'disabled', desc:'요소를 비활성화시킵니다.', href:'http://naver.com'},
 			{tit:'form', desc:'연결되는 폼 소유자를 가리킵니다.', href:'http://naver.com'},

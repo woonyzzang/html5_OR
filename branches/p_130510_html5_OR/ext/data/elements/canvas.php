@@ -55,7 +55,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'width', desc:'canvas 요소의 너비를 지정 합니다.', href:'http://naver.com'},
 			{tit:'height', desc:'canvas 요소의 높이를 지정 합니다.', href:'http://naver.com'}
 		]},

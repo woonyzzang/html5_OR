@@ -62,7 +62,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'onbeforeprint', desc:'브라우저에서 프린트를 시작할 때 발생하는 이벤트입니다. CSS 미디어 쿼리 만으로는 표현할 수 없는 것을 자바스크립트로 보조하려고 할 때 사용합니다.', href:'http://naver.com'},
 			{tit:'onafterprint', desc:'브라우저에서 프린트를 끝냈을 때 발생하는 이벤트입니다. CSS 미디어 쿼리 만으로는 표현할 수 없는 것을 자바스크립트로 보조하려고 할 때 사용합니다.', href:'http://naver.com'},
 			{tit:'onbeforeunload', desc:'브라우저에서 현재 창을 닫거나, 다른 페이지로 가는 링크를 누르거나, document.write() 를 실행했을 때 발생합니다.', href:'http://naver.com'},

@@ -79,7 +79,7 @@ interface HTMLOptionElement : HTMLElement {
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>HTML5에서 추가된 요소입니다.</li>
+		<li>option 요소는 select 요소 또는 datalist 요소 내에 이동합니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->

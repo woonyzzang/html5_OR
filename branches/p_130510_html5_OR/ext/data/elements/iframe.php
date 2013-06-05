@@ -61,7 +61,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'src', desc:'중첩된 문맥이 포함된 페이지 주소를 정의합니다.', href:'http://naver.com'},
 			{tit:'srcdoc', desc:'중첩된 문맥이 포함된 내용을 정의합니다.', href:'http://naver.com'},
 			{tit:'name', desc:'중첩된 문맥의 이름을 정의합니다.', href:'http://naver.com'},

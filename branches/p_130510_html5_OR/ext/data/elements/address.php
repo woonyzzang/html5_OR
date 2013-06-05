@@ -61,7 +61,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'}
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',
