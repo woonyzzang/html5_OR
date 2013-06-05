@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>iframe 요소 : HTML5 Open Reference Guide</title>
+<title>object 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,31 +19,26 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">iframe 요소: (inline frame)</h2>
+		<h2 class="s_tit">object 요소: (generic external content)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>iframe 요소는 html 안에 다른 페이지의 문서를 불러오는데 사용됩니다. src과 srcdoc으로 중첩된 문맥이 포함된 페이지 주소나, 내용을 나타냅니다.</dd>
+		<dd>object 요소는 이미지, 오디오, 비디오, 자바애플릿, 액티브X, PDF, 플래시 등과 같은 개체, 중첩된 브라우징 문맥, 플러그인 등 외부 자원을 나타낼 수 있습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Frame &amp; window</p>
+		<p>HTML Basic</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<!-- 기본 -->
-			<iframe src="@문서파일 경로"></iframe>
-
-			<!-- 지원하지 않는 브라우저 고려시 -->
-			<iframe src="@문서파일 경로">
-				<p>Your browser does not support iframes.</p>
-			</iframe>
+			<!-- @플래시 파일을 포함하는 object 요소를 사용 -->
+			&lt;object width="400" height="400" data="@파일명"&gt;&lt;/object&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -61,12 +56,12 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
-			{tit:'src', desc:'중첩된 문맥이 포함된 페이지 주소를 정의합니다.', href:'http://naver.com'},
-			{tit:'srcdoc', desc:'중첩된 문맥이 포함된 내용을 정의합니다.', href:'http://naver.com'},
-			{tit:'name', desc:'중첩된 문맥의 이름을 정의합니다.', href:'http://naver.com'},
-			{tit:'sandbox', desc:'iframe 요소에 위치한 내용의 제한을 설정합니다.', href:'http://naver.com'},
-			{tit:'seamless', desc:'iframe 요소의 문맥이 문서의 일부분인것처럼 렌더링합니다.', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'data', desc:'자원의 주소를 명시합니다.', href:'http://naver.com'},
+			{tit:'type', desc:'자원의 타입을 명시합니다.', href:'http://naver.com'},
+			{tit:'name', desc:'문맥 이름을 정의 합니다.', href:'http://naver.com'},
+			{tit:'usemap', desc:'외부 자원이 이미지인 경우 이미지 맵과 연결합니다.', href:'http://naver.com'},
+			{tit:'form', desc:'명시적으로 폼 소유자를 정의합니다.', href:'http://naver.com'},
 			{tit:'width', desc:'요소의 너비를 정의합니다.', href:'http://naver.com'},
 			{tit:'height', desc:'요소의 높이를 정의합니다.', href:'http://naver.com'}
 		]},

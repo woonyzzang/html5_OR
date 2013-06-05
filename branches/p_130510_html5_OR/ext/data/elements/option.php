@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>iframe 요소 : HTML5 Open Reference Guide</title>
+<title>option 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,31 +19,35 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">iframe 요소: (inline frame)</h2>
+		<h2 class="s_tit">option 요소: (option)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>iframe 요소는 html 안에 다른 페이지의 문서를 불러오는데 사용됩니다. src과 srcdoc으로 중첩된 문맥이 포함된 페이지 주소나, 내용을 나타냅니다.</dd>
+		<dd>option 요소는 select 요소의 옵션이나 datalist 요소가 나타내는 제시 목록의 부분을 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Inline-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Frame &amp; window</p>
+		<p>From</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<!-- 기본 -->
-			<iframe src="@문서파일 경로"></iframe>
-
-			<!-- 지원하지 않는 브라우저 고려시 -->
-			<iframe src="@문서파일 경로">
-				<p>Your browser does not support iframes.</p>
-			</iframe>
+			<label for="baseball_list">야구단</label>
+			<select id="baseball_list">
+			<option value="lg" label="LG">LG 트윈스</option>
+			<option value="doosan" label="두산">두산 베어스</option>
+			<option value="kia" label="KIA" selected>KIA 타이거즈</option>
+			<option value="sk" label="SK">SK 와이번스</option>
+			<option value="samsung" label="삼성">삼성 라이온스</option>
+			<option value="hwanhaw" label="한화">한화 이글스</option>
+			<option value="nexen" label="넥센">넥센 히어로즈</option>
+			<option value="lotte" label="롯데">롯데 자이언츠</option>
+			</select>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -61,14 +65,11 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역속성', desc:'공통 속성', href:'http://naver.com'},
-			{tit:'src', desc:'중첩된 문맥이 포함된 페이지 주소를 정의합니다.', href:'http://naver.com'},
-			{tit:'srcdoc', desc:'중첩된 문맥이 포함된 내용을 정의합니다.', href:'http://naver.com'},
-			{tit:'name', desc:'중첩된 문맥의 이름을 정의합니다.', href:'http://naver.com'},
-			{tit:'sandbox', desc:'iframe 요소에 위치한 내용의 제한을 설정합니다.', href:'http://naver.com'},
-			{tit:'seamless', desc:'iframe 요소의 문맥이 문서의 일부분인것처럼 렌더링합니다.', href:'http://naver.com'},
-			{tit:'width', desc:'요소의 너비를 정의합니다.', href:'http://naver.com'},
-			{tit:'height', desc:'요소의 높이를 정의합니다.', href:'http://naver.com'}
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'disabled', desc:'옵션을 비활성합니다.', href:'http://naver.com'},
+			{tit:'selected', desc:'옵션이 선택되었는지를 나타냅니다.', href:'http://naver.com'},
+			{tit:'label', desc:'요소의 레이블을 나타냅니다.', href:'http://naver.com'},
+			{tit:'value', desc:'요소의 값을 나타냅니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

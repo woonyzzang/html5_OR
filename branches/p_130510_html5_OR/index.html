@@ -107,26 +107,26 @@ Ext.onReady(function(){
 					{text: 'nav', leaf: true, href: ['ext/data/elements/nav.php', 'ext/data/elements/nav_desc.php']},
 					{text: 'noscript', leaf: true, href: ['ext/data/elements/noscript.php', 'ext/data/elements/noscript_desc.php']}
 				]},
-				{text: 'O', expanded: true, children: [
-					{text: 'object', leaf: true},
-					{text: 'ol', leaf: true},
-					{text: 'optgroup', leaf: true},
-					{text: 'option', leaf: true},
-					{text: 'output', leaf: true}
+				{text: 'O', expanded: false, children: [
+					{text: 'object', leaf: true, href: ['ext/data/elements/object.php', 'ext/data/elements/object_desc.php']},
+					{text: 'ol', leaf: true, href: ['ext/data/elements/ol.php', 'ext/data/elements/ol_desc.php']},
+					{text: 'optgroup', leaf: true, href: ['ext/data/elements/optgroup.php', 'ext/data/elements/optgroup_desc.php']},
+					{text: 'option', leaf: true, href: ['ext/data/elements/option.php', 'ext/data/elements/option_desc.php']},
+					{text: 'output', leaf: true, href: ['ext/data/elements/output.php', 'ext/data/elements/output_desc.php']}
 				]},
-				{text: 'P', expanded: true, children: [
-					{text: 'p', leaf: true},
-					{text: 'param', leaf: true},
-					{text: 'pre', leaf: true},
-					{text: 'progress', leaf: true}
+				{text: 'P', expanded: false, children: [
+					{text: 'p', leaf: true, href: ['ext/data/elements/p.php', 'ext/data/elements/p_desc.php']},
+					{text: 'param', leaf: true, href: ['ext/data/elements/param.php', 'ext/data/elements/param_desc.php']},
+					{text: 'pre', leaf: true, href: ['ext/data/elements/pre.php', 'ext/data/elements/pre_desc.php']},
+					{text: 'progress', leaf: true, href: ['ext/data/elements/progress.php', 'ext/data/elements/progress_desc.php']}
 				]},
-				{text: 'Q', expanded: true, children: [
-					{text: 'q', leaf: true}
+				{text: 'Q', expanded: false, children: [
+					{text: 'q', leaf: true, href: ['ext/data/elements/q.php', 'ext/data/elements/q_desc.php']}
 				]},
-				{text: 'R', expanded: true, children: [
-					{text: 'rp', leaf: true},
-					{text: 'rt', leaf: true},
-					{text: 'ruby', leaf: true}
+				{text: 'R', expanded: false, children: [
+					{text: 'rp', leaf: true, href: ['ext/data/elements/rp.php', 'ext/data/elements/rp_desc.php']},
+					{text: 'rt', leaf: true, href: ['ext/data/elements/rt.php', 'ext/data/elements/rt_desc.php']},
+					{text: 'ruby', leaf: true, href: ['ext/data/elements/ruby.php', 'ext/data/elements/ruby_desc.php']}
 				]},
 				{text: 'S', expanded: true, children: [
 					{text: 'samp', leaf: true},
@@ -276,7 +276,7 @@ Ext.onReady(function(){
 
 					switch(newCard.title){
 						case 'Elements':
-							textVal = '태그';
+							textVal = '요소';
 							break;
 						case 'Attributes':
 							textVal = '속성';
