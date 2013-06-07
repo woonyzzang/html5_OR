@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>fieldset 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>tr 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -14,41 +14,31 @@
 		<dt class="first">[요소가 속하는 범주]</dt>
 		<dd>
 			<ul>
-			<li>플로우 컨텐츠</li>
-			<li>섹션 루트</li>
-			<li>목록화된 폼 관련 요소</li>
+			<li>없음</li>
 			</ul>
 		</dd>
 		<dt>[이 사용될 수 있는요소가 문맥]</dt>
-		<dd>구문 컨텐츠가 올 수 있는 곳</dd>
+		<dd>thead 요소의 자식 요소로</dd>
+		<dd>tbody 요소의 자식 요소로</dd>
+		<dd>tfoot 요소의 자식 요소로</dd>
+		<dd>table 요소의 자식으로 caption, colgroup, and thead 요소 다음. (이렇게 사용했을 때는 table 요소에 tbody 요소를 자식 요소로 쓸 수 없습니다.)</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>선택적으로, legend 요소. 그 다음에 플로우 컨텐츠가 옵니다.</dd>
+		<dd>0개 이상의 td 또는 th 요소</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
-			<li>disabled</li>
-			<li>form</li>
-			<li>name</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-interface HTMLFieldSetElement : HTMLElement {
-           attribute boolean disabled;
-  readonly attribute HTMLFormElement form;
-           attribute DOMString name;
-
-  readonly attribute DOMString type;
-
-  readonly attribute HTMLFormControlsCollection elements;
-
-  readonly attribute boolean willValidate;
-  readonly attribute ValidityState validity;
-  readonly attribute DOMString validationMessage;
-  boolean checkValidity();
-  void setCustomValidity(in DOMString error);
+interface HTMLTableRowElement : HTMLElement {
+  readonly attribute long rowIndex;
+  readonly attribute long sectionRowIndex;
+  readonly attribute HTMLCollection cells;
+  HTMLElement insertCell(in optional long index);
+  void deleteCell(in long index);
 };
 			</pre>
 		</dd>
@@ -69,15 +59,9 @@ interface HTMLFieldSetElement : HTMLElement {
 		</svg>
 
 		<ul>
-		<li>플로우 컨텐츠, 섹션 루트, 폼 관련 요소에 속합니다.
-			<ul>
-			<li>스크립트에서 form.elements와 fieldset.elements로 호출할 수 있습니다. (여기에서 form, fieldset은 해당 요소의 name 속성값입니다.)</li>
-			</ul>
-		</li>
-		<li>플로우 컨텐츠의 위치에 사용할 수 있습니다.</li>
-		<li>선택적으로 legend 요소를 자식 요소로 포함할 수 있으며 그 다음 플로우 컨텐츠를 포함할 수 있습니다.</li>
-		<li>사용된 legend 요소는 그룹의 이름으로 사용되며 나머지 자식 요소로 그룹을 형성합니다.</li>
-		<li>섹션 루트인 fieldset 요소는 독립된 개요(아웃라인)를 생성하며 fieldset 요소안에 사용된 섹션과 제목은 개요(아웃라인) 생성에 관여하지 않습니다.</li>
+		<li>thead 요소, tbody 요소, tfoot 요소의 자식 요소로 사용하며 table 요소의 자식 요소로도 사용할 수 있습니다.</li>
+		<li>caption 요소 ,colgroup 요소 ,thead 요소 다음에 선언할 수도 있습니다. 이렇게 tr 요소를 사용했을 때는 tbody 요소를 자식 요소로 쓸 수 없습니다.</li>
+		<li>td 요소 또는 th 요소를 0개 이상 포함할 수 있습니다.</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -85,23 +69,25 @@ interface HTMLFieldSetElement : HTMLElement {
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>HTML5에서 disabled 속성 , form 속성, name 속성이 추가되었습니다.</li>
-		<li>legend요소를 이용하여 캡션을 부여할 수 있습니다.</li>
+		<li>HTML5에서 사용했던 속성(align, valign, char, charoff)이 폐기되었습니다.</li>
+		<li>자식 요소로 사용하는 th 요소나 td 요소는 최소 한 번 이상 사용이였는데 0개 이상 사용으로 바뀌었습니다.</li>
+		<li>시작&frasl;종료 태그 생략 정보는 명세 8.1.2.4 선택적 태그의 주석을 참조해 주세요.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
 	<!-- 관련 요소 레벨 -->
 	<section id="related">
 		<h3 class="blind">관련 요소 레벨</h3>
-		<a href="#">form 요소</a>,
-		<a href="#">fieldset 요소</a>,
-		<a href="#">legend 요소</a>,
-		<a href="#">datalist 요소</a>,
-		<a href="#">optgroup 요소</a>,
-		<a href="#">option 요소</a>,
-		<a href="#">output 요소</a>,
-		<a href="#">progress 요소</a>,
-		<a href="#">meter 요소</a>
+		<a href="#">table 요소</a>,
+		<a href="#">caption 요소</a>,
+		<a href="#">colgroup 요소</a>,
+		<a href="#">col 요소</a>,
+		<a href="#">tbody 요소</a>,
+		<a href="#">thead 요소</a>,
+		<a href="#">tfoot 요소</a>,
+		<a href="#">tr 요소</a>,
+		<a href="#">td 요소</a>,
+		<a href="#">th 요소</a>
 	</section>
 	<!--//관련 요소 레벨 -->
 	<!-- 지원 브라우저 -->

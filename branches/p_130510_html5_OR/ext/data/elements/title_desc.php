@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>fieldset 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>title 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -14,41 +14,24 @@
 		<dt class="first">[요소가 속하는 범주]</dt>
 		<dd>
 			<ul>
-			<li>플로우 컨텐츠</li>
-			<li>섹션 루트</li>
-			<li>목록화된 폼 관련 요소</li>
+			<li>메타데이터</li>
 			</ul>
 		</dd>
 		<dt>[이 사용될 수 있는요소가 문맥]</dt>
-		<dd>구문 컨텐츠가 올 수 있는 곳</dd>
+		<dd>head 요소 내부. 다른 title 요소가 없어야 합니다.</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>선택적으로, legend 요소. 그 다음에 플로우 컨텐츠가 옵니다.</dd>
+		<dd>텍스트</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
-			<li>disabled</li>
-			<li>form</li>
-			<li>name</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-interface HTMLFieldSetElement : HTMLElement {
-           attribute boolean disabled;
-  readonly attribute HTMLFormElement form;
-           attribute DOMString name;
-
-  readonly attribute DOMString type;
-
-  readonly attribute HTMLFormControlsCollection elements;
-
-  readonly attribute boolean willValidate;
-  readonly attribute ValidityState validity;
-  readonly attribute DOMString validationMessage;
-  boolean checkValidity();
-  void setCustomValidity(in DOMString error);
+interface HTMLTitleElement : HTMLElement {
+           attribute DOMString text;
 };
 			</pre>
 		</dd>
@@ -59,9 +42,9 @@ interface HTMLFieldSetElement : HTMLElement {
 	<section id="flow">
 		<h3 class="blind">콘텐츠 분류 타입</h3>
 		<svg width="300" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg" class="svg">
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#flow-content-0" target="_blank"><ellipse cx="150" cy="100" rx="130" ry="80" class="cate_flow on" title="Flow"></ellipse><text x="140" y="40">Flow</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#flow-content-0" target="_blank"><ellipse cx="150" cy="100" rx="130" ry="80" class="cate_flow" title="Flow"></ellipse><text x="140" y="40">Flow</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#interactive-content-0" target="_blank"><ellipse cx="85" cy="80" rx="50" ry="30" class="cate_interactive" title="Interactive"></ellipse><text x="55" y="80">Interactive</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#metadata-content-0" target="_blank"><ellipse cx="80" cy="150" rx="60" ry="30" class="cate_metadata" title="Metadata"></ellipse><text x="55" y="155">Metadata</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#metadata-content-0" target="_blank"><ellipse cx="80" cy="150" rx="60" ry="30" class="cate_metadata on" title="Metadata"></ellipse><text x="55" y="155">Metadata</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#phrasing-content-0" target="_blank"><ellipse cx="120" cy="100" rx="50" ry="50" class="cate_phrasing" title="Phrasing"></ellipse><text x="100" y="75">Phrasing</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#embedded-content-0" target="_blank"><ellipse cx="120" cy="100" rx="40" ry="20" class="cate_embedded" title="Embedded"></ellipse><text x="97" y="102">Embedded</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#heading-content-0" target="_blank"><ellipse cx="220" cy="75" rx="40" ry="20" class="cate_heading" title="Heading"></ellipse><text x="203" y="78">Heading</text></a>
@@ -69,15 +52,9 @@ interface HTMLFieldSetElement : HTMLElement {
 		</svg>
 
 		<ul>
-		<li>플로우 컨텐츠, 섹션 루트, 폼 관련 요소에 속합니다.
-			<ul>
-			<li>스크립트에서 form.elements와 fieldset.elements로 호출할 수 있습니다. (여기에서 form, fieldset은 해당 요소의 name 속성값입니다.)</li>
-			</ul>
-		</li>
-		<li>플로우 컨텐츠의 위치에 사용할 수 있습니다.</li>
-		<li>선택적으로 legend 요소를 자식 요소로 포함할 수 있으며 그 다음 플로우 컨텐츠를 포함할 수 있습니다.</li>
-		<li>사용된 legend 요소는 그룹의 이름으로 사용되며 나머지 자식 요소로 그룹을 형성합니다.</li>
-		<li>섹션 루트인 fieldset 요소는 독립된 개요(아웃라인)를 생성하며 fieldset 요소안에 사용된 섹션과 제목은 개요(아웃라인) 생성에 관여하지 않습니다.</li>
+		<li>메타데이터에 속합니다.</li>
+		<li>head 요소 내부에 나타나며, 한번만 사용됩니다.</li>
+		<li>텍스트를 포함할 수 있습니다.</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -85,23 +62,25 @@ interface HTMLFieldSetElement : HTMLElement {
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>HTML5에서 disabled 속성 , form 속성, name 속성이 추가되었습니다.</li>
-		<li>legend요소를 이용하여 캡션을 부여할 수 있습니다.</li>
+		<li>브라우저의 히스토리 리스트, 북마크, 검색엔진 결과 등에 title 요소의 내용이 나타나므로 이를 고려해서 title 요소를 작성해야 합니다.</li>
+		<li>title 요소의 내용이 문서의 첫번째 제목 요소의 내용과 같을 필요는 없습니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
 	<!-- 관련 요소 레벨 -->
 	<section id="related">
 		<h3 class="blind">관련 요소 레벨</h3>
-		<a href="#">form 요소</a>,
-		<a href="#">fieldset 요소</a>,
-		<a href="#">legend 요소</a>,
-		<a href="#">datalist 요소</a>,
-		<a href="#">optgroup 요소</a>,
-		<a href="#">option 요소</a>,
-		<a href="#">output 요소</a>,
-		<a href="#">progress 요소</a>,
-		<a href="#">meter 요소</a>
+		<a href="#">doctype</a>,
+		<a href="#">html 요소</a>,
+		<a href="#">head 요소</a>,
+		<a href="#">title 요소</a>,
+		<a href="#">base 요소</a>,
+		<a href="#">link 요소</a>,
+		<a href="#">meta 요소</a>,
+		<a href="#">style 요소</a>,
+		<a href="#">body 요소</a>,
+		<a href="#">noscript 요소</a>,
+		<a href="#">script 요소</a>
 	</section>
 	<!--//관련 요소 레벨 -->
 	<!-- 지원 브라우저 -->

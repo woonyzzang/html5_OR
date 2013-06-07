@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>fieldset 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>table 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -15,40 +15,37 @@
 		<dd>
 			<ul>
 			<li>플로우 컨텐츠</li>
-			<li>섹션 루트</li>
-			<li>목록화된 폼 관련 요소</li>
 			</ul>
 		</dd>
 		<dt>[이 사용될 수 있는요소가 문맥]</dt>
-		<dd>구문 컨텐츠가 올 수 있는 곳</dd>
+		<dd>플로우 컨텐츠가 올 수 있는 곳</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>선택적으로, legend 요소. 그 다음에 플로우 컨텐츠가 옵니다.</dd>
+		<dd>이 순서대로: 선택적으로 caption 요소 → 0 혹은 그 이상의 colgroup 요소 → 선택적으로 thead → 선택적으로 tfoot → 0 또는 그 이상의 tbody 또는 tr → 선택적으로 tfoot (하지만 tfoot 요소는 위 중 하나에서만 사용할 수 있습니다.)</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
-			<li>disabled</li>
-			<li>form</li>
-			<li>name</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-interface HTMLFieldSetElement : HTMLElement {
-           attribute boolean disabled;
-  readonly attribute HTMLFormElement form;
-           attribute DOMString name;
-
-  readonly attribute DOMString type;
-
-  readonly attribute HTMLFormControlsCollection elements;
-
-  readonly attribute boolean willValidate;
-  readonly attribute ValidityState validity;
-  readonly attribute DOMString validationMessage;
-  boolean checkValidity();
-  void setCustomValidity(in DOMString error);
+interface HTMLTableElement : HTMLElement {
+           attribute HTMLTableCaptionElement caption;
+  HTMLElement createCaption();
+  void deleteCaption();
+           attribute HTMLTableSectionElement tHead;
+  HTMLElement createTHead();
+  void deleteTHead();
+           attribute HTMLTableSectionElement tFoot;
+  HTMLElement createTFoot();
+  void deleteTFoot();
+  readonly attribute HTMLCollection tBodies;
+  HTMLElement createTBody();
+  readonly attribute HTMLCollection rows;
+  HTMLElement insertRow(in optional long index);
+  void deleteRow(in long index);
+           attribute DOMString summary;
 };
 			</pre>
 		</dd>
@@ -69,15 +66,22 @@ interface HTMLFieldSetElement : HTMLElement {
 		</svg>
 
 		<ul>
-		<li>플로우 컨텐츠, 섹션 루트, 폼 관련 요소에 속합니다.
+		<li>플로우 컨텐츠에 속합니다.</li>
+		<li>caption 요소, colgroup 요소, thead 요소, tbody 요소, tfoot 요소를 순서대로 사용할 수 있습니다.</li>
+		<li>단, tfoot 요소는 table 요소에 단 한번만 사용할 수 있습니다.</li>
+		<li>자식으로는 열, 행, 셀이 있습니다. 열과 행으로 그리드를 구성하며, 이 그리드 안의 셀은 겹치지 말아야 합니다.</li>
+		<li>단순한 구조가 아니거나 내용을 이해하기 어려우면 table 내용을 소개하는 설명 정보를 포함시켜야 합니다.
 			<ul>
-			<li>스크립트에서 form.elements와 fieldset.elements로 호출할 수 있습니다. (여기에서 form, fieldset은 해당 요소의 name 속성값입니다.)</li>
+			<li>table 소개 내용에는 사용 목적, 셀 구조의 개요, 패턴 등의 정보가 수록되어야 합니다.</li>
 			</ul>
 		</li>
-		<li>플로우 컨텐츠의 위치에 사용할 수 있습니다.</li>
-		<li>선택적으로 legend 요소를 자식 요소로 포함할 수 있으며 그 다음 플로우 컨텐츠를 포함할 수 있습니다.</li>
-		<li>사용된 legend 요소는 그룹의 이름으로 사용되며 나머지 자식 요소로 그룹을 형성합니다.</li>
-		<li>섹션 루트인 fieldset 요소는 독립된 개요(아웃라인)를 생성하며 fieldset 요소안에 사용된 섹션과 제목은 개요(아웃라인) 생성에 관여하지 않습니다.</li>
+		<li>작성한 테이블에 대한 소개 내용은 caption, details, figure, figcaption 에서 보다 상세하게 설명합니다.</li>
+		<li>레이아웃 용도로 사용해서는 안 됩니다.
+			<ul>
+			<li>데이터 접근성에 혼란스러운 결과를 얻을수 있습니다.</li>
+			<li>스크린리더와 같은 접근성 도구를 이용하기 어렵게 합니다.</li>
+			</ul>
+		</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -85,23 +89,23 @@ interface HTMLFieldSetElement : HTMLElement {
 	<section id="memo">
 		<h3 class="blind">참조</h3>
 		<ul>
-		<li>HTML5에서 disabled 속성 , form 속성, name 속성이 추가되었습니다.</li>
-		<li>legend요소를 이용하여 캡션을 부여할 수 있습니다.</li>
+		<li>HTML5 이전 버전에서는 summary 요소를 사용하여 테이블의 소개 내용을 제공하자는 의견이 있었으나, 테이블의 구조를 두세번 설명하는건 바람직하지 않는 이유로 사용하지 않는 것을 권장합니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
 	<!-- 관련 요소 레벨 -->
 	<section id="related">
 		<h3 class="blind">관련 요소 레벨</h3>
-		<a href="#">form 요소</a>,
-		<a href="#">fieldset 요소</a>,
-		<a href="#">legend 요소</a>,
-		<a href="#">datalist 요소</a>,
-		<a href="#">optgroup 요소</a>,
-		<a href="#">option 요소</a>,
-		<a href="#">output 요소</a>,
-		<a href="#">progress 요소</a>,
-		<a href="#">meter 요소</a>
+		<a href="#">table 요소</a>,
+		<a href="#">caption 요소</a>,
+		<a href="#">colgroup 요소</a>,
+		<a href="#">col 요소</a>,
+		<a href="#">tbody 요소</a>,
+		<a href="#">thead 요소</a>,
+		<a href="#">tfoot 요소</a>,
+		<a href="#">tr 요소</a>,
+		<a href="#">td 요소</a>,
+		<a href="#">th 요소</a>
 	</section>
 	<!--//관련 요소 레벨 -->
 	<!-- 지원 브라우저 -->

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>embed 요소 : HTML5 Open Reference Guide</title>
+<title>tbody 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,25 +19,39 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">embed 요소: (integration point for plugins)</h2>
+		<h2 class="s_tit">tbody 요소: (table body)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>embed 요소는 외부 애플리케이션이나 외부 플러그인 또는 대화형 컨텐츠를 포함할 때 사용합니다.</dd>
+		<dd>tbody 요소는 표의 데이터행의 집합을 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Media</p>
+		<p>Table</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			&lt;embed type="video/quicktime" src="@파일명" width="340" height="140"&gt;
+			<table>
+			<caption>제철 과일 가격 및 갯수 표 목록</caption>
+			<tbody>
+			<tr>
+			<td>사과</td>
+			<td>5</td>
+			<td>500원</td>
+			</tr>
+			<tr>
+			<td>딸기</td>
+			<td>7</td>
+			<td>200원</td>
+			</tr>
+			</tbody>
+			</table>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -55,11 +69,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
-			{tit:'src', desc:'포함하고자 하는 외부 자원의 주소를 지정합니다.', href:'http://naver.com'},
-			{tit:'type', desc:'인스턴스화 할 플러그인의 유효한 MIME 타입을 지정합니다.', href:'http://naver.com'},
-			{tit:'width', desc:'요소의 너비를 정의합니다.', href:'http://naver.com'},
-			{tit:'height', desc:'요소의 높이를 정의합니다.', href:'http://naver.com'}
+			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>embed 요소 : HTML5 Open Reference Guide</title>
+<title>time 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,25 +19,36 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">embed 요소: (integration point for plugins)</h2>
+		<h2 class="s_tit">time 요소: (date and&frasl;or time)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>embed 요소는 외부 애플리케이션이나 외부 플러그인 또는 대화형 컨텐츠를 포함할 때 사용합니다.</dd>
+		<dd>time 요소는 24시간에서의 시간, 혹은 그레고리력에서의 정밀한 날짜(선택적으로, 타임존 옵셋 정보를 포함하여)를 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Inline-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Media</p>
+		<p>Text formatting</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			&lt;embed type="video/quicktime" src="@파일명" width="340" height="140"&gt;
+			<p>난 보통 간식을 <time>17:30</time>에 먹는다.</p>
+
+			<!-- @Date만 나타낼 경우 -->
+			<time xsi:type="xsd:date" datetime="2011-03-08" title="Mardi Gras (Fat Tuesday), 2011">March 8, 2011</time>
+			is the latest in the year Mardi Gras falls until
+			<time xsi:type="xsd:date" datetime="2011-03-09" title="Mardi Gras (Fat Tuesday), 2038" style="cursor:help">March, 2038</time>
+
+			<!-- @Date와 Time을 나타낼 경우 -->
+			<time xsi:type="xsd:dateTime" datetime="2010-12-31T23:59:59-04:00" title="One second before midnight, New Years Eve, 2010" style="cursor:help">12/31/2010 11:59:59 PM EST</time>
+
+			<!-- @Time 만 나타낼 경우 -->
+			<time xsi:type="xsd:time" datetime="12:00:00-05:00" title="Noon Eastern time" style="cursor:help">12:00 PM ET</time>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -56,10 +67,8 @@ Ext.onReady(function(){
 		fields: ['tit','desc','href'],
 		data: {'items':[
 			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
-			{tit:'src', desc:'포함하고자 하는 외부 자원의 주소를 지정합니다.', href:'http://naver.com'},
-			{tit:'type', desc:'인스턴스화 할 플러그인의 유효한 MIME 타입을 지정합니다.', href:'http://naver.com'},
-			{tit:'width', desc:'요소의 너비를 정의합니다.', href:'http://naver.com'},
-			{tit:'height', desc:'요소의 높이를 정의합니다.', href:'http://naver.com'}
+			{tit:'datetime', desc:'날짜, 시간을 표시합니다.', href:'http://naver.com'},
+			{tit:'pubdate', desc:'문서의 작성 날짜를 표시합니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

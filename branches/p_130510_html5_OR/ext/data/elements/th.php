@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>embed 요소 : HTML5 Open Reference Guide</title>
+<title>th 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,25 +19,33 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">embed 요소: (integration point for plugins)</h2>
+		<h2 class="s_tit">th 요소: (table header cell)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>embed 요소는 외부 애플리케이션이나 외부 플러그인 또는 대화형 컨텐츠를 포함할 때 사용합니다.</dd>
+		<dd>th 요소는 table의 헤더 셀을 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Media</p>
+		<p>Table</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			&lt;embed type="video/quicktime" src="@파일명" width="340" height="140"&gt;
+			<table>
+			<caption>표 목록 요약</caption>
+			<tbody>
+			<tr>
+			<th scope="row">셀의 제목을 선언해주세요.</th>
+			<td>셀의 데이터를 선언해주세요.</td>
+			</tr>
+			</tbody>
+			</table>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -56,10 +64,10 @@ Ext.onReady(function(){
 		fields: ['tit','desc','href'],
 		data: {'items':[
 			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
-			{tit:'src', desc:'포함하고자 하는 외부 자원의 주소를 지정합니다.', href:'http://naver.com'},
-			{tit:'type', desc:'인스턴스화 할 플러그인의 유효한 MIME 타입을 지정합니다.', href:'http://naver.com'},
-			{tit:'width', desc:'요소의 너비를 정의합니다.', href:'http://naver.com'},
-			{tit:'height', desc:'요소의 높이를 정의합니다.', href:'http://naver.com'}
+			{tit:'colspan', desc:'해당 셀이 미치는 범위의 열 수를 지정합니다.', href:'http://naver.com'}
+			{tit:'rowspan', desc:'해당 셀이 미치는 범위의 행 수를 지정합니다.', href:'http://naver.com'},
+			{tit:'header', desc:'해당 셀에 대응하는 헤더 셀(th 요소)의 id 콘텐츠 속성의 값을 지정합니다.', href:'http://naver.com'},
+			{tit:'scope', desc:'해당 헤더 셀이 영향을 미치는 셀의 범위를 나타내는 키워드를 지정합니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',

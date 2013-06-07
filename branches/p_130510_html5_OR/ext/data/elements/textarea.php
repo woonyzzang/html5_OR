@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>embed 요소 : HTML5 Open Reference Guide</title>
+<title>textarea 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,25 +19,25 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">embed 요소: (integration point for plugins)</h2>
+		<h2 class="s_tit">textarea 요소: (text input area)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>embed 요소는 외부 애플리케이션이나 외부 플러그인 또는 대화형 컨텐츠를 포함할 때 사용합니다.</dd>
+		<dd>textarea 요소는 여러 줄의 텍스트를 편집할 수 있는 컨트롤입니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
+		<p>Inline Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Media</p>
+		<p>Form</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			&lt;embed type="video/quicktime" src="@파일명" width="340" height="140"&gt;
+			<textarea cols="30" rows="5" title="댓글을 입력 하세요.">내용을 입력 하세요.</textarea>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -56,10 +56,18 @@ Ext.onReady(function(){
 		fields: ['tit','desc','href'],
 		data: {'items':[
 			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
-			{tit:'src', desc:'포함하고자 하는 외부 자원의 주소를 지정합니다.', href:'http://naver.com'},
-			{tit:'type', desc:'인스턴스화 할 플러그인의 유효한 MIME 타입을 지정합니다.', href:'http://naver.com'},
-			{tit:'width', desc:'요소의 너비를 정의합니다.', href:'http://naver.com'},
-			{tit:'height', desc:'요소의 높이를 정의합니다.', href:'http://naver.com'}
+			{tit:'autofocus', desc:'페이지가 로드될 때 요소가 자동으로 포커스를 받습니다.', href:'http://naver.com'},
+			{tit:'cols', desc:'한 줄당 입력할 수 있는 글자수를 제한합니다.', href:'http://naver.com'},
+			{tit:'disabled', desc:'사용자가 입력하거나 수정할 수 없도록 설정합니다.', href:'http://naver.com'},
+			{tit:'dirname', desc:'textarea 요소의 방향성을 제출합니다.', href:'http://naver.com'},
+			{tit:'form', desc:'연관된 form 요소를 명시적으로 연결합니다.', href:'http://naver.com'},
+			{tit:'maxlength', desc:'포함할 수 있는 문자열의 최대 값을 정의합니다.', href:'http://naver.com'},
+			{tit:'name', desc:'폼 제출 시에 사용되는 폼 컨트롤의 이름을 나타냅니다.', href:'http://naver.com'},
+			{tit:'placeholder', desc:'사용자의 입력을 돕는 힌트 메시지를 입력합니다.', href:'http://naver.com'},
+			{tit:'readonly', desc:'편집 여부를 정의합니다.', href:'http://naver.com'},
+			{tit:'required', desc:'폼을 제출할 때 반드시 값을 입력하도록 강제합니다.', href:'http://naver.com'},
+			{tit:'rows', desc:'textarea 요소가 몇 줄로 보일지를 결정합니다.', href:'http://naver.com'},
+			{tit:'wrap', desc:'텍스트의 줄바꿈 여부를 결정합니다.', href:'http://naver.com'}
 		]},
 		proxy : {
 			type: 'memory',
