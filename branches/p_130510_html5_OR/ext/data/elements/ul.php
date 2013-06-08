@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>head 요소 : HTML5 Open Reference Guide</title>
+<title>ul 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,33 +19,33 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">form 요소: (document metadata container)</h2>
+		<h2 class="s_tit">ul 요소: (unordered list)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>head 요소는 문서의 메타데이터 집합을 나타냅니다.</dd>
+		<dd>ul 요소는 순서가 중요하지 않은 목록을 나타낼 때 사용합니다. 목록을 구성하는 것은 li 요소이며 다른 요소는 포함할 수 없습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>HTML Basic</p>
+		<p>List</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			&lt;!DOCTYPE html&gt;
-			&lt;html&gt;
-			&lt;head&gt;
-			&lt;title&gt;문서의 제목&lt;/title&gt;
-			&lt;/head&gt;
-			&lt;body&gt;
-				문서의 본문...
-			&lt;/body&gt;
-			&lt;html&gt;
+			<h4>기말고사 대상 과목</h4>
+			<ul>
+			<li>국어</li>
+			<li>영어</li>
+			<li>수학</li>
+			<li>국사</li>
+			<li>과학</li>
+			<li>미술</li>
+			</ul>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

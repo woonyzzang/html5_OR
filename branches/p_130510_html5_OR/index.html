@@ -155,15 +155,15 @@ Ext.onReady(function(){
 					{text: 'tr', leaf: true, href: ['ext/data/elements/tr.php', 'ext/data/elements/tr_desc.php']},
 					{text: 'track', leaf: true, href: ['ext/data/elements/track.php', 'ext/data/elements/track_desc.php']}
 				]},
-				{text: 'U', expanded: true, children: [
-					{text: 'ul', leaf: true}
+				{text: 'U', expanded: false, children: [
+					{text: 'ul', leaf: true, href: ['ext/data/elements/ul.php', 'ext/data/elements/ul_desc.php']}
 				]},
-				{text: 'V', expanded: true, children: [
-					{text: 'var', leaf: true},
-					{text: 'video', leaf: true}
+				{text: 'V', expanded: false, children: [
+					{text: 'var', leaf: true, href: ['ext/data/elements/var.php', 'ext/data/elements/var_desc.php']},
+					{text: 'video', leaf: true, href: ['ext/data/elements/video.php', 'ext/data/elements/video_desc.php']}
 				]},
-				{text: 'W', expanded: true, children: [
-					{text: 'wbr', leaf: true}
+				{text: 'W', expanded: false, children: [
+					{text: 'wbr', leaf: true, href: ['ext/data/elements/wbr.php', 'ext/data/elements/wbr_desc.php']}
 				]}
 			]
 		}
@@ -315,25 +315,25 @@ Ext.onReady(function(){
 			activeOnTop: true
 		},
 		items: [{
-			title: '스펙 명세',
+			title: '1. 스펙 명세',
 			id: 'referArea',
 			html: '테스트3',
 			autoHeight: true,
 			autoScroll: true
 		},{
-			title: '콘텐츠 분류 타입',
+			title: '2. 콘텐츠 분류 타입 &frasl; 마크업 규칙',
 			id: 'flowArea',
 			html: '테스트1',
 			autoHeight: true,
 			autoScroll: true
 		},{
-			title: '참조',
+			title: '3. 참조',
 			id: 'memoArea',
 			html: '테스트2',
 			autoHeight: true,
 			autoScroll: true
 		},{
-			title: '관련 요소 레벨',
+			title: '4. 관련 요소 레벨',
 			id: 'relatedArea',
 			html: '테스트4',
 			autoHeight: true,

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>track 요소 상세설명 : HTML5 Open Reference Guide</title>
+<title>hgroup 요소 상세설명 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/base.css">
 </head>
 <body>
@@ -14,36 +14,25 @@
 		<dt class="first">[요소가 속하는 범주]</dt>
 		<dd>
 			<ul>
-			<li>없음</li>
+			<li>플로우 컨텐츠</li>
+			<li>제목 컨텐츠</li>
+			<li>formatBlock이 될 수 있는 요소</li>
 			</ul>
 		</dd>
 		<dt>[이 사용될 수 있는요소가 문맥]</dt>
-		<dd>미디어 요소의 자식 요소. 어떤 플로우 컨텐츠보다도 앞에 있어야 합니다.</dd>
+		<dd>플로우 컨텐츠가 올 수 있는 곳</dd>
 		<dt>[이 요소가 포함할 수 있는 것]</dt>
-		<dd>이 요소는 비어 있어야 합니다.</dd>
+		<dd>하나 이상의 h1 ~ h6 요소</dd>
 		<dt>[요소에 사용할 수 있는 속성]</dt>
 		<dd>
 			<ul>
 			<li>Global attributes</li>
-			<li>kind</li>
-			<li>src</li>
-			<li>srclang</li>
-			<li>label</li>
-			<li>default</li>
 			</ul>
 		</dd>
 		<dt>[DOM 인터페이스]</dt>
 		<dd>
 			<pre>
-interface HTMLTrackElement : HTMLElement {
-           attribute DOMString kind;
-           attribute DOMString src;
-           attribute DOMString srclang;
-           attribute DOMString label;
-           attribute boolean default;
-
-  readonly attribute TextTrack track;
-};
+Uses HTMLElement.
 			</pre>
 		</dd>
 		</dl>
@@ -57,14 +46,29 @@ interface HTMLTrackElement : HTMLElement {
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#interactive-content-0" target="_blank"><ellipse cx="85" cy="80" rx="50" ry="30" class="cate_interactive" title="Interactive"></ellipse><text x="55" y="80">Interactive</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#metadata-content-0" target="_blank"><ellipse cx="80" cy="150" rx="60" ry="30" class="cate_metadata " title="Metadata"></ellipse><text x="55" y="155">Metadata</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#phrasing-content-0" target="_blank"><ellipse cx="120" cy="100" rx="50" ry="50" class="cate_phrasing " title="Phrasing"></ellipse><text x="100" y="75">Phrasing</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#embedded-content-0" target="_blank"><ellipse cx="120" cy="100" rx="40" ry="20" class="cate_embedded on" title="Embedded"></ellipse><text x="97" y="102">Embedded</text></a>
-			<a xlink:href="http://www.clearboth.org/html5/content-models.html#heading-content-0" target="_blank"><ellipse cx="220" cy="75" rx="40" ry="20" class="cate_heading" title="Heading"></ellipse><text x="203" y="78">Heading</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#embedded-content-0" target="_blank"><ellipse cx="120" cy="100" rx="40" ry="20" class="cate_embedded" title="Embedded"></ellipse><text x="97" y="102">Embedded</text></a>
+			<a xlink:href="http://www.clearboth.org/html5/content-models.html#heading-content-0" target="_blank"><ellipse cx="220" cy="75" rx="40" ry="20" class="cate_heading on" title="Heading"></ellipse><text x="203" y="78">Heading</text></a>
 			<a xlink:href="http://www.clearboth.org/html5/content-models.html#sectioning-content-0" target="_blank"><ellipse cx="220" cy="125" rx="40" ry="20" class="cate_sectioning" title="Sectioning"></ellipse><text x="195" y="127">Sectioning</text></a>
 		</svg>
 
 		<ul>
-		<li>미디어 요소 video, audio 요소의 자식 요소로 올 수 있습니다. 단, 어떤 플로우 컨텐츠보다도 앞에 있어야 합니다.</li>
-		<li>자식 요소가 없는 빈 요소입니다.</li>
+		<li>플로우 컨텐츠, 제목 컨텐츠, 전체 선택이 가능한 요소에 속합니다.</li>
+		<li>플로우 컨텐츠 올 수 있는 곳에 사용될 수 있습니다.</li>
+		<li>자식 요소로 하나 이상의 h1~h6 요소를 포함 할 수 있습니다.</li>
+		<li>hgroup의 제목
+			<ul>
+			<li>문서의 요약, 개요를 위해 hgroup 요소의 제목은 가장 높은 등급의 제목 요소(h1~h6 요소)의 텍스트로 선정됩니다.</li>
+			<li>같은 등급의 제목이 여러 개 있다면 가장 앞의 제목이 hgroup의 텍스트로 선정됩니다.</li>
+			<li>hgroup 요소 내부에 있는 제목 컨텐츠의 다른 요소는 부제목이 됩니다.</li>
+			<li>h1~h6 요소 중에 가장 높은 등급의 요소를 제외한 나머지 것은 중요하지 않은 것으로 간주됩니다.</li>
+			</ul>
+		</li>
+		<li>hgroup의 등급
+			<ul>
+			<li>포함하고 있는 제목 요소 중 가장 높은 등급이 hgroup 요소의 등급이 됩니다.</li>
+			<li>제목 요소를 포함하지 않고 있다면 hgroup 요소의 등급은 h1 요소가 됩니다.</li>
+			</ul>
+		</li>
 		</ul>
 	</section>
 	<!-- //콘텐츠 분류 타입 -->
@@ -73,14 +77,15 @@ interface HTMLTrackElement : HTMLElement {
 		<h3 class="blind">참조</h3>
 		<ul>
 		<li>HTML5에서 추가된 요소입니다.</li>
-		<li>IE, Chrome, Firefox, Opera, Safari에서 menu 요소를 지원하지 않습니다.</li>
+		<li>IE8 및 이전 버전, hgroup 요소를 지원하지 않습니다.</li>
 		</ul>
 	</section>
 	<!--//참조 -->
 	<!-- 관련 요소 레벨 -->
 	<section id="related">
 		<h3 class="blind">관련 요소 레벨</h3>
-		없음
+		<a href="#">hgroup 요소</a>,
+		<a href="#">h1, h2, h3, h4, h5, h6 요소</a>
 	</section>
 	<!--//관련 요소 레벨 -->
 	<!-- 지원 브라우저 -->
@@ -90,14 +95,14 @@ interface HTMLTrackElement : HTMLElement {
 			<img src="ext/resources/css/images/custom/ico_support_ie6_none.png" width="25" height="25" alt="IE6 지원 안함">
 			<img src="ext/resources/css/images/custom/ico_support_ie7_none.png" width="25" height="25" alt="IE7 지원 안함">
 			<img src="ext/resources/css/images/custom/ico_support_ie8_none.png" width="25" height="25" alt="IE8 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_ie9_none.png" width="25" height="25" alt="IE9 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_ie10_none.png" width="25" height="25" alt="IE10 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_chrome_none.png" width="25" height="25" alt="Chrome 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_firefox_none.png" width="25" height="25" alt="Firefox 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_opera_none.png" width="25" height="25" alt="Opera 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_safari_none.png" width="25" height="25" alt="Safari 지원 안함">
+			<img src="ext/resources/css/images/custom/ico_support_ie9.png" width="25" height="25" alt="IE9 지원">
+			<img src="ext/resources/css/images/custom/ico_support_ie10.png" width="25" height="25" alt="IE10 지원">
+			<img src="ext/resources/css/images/custom/ico_support_chrome.png" width="25" height="25" alt="Chrome 지원">
+			<img src="ext/resources/css/images/custom/ico_support_firefox.png" width="25" height="25" alt="Firefox 지원">
+			<img src="ext/resources/css/images/custom/ico_support_opera.png" width="25" height="25" alt="Opera 지원">
+			<img src="ext/resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
 		</p>
-		<em>모든 주요 브라우저에서 지원되지 않습니다.</em>
+		<em>최신 브라우저에서 지원 합니다.</em>
 	</section>
 	<!-- //지원 브라우저 -->
 </article>

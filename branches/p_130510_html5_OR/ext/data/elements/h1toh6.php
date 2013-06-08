@@ -38,12 +38,12 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<h1>header 1</h1>
-			<h2>header 2</h2>
-			<h3>header 3</h3>
-			<h4>header 4</h4>
-			<h5>header 5</h5>
-			<h6>header 6</h6>
+			<h1>머릿글1</h1>
+			<h2>머릿글2</h2>
+			<h3>머릿글3</h3>
+			<h4>머릿글4</h4>
+			<h5>머릿글5</h5>
+			<h6>머릿글6</h6>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

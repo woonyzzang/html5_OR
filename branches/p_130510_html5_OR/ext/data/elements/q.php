@@ -19,7 +19,7 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">pre 요소: (quoted text)</h2>
+		<h2 class="s_tit">q 요소: (quoted text)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>head 요소 : HTML5 Open Reference Guide</title>
+<title>hgroup 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,33 +19,28 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">form 요소: (document metadata container)</h2>
+		<h2 class="s_tit">hgroup 요소: (heading group)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>head 요소는 문서의 메타데이터 집합을 나타냅니다.</dd>
+		<dd>hgroup 요소는 섹션의 제목을 나타냅니다. 이 요소는 섹션의 제목이 몇 개의 레벨을 가질 때(단계를 가질 때, 예를 들어 부제목이나 태그 영역 tagline 등)h1~h6 요소들을 그룹짓기 위해 사용됩니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>HTML Basic</p>
+		<p>Structural Elements</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			&lt;!DOCTYPE html&gt;
-			&lt;html&gt;
-			&lt;head&gt;
-			&lt;title&gt;문서의 제목&lt;/title&gt;
-			&lt;/head&gt;
-			&lt;body&gt;
-				문서의 본문...
-			&lt;/body&gt;
-			&lt;html&gt;
+			<hgroup>
+			<h1>HTML5 OpenReference</h1>
+			<h3>Universal Web Studio</h3>
+			</hgroup>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

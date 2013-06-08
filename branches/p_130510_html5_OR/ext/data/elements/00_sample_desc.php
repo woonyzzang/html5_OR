@@ -10,6 +10,7 @@
 	<!-- 스펙 명세 -->
 	<section id="refer">
 		<h3 class="blind">스펙 명세</h3>
+		<!-- <p><a href="http://www.w3.org/TR/html5/text-level-semantics.html#the-a-element" target="_blank">최신 명세 바로가기</a></p> -->
 		<dl>
 		<dt class="first">[요소가 속하는 범주]</dt>
 		<dd>

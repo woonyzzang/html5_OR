@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>head 요소 : HTML5 Open Reference Guide</title>
+<title>var 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -19,33 +19,25 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">form 요소: (document metadata container)</h2>
+		<h2 class="s_tit">title 요소: (variable or placeholder text)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>head 요소는 문서의 메타데이터 집합을 나타냅니다.</dd>
+		<dd>var 요소는 변수를 나타냅니다. 이 변수는 프로그래밍 문맥이나 수식에서 사용하는 실제 변수일 수도 있고 일반적인 문장에서 마치 변수처럼 임의의 숫자 또는 문자열을 나타내기 위해 사용할 수도 있습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
-		<p>Block-Level 엘리먼트</p>
+		<p>Inline-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>HTML Basic</p>
+		<p>Text formatting</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			&lt;!DOCTYPE html&gt;
-			&lt;html&gt;
-			&lt;head&gt;
-			&lt;title&gt;문서의 제목&lt;/title&gt;
-			&lt;/head&gt;
-			&lt;body&gt;
-				문서의 본문...
-			&lt;/body&gt;
-			&lt;html&gt;
+			<var>ImageSize</var>는 이미지 사이즈와 관련된 변수 입니다..
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

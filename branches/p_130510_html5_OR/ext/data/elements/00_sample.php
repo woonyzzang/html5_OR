@@ -19,7 +19,7 @@
 	<!-- 태그 설명 -->
 	<section>
 		<div>
-		<h2 class="s_tit">a 요소: (anchor)</h2>
+		<h2 class="s_tit">a 요소: (Anchor)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
@@ -31,6 +31,19 @@
 
 		<h3 class="s_tit">요소 카테고리</h3>
 		<p>HTML Basic</p>
+		<!--
+		<h3 class="s_tit">마크업 규칙</h3>
+		<ul class="markup_rule">
+		<li>플로우 컨텐츠이자 대화형 컨텐츠입니다. 그리고, 자손 요소로 구문 컨텐츠만 있다면 구문 컨텐츠에 속합니다.</li>
+		<li>a 요소는 두 군데에 위치할 수 있습니다.
+			<ul>
+			<li>자식 요소에 구문 컨텐츠만 있으면 구문 컨텐츠의 위치에 올 수 있습니다.</li>
+			<li>자식 요소에 구문 컨텐츠를 포함하지 않으면 플로우 컨텐츠의 위치에 올 수 있습니다.</li>
+			</ul>
+		</li>
+		<li>자식 요소에 투명한 요소가 있으면 대화형 컨텐츠는 포함할 수 없습니다.</li>
+		</ul>
+		-->
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
@@ -61,6 +74,47 @@
 	<section>
 		<h3 class="s_tit">속성</h3>
 		<div id="gridAttr"></div>
+		<!--
+		<table class="tb_attr">
+		<caption>태그 속성 목록 표</caption>
+		<thead>
+		<tr>
+		<th scope="col">속성명</th>
+		<th scope="col">설명</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td><a href="#" title="html5:attribute:global">전역 속성</a></td>
+		<td>공통 속성</td>
+		</tr>
+		<tr>
+		<td><a href="#" title="html5:attribute:href_hyperlink">href</a></td>
+		<td>이동할 URL을 지정합니다.</td>
+		</tr>
+		<tr>
+		<td><a href="#" title="html5:attribute:target">target</a></td>
+		<td>이동시 사용되는 콘텍스트 이름이나 키워드 지정합니다.</td>
+		</tr>
+		<tr>
+		<td><a href="#" title="html5:attribute:rel">rel</a></td>
+		<td>링크 대상과의 관계를 지정합니다.</td>
+		</tr>
+		<tr>
+		<td><a href="#" title="html5:attribute:media_hyperlink">media</a></td>
+		<td>링크 대상을 출력하는 매체를 지정합니다.</td>
+		</tr>
+		<tr>
+		<td><a href="#" title="html5:attribute:hreflang">hreflang</a></td>
+		<td>링크 대상의 언어 코드를 지정합니다.</td>
+		</tr>
+		<tr>
+		<td><a href="#" title="html5:attribute:type_hyperlink">type</a></td>
+		<td>링크 대상의 <abbr title="Multipurpose Internet Mail Extension">MIME</abbr> 타입을 지정합니다.</td>
+		</tr>
+		</tbody>
+		</table>
+		-->
 	</section>
 	<!-- //속성 설명 -->
 </article>
@@ -88,11 +142,20 @@ Ext.onReady(function(){
 		}
 	});
 
+	/*
+	var addLink = function(val, x, rec){
+		return '<a href=\"' + rec.data.href + '\">' + val + '</a>';
+	};
+	*/
+
 	var grid = Ext.create('Ext.grid.Panel', {
 		renderTo: Ext.get('gridAttr'),
 		title: '요소 속성 목록',
+		//width: 200,
+		//height: 200,
 		store: storeData,
 		columns: [
+			//{header:'속성명', dataIndex:'tit', width:200, renderer:addLink},
 			{header:'속성명', xtype: 'templatecolumn', tpl: '<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
