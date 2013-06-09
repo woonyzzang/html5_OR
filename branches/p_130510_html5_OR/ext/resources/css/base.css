@@ -48,6 +48,9 @@ table{width:100%;border-collapse:collapse;border-spacing:0}
 #content_desc .tb_attr th,#content_desc .tb_attr td{padding:5px 15px;border:1px solid #ccc}
 #content_desc .tb_attr th{background-color:#eee}
 #content_desc .tb_attr td{background-color:#f7f7f7}
+#content_desc .category dt{font-weight:bold}
+#content_desc .category dd{margin:0}
+#content_desc .category li{line-height:1.8}
 
 /* =Refer */
 #refer{padding:0 10px}

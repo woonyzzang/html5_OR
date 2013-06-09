@@ -15,8 +15,10 @@
 <script>
 Ext.onReady(function(){
 	var dataPath = '';
+	//var flag = false;
 
-	var elementsStore = Ext.create('Ext.data.TreeStore', {
+	// @Elements
+	var elemStore = Ext.create('Ext.data.TreeStore', {
 		root: {
 			expanded: true,
 			animate: true,
@@ -169,6 +171,223 @@ Ext.onReady(function(){
 		}
 	});
 
+	// @Attributes
+	var attrStore = Ext.create('Ext.data.TreeStore', {
+		root: {
+			expanded: true,
+			animate: true,
+			children: [
+				{text: 'A', expanded: true, children: [
+					{text: 'accept-charset', leaf: true, href: ['ext/data/attributes/accept-charset.php']},
+					{text: 'accept (input)', leaf: true, href: ['ext/data/attributes/accept_input.php']},
+					{text: 'accesskey', leaf: true, href: ['ext/data/attributes/accesskey.php']},
+					{text: 'action', leaf: true, href: ['ext/data/attributes/action.php']},
+					{text: 'alt (img)', leaf: true, href: ['ext/data/attributes/alt_img.php']},
+					{text: 'alt (input)', leaf: true, href: ['ext/data/attributes/alt_input.php']},
+					{text: 'async (script)', leaf: true, href: ['ext/data/attributes/async_script.php']},
+					{text: 'audio (audio, video)', leaf: true, href: ['ext/data/attributes/audio_media.php']},
+					{text: 'autocomplete (input)', leaf: true, href: ['ext/data/attributes/autocomplete_input.php']},
+					{text: 'autocomplete (form)', leaf: true, href: ['ext/data/attributes/autocomplete_form.php']},
+					{text: 'autofocus', leaf: true, href: ['ext/data/attributes/autofocus.php']},
+					{text: 'autoplay (audio, video)', leaf: true, href: ['ext/data/attributes/autoplay_media.php']}
+				]},
+				{text: 'C', expanded: false, children: [
+					{text: 'challenge (keygen)', leaf: true, href: ['ext/data/elements/challenge_keygen.php']},
+					{text: 'charset (meta)', leaf: true, href: ['ext/data/elements/charset_meta.php']},
+					{text: 'charset (script)', leaf: true, href: ['ext/data/elements/charset_script.php']},
+					{text: 'checked (command)', leaf: true, href: ['ext/data/elements/checked_command.php']},
+					{text: 'checked (input)', leaf: true, href: ['ext/data/elements/checked_input.php']},
+					{text: 'cite (blockquote)', leaf: true, href: ['ext/data/elements/cite_blockquote.php']},
+					{text: 'cite (ins, del)', leaf: true, href: ['ext/data/elements/cite_edits.php']},
+					{text: 'cite (q)', leaf: true, href: ['ext/data/elements/cite_q.php']},
+					{text: 'class', leaf: true, href: ['ext/data/elements/class.php']},
+					{text: 'cols (textarea)', leaf: true, href: ['ext/data/elements/cols_textarea.php']},
+					{text: 'colspan', leaf: true, href: ['ext/data/elements/colspan.php']},
+					{text: 'content (meta)', leaf: true, href: ['ext/data/elements/content_meta.php']},
+					{text: 'contenteditable', leaf: true, href: ['ext/data/elements/contenteditable.php']},
+					{text: 'contextmenu', leaf: true, href: ['ext/data/elements/contextmenu.php']},
+					{text: 'controls_media', leaf: true, href: ['ext/data/elements/controls_media.php']},
+					{text: 'coords', leaf: true, href: ['ext/data/elements/coords.php']}
+				]},
+				{text: 'D', expanded: false, children: [
+					{text: 'data (object)', leaf: true, href: ['ext/data/elements/data_object.php']},
+					{text: 'datetime (ins, del)', leaf: true, href: ['ext/data/elements/datetime_edits.php']},
+					{text: 'default (track)', leaf: true, href: ['ext/data/elements/default_track.php']},
+					{text: 'defer (script)', leaf: true, href: ['ext/data/elements/defer_script.php']},
+					{text: 'dir', leaf: true, href: ['ext/data/elements/dir.php']},
+					{text: 'dirname (input)', leaf: true, href: ['ext/data/elements/dirname_input.php']},
+					{text: 'dirname (textarea)', leaf: true, href: ['ext/data/elements/dirname_textarea.php']},
+					{text: 'disabled (command)', leaf: true, href: ['ext/data/elements/disabled_command.php']},
+					{text: 'disabled (fieldset)', leaf: true, href: ['ext/data/elements/disabled_fieldset.php']},
+					{text: 'disabled (optgroup)', leaf: true, href: ['ext/data/elements/disabled_optgroup.php']},
+					{text: 'disabled (option)', leaf: true, href: ['ext/data/elements/disabled_option.php']},
+					{text: 'draggable', leaf: true, href: ['ext/data/elements/draggable.php']},
+					{text: 'dropzone', leaf: true, href: ['ext/data/elements/dropzone.php']}
+				]},
+				{text: 'E', expanded: false, children: [
+					{text: 'enctype', leaf: true, href: ['ext/data/elements/enctype.php']}
+				]},
+				{text: 'F', expanded: false, children: [
+					{text: 'for (label)', leaf: true, href: ['ext/data/elements/for_label.php']},
+					{text: 'for (output)', leaf: true, href: ['ext/data/elements/for_output.php']},
+					{text: 'form', leaf: true, href: ['ext/data/elements/form.php']},
+					{text: 'formaction', leaf: true, href: ['ext/data/elements/formaction.php']},
+					{text: 'formenctype', leaf: true, href: ['ext/data/elements/formenctype.php']},
+					{text: 'formmethod', leaf: true, href: ['ext/data/elements/formmethod.php']},
+					{text: 'formnovalidate', leaf: true, href: ['ext/data/elements/formnovalidate.php']},
+					{text: 'formtarget', leaf: true, href: ['ext/data/elements/formtarget.php']}
+				]},
+				{text: 'G', expanded: false, children: [
+					{text: 'global', leaf: true, href: ['ext/data/elements/global.php']}
+				]},
+				{text: 'H', expanded: false, children: [
+					{text: 'header', leaf: true, href: ['ext/data/elements/header.php']},
+					{text: 'height', leaf: true, href: ['ext/data/elements/height.php']},
+					{text: 'hidden', leaf: true, href: ['ext/data/elements/hidden.php']},
+					{text: 'href', leaf: true, href: ['ext/data/elements/href.php']},
+					{text: 'href (base)', leaf: true, href: ['ext/data/elements/href_base.php']},
+					{text: 'href (a, area)', leaf: true, href: ['ext/data/elements/href_hyperlink.php']},
+					{text: 'href (link)', leaf: true, href: ['ext/data/elements/href_link.php']},
+					{text: 'hreflang', leaf: true, href: ['ext/data/elements/hreflang.php']},
+					{text: 'http-equiv (meta)', leaf: true, href: ['ext/data/elements/http-equiv_meta.php']},
+					{text: 'high (meter)', leaf: true, href: ['ext/data/elements/high_meter.php']}
+				]},
+				{text: 'I', expanded: false, children: [
+					{text: 'icon (command)', leaf: true, href: ['ext/data/elements/icon_command.php']},
+					{text: 'id', leaf: true, href: ['ext/data/elements/id.php']},
+					{text: 'ismap', leaf: true, href: ['ext/data/elements/ismap.php']}
+				]},
+				{text: 'K', expanded: false, children: [
+					{text: 'keytype (keygen)', leaf: true, href: ['ext/data/elements/keytype_keygen.php']},
+					{text: 'kind (track)', leaf: true, href: ['ext/data/elements/kind_track.php']}
+				]},
+				{text: 'L', expanded: false, children: [
+					{text: 'label (optgroup)', leaf: true, href: ['ext/data/elements/label_optgroup.php']},
+					{text: 'labe (menu)', leaf: true, href: ['ext/data/elements/labe_menu.php']},
+					{text: 'label (command)', leaf: true, href: ['ext/data/elements/label_command.php']},
+					{text: 'label (option)', leaf: true, href: ['ext/data/elements/label_option.php']},
+					{text: 'label (track)', leaf: true, href: ['ext/data/elements/label_track.php']},
+					{text: 'lang', leaf: true, href: ['ext/data/elements/lang.php']},
+					{text: 'list (input)', leaf: true, href: ['ext/data/elements/list_input.php']},
+					{text: 'loop', leaf: true, href: ['ext/data/elements/loop_media.php']},
+					{text: 'low (meter)', leaf: true, href: ['ext/data/elements/low_meter.php']}
+				]},
+				{text: 'M', expanded: false, children: [
+					{text: 'manifest', leaf: true, href: ['ext/data/elements/manifest.php']},
+					{text: 'max (input)', leaf: true, href: ['ext/data/elements/max_input.php']},
+					{text: 'max (meter)', leaf: true, href: ['ext/data/elements/max_meter.php']},
+					{text: 'max (progress)', leaf: true, href: ['ext/data/elements/max_progress.php']},
+					{text: 'maxlength (input)', leaf: true, href: ['ext/data/elements/maxlength_input.php']},
+					{text: 'maxlength (textarea)', leaf: true, href: ['ext/data/elements/maxlength_textarea.php']},
+					{text: 'media (a, area)', leaf: true, href: ['ext/data/elements/media_hyperlink.php']},
+					{text: 'media (link)', leaf: true, href: ['ext/data/elements/media_link.php']},
+					{text: 'media (source)', leaf: true, href: ['ext/data/elements/media_source.php']},
+					{text: 'media (style)', leaf: true, href: ['ext/data/elements/media_style.php']},
+					{text: 'min (meter)', leaf: true, href: ['ext/data/elements/min_meter.php']},
+					{text: 'method', leaf: true, href: ['ext/data/elements/method.php']},
+					{text: 'min (input)', leaf: true, href: ['ext/data/elements/min_input.php']},
+					{text: 'multiple (input)', leaf: true, href: ['ext/data/elements/multiple_input.php']},
+					{text: 'multiple (select)', leaf: true, href: ['ext/data/elements/multiple_select.php']}
+				]},
+				{text: 'N', expanded: false, children: [
+					{text: 'name', leaf: true, href: ['ext/data/elements/name.php']},
+					{text: 'name (iframe)', leaf: true, href: ['ext/data/elements/name_iframe.php']},
+					{text: 'name (map)', leaf: true, href: ['ext/data/elements/name_map.php']},
+					{text: 'name (meta)', leaf: true, href: ['ext/data/elements/name_meta.php']},
+					{text: 'name (object)', leaf: true, href: ['ext/data/elements/name_object.php']},
+					{text: 'name (param)', leaf: true, href: ['ext/data/elements/name_param.php']},
+					{text: 'novalidate', leaf: true, href: ['ext/data/elements/novalidate.php']}
+				]},
+				{text: 'O', expanded: false, children: [
+					{text: 'optimum (meter)', leaf: true, href: ['ext/data/elements/optimum_meter.php']},
+					{text: 'open (details)', leaf: true, href: ['ext/data/elements/open_details.php']}
+				]},
+				{text: 'P', expanded: false, children: [
+					{text: 'pattern (input)', leaf: true, href: ['ext/data/elements/pattern_input.php']},
+					{text: 'placeholder (input)', leaf: true, href: ['ext/data/elements/placeholder_input.php']},
+					{text: 'placeholder (textarea)', leaf: true, href: ['ext/data/elements/placeholder_textarea.php']},
+					{text: 'poster (video)', leaf: true, href: ['ext/data/elements/poster_video.php']},
+					{text: 'preload', leaf: true, href: ['ext/data/elements/preload_media.php']}
+				]},
+				{text: 'R', expanded: false, children: [
+					{text: 'radiogroup (command)', leaf: true, href: ['ext/data/elements/radiogroup_command.php']},
+					{text: 'readonly (input)', leaf: true, href: ['ext/data/elements/readonly_input.php']},
+					{text: 'readonly (textarea)', leaf: true, href: ['ext/data/elements/readonly_textarea.php']},
+					{text: 'required (input)', leaf: true, href: ['ext/data/elements/required_input.php']},
+					{text: 'required (select)', leaf: true, href: ['ext/data/elements/required_select.php']},
+					{text: 'required (textarea)', leaf: true, href: ['ext/data/elements/required_textarea.php']},
+					{text: 'reversed (ol)', leaf: true, href: ['ext/data/elements/reversed_ol.php']},
+					{text: 'rows (textarea)', leaf: true, href: ['ext/data/elements/rows_textarea.php']},
+					{text: 'rowspan', leaf: true, href: ['ext/data/elements/rowspan.php']}
+				]},
+				{text: 'S', expanded: false, children: [
+					{text: 'sandbox (iframe)', leaf: true, href: ['ext/data/elements/sandbox_iframe.php']},
+					{text: 'scope', leaf: true, href: ['ext/data/elements/scope.php']},
+					{text: 'scoped (style)', leaf: true, href: ['ext/data/elements/scoped_style.php']},
+					{text: 'seamless (iframe)', leaf: true, href: ['ext/data/elements/seamless_iframe.php']},
+					{text: 'selected (option)', leaf: true, href: ['ext/data/elements/selected_option.php']},
+					{text: 'shape', leaf: true, href: ['ext/data/elements/shape.php']},
+					{text: 'size (input)', leaf: true, href: ['ext/data/elements/size_input.php']},
+					{text: 'size (select)', leaf: true, href: ['ext/data/elements/size_select.php']},
+					{text: 'sizes', leaf: true, href: ['ext/data/elements/sizes.php']},
+					{text: 'span', leaf: true, href: ['ext/data/elements/span.php']},
+					{text: 'spellcheck', leaf: true, href: ['ext/data/elements/spellcheck.php']},
+					{text: 'src (embed)', leaf: true, href: ['ext/data/elements/src_embed.php']},
+					{text: 'src (iframe)', leaf: true, href: ['ext/data/elements/src_iframe.php']},
+					{text: 'src (img)', leaf: true, href: ['ext/data/elements/src_img.php']},
+					{text: 'src (input)', leaf: true, href: ['ext/data/elements/src_input.php']},
+					{text: 'src (video, audio)', leaf: true, href: ['ext/data/elements/src_media.php']},
+					{text: 'src (script)', leaf: true, href: ['ext/data/elements/src_script.php']},
+					{text: 'src (source)', leaf: true, href: ['ext/data/elements/src_source.php']},
+					{text: 'src (track)', leaf: true, href: ['ext/data/elements/src_track.php']},
+					{text: 'srcdoc (iframe)', leaf: true, href: ['ext/data/elements/srcdoc_iframe.php']},
+					{text: 'srclang (track)', leaf: true, href: ['ext/data/elements/srclang_track.php']},
+					{text: 'start (ol)', leaf: true, href: ['ext/data/elements/start_ol.php']},
+					{text: 'step (input)', leaf: true, href: ['ext/data/elements/step_input.php']},
+					{text: 'style', leaf: true, href: ['ext/data/elements/style.php']}
+				]},
+				{text: 'T', expanded: false, children: [
+					{text: 'tabindex', leaf: true, href: ['ext/data/elements/tabindex.php']},
+					{text: 'target', leaf: true, href: ['ext/data/elements/target.php']},
+					{text: 'target (base)', leaf: true, href: ['ext/data/elements/target_base.php']},
+					{text: 'target (form)', leaf: true, href: ['ext/data/elements/target_form.php']},
+					{text: 'title', leaf: true, href: ['ext/data/elements/title.php']},
+					{text: 'title (abbr)', leaf: true, href: ['ext/data/elements/title_abbr.php']},
+					{text: 'title (command)', leaf: true, href: ['ext/data/elements/title_command.php']},
+					{text: 'title (dfn)', leaf: true, href: ['ext/data/elements/title_dfn.php']},
+					{text: 'title (link)', leaf: true, href: ['ext/data/elements/title_link.php']},
+					{text: 'type (a, area)', leaf: true, href: ['ext/data/elements/type_hyperlink.php']},
+					{text: 'type (button)', leaf: true, href: ['ext/data/elements/type_button.php']},
+					{text: 'type (command)', leaf: true, href: ['ext/data/elements/type_command.php']},
+					{text: 'type (embed)', leaf: true, href: ['ext/data/elements/type_embed.php']},
+					{text: 'type (input)', leaf: true, href: ['ext/data/elements/type_input.php']},
+					{text: 'type (menu)', leaf: true, href: ['ext/data/elements/type_menu.php']},
+					{text: 'type (object)', leaf: true, href: ['ext/data/elements/type_object.php']},
+					{text: 'type (ol)', leaf: true, href: ['ext/data/elements/type_ol.php']},
+					{text: 'type (script)', leaf: true, href: ['ext/data/elements/type_script.php']},
+					{text: 'type (source)', leaf: true, href: ['ext/data/elements/type_source.php']},
+					{text: 'type (style)', leaf: true, href: ['ext/data/elements/type_style.php']}
+				]},
+				{text: 'U', expanded: false, children: [
+					{text: 'usemap', leaf: true, href: ['ext/data/elements/usemap.php']}
+				]},
+				{text: 'V', expanded: false, children: [
+					{text: 'value (meter)', leaf: true, href: ['ext/data/elements/value_meter.php']},
+					{text: 'value (button)', leaf: true, href: ['ext/data/elements/value_button.php']},
+					{text: 'value (input)', leaf: true, href: ['ext/data/elements/value_input.php']},
+					{text: 'value (li)', leaf: true, href: ['ext/data/elements/value_li.php']},
+					{text: 'value (option)', leaf: true, href: ['ext/data/elements/value_option.php']},
+					{text: 'value (param)', leaf: true, href: ['ext/data/elements/value_param.php']},
+					{text: 'value (progress)', leaf: true, href: ['ext/data/elements/value_progress.php']}
+				]},
+				{text: 'W', expanded: false, children: [
+					{text: 'width', leaf: true, href: ['ext/data/elements/width.php']},
+					{text: 'wrap (textarea)', leaf: true, href: ['ext/data/elements/wrap_textarea.php']}
+				]}
+			]
+		}
+	});
+
 	var toolbarConfig = {
 		region: 'north',
 		height: 27,
@@ -220,11 +439,11 @@ Ext.onReady(function(){
 		},*/{
 			xtype: 'tabpanel',
 			flex: 1,
-			activeTab: 0,
+			activeTab: 1,
 			items: [{
 				xtype: 'treepanel',
 				title: 'Elements',
-				store: elementsStore,
+				store: elemStore,
 				rootVisible: false,
 				viewConfig: {
 					plugins: {ptype: 'treeviewdragdrop'}
@@ -259,13 +478,28 @@ Ext.onReady(function(){
 						}
 
 						ajaxLoad('support-innerCt', 'browser');
+
 						e.preventDefault();
 					}
 				}
 			},{
+				xtype: 'treepanel',
 				title: 'Attributes',
-				html: '내용2',
-				border: false
+				store: attrStore,
+				rootVisible: false,
+				listeners : {
+					itemclick : function($this, record, item, index, e, eOpts){
+						var path = record.data.href;
+
+						if(path){
+							Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
+						}else{
+							return false;
+						}
+
+						e.preventDefault();
+					}
+				}
 			},{
 				title: 'Events',
 				html: '내용3',
@@ -275,20 +509,51 @@ Ext.onReady(function(){
 				tabchange: function(tabPanel, newCard, oldCard, eOpts){
 					var textVal = '';
 
+					function toggleEft(options){
+						var $this = options,
+							$selecter = $this.selecter,
+							visible = $this.visible,
+							len = $selecter.length,
+							i = 0;
+
+						while(i < len){
+							if(visible == 'show'){
+								Ext.getCmp($selecter[i]).show();
+							}else{
+								Ext.getCmp($selecter[i]).hide();
+							}
+
+							i++;
+						}
+					}
+
 					switch(newCard.title){
 						case 'Elements':
 							textVal = '요소';
+
+							toggleEft({selecter:['side','support'], visible:'show'});
+							//Ext.getCmp('side').show();
+							//Ext.getCmp('support').show();
 							break;
 						case 'Attributes':
 							textVal = '속성';
+
+							toggleEft({selecter:['side','support'], visible:'hide'});
+							//Ext.getCmp('side').hide();
+							//Ext.getCmp('support').hide();
 							break;
 						case 'Events':
 							textVal = '이벤트';
+
+							toggleEft({selecter:['side','support'], visible:'hide'});
+							//Ext.getCmp('side').hide();
+							//Ext.getCmp('support').show();
 							break;
 						default:break;
 					}
 
 					Ext.DomQuery.selectNode('#detailDsc_header_hd-textEl').innerHTML = textVal + ' 설명';
+					//console.log(Ext.DomQuery.selectNode('#side'));//.style.display = 'none';
 				}
 			}
 		}]
@@ -303,10 +568,11 @@ Ext.onReady(function(){
 	var side = {
 		region: 'east',
 		title: '상세 설명',
+		id: 'side',
 		collapsible: true,
-		collapsed: true,
+		//collapsed: true,
 		//collapseMode: 'mini',
-		//hidden: true,
+		hidden: false,
 		width: 300,
 		layout: {
 			type: 'accordion',
@@ -343,6 +609,7 @@ Ext.onReady(function(){
 
 	var foot = {
 		region: 'south',
+		hidden: false,
 		title: '브라우저 지원',
 		id: 'support',
 		collapsible: true,
