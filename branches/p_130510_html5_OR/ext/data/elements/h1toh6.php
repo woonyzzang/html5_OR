@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">form 요소: (header 1 to header 6)</h2>
 
 		<dl class="definition">

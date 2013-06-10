@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">keygen 요소: (key-pair generator&frasl;input control)</h2>
 
 		<dl class="definition">

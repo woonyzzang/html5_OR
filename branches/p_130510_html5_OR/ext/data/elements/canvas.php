@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">canvas 요소: (canvas for dynamic graphics)</h2>
 
 		<dl class="definition">

@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">ul 요소: (unordered list)</h2>
 
 		<dl class="definition">

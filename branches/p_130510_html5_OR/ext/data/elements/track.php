@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">title 요소: (supplementary media track)</h2>
 
 		<dl class="definition">

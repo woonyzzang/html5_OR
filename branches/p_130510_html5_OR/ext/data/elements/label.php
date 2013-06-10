@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">label 요소: (caption for a form control)</h2>
 
 		<dl class="definition">
