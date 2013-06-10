@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>default 속성 (track) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,34 +18,39 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">default 속성 (track)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>사용자가 선택한 것이 없다면 이 트랙을 사용한다는 뜻입니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>불리언 속성입니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			&lt;video src="opening.mp4"&gt;
+				&lt;track src="caption_kr.srt" srclang="ko" label="한글 자막 (Korean)" default&gt;
+				&lt;track src="caption_en.srt" srclang="en" label="영어 자막 (English)"&gt;
+			&lt;/video&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
+	<!-- 메모 -->
+	<section>
+		<h3 class="s_tit">메모</h3>
+		<p>default 속성은 동일 부모 아래에서 한번만 사용할 수 있습니다.</p>
+	</section>
+	<!-- //메모 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/edits.html#attr-mod-datetime" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

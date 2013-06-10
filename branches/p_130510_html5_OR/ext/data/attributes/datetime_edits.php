@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>datetime 속성 (ins, del) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,27 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">datetime 속성 (ins, del)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>datetime 속성은 ins 요소, del 요소,time 요소의 변화와 관련하여 변경한 날짜와 시간을 표시할 수 있습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>선택적으로 시간정보를 갖는 유효한 날짜 문자열이어야 합니다.</p>
+		<p>이 속성을 사용했다면, 값은 반드시 있어야 합니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			<p><del datetime="2011-09-02T20:00:00+09:00">토마토는 야채이다.</del></p>
+
+			<p><ins datetime="2011-09-02T21:00:00+09:00">토마토는 미국에서만 야채이다.</ins></p>
+
+			<p><time class="dtend" datetime="2007-10-20">19</time></p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +46,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/edits.html#attr-mod-datetime" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

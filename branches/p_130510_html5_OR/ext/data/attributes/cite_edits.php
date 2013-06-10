@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>cite 속성 (ins, del) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,26 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">cite 속성 (ins, del)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>cite 속성은 ins 요소와 del 요소요소의 변화에 대해 설명하는 문서의 위치를 표시합니다. 문서가 길다면, &#34;#&#34; 식별자를 사용하여 변화에 대해 설명하는 정확한 부분을 가리키기를 권장합니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>유효한, 앞뒤로 공백을 허용하는 URL이어야 합니다. 대응하는 인용 링크를 얻기 위해, 속성의 값은 요소에 대해 상대적으로 해석되어야 합니다. 사용자 에이전트는 사용자가 그러한 인용 링크를 따라갈 수 있도록 해야 합니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			<!-- @ins 요소에 cite 속성을 사용한 경우 -->
+			<p><ins cite="http://ko.wikipedia.org/wiki/토마토">토마토는 미국에서만 야채이다.</ins></p>
+
+			<!-- @del 요소에 cite 속성을 사용한 경우 -->
+			<p><del cite="http://ko.wikipedia.org/wiki/토마토">토마토는 야채이다.</del></p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +45,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/edits.html#attr-mod-cite" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

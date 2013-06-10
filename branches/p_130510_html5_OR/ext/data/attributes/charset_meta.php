@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>charset 속성 (meta) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,23 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">charset 속성 (meta)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>charset 속성은 문서에서 사용하는 문자 인코딩 방식을 지정합니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>이 속성이 XML 문서에서 나타날 경우, 속성의 값은 반드시 아스키, 대소문자 구분 없이 &#34;UTF-8&#34;이 되어야 합니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			<!-- @meta 요소에 charset 속성을 함께 선언하는 경우 -->
+			&lt;meta charset="utf-8"&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +42,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/semantics.html#attr-meta-charset" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>autocomplete 속성 (form) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,25 +18,27 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">autocomplete 속성 (form)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>autocomplete 속성은 폼 내부 요소의 자동완성 기능을 설정하는 속성입니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>두가지 상태값을 가집니다. 속성값 on은 자동완성 기능의 활성화 상태를 나타내며, 속성값 off는 자동완성 기능의 비활성화 상태를 나타냅니다.</p>
+		<div id="gridAttr"></div>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
+			<form action="demo_form.asp" method="get" autocomplete="on">
 			First name: <input type="text" name="fname"><br>
 			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
+			E-mail: <input type="email" name="email" autocomplete="off"><br>
+			<input type="submit">
 			</form>
 		</pre>
 	</section>
@@ -45,12 +47,40 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/forms.html#attr-form-autocomplete" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->
 </article>
 
 <script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script>
+Ext.onReady(function(){
+	var storeData = Ext.create('Ext.data.Store',{
+		fields: ['keyword','desc'],
+		data: {'items':[
+			{keyword:'on', desc:'폼 내부 요소 자동완성 기능을 활성화시킵니다. (기본값)'},
+			{keyword:'off', desc:'폼 내부 요소 자동완성 기능을 비활성화시킵니다.'}
+		]},
+		proxy : {
+			type: 'memory',
+			reader: {
+				type: 'json',
+				root: 'items'
+			}
+		}
+	});
+
+	var grid = Ext.create('Ext.grid.Panel', {
+		renderTo: Ext.get('gridAttr'),
+		title: '속성 정의 목록',
+		store: storeData,
+		columns: [
+			{header:'키워드', dataIndex:'keyword'},
+			{header:'설명', dataIndex:'desc', flex:1}
+		]
+	})
+});
+</script>
 </body>
 </html>

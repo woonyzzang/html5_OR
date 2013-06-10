@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>cite 속성 (q) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,23 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">cite 속성 (q)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>q 요소 에서의 cite 속성은 인용문의 원본 출처를 표기할 수 있습니다. 다른 원본 페이지에 있던 내용을 인용한 경우에는 cite 속성에 유효한 URL을 선언할 수 있습니다. 유의점으로는 cite 요소요소는 어떤 작품의 제목을 나타내지만, cite 속성은 인용문의 원본출처를 표기한다는 것입니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>cite 속성을 사용했다면, 유효한 URL이어야 합니다.</p>
+		<p>상대적으로 해석한 링크를 따라갈 수 있어야 합니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			<p>웹 접근성이란<q cite="http://www.wah.or.kr/Accessibility/define.asp">장애인뿐만 아니라 모든 사람이 정보통신 기기나 서비스를 손쉽게 활용할 수 있도록 만드는 것</q>을 말합니다.</p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +42,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/text-level-semantics.html#attr-q-cite" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

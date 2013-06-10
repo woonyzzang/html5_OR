@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>checked 속성 (command) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,23 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">checked 속성 (command)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>checked 속성은 참과 거짓의 불리언 속성입니다. 따라서 이 속성이 존재한다면 커맨드가 선택되었음을 나타냅니다. checked 속성은 type 속성이 checkbox, radio 상태일 경우에만 사용할 수 있습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>불리언 속성입니다. checked 속성은 checked 속성 그 자체를 선언하거나 또는 checked=&#34;checked&#34; 로 선언하면 선택됨이 되고 속성이 선언되지 않았다면 선택되지 않은 상태 입니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			<command type="radio" radiogroup="alignment" checked="checked" label="왼쪽정렬">
+			<command label="필수체크" type="checkbox" checked="checked">
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +42,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/interactive-elements.html#attr-command-checked" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

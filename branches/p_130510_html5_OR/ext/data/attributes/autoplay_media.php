@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>autoplay 속성 (media) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,34 +18,36 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">autoplay 속성 (media)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>autoplay 속성은 미디어를 자동 재생시킵니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>불리언 속성입니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			&lt;video src="opening.ogv" controls autoplay&gt;&lt;/video&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
+	<!-- 메모 -->
+	<section>
+		<h3 class="s_tit">메모</h3>
+		<p>스크립트를 사용하여 자동 재생하는 것보다 autoplay 속성을 사용할 것을 권장합니다. 또한 음성 낭독기와 같은 보조기기에 의해서 재생 옵션을 덮어쓸 수 있습니다. 하지만, 자동 재생을 하지 않고 사용자에게 재생 권한을 넘기는 것이 더 좋습니다.</p>
+	</section>
+	<!-- //메모 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/video.html#attr-media-autoplay" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

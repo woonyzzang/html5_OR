@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">alt 속성 (img)</h2>
 
 		<dl class="definition">
@@ -120,6 +119,15 @@
 		<p>이미지 대신 alt 속성에 지정된텍스트를 읽었을 때 자연스럽게 문장이 이어져야 합니다. 즉, 단어를 대체하는 이미지의대체 텍스트는 단어여야 하며 문장을 대체하는 이미지의대체 텍스트는 완전한 문장이어야 합니다.</p>
 	</section>
 	<!-- //메모 -->
+	<!-- 참고 -->
+	<section>
+		<h3 class="s_tit">참고 API</h3>
+		<ul class="api_ist">
+		<li><a href="http://www.w3.org/TR/html5/embedded-content-1.html#attr-img-alt" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/embedded-content-1.html#general-guidelines" target="_blank">alt 속성 사용 가이드 최신 명세</a></li>
+		</ul>
+	</section>
+	<!-- //참고 -->
 </article>
 
 <script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>

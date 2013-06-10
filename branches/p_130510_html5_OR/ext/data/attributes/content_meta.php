@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>content 속성 (meta) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,32 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">content 속성 (meta)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>요소가 그러한 목적으로 사용되었을때는 문서 메타데이터, 프라그마 디렉티브(pragma directive, 전처리)의 값을 나타냅니다. 허용된 값은 문맥에 따라 다릅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>유효한 메타데이터 정보의 내용이어야 합니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			<!-- @name속성에 content속성이 사용될 때 -->
+			&lt;meta name="author" content="Joe Seung Woon"&gt;
+
+			<!-- @http-equiv속성에 content속성이 사용될 때 -->
+			&lt;meta http-equiv="Content-Type" content="text/html; charset=euc-kr"&gt;
+
+			<!-- @기타 -->
+			&lt;meta http-equiv="content-language" content="ko"&gt;
+			&lt;meta http-equiv="Content-Type" content="text/html; charset=euc-kr"&gt;
+			&lt;meta http-equiv="content-style-type" content="text/css"&gt;
+			&lt;meta http-equiv="refresh" content="10, www.w3c.org"&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +51,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/document-metadata.html#attr-meta-content" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

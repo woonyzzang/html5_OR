@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">alt 속성 (input)</h2>
 
 		<dl class="definition">
@@ -38,6 +37,14 @@
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
+	<!-- 참고 -->
+	<section>
+		<h3 class="s_tit">참고 API</h3>
+		<ul class="api_ist">
+		<li><a href="http://www.w3.org/TR/html5/number-state.html#attr-input-alt" target="_blank">최신 명세</a></li>
+		</ul>
+	</section>
+	<!-- //참고 -->
 </article>
 
 <script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>

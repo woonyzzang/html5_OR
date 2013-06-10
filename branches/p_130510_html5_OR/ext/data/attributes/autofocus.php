@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>autofocus 속성 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,34 +18,39 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">autofocus 속성</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>autofocus 속성은 페이지가 로드될 때 요소에 자동으로 포커스를 받도록 정의합니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>불리언 속성입니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			<!-- @다음 두가지는 모두 true로 간주됩니다. 즉, 페이지를 로드하면 이 요소는자동으로 포커스를 받습니다. -->
+			<input type="text" autofocus>
+
+			<input type="text" autofocus="autofocus">
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
+	<!-- 메모 -->
+	<section>
+		<h3 class="s_tit">메모</h3>
+		<p>autofocus 속성은 페이지당 하나만 쓸 수 있습니다. 유감스럽게도 W3C 유효성 검사 페이지는 autofocus를 두개 쓴 것을 에러로 발견하지 못하고 있습니다. 이는 autofocus 속성을 속성을 여러개 사용할 수 있다는 뜻이 아닙니다. 유효성 검사기가 에러를 찾아 주지 못하므로 조심해야 한다는 의미입니다.</p>
+	</section>
+	<!-- //메모 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fe-autofocus" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

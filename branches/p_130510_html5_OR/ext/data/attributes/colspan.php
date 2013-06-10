@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>action 속성 : HTML5 Open Reference Guide</title>
+<title>colspan 속성 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,38 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">action 속성</h2>
+		<h2 class="s_tit">colspan 속성</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.</dd>
+		<dd>column group 상태는 헤더가 동일한 열 집합에 있는 다른 모든 셀에 적용됨을 의미합니다. 따라서 요소가 열 집합을 가리키는 경우에만 colspan 속성을 사용할 수 있습니다.</dd>
+		<dd>td 요소요소, th 요소요소 모두 colspan 속성을 포함 할 수 으며, 이는 셀이 확장될 열의 숫자를 나타냅니다. 단, 셀을 오버랩하기 위해서 colspan 속성을 사용해서는 안됩니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>서식 값을 전송할 유효한 URL을 입력해야 합니다.</p>
+		<p>0보다 큰 유효한 양의 정수이어야 합니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form action="form_action.asp" method="get">
-			First name: <input type="text" name="fname"><br>
-			Last name: <input type="text" name="lname"><br>
-			<input type="submit" value="전송">
-			</form>
+			<table>
+			<caption>과일 품목 지출 현황</caption>
+			<tr>
+			<th>과일이름</th>
+			<th>가격</th>
+			<th>갯수</th>
+			</tr>
+			<tr>
+			<td>사과</td>
+			<td>2,000원</td>
+			<td>5개</td>
+			</tr>
+			<tr>
+			<td colspan="3">오렌지 품절</td>
+			</tr>
+			</table>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +57,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/association-of-controls-and-forms.html#attr-fs-action" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/tabular-data.html#attr-tdth-colspan" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

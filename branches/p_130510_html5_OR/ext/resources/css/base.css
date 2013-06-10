@@ -12,6 +12,7 @@ table{width:100%;border-collapse:collapse;border-spacing:0}
 
 /* =Common */
 .x-body{font-family:NanumGothic,'나눔고딕',MalgunGothic,'맑은고딕',Dotum,'돋움',Gulim,'굴림',AppleGothic,Helvetica,sans-serif;font-size:14px}
+a.x-tree-node-text{color:#2600f0}
 
 /* =Set Class */
 .blind{visibility:hidden;overflow:hidden;position:absolute;z-index:-1;width:0;height:0;font-size:0;line-height:0}
@@ -51,6 +52,7 @@ table{width:100%;border-collapse:collapse;border-spacing:0}
 #content_desc .category dt{font-weight:bold}
 #content_desc .category dd{margin:0}
 #content_desc .category li{line-height:1.8}
+#content_desc .api_ist li{line-height:1.6}
 
 /* =Refer */
 #refer{padding:0 10px}

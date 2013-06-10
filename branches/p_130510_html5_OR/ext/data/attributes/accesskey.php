@@ -18,7 +18,6 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<div>
 		<h2 class="s_tit">accesskey 속성</h2>
 
 		<dl class="definition">
@@ -46,11 +45,19 @@
 	<!-- 메모 -->
 	<section>
 		<h3 class="s_tit">메모</h3>
-		<p>Accesskey 속성은명세에 Ctrl + Alt 조합키로 사용될수 있다고 명시되어 있지만, 사용자 에이전트별로 차이가 있을 수 있습니다. 또한, 윈도우와 매킨토시에서의 조합키도 다를 수도 있습니다. </p>
+		<p>Accesskey 속성은명세에 Ctrl + Alt 조합키로 사용될수 있다고 명시되어 있지만, 사용자 에이전트별로 차이가 있을 수 있습니다. 또한, 윈도우와 매킨토시에서의 조합키도 다를 수도 있습니다.</p>
 		<div id="gridAttr"></div>
 		<p>오페라 브라우저는 Shift + Esc 조합키를 누르면 접근키 목록이 별도의 팝업으로 나타납니다.</p>
 	</section>
 	<!-- //메모 -->
+	<!-- 참고 -->
+	<section>
+		<h3 class="s_tit">참고 API</h3>
+		<ul class="api_ist">
+		<li><a href="http://www.w3.org/TR/html5/editing.html#the-accesskey-attribute" target="_blank">최신 명세</a></li>
+		</ul>
+	</section>
+	<!-- //참고 -->
 </article>
 
 <script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
@@ -76,7 +83,7 @@ Ext.onReady(function(){
 
 	var grid = Ext.create('Ext.grid.Panel', {
 		renderTo: Ext.get('gridAttr'),
-		title: '주요 브라우저별, 윈도우, 매킨토시 조합키',
+		title: '주요 브라우저별, 윈도우, 매킨토시 조합키 목록',
 		store: storeData,
 		columns: [
 			{header:'웹 브라우저', dataIndex:'browser', flex:1},
