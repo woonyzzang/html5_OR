@@ -127,7 +127,6 @@ Uses HTMLElement.
 			<img src="ext/resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
 		</p>
 		<em>모든 주요 브라우저에서 지원 합니다.</em>
-		<strong>(참고: abbr 태그는 IE6 또는 이전 버전에서는 지원되지 않습니다.)</strong>
 	</section>
 	<!-- //지원 브라우저 -->
 </article>

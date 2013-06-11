@@ -228,7 +228,7 @@ Ext.onReady(function(){
 				{text: 'E', expanded: false, children: [
 					{text: 'enctype', leaf: true, href: ['ext/data/attributes/enctype.php']}
 				]},
-				{text: 'F', expanded: true, children: [
+				{text: 'F', expanded: false, children: [
 					{text: 'for (label)', leaf: true, href: ['ext/data/attributes/for_label.php']},
 					{text: 'for (output)', leaf: true, href: ['ext/data/attributes/for_output.php']},
 					{text: 'form', leaf: true, href: ['ext/data/attributes/form.php']},
@@ -242,7 +242,7 @@ Ext.onReady(function(){
 					{text: 'global', leaf: true, href: ['ext/data/attributes/global.php']}
 				]},
 				{text: 'H', expanded: false, children: [
-					{text: 'header', leaf: true, href: ['ext/data/attributes/header.php']},
+					{text: 'headers', leaf: true, href: ['ext/data/attributes/headers.php']},
 					{text: 'height', leaf: true, href: ['ext/data/attributes/height.php']},
 					{text: 'hidden', leaf: true, href: ['ext/data/attributes/hidden.php']},
 					{text: 'href', leaf: true, href: ['ext/data/attributes/href.php']},
@@ -264,7 +264,7 @@ Ext.onReady(function(){
 				]},
 				{text: 'L', expanded: false, children: [
 					{text: 'label (optgroup)', leaf: true, href: ['ext/data/attributes/label_optgroup.php']},
-					{text: 'labe (menu)', leaf: true, href: ['ext/data/attributes/labe_menu.php']},
+					//{text: 'labe (menu)', leaf: true, href: ['ext/data/attributes/labe_menu.php']},
 					{text: 'label (command)', leaf: true, href: ['ext/data/attributes/label_command.php']},
 					{text: 'label (option)', leaf: true, href: ['ext/data/attributes/label_option.php']},
 					{text: 'label (track)', leaf: true, href: ['ext/data/attributes/label_track.php']},
@@ -290,7 +290,7 @@ Ext.onReady(function(){
 					{text: 'multiple (input)', leaf: true, href: ['ext/data/attributes/multiple_input.php']},
 					{text: 'multiple (select)', leaf: true, href: ['ext/data/attributes/multiple_select.php']}
 				]},
-				{text: 'N', expanded: false, children: [
+				{text: 'N', expanded: true, children: [
 					{text: 'name', leaf: true, href: ['ext/data/attributes/name.php']},
 					{text: 'name (iframe)', leaf: true, href: ['ext/data/attributes/name_iframe.php']},
 					{text: 'name (map)', leaf: true, href: ['ext/data/attributes/name_map.php']},
@@ -418,7 +418,7 @@ Ext.onReady(function(){
 		}]
 	};
 
-	var elemMenu = {
+	var nav = {
 		region: 'west',
 		title: '요소 메뉴',
 		collapsible: true,
@@ -468,8 +468,8 @@ Ext.onReady(function(){
 							*/
 							Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
 
-							for(var i=0,len=side.items.length; i<len; i++){
-								var obj = side.items[i],
+							for(var i=0,len=aside.items.length; i<len; i++){
+								var obj = aside.items[i],
 									idx = obj.id.replace('Area','');
 
 								ajaxLoad(obj.id + '-innerCt', idx);
@@ -560,20 +560,21 @@ Ext.onReady(function(){
 		}]
 	};
 
-	var contents = {
+	var container = {
 		region: 'center',
 		title: '설명',
-		id : 'detailDsc'
+		id : 'detailDsc',
+		html: '<h3>HTML5 오픈 레퍼런스 가이드 준비중...</h3>'
 	};
 
-	var side = {
+	var aside = {
 		region: 'east',
 		title: '상세 설명',
 		id: 'side',
 		collapsible: true,
 		//collapsed: true,
 		//collapseMode: 'mini',
-		hidden: false,
+		hidden: true,
 		width: 300,
 		layout: {
 			type: 'accordion',
@@ -584,19 +585,19 @@ Ext.onReady(function(){
 		items: [{
 			title: '1. 스펙 명세',
 			id: 'referArea',
-			html: '테스트3',
+			html: '테스트1',
 			autoHeight: true,
 			autoScroll: true
 		},{
 			title: '2. 콘텐츠 분류 타입 &frasl; 마크업 규칙',
 			id: 'flowArea',
-			html: '테스트1',
+			html: '테스트2',
 			autoHeight: true,
 			autoScroll: true
 		},{
 			title: '3. 참조',
 			id: 'memoArea',
-			html: '테스트2',
+			html: '테스트3',
 			autoHeight: true,
 			autoScroll: true
 		},{
@@ -615,6 +616,7 @@ Ext.onReady(function(){
 		id: 'support',
 		collapsible: true,
 		collapsed: true,
+		hidden: true,
 		html: 'Support Browser',
 		height: 80,
 		minHeight: 80
@@ -628,7 +630,7 @@ Ext.onReady(function(){
 		defaults: {
             split: true
         },
-		items: [toolbarConfig, elemMenu, contents, side, foot]
+		items: [toolbarConfig, nav, container, aside, foot]
 	});
 });
 </script>
