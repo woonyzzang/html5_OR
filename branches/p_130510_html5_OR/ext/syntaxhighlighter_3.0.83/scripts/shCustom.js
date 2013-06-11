@@ -39,7 +39,7 @@ SyntaxHighlighter.autoloader.apply(null, path(
 // @SyntaxHighlighter 설정
 //SyntaxHighlighter.config.bloggerMode = true;
 //SyntaxHighlighter.config.strings.viewSource = "view my source!!!!";
-SyntaxHighlighter.config.stripBrs = true;
+//SyntaxHighlighter.config.stripBrs = true;
 //SyntaxHighlighter.config.tagName = 'pre';
 
 
