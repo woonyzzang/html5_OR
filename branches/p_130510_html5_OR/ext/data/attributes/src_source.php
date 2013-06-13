@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>min 속성 (meter) : HTML5 Open Reference Guide</title>
+<title>src 속성 (source) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,34 +18,36 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">min 속성 (meter)</h2>
+		<h2 class="s_tit">src 속성 (source)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>min 속성은 meter 요소의 최소값을 나타냅니다.</dd>
+		<dd>src 속성은 source 요소의 미디어 자원 주소를 정의합니다. 이 속성은 반드시 존재하여야 합니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>유효한 부동소수점 숫자를 사용하여야 합니다. 값을 명시하지 않으면 최소 값은 0이 됩니다.</p>
+		<p>값은 유효해야 하며, 앞뒤로 공백을 허용하고 비어 있지 않은 URL이어야 합니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<!-- @기본 마크업 -->
-			<p>C 드라이브 현황 : <meter min="0" max="1000" value="600"></p>
-
-			<!-- @min 속성을 지정하지 않을 경우 최소값은 0이 됩니다. -->
-			<p>C 드라이브 현황 : <meter value="0.6"></p>
+			&lt;source src="video.ogv" type="video/ogg; codecs='dirac, vorbis'"&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
+	<!-- 메모 -->
+	<section>
+		<h3 class="s_tit">메모</h3>
+		<p>src 속성을 동적으로 변경하는 것은 아무런 변화도 주지 않습니다.</p>
+	</section>
+	<!-- //메모 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/the-button-element.html#attr-meter-min" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/video.html#attr-source-src" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

@@ -9,9 +9,6 @@
 <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
 <script src="../../ext-all-debug.js"></script>
 <script src="../../locale/ext-lang-ko.js"></script>
-<script>
-
-</script>
 </head>
 <body>
 <article id="content_desc">

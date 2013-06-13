@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>min 속성 (meter) : HTML5 Open Reference Guide</title>
+<title>sizes 속성 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,24 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">min 속성 (meter)</h2>
+		<h2 class="s_tit">sizes 속성</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>min 속성은 meter 요소의 최소값을 나타냅니다.</dd>
+		<dd>sizes 속성은 link 요소에서 [html5:attribute:rel]값을 icon으로 사용할 경우에만 사용됩니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>유효한 부동소수점 숫자를 사용하여야 합니다. 값을 명시하지 않으면 최소 값은 0이 됩니다.</p>
+		<p>속성 값으로 아이콘의 가로와 세로 사이즈를 &#39;X&#39;나 &#39;x&#39;로 구분하여 지정할 수 있습니다. 만약 아이콘 이외(예를들어 SVG와 같은)의 것이라면 any 값으로 확장된 아이콘을 지정할 수도 있습니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<!-- @기본 마크업 -->
-			<p>C 드라이브 현황 : <meter min="0" max="1000" value="600"></p>
-
-			<!-- @min 속성을 지정하지 않을 경우 최소값은 0이 됩니다. -->
-			<p>C 드라이브 현황 : <meter value="0.6"></p>
+			&lt;link rel="icon" href="favicon.png" sizes="16x16" type="image/png"&gt;
+			&lt;link rel="icon" href="mac.icns" sizes="128x128 512x512 8192x8192 32768x32768"&gt;
+			&lt;link rel="icon" href="gnome.svg" sizes="any" type="image/svg+xml"&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +43,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/the-button-element.html#attr-meter-min" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/inks.html#attr-hyperlink-sizes" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

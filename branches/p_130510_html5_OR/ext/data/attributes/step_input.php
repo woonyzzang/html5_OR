@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>min 속성 (meter) : HTML5 Open Reference Guide</title>
+<title>step 속성 (input) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,26 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">min 속성 (meter)</h2>
+		<h2 class="s_tit">step 속성 (input)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>min 속성은 meter 요소의 최소값을 나타냅니다.</dd>
+		<dd>step 속성은 허용되는 값을 제한하여, 값이 예상되는(그리고 요구되는) 단계성을 나타냅니다. max 속성의 값(최대값)은 min 속성의 값(최소값)보다 작을 수 없습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>유효한 부동소수점 숫자를 사용하여야 합니다. 값을 명시하지 않으면 최소 값은 0이 됩니다.</p>
+		<p>step 속성을 명시하였다면, 그 값은 0 이상의 값으로 파싱될 수 있는 유효한 부동소수점 숫자이거나, 혹은 문자열 &#34;any&#34;와 매칭되는 ASCII 값이어야 합니다(대소문자는 구분하지 않습니다).</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<!-- @기본 마크업 -->
-			<p>C 드라이브 현황 : <meter min="0" max="1000" value="600"></p>
+			<!-- @범위 컨트롤은 0부터 1까지의 값으로 제한하며 11 단계를 허용합니다. -->
+			<p><label>투명도: <input type="range" name="opacity" min="0" max="1" step="0.1"></label></p>
 
-			<!-- @min 속성을 지정하지 않을 경우 최소값은 0이 됩니다. -->
-			<p>C 드라이브 현황 : <meter value="0.6"></p>
+			<!-- @시간 컨트롤은 하루중 어떤 시간도 선택할 수 있으며, 그 정확도에도 제한이 없습니다. (1 밀리초 단위의 정확도도 상관없으며, 더 세밀해도 좋습니다.) (하지만 일반적으로, 시간 컨트롤은 분 단위 정확도로 제한됩니다.) -->
+			<p><label>출발시간: <input type="time" name="startTime" step="any"></label></p>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +45,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/the-button-element.html#attr-meter-min" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/common-input-element-attributes.html#attr-input-step" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->

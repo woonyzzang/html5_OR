@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>min 속성 (meter) : HTML5 Open Reference Guide</title>
+<title>start 속성 (ol) : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,26 +18,37 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">min 속성 (meter)</h2>
+		<h2 class="s_tit">start 속성 (ol)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>min 속성은 meter 요소의 최소값을 나타냅니다.</dd>
+		<dd>start 속성은 목록이 시작하는 숫자를 지정할 수 있습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">속성 값</h3>
-		<p>유효한 부동소수점 숫자를 사용하여야 합니다. 값을 명시하지 않으면 최소 값은 0이 됩니다.</p>
+		<p>유효한 정수여야 합니다.</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<!-- @기본 마크업 -->
-			<p>C 드라이브 현황 : <meter min="0" max="1000" value="600"></p>
+			<p>계속해서 한국인이 가장 좋아하는 음식 5위부터 보시겠습니다.</p>
+			<ol start="5">
+			<li>치킨</li>
+			<li>삼겹살</li>
+			<li>김치찜</li>
+			<li>부침개</li>
+			</ol>
 
-			<!-- @min 속성을 지정하지 않을 경우 최소값은 0이 됩니다. -->
-			<p>C 드라이브 현황 : <meter value="0.6"></p>
+			<!-- @type 속성과 같이 사용 할 경우 -->
+			<p>계속해서 한국인이 가장 좋아하는 음식 5위부터 보시겠습니다.</p>
+			<ol start="5" type="i">
+			<li>치킨</li>
+			<li>삼겹살</li>
+			<li>김치찜</li>
+			<li>부침개</li>
+			</ol>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -45,7 +56,7 @@
 	<section>
 		<h3 class="s_tit">참고 API</h3>
 		<ul class="api_ist">
-		<li><a href="http://www.w3.org/TR/html5/the-button-element.html#attr-meter-min" target="_blank">최신 명세</a></li>
+		<li><a href="http://www.w3.org/TR/html5/grouping-content.html#attr-ol-start" target="_blank">최신 명세</a></li>
 		</ul>
 	</section>
 	<!-- //참고 -->
