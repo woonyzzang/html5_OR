@@ -79,7 +79,7 @@ Ext.onReady(function(){
 			{header:'속성명', xtype:'templatecolumn', tpl:'<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

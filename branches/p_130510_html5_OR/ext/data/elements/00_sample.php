@@ -117,11 +117,55 @@
 		-->
 	</section>
 	<!-- //속성 설명 -->
+	<div id="some-element"><!-- @테스트 영역: new Ext.XTemplate --></div>
 </article>
 
 <script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tpl = new Ext.XTemplate(
+		'<p>Name: {name}</p>',
+		'<p>Kids: ',
+		'<tpl for="kids">',
+			'<tpl if="this.isGirl(name)">',
+				'<p>Girl: {name} - {age}</p>',
+			'<tpl else>',
+				'<p>Boy: {name} - {age}</p>',
+			'</tpl>',
+			'<tpl if="this.isBaby(age)">',
+				'<p>{name} is a baby!</p>',
+			'</tpl>',
+		'</tpl></p>',
+		{
+			// XTemplate configuration:
+			disableFormats: true,
+			// member functions:
+			isGirl: function(name){
+			   return name == 'Aubrey' || name == 'Nikol';
+			},
+			isBaby: function(age){
+			   return age < 1;
+			}
+		}
+	);
+
+	var data = {
+		name: 'Don Griffin',
+		title: 'Senior Technomage',
+		company: 'Sencha Inc.',
+		drinks: ['Coffee', 'Water', 'More Coffee'],
+		kids: [
+			{ name: 'Aubrey',  age: 17 },
+			{ name: 'Joshua',  age: 13 },
+			{ name: 'Cale',    age: 10 },
+			{ name: 'Nikol',   age: 5 },
+			{ name: 'Solomon', age: 0 }
+		]
+	};
+
+	tpl.overwrite(Ext.get('some-element'), data);
+
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
@@ -159,7 +203,7 @@ Ext.onReady(function(){
 			{header:'속성명', xtype: 'templatecolumn', tpl: '<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

@@ -63,7 +63,7 @@ Ext.onReady(function(){
 		fields: ['tit','desc','href'],
 		data: {'items':[
 			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
-			{tit:'colspan', desc:'해당 셀이 미치는 범위의 열 수를 지정합니다.', href:'http://naver.com'}
+			{tit:'colspan', desc:'해당 셀이 미치는 범위의 열 수를 지정합니다.', href:'http://naver.com'},
 			{tit:'rowspan', desc:'해당 셀이 미치는 범위의 행 수를 지정합니다.', href:'http://naver.com'},
 			{tit:'header', desc:'해당 셀에 대응하는 헤더 셀(th 요소)의 id 콘텐츠 속성의 값을 지정합니다.', href:'http://naver.com'},
 			{tit:'scope', desc:'해당 헤더 셀이 영향을 미치는 셀의 범위를 나타내는 키워드를 지정합니다.', href:'http://naver.com'}
@@ -85,7 +85,7 @@ Ext.onReady(function(){
 			{header:'속성명', xtype:'templatecolumn', tpl:'<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

@@ -83,7 +83,7 @@ Ext.onReady(function(){
 			{header:'공개 식별자', dataIndex:'publicID', width:250},
 			{header:'시스템 식별자', dataIndex:'sysID', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

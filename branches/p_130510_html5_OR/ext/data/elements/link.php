@@ -41,31 +41,31 @@
 			&lt;link rel="alternate stylesheet" href="@파일명" title="@파일 부가 설명"&gt;
 
 			<!-- @외부 자원 링크 연동 -->
-			<link rel="alternate" type="text/html" href="@파일명" hreflang="en" title="English HTML">
-			<link rel="alternate" type="text/html" href="@파일명" hreflang="fr" title="French HTML">
-			<link rel="alternate" type="text/html" href="@파일명" hreflang="en" media="print" title="English HTML (for printing)">
-			<link rel="alternate" type="text/html" href="@파일명" hreflang="fr" media="print" title="French HTML (for printing)">
-			<link rel="alternate" type="application/pdf" href="@파일명" hreflang="en" title="English PDF">
-			<link rel="alternate" type="application/pdf" href="@파일명" hreflang="fr" title="French PDF">
+			&lt;link rel="alternate" type="text/html" href="@파일명" hreflang="en" title="English HTML"&gt;
+			&lt;link rel="alternate" type="text/html" href="@파일명" hreflang="fr" title="French HTML"&gt;
+			&lt;link rel="alternate" type="text/html" href="@파일명" hreflang="en" media="print" title="English HTML (for printing)"&gt;
+			&lt;link rel="alternate" type="text/html" href="@파일명" hreflang="fr" media="print" title="French HTML (for printing)"&gt;
+			&lt;link rel="alternate" type="application/pdf" href="@파일명" hreflang="en" title="English PDF"&gt;
+			&lt;link rel="alternate" type="application/pdf" href="@파일명" hreflang="fr" title="French PDF"&gt;
 
-			<link rel="alternate">
-			<link rel="archives">
-			<link rel="author">
-			<link rel="feed">
-			<link rel="first">
-			<link rel="help">
-			<link rel="icon">
-			<link rel="index">
-			<link rel="last">
-			<link rel="license">
-			<link rel="next">
-			<link rel="pingback">
-			<link rel="prefetch">
-			<link rel="prev">
-			<link rel="search">
-			<link rel="stylesheet">
-			<link rel="sidebar">
-			<link rel="tag">
+			&lt;link rel="alternate"&gt;
+			&lt;link rel="archives"&gt;
+			&lt;link rel="author"&gt;
+			&lt;link rel="feed"&gt;
+			&lt;link rel="first"&gt;
+			&lt;link rel="help"&gt;
+			&lt;link rel="icon"&gt;
+			&lt;link rel="index"&gt;
+			&lt;link rel="last"&gt;
+			&lt;link rel="license"&gt;
+			&lt;link rel="next"&gt;
+			&lt;link rel="pingback"&gt;
+			&lt;link rel="prefetch"&gt;
+			&lt;link rel="prev"&gt;
+			&lt;link rel="search"&gt;
+			&lt;link rel="stylesheet"&gt;
+			&lt;link rel="sidebar"&gt;
+			&lt;link rel="tag"&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -85,7 +85,7 @@ Ext.onReady(function(){
 		data: {'items':[
 			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
 			{tit:'href', desc:'링크의 목적지를 지정합니다. 유효한, 앞뒤 공백은 허용하지만 비어 있지 않은 URL을 사용하여야 합니다. href 속성이 없거나 명세상의 정의에 따라 허용된 값이 아니라면 링크가 만들어지지 않습니다.', href:'http://naver.com'},
-			{tit:'rel', desc:'링크가 형성하는 관계를 지정합니다. rel 속성이 없거나 명세상의 정의에 따라 허용된 값이 아닌 경우 rel 요소를 정의하지 않아야 합니다.', href:'http://naver.com'}
+			{tit:'rel', desc:'링크가 형성하는 관계를 지정합니다. rel 속성이 없거나 명세상의 정의에 따라 허용된 값이 아닌 경우 rel 요소를 정의하지 않아야 합니다.', href:'http://naver.com'},
 			{tit:'media', desc:'어떤 매체에 적용되는지 나타냅니다. 값은 반드시 유효한 미디어 쿼리여야 합니다.', href:'http://naver.com'},
 			{tit:'hreflang', desc:'대상 URL의 언어를 명시합니다. 이 속성은 a 요소 및 area 요소의 hreflang 속성과 같은 의미입니다.', href:'http://naver.com'},
 			{tit:'type', desc:'MIME 타입을 지정합니다. 반드시 유효한 MIME 타입 값이어야 합니다.', href:'http://naver.com'},
@@ -109,7 +109,7 @@ Ext.onReady(function(){
 			{header:'속성명', xtype:'templatecolumn', tpl:'<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

@@ -37,7 +37,7 @@
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
 			<figure>
-				<img src="@이미지파일" alt="W3C Logo">
+				&lt;img src="@이미지파일" alt="W3C Logo"&gt;
 			</figure>
 		</pre>
 	</section>
@@ -75,7 +75,7 @@ Ext.onReady(function(){
 			{header:'속성명', xtype:'templatecolumn', tpl:'<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

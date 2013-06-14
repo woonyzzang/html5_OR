@@ -36,12 +36,12 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<img src="@이미지 파일 경로" alt="Planets" usemap="#planetmap" />
+			&lt;img src="@이미지 파일 경로" alt="Planets" usemap="#planetmap"&gt;
 
 			<map name="planetmap">
-			<area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun" />
-			<area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury" />
-			<area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus" />
+			<area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
+			<area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+			<area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
 			</map>
 		</pre>
 	</section>
@@ -80,7 +80,7 @@ Ext.onReady(function(){
 			{header:'속성명', xtype:'templatecolumn', tpl:'<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

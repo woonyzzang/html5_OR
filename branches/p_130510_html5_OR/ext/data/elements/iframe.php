@@ -37,12 +37,12 @@
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
 			<!-- 기본 -->
-			<iframe src="@문서파일 경로"></iframe>
+			&lt;iframe src="@문서파일 경로"&gt;&lt;/iframe&gt;
 
 			<!-- 지원하지 않는 브라우저 고려시 -->
-			<iframe src="@문서파일 경로">
+			&lt;iframe src="@문서파일 경로">
 				<p>Your browser does not support iframes.</p>
-			</iframe>
+			&lt;/iframe&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -86,7 +86,7 @@ Ext.onReady(function(){
 			{header:'속성명', xtype:'templatecolumn', tpl:'<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

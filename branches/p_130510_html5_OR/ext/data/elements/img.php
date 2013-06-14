@@ -36,7 +36,7 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<img src="@이미지 파일" width="100" height="100" alt="대체 텍스트">
+			&lt;img src="@이미지 파일" width="100" height="100" alt="대체 텍스트"&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -79,7 +79,7 @@ Ext.onReady(function(){
 			{header:'속성명', xtype:'templatecolumn', tpl:'<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

@@ -36,7 +36,7 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<img src="planets.gif" usemap="#planetmap" alt="Planets">
+			&lt;img src="planets.gif" usemap="#planetmap" alt="Planets"&gt;
 			<map name="planetmap">
 				<area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun">
 				<area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">

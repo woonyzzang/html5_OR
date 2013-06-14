@@ -70,7 +70,7 @@ Ext.onReady(function(){
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
-			{tit:'전역 속성', desc:'공통 속성', href:'http://naver.com'},
+			{tit:'전역 속성', desc:'공통 속성', href:'../attributes/global.php'},
 			{tit:'href', desc:'이동할 URL을 지정합니다.', href:'naver.com'},
 			{tit:'target', desc:'이동시 사용되는 콘텍스트 이름이나 키워드를 지정합니다.', href:'naver.com'},
 			{tit:'rel', desc:'링크 대상과의 관계를 지정합니다.', href:'naver.com'},
@@ -94,8 +94,14 @@ Ext.onReady(function(){
 		columns: [
 			{header:'속성명', xtype: 'templatecolumn', tpl: '<a href="{href}">{tit}</a>'},
 			{header:'설명', dataIndex:'desc', flex:1}
-		]
-	})
+		],
+		listeners : {
+			itemclick : function($this, record, item, index, e, eOpts){
+				//console.log(nav);
+				//e.preventDefault();
+			}
+		}
+	});
 });
 </script>
 </body>
