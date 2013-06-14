@@ -77,7 +77,7 @@ Ext.onReady(function(){
 			{header:'키워드', dataIndex:'keyword'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>
