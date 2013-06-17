@@ -16,6 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
+	<div id="some-element"><!-- @테스트 영역: new Ext.XTemplate --></div>
 	<!-- 태그 설명 -->
 	<section>
 		<h2 class="s_tit">a 요소: (anchor)</h2>
@@ -67,6 +68,34 @@
 <script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tpl = new Ext.XTemplate(
+		'<section>',
+			'<h2 class="s_tit">{elem} 요소: ({meaning})</h2>',
+			'<dl class="definition">',
+			'<tpl for="item">',
+				'<dt>정의</dt>',
+				'<dd>{desc}</dd>',
+			'</tpl>',
+			'</dl>',
+			'<h3 class="s_tit">요소 레벨</h3>',
+			'<p>{level} 엘리먼트</p>',
+			'<h3 class="s_tit">요소 카테고리</h3>',
+			'<p>{category}</p>',
+		'</section>'
+	);
+
+	var tplData = {
+		elem: 'a',
+		meaning: 'anchor',
+		item: [{
+			desc:'a 요소는 현재 웹페이지에서 다른 웹페이지로 이동하거나 현재 웹페이지 내의 특정 위치 이동시에 문서들을 연결합니다.'
+		}],
+		level: 'Inline-Level',
+		category: 'HTML Basic'
+	};
+
+	tpl.overwrite(Ext.get('some-element'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

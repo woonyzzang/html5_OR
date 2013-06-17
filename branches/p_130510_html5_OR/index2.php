@@ -11,7 +11,64 @@
 <script src="ext/locale/ext-lang-ko.js"></script>
 </head>
 <script>
+var loadMask = null;
+
+var blind = {
+	hide : function(obj){
+		Ext.getCmp(obj).hide();
+	},
+	show : function(obj){
+		Ext.getCmp(obj).show();
+	},
+	disable : function(obj){
+		Ext.getCmp(obj).disable();
+	},
+	enable : function(obj){
+		Ext.getCmp(obj).enable();
+	}
+};
+
+function fsLoad(url){
+	var path = url;
+	Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
+}
+
+function ajaxLoad(con, url, idx){
+	$('#' + con).load(url + ' #' + idx, function(){
+		loadMask.hide();
+	});
+}
+
+function toggleEft(options){
+	var $this = options,
+		$selecter = $this.selecter,
+		visible = $this.visible,
+		len = $selecter.length,
+		i = 0;
+
+	while(i < len){
+		if(visible == 'show'){
+			Ext.getCmp($selecter[i]).show();
+		}else{
+			Ext.getCmp($selecter[i]).hide();
+		}
+
+		i++;
+	}
+}
+
+function init(){
+	blind.hide('accessiblity');
+	blind.hide('reference');
+	//blind.disable('side');
+	//blind.disable('support');
+	toggleEft({selecter:['side','support'], visible:'hide'});
+}
+</script>
+<script>
 Ext.onReady(function(){
+	loadMask = new Ext.LoadMask(document.body, {msg:'Please wait...'});
+
 	var toolbarConfig = {
 		region: 'north',
 		height: 27,
@@ -27,23 +84,31 @@ Ext.onReady(function(){
 			menu: [{
 				text: 'HTML&amp;CSS',
 				handler: function(e){
-					Ext.getCmp('convention').show();
-					Ext.getCmp('accessiblity').hide();
-					Ext.getCmp('reference').hide();
+					blind.show('convention');
+					blind.hide('accessiblity');
+					blind.hide('reference');
+					toggleEft({selecter:['side','support'], visible:'hide'});
 				}
 			},{
 				text: 'Accessiblity',
 				handler: function(e){
-					Ext.getCmp('convention').hide();
-					Ext.getCmp('accessiblity').show();
-					Ext.getCmp('reference').hide();
+					blind.hide('convention');
+					blind.show('accessiblity');
+					blind.hide('reference');
+					toggleEft({selecter:['side','support'], visible:'hide'});
 				}
 			},{
 				text: 'HTML5 Open Reference',
 				handler: function(e){
-					Ext.getCmp('convention').hide();
-					Ext.getCmp('accessiblity').hide();
-					Ext.getCmp('reference').show();
+					blind.hide('convention');
+					blind.hide('accessiblity');
+					blind.show('reference');
+					toggleEft({selecter:['side','support'], visible:'show'});
+				}
+			},{
+				text: 'Blog',
+				handler: function(e){
+					alert('블로그');
 				}
 			}]
 		},'-','검색', {
@@ -68,6 +133,7 @@ Ext.onReady(function(){
 		},
 		items: [{
 			xtype: 'treepanel',
+			title: '마크업 코딩 컨벤션',
 			flex: 1,
 			store: Ext.create('Ext.data.TreeStore', {
 				autoLoad: true,
@@ -96,6 +162,7 @@ Ext.onReady(function(){
 		},
 		items: [{
 			xtype: 'treepanel',
+			title: 'PC 웹 접근성, 모바일 접근성',
 			flex: 1,
 			store: Ext.create('Ext.data.TreeStore', {
 				autoLoad: true,
@@ -117,6 +184,8 @@ Ext.onReady(function(){
 		title: 'HTML5 Open Reference',
 		id: 'reference',
 		collapsible: true,
+		//collapsed: true,
+		//collapseMode: 'mini',
 		width: 220,
 		layout: {
 			type: 'hbox',
@@ -148,24 +217,22 @@ Ext.onReady(function(){
 					itemclick : function($this, record, item, index, e, eOpts){
 						var path = record.data.href;
 
-						function ajaxLoad(con, idx){
-							$('#' + con).load(path[1] + ' #' + idx);
-						}
-
 						if(path){
-							Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
+							loadMask.show();
+
+							fsLoad(path);
 
 							for(var i=0,len=aside.items.length; i<len; i++){
 								var obj = aside.items[i],
 									idx = obj.id.replace('Area','');
 
-								ajaxLoad(obj.id + '-innerCt', idx);
+								ajaxLoad(obj.id + '-innerCt', path[1], idx);
 							}
 						}else{
 							return false;
 						}
 
-						ajaxLoad('support-innerCt', 'browser');
+						ajaxLoad('support-innerCt', path[1], 'browser');
 
 						e.preventDefault();
 					}
@@ -190,7 +257,9 @@ Ext.onReady(function(){
 						var path = record.data.href;
 
 						if(path){
-							Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
+							loadMask.show();
+
+							fsLoad(path);
 						}else{
 							return false;
 						}
@@ -207,38 +276,17 @@ Ext.onReady(function(){
 				tabchange: function(tabPanel, newCard, oldCard, eOpts){
 					var textVal = '';
 
-					function toggleEft(options){
-						var $this = options,
-							$selecter = $this.selecter,
-							visible = $this.visible,
-							len = $selecter.length,
-							i = 0;
-
-						while(i < len){
-							if(visible == 'show'){
-								Ext.getCmp($selecter[i]).show();
-							}else{
-								Ext.getCmp($selecter[i]).hide();
-							}
-
-							i++;
-						}
-					}
-
 					switch(newCard.title){
 						case 'Elements':
 							textVal = '요소';
-
 							toggleEft({selecter:['side','support'], visible:'show'});
 							break;
 						case 'Attributes':
 							textVal = '속성';
-
 							toggleEft({selecter:['side','support'], visible:'hide'});
 							break;
 						case 'Events':
 							textVal = '이벤트';
-
 							toggleEft({selecter:['side','support'], visible:'hide'});
 							break;
 						default:break;
@@ -303,8 +351,7 @@ Ext.onReady(function(){
 		title: '브라우저 지원',
 		id: 'support',
 		collapsible: true,
-		collapsed: true,
-		hidden: true,
+		collapsed: false,
 		html: 'Support Browser',
 		height: 80,
 		minHeight: 80
@@ -321,8 +368,22 @@ Ext.onReady(function(){
 		items: [toolbarConfig, convention, accessiblity, reference, container, aside, foot]
 	});
 
-	Ext.getCmp('accessiblity').hide();
-	Ext.getCmp('reference').hide();
+	init();
+/*
+function handleClick(e, t){
+	//var target = e.getTarget();
+	console.log('aaaaa');
+    //e.preventDefault();
+}
+
+var myDiv = Ext.get('tree');
+console.log(myDiv);
+myDiv.on('click', handleClick);
+
+
+//Ext.EventManager.on(myDiv, 'click', handleClick);
+//Ext.EventManager.addListener(Ext.get('myDiv'), 'click', handleClick);
+*/
 });
 </script>
 </body>
