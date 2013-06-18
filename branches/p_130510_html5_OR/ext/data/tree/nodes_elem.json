@@ -4,148 +4,148 @@
 	animate: true,
 	children: [
 		{text: 'A', expanded: false, children: [
-			{text: 'a', cls: 'wikilink', leaf: true, href: ['ext/data/elements/a.php', 'ext/data/elements/a_desc.php'], qtitle: 'elements:a'},
-			{text: 'abbr', leaf: true, href: ['ext/data/elements/abbr.php', 'ext/data/elements/abbr_desc.php']},
-			{text: 'address', leaf: true, href: ['ext/data/elements/address.php', 'ext/data/elements/address_desc.php']},
-			{text: 'area', leaf: true, href: ['ext/data/elements/area.php', 'ext/data/elements/area_desc.php']},
-			{text: 'article', leaf: true, href: ['ext/data/elements/article.php', 'ext/data/elements/article_desc.php']},
-			{text: 'aside', leaf: true, href: ['ext/data/elements/aside.php', 'ext/data/elements/aside_desc.php']},
-			{text: 'audio', leaf: true, href: ['ext/data/elements/audio.php', 'ext/data/elements/audio_desc.php']}
+			{text: 'a', cls: 'wikilink', leaf: true, href: ['a.php', 'a_desc.php'], qtitle: 'elements:a'},
+			{text: 'abbr', leaf: true, href: ['abbr.php', 'abbr_desc.php']},
+			{text: 'address', leaf: true, href: ['address.php', 'address_desc.php']},
+			{text: 'area', leaf: true, href: ['area.php', 'area_desc.php']},
+			{text: 'article', leaf: true, href: ['article.php', 'article_desc.php']},
+			{text: 'aside', leaf: true, href: ['aside.php', 'aside_desc.php']},
+			{text: 'audio', leaf: true, href: ['audio.php', 'audio_desc.php']}
 		]},
 		{text: 'B', expanded: false, children: [
-			{text: 'b', leaf: true, href: ['ext/data/elements/b.php', 'ext/data/elements/b_desc.php']},
-			{text: 'base', leaf: true, href: ['ext/data/elements/base.php', 'ext/data/elements/base_desc.php']},
-			{text: 'bdi', leaf: true, href: ['ext/data/elements/bdi.php', 'ext/data/elements/bdi_desc.php']},
-			{text: 'dbo', leaf: true, href: ['ext/data/elements/bdo.php', 'ext/data/elements/bdo_desc.php']},
-			{text: 'blockquote', leaf: true, href: ['ext/data/elements/blockquote.php', 'ext/data/elements/blockquote_desc.php']},
-			{text: 'body', leaf: true, href: ['ext/data/elements/body.php', 'ext/data/elements/body_desc.php']},
-			{text: 'br', leaf: true, href: ['ext/data/elements/br.php', 'ext/data/elements/br_desc.php']},
-			{text: 'button', leaf: true, href: ['ext/data/elements/button.php', 'ext/data/elements/button_desc.php']}
+			{text: 'b', leaf: true, href: ['b.php', 'b_desc.php']},
+			{text: 'base', leaf: true, href: ['base.php', 'base_desc.php']},
+			{text: 'bdi', leaf: true, href: ['bdi.php', 'bdi_desc.php']},
+			{text: 'dbo', leaf: true, href: ['bdo.php', 'bdo_desc.php']},
+			{text: 'blockquote', leaf: true, href: ['blockquote.php', 'blockquote_desc.php']},
+			{text: 'body', leaf: true, href: ['body.php', 'body_desc.php']},
+			{text: 'br', leaf: true, href: ['br.php', 'br_desc.php']},
+			{text: 'button', leaf: true, href: ['button.php', 'button_desc.php']}
 		]},
 		{text: 'C', expanded: false, children: [
-			{text: 'canvas', leaf: true, href: ['ext/data/elements/canvas.php', 'ext/data/elements/canvas_desc.php']},
-			{text: 'caption', leaf: true, href: ['ext/data/elements/caption.php', 'ext/data/elements/caption_desc.php']},
-			{text: 'cite', leaf: true, href: ['ext/data/elements/cite.php', 'ext/data/elements/cite_desc.php']},
-			{text: 'code', leaf: true, href: ['ext/data/elements/code.php', 'ext/data/elements/code_desc.php']},
-			{text: 'col', leaf: true, href: ['ext/data/elements/col.php', 'ext/data/elements/col_desc.php']},
-			{text: 'colgroup', leaf: true, href: ['ext/data/elements/colgroup.php', 'ext/data/elements/colgroup_desc.php']},
-			{text: 'command', leaf: true, href: ['ext/data/elements/command.php', 'ext/data/elements/command_desc.php']}
+			{text: 'canvas', leaf: true, href: ['canvas.php', 'canvas_desc.php']},
+			{text: 'caption', leaf: true, href: ['caption.php', 'caption_desc.php']},
+			{text: 'cite', leaf: true, href: ['cite.php', 'cite_desc.php']},
+			{text: 'code', leaf: true, href: ['code.php', 'code_desc.php']},
+			{text: 'col', leaf: true, href: ['col.php', 'col_desc.php']},
+			{text: 'colgroup', leaf: true, href: ['colgroup.php', 'colgroup_desc.php']},
+			{text: 'command', leaf: true, href: ['command.php', 'command_desc.php']}
 		]},
 		{text: 'D', expanded: false, children: [
-			{text: 'datalist', leaf: true, href: ['ext/data/elements/datalist.php', 'ext/data/elements/datalist_desc.php']},
-			{text: 'dd', leaf: true, href: ['ext/data/elements/dd.php', 'ext/data/elements/dd_desc.php']},
-			{text: 'del', leaf: true, href: ['ext/data/elements/del.php', 'ext/data/elements/del_desc.php']},
-			{text: 'details', leaf: true, href: ['ext/data/elements/details.php', 'ext/data/elements/details_desc.php']},
-			{text: 'dfn', leaf: true, href: ['ext/data/elements/dfn.php', 'ext/data/elements/dfn_desc.php']},
-			{text: 'div', leaf: true, href: ['ext/data/elements/div.php', 'ext/data/elements/div_desc.php']},
-			{text: 'dl', leaf: true, href: ['ext/data/elements/dl.php', 'ext/data/elements/dl_desc.php']},
-			{text: 'doctype', leaf: true, href: ['ext/data/elements/doctype.php', 'ext/data/elements/doctype_desc.php']},
-			{text: 'dt', leaf: true, href: ['ext/data/elements/dt.php', 'ext/data/elements/dt_desc.php']}
+			{text: 'datalist', leaf: true, href: ['datalist.php', 'datalist_desc.php']},
+			{text: 'dd', leaf: true, href: ['dd.php', 'dd_desc.php']},
+			{text: 'del', leaf: true, href: ['del.php', 'del_desc.php']},
+			{text: 'details', leaf: true, href: ['details.php', 'details_desc.php']},
+			{text: 'dfn', leaf: true, href: ['dfn.php', 'dfn_desc.php']},
+			{text: 'div', leaf: true, href: ['div.php', 'div_desc.php']},
+			{text: 'dl', leaf: true, href: ['dl.php', 'dl_desc.php']},
+			{text: 'doctype', leaf: true, href: ['doctype.php', 'doctype_desc.php']},
+			{text: 'dt', leaf: true, href: ['dt.php', 'dt_desc.php']}
 		]},
 		{text: 'E', expanded: false, children: [
-			{text: 'em', leaf: true, href: ['ext/data/elements/em.php', 'ext/data/elements/em_desc.php']},
-			{text: 'embed', leaf: true, href: ['ext/data/elements/embed.php', 'ext/data/elements/embed_desc.php']}
+			{text: 'em', leaf: true, href: ['em.php', 'em_desc.php']},
+			{text: 'embed', leaf: true, href: ['embed.php', 'embed_desc.php']}
 		]},
 		{text: 'F', expanded: false, children: [
-			{text: 'fieldset', leaf: true, href: ['ext/data/elements/fieldset.php', 'ext/data/elements/fieldset_desc.php']},
-			{text: 'figcaption', leaf: true, href: ['ext/data/elements/figcaption.php', 'ext/data/elements/figcaption_desc.php']},
-			{text: 'figure', leaf: true, href: ['ext/data/elements/figure.php', 'ext/data/elements/figure_desc.php']},
-			{text: 'footer', leaf: true, href: ['ext/data/elements/footer.php', 'ext/data/elements/footer_desc.php']},
-			{text: 'form', leaf: true, href: ['ext/data/elements/form.php', 'ext/data/elements/form_desc.php']}
+			{text: 'fieldset', leaf: true, href: ['fieldset.php', 'fieldset_desc.php']},
+			{text: 'figcaption', leaf: true, href: ['figcaption.php', 'figcaption_desc.php']},
+			{text: 'figure', leaf: true, href: ['figure.php', 'figure_desc.php']},
+			{text: 'footer', leaf: true, href: ['footer.php', 'footer_desc.php']},
+			{text: 'form', leaf: true, href: ['form.php', 'form_desc.php']}
 		]},
 		{text: 'H', expanded: false, children: [
-			{text: 'h1, h2, h3, h4, h5, h6', leaf: true, href: ['ext/data/elements/h1toh6.php', 'ext/data/elements/h1toh6_desc.php']},
-			{text: 'head', leaf: true, href: ['ext/data/elements/head.php', 'ext/data/elements/head_desc.php']},
-			{text: 'header', leaf: true, href: ['ext/data/elements/header.php', 'ext/data/elements/header_desc.php']},
-			{text: 'hgroup', leaf: true, href: ['ext/data/elements/hgroup.php', 'ext/data/elements/hgroup_desc.php']},
-			{text: 'hr', leaf: true, href: ['ext/data/elements/hr.php', 'ext/data/elements/hr_desc.php']},
-			{text: 'html', leaf: true, href: ['ext/data/elements/html.php', 'ext/data/elements/html_desc.php']}
+			{text: 'h1, h2, h3, h4, h5, h6', leaf: true, href: ['h1toh6.php', 'h1toh6_desc.php']},
+			{text: 'head', leaf: true, href: ['head.php', 'head_desc.php']},
+			{text: 'header', leaf: true, href: ['header.php', 'header_desc.php']},
+			{text: 'hgroup', leaf: true, href: ['hgroup.php', 'hgroup_desc.php']},
+			{text: 'hr', leaf: true, href: ['hr.php', 'hr_desc.php']},
+			{text: 'html', leaf: true, href: ['html.php', 'html_desc.php']}
 		]},
 		{text: 'I', expanded: false, children: [
-			{text: 'i', leaf: true, href: ['ext/data/elements/i.php', 'ext/data/elements/i_desc.php']},
-			{text: 'iframe', leaf: true, href: ['ext/data/elements/iframe.php', 'ext/data/elements/iframe_desc.php']},
-			{text: 'img', leaf: true, href: ['ext/data/elements/img.php', 'ext/data/elements/img_desc.php']},
-			{text: 'input', leaf: true, href: ['ext/data/elements/input.php', 'ext/data/elements/input_desc.php']},
-			{text: 'ins', leaf: true, href: ['ext/data/elements/ins.php', 'ext/data/elements/ins_desc.php']},
+			{text: 'i', leaf: true, href: ['i.php', 'i_desc.php']},
+			{text: 'iframe', leaf: true, href: ['iframe.php', 'iframe_desc.php']},
+			{text: 'img', leaf: true, href: ['img.php', 'img_desc.php']},
+			{text: 'input', leaf: true, href: ['input.php', 'input_desc.php']},
+			{text: 'ins', leaf: true, href: ['ins.php', 'ins_desc.php']},
 		]},
 		{text: 'K', expanded: false, children: [
-			{text: 'kbd', leaf: true, href: ['ext/data/elements/kbd.php', 'ext/data/elements/kbd_desc.php']},
-			{text: 'keygen', leaf: true, href: ['ext/data/elements/keygen.php', 'ext/data/elements/keygen_desc.php']}
+			{text: 'kbd', leaf: true, href: ['kbd.php', 'kbd_desc.php']},
+			{text: 'keygen', leaf: true, href: ['keygen.php', 'keygen_desc.php']}
 		]},
 		{text: 'L', expanded: false, children: [
-			{text: 'label', leaf: true, href: ['ext/data/elements/label.php', 'ext/data/elements/label_desc.php']},
-			{text: 'legend', leaf: true, href: ['ext/data/elements/legend.php', 'ext/data/elements/legend_desc.php']},
-			{text: 'li', leaf: true, href: ['ext/data/elements/li.php', 'ext/data/elements/li_desc.php']},
-			{text: 'link', leaf: true, href: ['ext/data/elements/link.php', 'ext/data/elements/link_desc.php']}
+			{text: 'label', leaf: true, href: ['label.php', 'label_desc.php']},
+			{text: 'legend', leaf: true, href: ['legend.php', 'legend_desc.php']},
+			{text: 'li', leaf: true, href: ['li.php', 'li_desc.php']},
+			{text: 'link', leaf: true, href: ['link.php', 'link_desc.php']}
 		]},
 		{text: 'M', expanded: false, children: [
-			{text: 'map', leaf: true, href: ['ext/data/elements/map.php', 'ext/data/elements/map_desc.php']},
-			{text: 'mark', leaf: true, href: ['ext/data/elements/mark.php', 'ext/data/elements/mark_desc.php']},
-			{text: 'menu', leaf: true, href: ['ext/data/elements/menu.php', 'ext/data/elements/menu_desc.php']},
-			{text: 'meta', leaf: true, href: ['ext/data/elements/meta.php', 'ext/data/elements/meta_desc.php']},
-			{text: 'meter', leaf: true, href: ['ext/data/elements/meter.php', 'ext/data/elements/meter_desc.php']}
+			{text: 'map', leaf: true, href: ['map.php', 'map_desc.php']},
+			{text: 'mark', leaf: true, href: ['mark.php', 'mark_desc.php']},
+			{text: 'menu', leaf: true, href: ['menu.php', 'menu_desc.php']},
+			{text: 'meta', leaf: true, href: ['meta.php', 'meta_desc.php']},
+			{text: 'meter', leaf: true, href: ['meter.php', 'meter_desc.php']}
 		]},
 		{text: 'N', expanded: false, children: [
-			{text: 'nav', leaf: true, href: ['ext/data/elements/nav.php', 'ext/data/elements/nav_desc.php']},
-			{text: 'noscript', leaf: true, href: ['ext/data/elements/noscript.php', 'ext/data/elements/noscript_desc.php']}
+			{text: 'nav', leaf: true, href: ['nav.php', 'nav_desc.php']},
+			{text: 'noscript', leaf: true, href: ['noscript.php', 'noscript_desc.php']}
 		]},
 		{text: 'O', expanded: false, children: [
-			{text: 'object', leaf: true, href: ['ext/data/elements/object.php', 'ext/data/elements/object_desc.php']},
-			{text: 'ol', leaf: true, href: ['ext/data/elements/ol.php', 'ext/data/elements/ol_desc.php']},
-			{text: 'optgroup', leaf: true, href: ['ext/data/elements/optgroup.php', 'ext/data/elements/optgroup_desc.php']},
-			{text: 'option', leaf: true, href: ['ext/data/elements/option.php', 'ext/data/elements/option_desc.php']},
-			{text: 'output', leaf: true, href: ['ext/data/elements/output.php', 'ext/data/elements/output_desc.php']}
+			{text: 'object', leaf: true, href: ['object.php', 'object_desc.php']},
+			{text: 'ol', leaf: true, href: ['ol.php', 'ol_desc.php']},
+			{text: 'optgroup', leaf: true, href: ['optgroup.php', 'optgroup_desc.php']},
+			{text: 'option', leaf: true, href: ['option.php', 'option_desc.php']},
+			{text: 'output', leaf: true, href: ['output.php', 'output_desc.php']}
 		]},
 		{text: 'P', expanded: false, children: [
-			{text: 'p', leaf: true, href: ['ext/data/elements/p.php', 'ext/data/elements/p_desc.php']},
-			{text: 'param', leaf: true, href: ['ext/data/elements/param.php', 'ext/data/elements/param_desc.php']},
-			{text: 'pre', leaf: true, href: ['ext/data/elements/pre.php', 'ext/data/elements/pre_desc.php']},
-			{text: 'progress', leaf: true, href: ['ext/data/elements/progress.php', 'ext/data/elements/progress_desc.php']}
+			{text: 'p', leaf: true, href: ['p.php', 'p_desc.php']},
+			{text: 'param', leaf: true, href: ['param.php', 'param_desc.php']},
+			{text: 'pre', leaf: true, href: ['pre.php', 'pre_desc.php']},
+			{text: 'progress', leaf: true, href: ['progress.php', 'progress_desc.php']}
 		]},
 		{text: 'Q', expanded: false, children: [
-			{text: 'q', leaf: true, href: ['ext/data/elements/q.php', 'ext/data/elements/q_desc.php']}
+			{text: 'q', leaf: true, href: ['q.php', 'q_desc.php']}
 		]},
 		{text: 'R', expanded: false, children: [
-			{text: 'rp', leaf: true, href: ['ext/data/elements/rp.php', 'ext/data/elements/rp_desc.php']},
-			{text: 'rt', leaf: true, href: ['ext/data/elements/rt.php', 'ext/data/elements/rt_desc.php']},
-			{text: 'ruby', leaf: true, href: ['ext/data/elements/ruby.php', 'ext/data/elements/ruby_desc.php']}
+			{text: 'rp', leaf: true, href: ['rp.php', 'rp_desc.php']},
+			{text: 'rt', leaf: true, href: ['rt.php', 'rt_desc.php']},
+			{text: 'ruby', leaf: true, href: ['ruby.php', 'ruby_desc.php']}
 		]},
 		{text: 'S', expanded: false, children: [
-			{text: 's', leaf: true, href: ['ext/data/elements/s.php', 'ext/data/elements/s_desc.php']},
-			{text: 'samp', leaf: true, href: ['ext/data/elements/samp.php', 'ext/data/elements/samp_desc.php']},
-			{text: 'script', leaf: true, href: ['ext/data/elements/script.php', 'ext/data/elements/script_desc.php']},
-			{text: 'section', leaf: true, href: ['ext/data/elements/section.php', 'ext/data/elements/section_desc.php']},
-			{text: 'select', leaf: true, href: ['ext/data/elements/select.php', 'ext/data/elements/select_desc.php']},
-			{text: 'small', leaf: true, href: ['ext/data/elements/small.php', 'ext/data/elements/small_desc.php']},
-			{text: 'source', leaf: true, href: ['ext/data/elements/source.php', 'ext/data/elements/source_desc.php']},
-			{text: 'span', leaf: true, href: ['ext/data/elements/span.php', 'ext/data/elements/span_desc.php']},
-			{text: 'strong', leaf: true, href: ['ext/data/elements/strong.php', 'ext/data/elements/strong_desc.php']},
-			{text: 'style', leaf: true, href: ['ext/data/elements/style.php', 'ext/data/elements/style_desc.php']},
-			{text: 'sub&frasl;sup', leaf: true, href: ['ext/data/elements/sub_sup.php', 'ext/data/elements/sub_sup_desc.php']},
-			{text: 'summary', leaf: true, href: ['ext/data/elements/summary.php', 'ext/data/elements/summary_desc.php']}
+			{text: 's', leaf: true, href: ['s.php', 's_desc.php']},
+			{text: 'samp', leaf: true, href: ['samp.php', 'samp_desc.php']},
+			{text: 'script', leaf: true, href: ['script.php', 'script_desc.php']},
+			{text: 'section', leaf: true, href: ['section.php', 'section_desc.php']},
+			{text: 'select', leaf: true, href: ['select.php', 'select_desc.php']},
+			{text: 'small', leaf: true, href: ['small.php', 'small_desc.php']},
+			{text: 'source', leaf: true, href: ['source.php', 'source_desc.php']},
+			{text: 'span', leaf: true, href: ['span.php', 'span_desc.php']},
+			{text: 'strong', leaf: true, href: ['strong.php', 'strong_desc.php']},
+			{text: 'style', leaf: true, href: ['style.php', 'style_desc.php']},
+			{text: 'sub&frasl;sup', leaf: true, href: ['sub_sup.php', 'sub_sup_desc.php']},
+			{text: 'summary', leaf: true, href: ['summary.php', 'summary_desc.php']}
 		]},
 		{text: 'T', expanded: false, children: [
-			{text: 'table', leaf: true, href: ['ext/data/elements/table.php', 'ext/data/elements/table_desc.php']},
-			{text: 'tbody', leaf: true, href: ['ext/data/elements/tbody.php', 'ext/data/elements/tbody_desc.php']},
-			{text: 'td', leaf: true, href: ['ext/data/elements/td.php', 'ext/data/elements/td_desc.php']},
-			{text: 'textarea', leaf: true, href: ['ext/data/elements/textarea.php', 'ext/data/elements/textarea_desc.php']},
-			{text: 'tfoot', leaf: true, href: ['ext/data/elements/tfoot.php', 'ext/data/elements/tfoot_desc.php']},
-			{text: 'th', leaf: true, href: ['ext/data/elements/th.php', 'ext/data/elements/th_desc.php']},
-			{text: 'thead', leaf: true, href: ['ext/data/elements/thead.php', 'ext/data/elements/thead_desc.php']},
-			{text: 'time', leaf: true, href: ['ext/data/elements/time.php', 'ext/data/elements/time_desc.php']},
-			{text: 'title', leaf: true, href: ['ext/data/elements/title.php', 'ext/data/elements/title_desc.php']},
-			{text: 'tr', leaf: true, href: ['ext/data/elements/tr.php', 'ext/data/elements/tr_desc.php']},
-			{text: 'track', leaf: true, href: ['ext/data/elements/track.php', 'ext/data/elements/track_desc.php']}
+			{text: 'table', leaf: true, href: ['table.php', 'table_desc.php']},
+			{text: 'tbody', leaf: true, href: ['tbody.php', 'tbody_desc.php']},
+			{text: 'td', leaf: true, href: ['td.php', 'td_desc.php']},
+			{text: 'textarea', leaf: true, href: ['textarea.php', 'textarea_desc.php']},
+			{text: 'tfoot', leaf: true, href: ['tfoot.php', 'tfoot_desc.php']},
+			{text: 'th', leaf: true, href: ['th.php', 'th_desc.php']},
+			{text: 'thead', leaf: true, href: ['thead.php', 'thead_desc.php']},
+			{text: 'time', leaf: true, href: ['time.php', 'time_desc.php']},
+			{text: 'title', leaf: true, href: ['title.php', 'title_desc.php']},
+			{text: 'tr', leaf: true, href: ['tr.php', 'tr_desc.php']},
+			{text: 'track', leaf: true, href: ['track.php', 'track_desc.php']}
 		]},
 		{text: 'U', expanded: false, children: [
-			{text: 'ul', leaf: true, href: ['ext/data/elements/ul.php', 'ext/data/elements/ul_desc.php']}
+			{text: 'ul', leaf: true, href: ['ul.php', 'ul_desc.php']}
 		]},
 		{text: 'V', expanded: false, children: [
-			{text: 'var', leaf: true, href: ['ext/data/elements/var.php', 'ext/data/elements/var_desc.php']},
-			{text: 'video', leaf: true, href: ['ext/data/elements/video.php', 'ext/data/elements/video_desc.php']}
+			{text: 'var', leaf: true, href: ['var.php', 'var_desc.php']},
+			{text: 'video', leaf: true, href: ['video.php', 'video_desc.php']}
 		]},
 		{text: 'W', expanded: false, children: [
-			{text: 'wbr', leaf: true, href: ['ext/data/elements/wbr.php', 'ext/data/elements/wbr_desc.php']}
+			{text: 'wbr', leaf: true, href: ['wbr.php', 'wbr_desc.php']}
 		]}
 	]
 }

@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>aside 요소 : HTML5 Open Reference Guide</title>
+<title>h1,h2,h3,h4,h5,h6 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,32 +18,31 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">aside 요소: (aside)</h2>
+		<h2 class="s_tit">h1, h2, h3, h4, h5, h6 요소: (header 1 to header 6)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>article 요소는 주위 요소의 내용과 접점을 이루는 섹션으로, 주 콘텐츠와 어느정도 연관성이 있는 부수적인 콘텐츠를 표시할 때 사용되며, 주로 article 요소나 section 요소 같은 중심 콘텐츠의 사이드바(side bar) 형태로 표현됩니다.﻿</dd>
+		<dd>h1, h2, h3, h4, h5, h6 요소는 섹션의 제목을 나타냅니다.</dd>
+		<dd>이름에 있는 숫자가 제목의 등급입니다. h1 요소가 가장 높은 등급이고, h6 요소는 가장 낮은 등급입니다. 이름이 같으면 등급도 같습니다. 섹션 컨텐츠 요소의 첫 번째 제목 컨텐츠가 해당 섹션의 제목을 나타냅니다. 그 후에 나타나는 같거나 더 높은 등급의 제목은 새로운 섹션의 시작을 의미하며 더 낮은 등급의 제목은 이전 섹션의 하위 섹션이 시작됨을 암시합니다. 둘 모두, 해당 요소는 자신이 암시하고 있는 섹션의 제목을 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Structural Elements</p>
+		<p>Form</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<div id="content">
-				<article class="hentry">...</article>
-				<article class="hentry">...</article>
-				<article class="hentry">...</article>
-				<aside>
-					<p>aside 섹션은 부가적인 정보를 제공하는 영역으로 사용됩니다.</p>
-				</aside>
-			</div>
+			<h1>머릿글1</h1>
+			<h2>머릿글2</h2>
+			<h3>머릿글3</h3>
+			<h4>머릿글4</h4>
+			<h5>머릿글5</h5>
+			<h6>머릿글6</h6>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

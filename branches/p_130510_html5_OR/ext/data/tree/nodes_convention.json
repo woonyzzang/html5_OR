@@ -4,11 +4,11 @@
 	animate: true,
 	children: [
 		{text: 'HTML Guide', expanded: true, children: [
-			{text: 'Intro', cls: 'wikilink', leaf: true, href: ['ext/data/elements/a.php', 'ext/data/elements/a_desc.php'], qtitle: 'elements:a'},
-			{text: 'HTML Convention', leaf: true, href: ['ext/data/elements/abbr.php', 'ext/data/elements/abbr_desc.php']},
-			{text: 'HTML Grammar', leaf: true, href: ['ext/data/elements/address.php', 'ext/data/elements/address_desc.php']},
-			{text: '(X)HTML Elements', leaf: true, href: ['ext/data/elements/area.php', 'ext/data/elements/area_desc.php']},
-			{text: 'HTML5 Elements', leaf: true, href: ['ext/data/elements/article.php', 'ext/data/elements/article_desc.php']}
+			{text: 'Intro', leaf: true, href: ['ext/data/convention/html_guide/intro.php']},
+			{text: 'HTML Convention', leaf: true, href: ['ext/data/convention/abbr.php']},
+			{text: 'HTML Grammar', leaf: true, href: ['ext/data/convention/address.php']},
+			{text: '(X)HTML Elements', leaf: true, href: ['ext/data/convention/area.php]},
+			{text: 'HTML5 Elements', leaf: true, href: ['ext/data/convention/article.php']}
 		]},
 		{text: 'CSS Guide', expanded: false, children: [
 			{text: 'Intro', leaf: true, href: ['ext/data/elements/b.php', 'ext/data/elements/b_desc.php']},

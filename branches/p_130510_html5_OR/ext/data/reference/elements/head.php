@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>h1,h2,h3,h4,h5,h6 요소 : HTML5 Open Reference Guide</title>
+<title>head 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,31 +18,33 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">form 요소: (header 1 to header 6)</h2>
+		<h2 class="s_tit">head 요소: (document metadata container)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>h1, h2, h3, h4, h5, h6 요소는 섹션의 제목을 나타냅니다.</dd>
-		<dd>이름에 있는 숫자가 제목의 등급입니다. h1 요소가 가장 높은 등급이고, h6 요소는 가장 낮은 등급입니다. 이름이 같으면 등급도 같습니다. 섹션 컨텐츠 요소의 첫 번째 제목 컨텐츠가 해당 섹션의 제목을 나타냅니다. 그 후에 나타나는 같거나 더 높은 등급의 제목은 새로운 섹션의 시작을 의미하며 더 낮은 등급의 제목은 이전 섹션의 하위 섹션이 시작됨을 암시합니다. 둘 모두, 해당 요소는 자신이 암시하고 있는 섹션의 제목을 나타냅니다.</dd>
+		<dd>head 요소는 문서의 메타데이터 집합을 나타냅니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Form</p>
+		<p>HTML Basic</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<h1>머릿글1</h1>
-			<h2>머릿글2</h2>
-			<h3>머릿글3</h3>
-			<h4>머릿글4</h4>
-			<h5>머릿글5</h5>
-			<h6>머릿글6</h6>
+			&lt;!DOCTYPE html&gt;
+			&lt;html&gt;
+			&lt;head&gt;
+			&lt;title&gt;문서의 제목&lt;/title&gt;
+			&lt;/head&gt;
+			&lt;body&gt;
+				문서의 본문...
+			&lt;/body&gt;
+			&lt;html&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

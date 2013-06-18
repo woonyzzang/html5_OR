@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>head 요소 : HTML5 Open Reference Guide</title>
+<title>figcaption 요소 : HTML5 Open Reference Guide</title>
 <link rel="stylesheet" href="../../resources/css/ext-all.css">
 <link rel="stylesheet" href="../../resources/css/base.css">
 <link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
@@ -18,33 +18,28 @@
 <article id="content_desc">
 	<!-- 태그 설명 -->
 	<section>
-		<h2 class="s_tit">form 요소: (document metadata container)</h2>
+		<h2 class="s_tit">figcaption 요소: (figure caption)</h2>
 
 		<dl class="definition">
 		<dt>정의</dt>
-		<dd>head 요소는 문서의 메타데이터 집합을 나타냅니다.</dd>
+		<dd>figcaption 요소는 부모 요소인 figure 요소의 캡션이나 제목을 정의합니다. 이 요소는 figure 요소 안에 사용되며, 혼자 독립적으로는 사용할 수 없습니다.</dd>
 		</dl>
 
 		<h3 class="s_tit">요소 레벨</h3>
 		<p>Block-Level 엘리먼트</p>
 
 		<h3 class="s_tit">요소 카테고리</h3>
-		<p>HTML Basic</p>
+		<p>Structural Elements</p>
 	</section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			&lt;!DOCTYPE html&gt;
-			&lt;html&gt;
-			&lt;head&gt;
-			&lt;title&gt;문서의 제목&lt;/title&gt;
-			&lt;/head&gt;
-			&lt;body&gt;
-				문서의 본문...
-			&lt;/body&gt;
-			&lt;html&gt;
+			<figure>
+				&lt;img src="@이미지파일" alt="W3C Logo"&gt;
+				<figcaption>W3C Logo</figcaption>
+			</figure>
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->

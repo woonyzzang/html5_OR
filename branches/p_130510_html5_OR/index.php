@@ -1,35 +1,117 @@
+<?php require 'ext/settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="ext/resources/css/ext-all.css">
-<link rel="stylesheet" href="ext/resources/css/base.css">
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="ext/ext-all-debug.js"></script>
-<script src="ext/locale/ext-lang-ko.js"></script>
+<title>Web Standards Guide API</title>
+<?php include 'ext/common_inc.php'; ?>
 </head>
+<body>
+<script>
+var loadMask = null;
+
+var blind = {
+	hide : function(obj){
+		Ext.getCmp(obj).hide();
+	},
+	show : function(obj){
+		Ext.getCmp(obj).show();
+	},
+	disable : function(obj){
+		Ext.getCmp(obj).disable();
+	},
+	enable : function(obj){
+		Ext.getCmp(obj).enable();
+	}
+};
+
+function fsLoad(dir, url){
+
+	loadMask.show();
+
+	Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + (dir + url[0]) + '" title="콘텐츠 영역"></iframe>', true, function(){
+		loadMask.hide();
+	});
+}
+
+function ajaxLoad(con, url, idx){
+	$('#' + con).load(url + ' #' + idx, function(data){
+		//loadMask.hide();
+	});
+}
+
+function toggleEft(options){
+	var $this = options,
+		$selecter = $this.selecter,
+		visible = $this.visible,
+		len = $selecter.length,
+		i = 0;
+
+	while(i < len){
+		if(visible == 'show'){
+			Ext.getCmp($selecter[i]).show();
+		}else{
+			Ext.getCmp($selecter[i]).hide();
+		}
+
+		i++;
+	}
+}
+
+function init(){
+	blind.hide('convention');
+	blind.hide('accessiblity');
+	//blind.hide('reference');
+	//blind.disable('side');
+	//blind.disable('support');
+	toggleEft({selecter:['side','support'], visible:'show'});
+}
+</script>
 <script>
 Ext.onReady(function(){
+	loadMask = new Ext.LoadMask(document.body, {msg:'Please wait...'});
+
 	var toolbarConfig = {
 		region: 'north',
 		height: 27,
 		xtype: 'toolbar',
 		items: [{
-			html: '<strong>HTML5 Open Reference Guide - BETA</strong>',
+			html: '<strong>Web Standards Guide API</strong>',
 			handler: function(e){
 				e.disable();
 			}
 		},'->',{
 			xtype: 'button',
-			text: '메뉴 버튼',
+			text: '메뉴',
 			menu: [{
-				text: '나음'
+				text: 'HTML&amp;CSS',
+				handler: function(e){
+					blind.show('convention');
+					blind.hide('accessiblity');
+					blind.hide('reference');
+					toggleEft({selecter:['side','support'], visible:'hide'});
+				}
 			},{
-				text: '좋음'
+				text: 'Accessiblity',
+				handler: function(e){
+					blind.hide('convention');
+					blind.show('accessiblity');
+					blind.hide('reference');
+					toggleEft({selecter:['side','support'], visible:'hide'});
+				}
 			},{
-				text: '최고'
+				text: 'HTML5 Open Reference',
+				handler: function(e){
+					blind.hide('convention');
+					blind.hide('accessiblity');
+					blind.show('reference');
+					toggleEft({selecter:['side','support'], visible:'show'});
+				}
+			},{
+				text: 'Blog',
+				handler: function(e){
+					alert('블로그');
+				}
 			}]
 		},'-','검색', {
 			xtype : 'combo',
@@ -41,10 +123,97 @@ Ext.onReady(function(){
 		}]
 	};
 
-	var nav = {
+	var convention = {
 		region: 'west',
-		title: '요소 메뉴',
+		title: 'HTML&amp;CSS',
+		id: 'convention',
 		collapsible: true,
+		width: 220,
+		layout: {
+			type: 'hbox',
+			align: 'stretch'
+		},
+		items: [{
+			xtype: 'treepanel',
+			title: '마크업 코딩 컨벤션',
+			flex: 1,
+			store: Ext.create('Ext.data.TreeStore', {
+				autoLoad: true,
+				proxy: {
+					type: 'ajax',
+					url: 'ext/data/tree/nodes_convention.json',
+					reader: {
+						type: 'json',
+						root: 'children'
+					}
+				}
+			}),
+			rootVisible: false,
+			listeners : {
+				itemclick : function($this, record, item, index, e, eOpts){
+					var path = record.data.href;
+
+					if(path){
+						fsLoad(path);
+					}else{
+						return false;
+					}
+
+					e.preventDefault();
+				}
+			}
+		}]
+	};
+
+	var accessiblity = {
+		region: 'west',
+		title: 'Accessiblity',
+		id: 'accessiblity',
+		collapsible: true,
+		width: 220,
+		layout: {
+			type: 'hbox',
+			align: 'stretch'
+		},
+		items: [{
+			xtype: 'treepanel',
+			title: 'PC 웹 접근성, 모바일 접근성',
+			flex: 1,
+			store: Ext.create('Ext.data.TreeStore', {
+				autoLoad: true,
+				proxy: {
+					type: 'ajax',
+					url: 'ext/data/tree/nodes_accessiblity.json',
+					reader: {
+						type: 'json',
+						root: 'children'
+					}
+				}
+			}),
+			rootVisible: false,
+			listeners : {
+				itemclick : function($this, record, item, index, e, eOpts){
+					var path = record.data.href;
+
+					if(path){
+						fsLoad(path);
+					}else{
+						return false;
+					}
+
+					e.preventDefault();
+				}
+			}
+		}]
+	};
+
+	var reference = {
+		region: 'west',
+		title: 'HTML5 Open Reference',
+		id: 'reference',
+		collapsible: true,
+		//collapsed: true,
+		//collapseMode: 'mini',
 		width: 220,
 		layout: {
 			type: 'hbox',
@@ -74,26 +243,23 @@ Ext.onReady(function(){
 				},
 				listeners : {
 					itemclick : function($this, record, item, index, e, eOpts){
-						var path = record.data.href;
-
-						function ajaxLoad(con, idx){
-							$('#' + con).load(path[1] + ' #' + idx);
-						}
+						var path = record.data.href,
+							dir = 'ext/data/reference/elements/';
 
 						if(path){
-							Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
+							fsLoad(dir, path);
 
 							for(var i=0,len=aside.items.length; i<len; i++){
 								var obj = aside.items[i],
 									idx = obj.id.replace('Area','');
 
-								ajaxLoad(obj.id + '-innerCt', idx);
+								ajaxLoad(obj.id + '-innerCt', dir + path[1], idx);
 							}
 						}else{
 							return false;
 						}
 
-						ajaxLoad('support-innerCt', 'browser');
+						ajaxLoad('support-innerCt', dir + path[1], 'browser');
 
 						e.preventDefault();
 					}
@@ -118,7 +284,7 @@ Ext.onReady(function(){
 						var path = record.data.href;
 
 						if(path){
-							Ext.get('detailDsc-innerCt').update('<iframe width=100% height=100% frameborder=0 src="' + path[0] + '"></iframe>');
+							fsLoad(path);
 						}else{
 							return false;
 						}
@@ -135,38 +301,17 @@ Ext.onReady(function(){
 				tabchange: function(tabPanel, newCard, oldCard, eOpts){
 					var textVal = '';
 
-					function toggleEft(options){
-						var $this = options,
-							$selecter = $this.selecter,
-							visible = $this.visible,
-							len = $selecter.length,
-							i = 0;
-
-						while(i < len){
-							if(visible == 'show'){
-								Ext.getCmp($selecter[i]).show();
-							}else{
-								Ext.getCmp($selecter[i]).hide();
-							}
-
-							i++;
-						}
-					}
-
 					switch(newCard.title){
 						case 'Elements':
 							textVal = '요소';
-
 							toggleEft({selecter:['side','support'], visible:'show'});
 							break;
 						case 'Attributes':
 							textVal = '속성';
-
 							toggleEft({selecter:['side','support'], visible:'hide'});
 							break;
 						case 'Events':
 							textVal = '이벤트';
-
 							toggleEft({selecter:['side','support'], visible:'hide'});
 							break;
 						default:break;
@@ -231,8 +376,7 @@ Ext.onReady(function(){
 		title: '브라우저 지원',
 		id: 'support',
 		collapsible: true,
-		collapsed: true,
-		hidden: true,
+		collapsed: false,
 		html: 'Support Browser',
 		height: 80,
 		minHeight: 80
@@ -246,8 +390,25 @@ Ext.onReady(function(){
 		defaults: {
             split: true
         },
-		items: [toolbarConfig, nav, container, aside, foot]
+		items: [toolbarConfig, convention, accessiblity, reference, container, aside, foot]
 	});
+
+	init();
+/*
+function handleClick(e, t){
+	//var target = e.getTarget();
+	console.log('aaaaa');
+    //e.preventDefault();
+}
+
+var myDiv = Ext.get('tree');
+console.log(myDiv);
+myDiv.on('click', handleClick);
+
+
+//Ext.EventManager.on(myDiv, 'click', handleClick);
+//Ext.EventManager.addListener(Ext.get('myDiv'), 'click', handleClick);
+*/
 });
 </script>
 </body>
