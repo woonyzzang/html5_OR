@@ -1,45 +1,24 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>bdi 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>bdi 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">bdi 요소: (BiDi isolate)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>bdi 요소는 한 덩어리의 텍스트 방향을 주위와는 별도로 표시하도록 지시하는 요소입니다. bdo 요소는 페이지 작성자가 명시적으로 방향을 지정해야 하지만 bdi 요소는 브라우저에서 요소의 텍스트를 보고 방향성을 판단할 수 있습니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Structural Elements</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<p>
-				<bdi>abc</bdi>
-				<bdi>ما اسمك؟</bdi>
-			</p>
+			&lt;p&gt;
+				&lt;bdi&gt;abc&lt;/bdi&gt;
+				&lt;bdi&gt;ما اسمك؟&lt;/bdi&gt;
+			&lt;/p&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -51,9 +30,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'bdi',
+		meaning: 'BiDi isolate',
+		item: [{
+			desc:'bdi 요소는 한 덩어리의 텍스트 방향을 주위와는 별도로 표시하도록 지시하는 요소입니다. bdo 요소는 페이지 작성자가 명시적으로 방향을 지정해야 하지만 bdi 요소는 브라우저에서 요소의 텍스트를 보고 방향성을 판단할 수 있습니다.﻿'
+		}],
+		level: 'Inline-Level',
+		category: 'Structural Elements'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

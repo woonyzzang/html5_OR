@@ -1,47 +1,26 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>command 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>command 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">command 요소: (command)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>command 요소는 사용자가 실행할 수 있는 명령(라디오 버튼, 체크 박스, 또는 명령 단추)을 나타냅니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Structural Elements</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<menu type="toolbar">
-				<command type="radio" radiogroup="alignment" checked="checked" label="왼쪽정렬" icon="icons/alL.png" onclick="setAlign('left')">
-				<command type="radio" radiogroup="alignment" label="가운데정렬" icon="icons/alC.png" onclick="setAlign('center')">
-				<command type="radio" radiogroup="alignment" label="오른쪽정렬" icon="icons/alR.png" onclick="setAlign('right')">
-				<command type="command" disabled="disabled" label="발행" icon="icons/pub.png" onclick="publish()">
-			</menu>
+			&lt;menu type="toolbar"&gt;
+				&lt;command type="radio" radiogroup="alignment" checked="checked" label="왼쪽정렬" icon="icons/alL.png" onclick="setAlign('left')"&gt;
+				&lt;command type="radio" radiogroup="alignment" label="가운데정렬" icon="icons/alC.png" onclick="setAlign('center')"&gt;
+				&lt;command type="radio" radiogroup="alignment" label="오른쪽정렬" icon="icons/alR.png" onclick="setAlign('right')"&gt;
+				&lt;command type="command" disabled="disabled" label="발행" icon="icons/pub.png" onclick="publish()"&gt;
+			&lt;/menu&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -53,9 +32,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'command',
+		meaning: 'command',
+		item: [{
+			desc:'command 요소는 사용자가 실행할 수 있는 명령(라디오 버튼, 체크 박스, 또는 명령 단추)을 나타냅니다.'
+		}],
+		level: 'Inline-Level',
+		category: 'Structural Elements'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

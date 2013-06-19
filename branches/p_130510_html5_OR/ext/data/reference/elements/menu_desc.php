@@ -1,9 +1,10 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>menu 요소 상세설명 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/base.css">
+<title>menu 요소 상세설명 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article>
@@ -90,15 +91,15 @@ interface HTMLMenuElement : HTMLElement {
 	<section id="browser">
 		<h3 class="blind">지원 브라우저</h3>
 		<p>
-			<img src="ext/resources/css/images/custom/ico_support_ie6_none.png" width="25" height="25" alt="IE6 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_ie7_none.png" width="25" height="25" alt="IE7 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_ie8_none.png" width="25" height="25" alt="IE8 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_ie9_none.png" width="25" height="25" alt="IE9 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_ie10_none.png" width="25" height="25" alt="IE10 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_chrome_none.png" width="25" height="25" alt="Chrome 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_firefox_none.png" width="25" height="25" alt="Firefox 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_opera_none.png" width="25" height="25" alt="Opera 지원 안함">
-			<img src="ext/resources/css/images/custom/ico_support_safari_none.png" width="25" height="25" alt="Safari 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie6_none.png" width="25" height="25" alt="IE6 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie7_none.png" width="25" height="25" alt="IE7 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie8_none.png" width="25" height="25" alt="IE8 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie9_none.png" width="25" height="25" alt="IE9 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie10_none.png" width="25" height="25" alt="IE10 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_chrome_none.png" width="25" height="25" alt="Chrome 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_firefox_none.png" width="25" height="25" alt="Firefox 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_opera_none.png" width="25" height="25" alt="Opera 지원 안함">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_safari_none.png" width="25" height="25" alt="Safari 지원 안함">
 		</p>
 		<em>현재 모든 브라우저에서 지원되지 않습니다.</em>
 	</section>

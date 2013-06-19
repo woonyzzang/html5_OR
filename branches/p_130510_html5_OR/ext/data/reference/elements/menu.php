@@ -1,66 +1,45 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>menu 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>menu 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">menu 요소: (list of commands)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>menu 요소는 컨텍스트 메뉴와 툴바를 정의하는 것으로 command 요소, button 요소등을 이용한 커맨드 목록을 나타냅니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Block-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>List</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<menu label="마실것">
-			<li><input type="radio" name="drinks">아메리카노</li>
-			<li><input type="radio" name="drinks">카페 라떼</li>
-			<li><input type="radio" name="drinks">카페 모카</li>
-			<li><input type="radio" name="drinks">콜라</li>
-			<li><input type="radio" name="drinks">녹차</li>
-			<li><input type="radio" name="drinks">우유</li>
-			</menu>
+			&lt;menu label="마실것"&gt;
+			&lt;li&gt;&lt;input type="radio" name="drinks"&gt;아메리카노&lt;/li&gt;
+			&lt;li&gt;&lt;input type="radio" name="drinks"&gt;카페 라떼&lt;/li&gt;
+			&lt;li&gt;&lt;input type="radio" name="drinks"&gt;카페 모카&lt;/li&gt;
+			&lt;li&gt;&lt;input type="radio" name="drinks"&gt;콜라&lt;/li&gt;
+			&lt;li&gt;&lt;input type="radio" name="drinks"&gt;녹차&lt;/li&gt;
+			&lt;li&gt;&lt;input type="radio" name="drinks"&gt;우유&lt;/li&gt;
+			&lt;/menu&gt;
 
-			<menu type="toolbar">
-			<li>
-				<menu label="File">
-				<button type="button" onclick="file_new()">New...</button>
-				<button type="button" onclick="file_open()">Open...</button>
-				<button type="button" onclick="file_save()">Save</button>
-				</menu>
-			</li>
-			<li>
-				<menu label="Edit">
-				<button type="button" onclick="edit_cut()">Cut</button>
-				<button type="button" onclick="edit_copy()">Copy</button>
-				<button type="button" onclick="edit_paste()">Paste</button>
-				</menu>
-			</li>
-			</menu>
+			&lt;menu type="toolbar"&gt;
+			&lt;li&gt;
+				&lt;menu label="File"&gt;
+				&lt;button type="button" onclick="file_new()"&gt;New...&lt;/button&gt;
+				&lt;button type="button" onclick="file_open()"&gt;Open...&lt;/button&gt;
+				&lt;button type="button" onclick="file_save()"&gt;Save&lt;/button&gt;
+				&lt;/menu&gt;
+			&lt;/li&gt;
+			&lt;li&gt;
+				&lt;menu label="Edit"&gt;
+				&lt;button type="button" onclick="edit_cut()"&gt;Cut&lt;/button&gt;
+				&lt;button type="button" onclick="edit_copy()"&gt;Copy&lt;/button&gt;
+				&lt;button type="button" onclick="edit_paste()"&gt;Paste&lt;/button&gt;
+				&lt;/menu&gt;
+			&lt;/li&gt;
+			&lt;/menu&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -72,9 +51,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'menu',
+		meaning: 'list of commands',
+		item: [{
+			desc:'menu 요소는 컨텍스트 메뉴와 툴바를 정의하는 것으로 command 요소, button 요소등을 이용한 커맨드 목록을 나타냅니다.'
+		}],
+		level: 'Block-Level',
+		category: 'List'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

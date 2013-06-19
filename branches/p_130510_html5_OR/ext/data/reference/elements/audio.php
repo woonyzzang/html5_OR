@@ -37,7 +37,7 @@ Ext.onReady(function(){
 			desc:'audio 요소는 소리 혹은 오디오 스트림을 들려줍니다.﻿'
 		}],
 		level: 'Inline-Level',
-		category: 'Image &amp; media'
+		category: 'Image \& Media'
 	};
 
 	tpl.overwrite(Ext.get('info'), tplData);

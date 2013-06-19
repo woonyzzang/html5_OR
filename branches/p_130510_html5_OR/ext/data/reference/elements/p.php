@@ -1,55 +1,34 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>p 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>p 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">p 요소: (paragraphy)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>p 요소는 문단을 나타냅니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Block-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Structural Elements</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<p>웹의 힘은 보편성에 있다.</p>
+			&lt;p&gt;웹의 힘은 보편성에 있다.&lt;/p&gt;
 
 			<!-- @요소가 적절하지 않은 경우: p 요소를 대신하여 보다 적합한 요소가 있다면 그것을 사용합니다. 이런 경우에는 p 요소를 사용하지 않습니다. -->
 			<!-- @최종 수정일과 연락처 정보를 담고 있는 섹션을 다음과 같이 마크업한 경우: -->
-			<section>
-				<p>최종 수정일: 2011-02-14</p>
-				<p>이 글에 대한 문의는 <a href="mailto:seungwoonjjang@gmail.com">운영자 메일</a>로 전달해 주세요.</p>
-			</section>
+			&lt;section&gt;
+				&lt;p&gt;최종 수정일: 2011-02-14&lt;/p&gt;
+				&lt;p&gt;이 글에 대한 문의는 &lt;a href="mailto:seungwoonjjang@gmail.com"&gt;운영자 메일&lt;/a&gt;로 전달해 주세요.&lt;/p&gt;
+			&lt;/section&gt;
 
 			<!-- @아래와 같이 최종 수정일은 footer 요소로, 연락처 정보는 address 요소로 마크업하는 것이 더 좋습니다. -->
-			<section>
-				<footer>최종 수정일: 2011-02-14</footer>
-				<address>이 글에 대한 문의는 <a href="mailto:seungwoonjjang@gmail.com">운영자 메일</a>로 전달해 주세요.</address>
-			</section>
+			&lt;section&gt;
+				&lt;footer&gt;최종 수정일: 2011-02-14&lt;/footer&gt;
+				&lt;address&gt;이 글에 대한 문의는 &lt;a href="mailto:seungwoonjjang@gmail.com">운영자 메일&lt;/a&gt;로 전달해 주세요.&lt;/address&gt;
+			&lt;/section&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -61,9 +40,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'p',
+		meaning: 'paragraphy',
+		item: [{
+			desc:'p 요소는 문단을 나타냅니다.'
+		}],
+		level: 'Block-Level',
+		category: 'Structural Elements'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

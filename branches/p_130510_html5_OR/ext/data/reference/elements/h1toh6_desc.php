@@ -1,9 +1,10 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>h1,h2,h3,h4,h5,h6 요소 상세설명 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/base.css">
+<title>h1,h2,h3,h4,h5,h6 요소 상세설명 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article>
@@ -80,15 +81,15 @@ interface HTMLHeadingElement : HTMLElement {};
 	<section id="browser">
 		<h3 class="blind">지원 브라우저</h3>
 		<p>
-			<img src="ext/resources/css/images/custom/ico_support_ie6.png" width="25" height="25" alt="IE6 지원">
-			<img src="ext/resources/css/images/custom/ico_support_ie7.png" width="25" height="25" alt="IE7 지원">
-			<img src="ext/resources/css/images/custom/ico_support_ie8.png" width="25" height="25" alt="IE8 지원">
-			<img src="ext/resources/css/images/custom/ico_support_ie9.png" width="25" height="25" alt="IE9 지원">
-			<img src="ext/resources/css/images/custom/ico_support_ie10.png" width="25" height="25" alt="IE10 지원">
-			<img src="ext/resources/css/images/custom/ico_support_chrome.png" width="25" height="25" alt="Chrome 지원">
-			<img src="ext/resources/css/images/custom/ico_support_firefox.png" width="25" height="25" alt="Firefox 지원">
-			<img src="ext/resources/css/images/custom/ico_support_opera.png" width="25" height="25" alt="Opera 지원">
-			<img src="ext/resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie6.png" width="25" height="25" alt="IE6 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie7.png" width="25" height="25" alt="IE7 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie8.png" width="25" height="25" alt="IE8 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie9.png" width="25" height="25" alt="IE9 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_ie10.png" width="25" height="25" alt="IE10 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_chrome.png" width="25" height="25" alt="Chrome 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_firefox.png" width="25" height="25" alt="Firefox 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_opera.png" width="25" height="25" alt="Opera 지원">
+			<img src="<?php echo PATH; ?>resources/css/images/custom/ico_support_safari.png" width="25" height="25" alt="Safari 지원">
 		</p>
 		<em>모든 주요 브라우저에서 지원 합니다.</em>
 	</section>

@@ -42,7 +42,7 @@ Ext.onReady(function(){
 			desc:'area 요소는 하이퍼링크, 링크에 대응하는 이미지맵 상의 영역, 이미지맵 내의 비활성 영역을 나타냅니다.'
 		}],
 		level: 'Inline-Level',
-		category: 'Image &amp; Media'
+		category: 'Image \& Media'
 	};
 
 	tpl.overwrite(Ext.get('info'), tplData);

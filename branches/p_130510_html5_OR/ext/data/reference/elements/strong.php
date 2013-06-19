@@ -1,47 +1,26 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>strong 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>strong 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">strong 요소: (strong importance)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>strong 요소는 중요한 내용을 정의합니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Text formatting</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<p>지난 주말은 <strong>100년</strong>만에 찾아온 가장 더운 3월 날씨라고 합니다.</p>
+			&lt;p&gt;지난 주말은 &lt;strong&gt;100년&lt;/strong&gt;만에 찾아온 가장 더운 3월 날씨라고 합니다.&lt;/p&gt;
 
-			<p>
-				중요한 내용이므로 반드시 읽으십시오. <strong>반드시 안전모를 착용하십시오.</strong>
+			&lt;p&gt;
+				중요한 내용이므로 반드시 읽으십시오. &lt;strong&gt;반드시 안전모를 착용하십시오.&lt;/strong&gt;
 				동굴 내부에서 이따금 낙석이 있으므로 안전모를 착용하지 않으면 위험할 수 있습니다.
-			</p>
+			&lt;/p&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -53,9 +32,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'strong',
+		meaning: 'strong importance',
+		item: [{
+			desc:'strong 요소는 중요한 내용을 정의합니다.'
+		}],
+		level: 'Inline-Level',
+		category: 'Text formatting'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

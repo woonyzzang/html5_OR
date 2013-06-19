@@ -1,46 +1,25 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>legend 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>legend 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">legend 요소: (title or explanatory caption)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>legend 요소는 자fieldset요소에 의해 묶여진 내용의 제목을 나타냅니다. legend 요소가 속하는 카테고리는 없습니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Block-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Form</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<fieldset>
-			<legend>로그인</legend>
-				<label for="uid">아이디</label> <input type="text" name="uid" id="uid" title="아이디 입력">
-				<label for="pw">비밀번호</label> <input type="password" name="pw" id="pw" title="비밀번호 입력">
-			</fieldset>
+			&lt;fieldset&gt;
+			&lt;legend&gt;로그인&lt;/legend&gt;
+				&lt;label for="uid"&gt;아이디&lt;/label&gt; &lt;input type="text" name="uid" id="uid" title="아이디 입력"&gt;
+				&lt;label for="pw"&gt;비밀번호&lt;/label&gt; &lt;input type="password" name="pw" id="pw" title="비밀번호 입력"&gt;
+			&lt;/fieldset&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -52,9 +31,23 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'legend',
+		meaning: 'title or explanatory caption',
+		item: [{
+			desc:'legend 요소는 자신의 상위 부모 요소에 내용이 있는 경우 해당 영역의 title 또는 설명을 나타냅니다.'
+		},{
+			desc:'legend 요소가 속하는 카테고리는 없습니다.'
+		}],
+		level: 'Block-Level',
+		category: 'Form'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

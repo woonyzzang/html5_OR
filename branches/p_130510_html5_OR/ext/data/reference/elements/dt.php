@@ -1,57 +1,36 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>dt 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>dt 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">dl 요소: (definition term)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>dt 요소는 정의 목록(dl 요소)에서 정의 그룹의 단어나 항목이름을 나타냅니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Block-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>List</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
 			<!-- @메타 정보의 의미로 마크업한 dt 요소입니다. -->
-			<dl>
-			<dt>Coffee:</dt>
-			<dd>Black hot drink</dd>
-			<dt>Milk:</dt>
-			<dd>White cold drink</dd>
-			</dl>
+			&lt;dl&gt;
+			&lt;dt&gt;Coffee:&lt;/dt&gt;
+			&lt;dd&gt;Black hot drink&lt;/dd&gt;
+			&lt;dt&gt;Milk:&lt;/dt&gt;
+			&lt;dd&gt;White cold drink&lt;/dd&gt;
+			&lt;/dl&gt;
 
 			<!-- @dt 요소 자체는 정의를 나타내지 않습니다. 이를 정의하려면 dfn 요소를 사용해야 합니다. -->
-			<dl>
-			<dt><dfn>good</dfn></dt>
-			<dd class="pronunciation">[gʊd]</dd>
-			<dd>1. (질적으로) 좋은</dd>
-			<dd>2. 즐거운, 기쁜, 좋은, 다행스러운</dd>
-			<dd>3. (논의 등을 진행시키기에) 좋은</dd>
-			</dl>
+			&lt;dl&gt;
+			&lt;dt&gt;&lt;dfn&gt;good&lt;/dfn&gt;&lt;/dt&gt;
+			&lt;dd class="pronunciation"&gt;[gʊd]&lt;/dd&gt;
+			&lt;dd&gt;1. (질적으로) 좋은&lt;/dd&gt;
+			&lt;dd&gt;2. 즐거운, 기쁜, 좋은, 다행스러운&lt;/dd&gt;
+			&lt;dd&gt;3. (논의 등을 진행시키기에) 좋은&lt;/dd&gt;
+			&lt;/dl&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -63,9 +42,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'dt',
+		meaning: 'definition term',
+		item: [{
+			desc:'dt 요소는 정의 목록(dl 요소)에서 정의 그룹의 단어나 항목이름을 나타냅니다.'
+		}],
+		level: 'Block-Level',
+		category: 'List'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

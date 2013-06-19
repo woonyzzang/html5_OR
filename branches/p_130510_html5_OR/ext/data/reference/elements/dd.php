@@ -1,47 +1,26 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>dd 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>dd 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">datalist 요소: (definition description)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>dd 요소는 dl 요소인 정의목록 안의 항목의 설명, 정의, 값을 설명하는데 사용됩니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Block-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>List</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<dl>
-			<dt>HTML</dt>
-			<dd>Hyper Text Markup Language</dd>
-			<dt>CSS</dt>
-			<dd>Cascading Style Sheet</dd>
-			</dl>
+			&lt;dl&gt;
+			&lt;dt&gt;HTML&lt;/dt&gt;
+			&lt;dd&gt;Hyper Text Markup Language&lt;/dd&gt;
+			&lt;dt&gt;CSS&lt;/dt&gt;
+			&lt;dd&gt;Cascading Style Sheet&lt;/dd&gt;
+			&lt;/dl&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -53,9 +32,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'dd',
+		meaning: 'definition description',
+		item: [{
+			desc:'dd 요소는 dl 요소인 정의목록 안의 항목의 설명, 정의, 값을 설명하는데 사용됩니다.'
+		}],
+		level: 'Block-Level',
+		category: 'List'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

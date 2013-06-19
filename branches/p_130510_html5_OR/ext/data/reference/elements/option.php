@@ -1,22 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>option 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>option 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<section>
 		<h2 class="s_tit">option 요소: (option)</h2>
 
@@ -36,17 +29,17 @@
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<label for="baseball_list">야구단</label>
-			<select id="baseball_list">
-			<option value="lg" label="LG">LG 트윈스</option>
-			<option value="doosan" label="두산">두산 베어스</option>
-			<option value="kia" label="KIA" selected>KIA 타이거즈</option>
-			<option value="sk" label="SK">SK 와이번스</option>
-			<option value="samsung" label="삼성">삼성 라이온스</option>
-			<option value="hwanhaw" label="한화">한화 이글스</option>
-			<option value="nexen" label="넥센">넥센 히어로즈</option>
-			<option value="lotte" label="롯데">롯데 자이언츠</option>
-			</select>
+			&lt;label for="baseball_list"&gt;야구단&lt;/label&gt;
+			&lt;select id="baseball_list"&gt;
+			&lt;option value="lg" label="LG"&gt;LG 트윈스&lt;/option&gt;
+			&lt;option value="doosan" label="두산"&gt;두산 베어스&lt;/option&gt;
+			&lt;option value="kia" label="KIA" selected&gt;KIA 타이거즈&lt;/option&gt;
+			&lt;option value="sk" label="SK"&gt;SK 와이번스&lt;/option&gt;
+			&lt;option value="samsung" label="삼성"&gt;삼성 라이온스&lt;/option&gt;
+			&lt;option value="hwanhaw" label="한화"&gt;한화 이글스&lt;/option&gt;
+			&lt;option value="nexen" label="넥센"&gt;넥센 히어로즈&lt;/option&gt;
+			&lt;option value="lotte" label="롯데"&gt;롯데 자이언츠&lt;/option&gt;
+			&lt;/select&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -58,9 +51,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'option',
+		meaning: 'option',
+		item: [{
+			desc:'option 요소는 select 요소의 옵션이나 datalist 요소가 나타내는 제시 목록의 부분을 나타냅니다.'
+		}],
+		level: 'Block-Level',
+		category: 'From'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

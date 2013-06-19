@@ -1,49 +1,28 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>b 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>b 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">b 요소: (bold)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>b 요소는 폰트와 관련된 요소이며 단순히 글자를 굵게 볼드체로 표현하는 텍스트에 사용합니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Inline-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Text formatting</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<article>
-				<h1>요구르트 라면 조리법</h1>
-				<ol>
-				<li>먼저 <b>면</b>을 익힌 후 물기를 빼서 차게 식힙니다.</li>
-				<li><b>복숭아맛 떠먹는 요구르트</b>를 붓습니다.</li>
-				<li>기호에 따라 <b>오이</b>, <b>피망</b> 등 신선한 야채를 넣으면 더욱 좋습니다.</li>
-				</ol>
-			</article>
+			&lt;article&gt;
+				&lt;h1&gt;요구르트 라면 조리법&lt;/h1&gt;
+				&lt;ol&gt;
+				&lt;li&gt;먼저 &lt;b&gt;면&lt;/b&gt;을 익힌 후 물기를 빼서 차게 식힙니다.&lt;/li&gt;
+				&lt;li&gt;&lt;b&gt;복숭아맛 떠먹는 요구르트&lt;/b&gt;를 붓습니다.&lt;/li&gt;
+				&lt;li&gt;기호에 따라 &lt;b&gt;오이&lt;/b&gt;, &lt;b&gt;피망&lt;/b&gt; 등 신선한 야채를 넣으면 더욱 좋습니다.&lt;/li&gt;
+				&lt;/ol&gt;
+			&lt;/article&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -55,9 +34,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'b',
+		meaning: 'bold',
+		item: [{
+			desc:'b 요소는 폰트와 관련된 요소이며 단순히 글자를 굵게 볼드체로 표현하는 텍스트에 사용합니다.﻿'
+		}],
+		level: 'Inline-Level',
+		category: 'Text formatting'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
