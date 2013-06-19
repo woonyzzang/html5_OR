@@ -38,7 +38,7 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="<?php echo PATH ; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
 	var tplData = {

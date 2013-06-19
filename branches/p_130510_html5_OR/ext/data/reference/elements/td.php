@@ -1,56 +1,35 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>td 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>td 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">tbody 요소: (table cell)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>td 요소는 데이터 셀을 나타내는 요소입니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Block-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Table</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<table>
-			<caption>PC 지출내역</caption>
-			<tbody>
-			<tr>
-			<td>모니터</td>
-			<td>120,000원</td>
-			<td>2대</td>
-			</tr>
-			<tr>
-			<td>본체</td>
-			<td>80,000원</td>
-			<td>1대</td>
-			</tr>
-			</tbody>
-			</table>
+			&lt;table&gt;
+			&lt;caption&gt;PC 지출내역&lt;/caption&gt;
+			&lt;tbody&gt;
+			&lt;tr&gt;
+			&lt;td&gt;모니터&lt;/td&gt;
+			&lt;td&gt;120,000원&lt;/td&gt;
+			&lt;td&gt;2대&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+			&lt;td&gt;본체&lt;/td&gt;
+			&lt;td&gt;80,000원&lt;/td&gt;
+			&lt;td&gt;1대&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;/tbody&gt;
+			&lt;/table&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -62,9 +41,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'td',
+		meaning: 'table cell',
+		item: [{
+			desc:'td 요소는 데이터 셀을 나타내는 요소입니다.'
+		}],
+		level: 'Block-Level',
+		category: 'Table'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[

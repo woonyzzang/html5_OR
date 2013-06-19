@@ -1,70 +1,49 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>tfoot 요소 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>tfoot 요소 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">tbody 요소: (table footer)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>tfoot 요소는 열의 요약(푸터)으로 구성된 행의 집합을 나타냅니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">요소 레벨</h3>
-		<p>Block-Level 엘리먼트</p>
-
-		<h3 class="s_tit">요소 카테고리</h3>
-		<p>Table</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //태그 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<table>
-			<caption>지출 현황</caption>
-			<thead>
-			<tr>
-			<th scope="col">과일이름</th>
-			<th scope="col">가격</th>
-			<th scope="col">갯수</th>
-			</tr>
-			</thead>
-			<tfoot>
-			<tr>
-			<td>합계</td>
-			<td>12</td>
-			<td>700원</td>
-			</tr>
-			</tfoot>
-			<tbody>
-			<tr>
-			<td>사과</td>
-			<td>5</td>
-			<td>500원</td>
-			</tr>
-			<tr>
-			<td>딸기</td>
-			<td>7</td>
-			<td>200원</td>
-			</tr>
-			</tbody>
-			</table>
+			&lt;table&gt;
+			&lt;caption&gt;지출 현황&lt;/caption&gt;
+			&lt;thead&gt;
+			&lt;tr&gt;
+			&lt;th scope="col"&gt;과일이름&lt;/th&gt;
+			&lt;th scope="col"&gt;가격&lt;/th&gt;
+			&lt;th scope="col"&gt;갯수&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;/thead&gt;
+			&lt;tfoot&gt;
+			&lt;tr&gt;
+			&lt;td&gt;합계&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;700원&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;/tfoot&gt;
+			&lt;tbody&gt;
+			&lt;tr&gt;
+			&lt;td&gt;사과&lt;/td&gt;
+			&lt;td&gt;5&lt;/td&gt;
+			&lt;td&gt;500원&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+			&lt;td&gt;딸기&lt;/td&gt;
+			&lt;td&gt;7&lt;/td&gt;
+			&lt;td&gt;200원&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;/tbody&gt;
+			&lt;/table&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -76,9 +55,21 @@
 	<!-- //속성 설명 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		elem: 'tfoot',
+		meaning: 'table footer',
+		item: [{
+			desc:'tfoot 요소는 열의 요약(푸터)으로 구성된 행의 집합을 나타냅니다.'
+		}],
+		level: 'Block-Level',
+		category: 'Table'
+	};
+
+	tpl.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['tit','desc','href'],
 		data: {'items':[
