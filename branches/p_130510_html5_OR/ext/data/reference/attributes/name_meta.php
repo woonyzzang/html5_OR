@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">name 속성 (meta)</h2>
 
@@ -29,7 +29,7 @@
 		<p>메타데이터는 &lt;이름&frasl;값&gt; 쌍으로 표현되는데, name의 속성이 그 이름을 나타내고, content 속성이 값을 나타냅니다. 이름들은 대소문자를 구별하지 않습니다.</p>
 		<div id="gridAttr"></div>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

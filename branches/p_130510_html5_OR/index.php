@@ -281,10 +281,11 @@ Ext.onReady(function(){
 				rootVisible: false,
 				listeners : {
 					itemclick : function($this, record, item, index, e, eOpts){
-						var path = record.data.href;
+						var path = record.data.href,
+							dir = 'ext/data/reference/attributes/';
 
 						if(path){
-							fsLoad(path);
+							fsLoad(dir, path);
 						}else{
 							return false;
 						}

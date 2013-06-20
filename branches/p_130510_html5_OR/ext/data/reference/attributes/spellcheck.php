@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">spellcheck 속성</h2>
 
@@ -34,7 +34,7 @@
 		<li>default 상태는 기본적인 동작방식에 따르며, 부모 요소의 속성을 상속했을 가능성이 있습니다.</li>
 		</ul>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

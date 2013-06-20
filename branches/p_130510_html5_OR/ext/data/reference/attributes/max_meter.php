@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">max 속성 (meter)</h2>
 
@@ -28,7 +28,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>유효한 부동소수점 숫자를 사용하여야 합니다. 값을 명시하지 않으면 최소 값은 1이 됩니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

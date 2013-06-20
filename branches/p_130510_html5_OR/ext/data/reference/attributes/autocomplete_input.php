@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">autocomplete 속성 (input)</h2>
 
@@ -51,7 +51,7 @@
 		</dd>
 		</dl>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

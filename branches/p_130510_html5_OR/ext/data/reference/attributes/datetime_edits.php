@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">datetime 속성 (ins, del)</h2>
 
@@ -29,7 +29,7 @@
 		<p>선택적으로 시간정보를 갖는 유효한 날짜 문자열이어야 합니다.</p>
 		<p>이 속성을 사용했다면, 값은 반드시 있어야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

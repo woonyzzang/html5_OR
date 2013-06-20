@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">value 속성 (li)</h2>
 
@@ -28,7 +28,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>목록의 순서를 지정할 수 있는 속성이기 때문에 반드시 정수형 값을 사용합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

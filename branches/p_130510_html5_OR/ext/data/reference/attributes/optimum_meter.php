@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">optimum 속성 (meter)</h2>
 
@@ -37,7 +37,7 @@
 		<p>속성 값은 유효한 부동소수점 숫자를 사용하여야 합니다.</p>
 		<p>minimum ≤ optimum ≤ maximum 와 같은 부등호 관계를 지켜야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

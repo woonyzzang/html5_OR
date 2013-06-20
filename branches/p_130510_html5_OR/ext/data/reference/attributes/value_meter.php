@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">value 속성 (meter)</h2>
 
@@ -30,7 +30,7 @@
 		<p>min 속성, max 속성을 지정하지 않으면 meter 요소의 기본 최소 값은 0, 최대 값은 1이 설정되며, 0 에서 1 사이의 값을 지정하여야 합니다.</p>
 		<p>minimum ≤ value ≤ maximum 와 같은 부등호 관계를 지켜야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

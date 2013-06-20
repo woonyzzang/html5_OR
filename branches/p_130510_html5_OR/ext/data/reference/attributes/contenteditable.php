@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">contenteditable 속성</h2>
 
@@ -29,7 +29,7 @@
 		<p>빈 문자열, true, false를 나열 타입으로 갖습니다. 빈 문자열은 true 상태입니다. 값을 명시하지 않거나 잘못된 값이 입력된 경우에는 inherit 상태가 됩니다.</p>
 		<div id="gridAttr"></div>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

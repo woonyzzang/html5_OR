@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">type 속성 (input)</h2>
 
@@ -226,7 +226,7 @@
 		<div id="gridAttr4"></div>
 		<p><strong>† 기호는 해당 기능이 multiple 속성이 사용된 경우에만 적용됨을 나타냅니다.</strong></p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

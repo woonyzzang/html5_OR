@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">value 속성 (input)</h2>
 
@@ -21,7 +21,7 @@
 		<dd>value 속성은 input 요소의 값을 나타냅니다.</dd>
 		</dl>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

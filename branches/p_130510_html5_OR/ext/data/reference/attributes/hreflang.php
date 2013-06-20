@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">hreflang 속성</h2>
 
@@ -29,7 +29,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>속성에 지정할 코드는 IETF BCP47 &#34;Matching of Language Tags&#34;를 따르며, 지금까지 사용한 언어 코드와 같으므로 특별히 신경 쓸 점은 없습니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

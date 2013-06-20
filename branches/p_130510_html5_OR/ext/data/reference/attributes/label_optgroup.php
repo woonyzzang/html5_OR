@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">label 속성 (optgroup)</h2>
 
@@ -21,7 +21,7 @@
 		<dd>lable 속성은 optgroup 요소의 그룹의 이름으로 사용됩니다. 이 속성은 반드시 작성되어야 합니다.</dd>
 		</dl>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

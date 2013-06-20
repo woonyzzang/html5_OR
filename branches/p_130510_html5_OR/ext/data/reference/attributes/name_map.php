@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">name 속성 (map)</h2>
 
@@ -24,7 +24,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>공백문자를 포함할 수 없고, 비어있지 않아야 합니다. 동일한 페이지 내에서 다른 map 요소와 같은 name 값을 가질 수 없습니다. map 요소에 id 속성이 있다면 name 속성과 같은 값이어야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

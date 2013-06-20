@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">value 속성 (param)</h2>
 
@@ -24,7 +24,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>값에 대한 제한은 없습니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

@@ -1,44 +1,26 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>accesskey 속성 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>accesskey 속성 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">accesskey 속성</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>accesskey 속성은 사용자 에이전트에 의해 요소를 활성화시키거나 포커스를 갖게끔 하는 단축키를 생성하기 위한 가이드로 사용됩니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>공백문자로 구분된 토큰(token)이며, 유니코드 값이어야 합니다.</p>
-	</section>
-	<!-- //태그 설명 -->
+	<!-- 속성 설명 -->
+	<section id="info"><!-- @new Ext.XTemplate --></section>
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<dl>
-			<dt><label for="uid">아이디</label></dt>
-			<dd class="uid"><input name="id" type="text" id="uid" maxlength="25" class="input_text" title="아이디" accesskey="L"></dd>
-			<dt><label for="upw">비밀번호</label> </dt>
-			<dd class="upw"><input name="pw" type="password" id="upw" maxlength="16" class="input_text" title="비밀번호"></dd>
-			</dl>
+			&lt;dl&gt;
+			&lt;dt&gt;&lt;label for="uid"&gt;아이디&lt;/label&gt;&lt;/dt&gt;
+			&lt;dd class="uid"&gt;&lt;input name="id" type="text" id="uid" maxlength="25" class="input_text" title="아이디" accesskey="L"&gt;&lt;/dd&gt;
+			&lt;dt&gt;&lt;label for="upw"&gt;비밀번호&lt;/label&gt;&lt;/dt&gt;
+			&lt;dd class="upw"&gt;&lt;input name="pw" type="password" id="upw" maxlength="16" class="input_text" title="비밀번호"&gt;&lt;/dd&gt;
+			&lt;/dl&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -60,9 +42,19 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData2 = {
+		attr: 'accesskey',
+		item: [{
+			desc:'accesskey 속성은 사용자 에이전트에 의해 요소를 활성화시키거나 포커스를 갖게끔 하는 단축키를 생성하기 위한 가이드로 사용됩니다.'
+		}],
+		txt: '공백문자로 구분된 토큰(token)이며, 유니코드 값이어야 합니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData2);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['browser','windows','mac'],
 		data: {'items':[
@@ -90,7 +82,7 @@ Ext.onReady(function(){
 			{header:'윈도우', dataIndex:'windows', flex:1},
 			{header:'맥킨토시', dataIndex:'mac', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

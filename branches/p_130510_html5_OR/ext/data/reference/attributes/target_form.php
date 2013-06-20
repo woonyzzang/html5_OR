@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">target 속성 (form)</h2>
 
@@ -24,7 +24,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>유효한 브라우징 문맥 이름이나 키워드를 값으로 가져야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

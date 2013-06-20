@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">srcdoc 속성 (iframe)</h2>
 
@@ -47,7 +47,7 @@
 		<dd>HTML 문서에 포함된 iframe 요소에 이 속성이 있다면, 값은 HTML 문법을 사용한 값이어야 하며, 다음의 문법 요소들이 순서대로 구성된 것이어야 합니다.</dd>
 		</dl>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

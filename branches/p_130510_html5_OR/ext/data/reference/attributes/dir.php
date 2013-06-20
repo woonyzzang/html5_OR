@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">dir 속성</h2>
 
@@ -32,7 +32,7 @@
 		<li>부모 요소를 갖는 요소에 dir 속성이 없다면, 부모의 방향성을 따릅니다.</li>
 		</ul>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 메모 -->
 	<section>
 		<h3 class="s_tit">메모</h3>

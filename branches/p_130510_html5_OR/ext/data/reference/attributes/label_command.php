@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">label 속성 (command)</h2>
 
@@ -28,7 +28,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>lable 속성은 받드시 명시되어야 하며, 빈 문자열이 아닌 값을 가져야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

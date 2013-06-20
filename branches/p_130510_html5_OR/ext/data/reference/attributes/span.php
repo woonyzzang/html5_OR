@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">span 속성</h2>
 
@@ -28,7 +28,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>0보다 큰 유요한 정수를 선언하여, 정수값만큼 테이블의 열을 지정할수 있습니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">form 속성</h2>
 
@@ -30,7 +30,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>같은 문서 상에 존재하는 form 요소의 id 속성 값이어야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

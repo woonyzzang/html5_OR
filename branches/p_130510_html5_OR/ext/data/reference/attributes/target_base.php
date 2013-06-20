@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">target 속성 (base)</h2>
 
@@ -31,7 +31,7 @@
 		<div id="gridAttr"></div>
 		<p>target 속성을 사용했다면 속성 값은 반드시 유효한 브라우징 문맥 이름 또는 키워드를 지정해야 됩니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

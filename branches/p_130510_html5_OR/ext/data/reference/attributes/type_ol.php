@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">type 속성 (ol)</h2>
 
@@ -31,7 +31,7 @@
 		<div id="gridAttr"></div>
 		<p>속성을 사용하지 않았다면 기본 상태는 decimal 상태 입니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

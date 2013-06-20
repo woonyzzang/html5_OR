@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">wrap 속성 (textarea)</h2>
 
@@ -29,7 +29,7 @@
 		<p>나열 속성입니다. 값을 명시하지 않는 경우 soft 상태가 기본입니다.</p>
 		<div id="gridAttr"></div>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

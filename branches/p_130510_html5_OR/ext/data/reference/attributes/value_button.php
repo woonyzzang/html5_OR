@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">value 속성 (button)</h2>
 
@@ -28,7 +28,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>값은 요소의 값을 나타내며, 사용되지 않는다면 텍스트 컨텐츠가 값으로 나타납니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

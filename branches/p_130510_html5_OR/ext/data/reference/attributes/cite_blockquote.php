@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">cite 속성 (blockquote)</h2>
 
@@ -29,7 +29,7 @@
 		<p>유효한, 앞뒤로 공백을 허용하는 URL이어야 합니다.</p>
 		<p>상대적으로 해석하고 링크를 따라갈 수 있어야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

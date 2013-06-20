@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">ismap 속성</h2>
 
@@ -28,7 +28,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>불리언 속성입니다. &#34;ismap&#34;만 쓰거나, ismap=&#34;ismap&#34;으로 쓸 수 있습니다. 서버에 이 img 요소를 처리할 수 있는 이미지 맵이 없음을 나타내려고 ismap=“true”를 쓰는건 안 됩니다. 브라우저는 ismap 까지만 확인한 후 서버에 이 img 요소를 처리할 수 있는 이미지 맵이 있다고 판단할 것입니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

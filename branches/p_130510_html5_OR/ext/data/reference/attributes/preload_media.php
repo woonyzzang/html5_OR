@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">preload 속성</h2>
 
@@ -33,7 +33,7 @@
 		<li>속성 자체를 생략한 경우 명세는 Metadata 상태를 권장합니다. 단, 브라우저마다 다른 기본값을 가질 수 있습니다.</li>
 		</ul>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

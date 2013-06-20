@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">kind 속성 (track)</h2>
 
@@ -30,7 +30,7 @@
 		<div id="gridAttr"></div>
 		<p>속성이 생략되었을 때 Subtitles 상태가 기본값이 됩니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

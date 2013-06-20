@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">title 속성 (command)</h2>
 
@@ -26,7 +26,7 @@
 		<dd>사용자에게 도움이 될 만한, 커맨드를 설명하는 힌트를 제공합니다.</dd>
 		</dl>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

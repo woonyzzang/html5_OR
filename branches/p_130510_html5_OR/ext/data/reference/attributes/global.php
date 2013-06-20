@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">global  속성</h2>
 
@@ -117,7 +117,7 @@
 
 		<p><strong>* 기호가 붙은 이벤트 속성은 body 요소에 사용했을 때 다른 의미를 갖습니다. 그러한 요소는 같은 이름으로 window 객체의 이벤트 핸들러를 참조합니다.</strong></p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 </article>
 </body>
 </html>

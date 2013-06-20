@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">pattern 속성 (input)</h2>
 
@@ -30,7 +30,7 @@
 		<p>이 속성의 값은 자바스크립트 정규 표현식과 일치해야 합니다. <a href="http://www.ecma-international.org/publications/standards/Ecma-262.htm" target="_blank">[ECMA]</a></p>
 		<p>이 속성에 올바른 값이 사용되었다면, 사용된 숫자는 요소에서 허용되는 최대 길이가 됩니다. 속성이 생략되었거나 그 값을 파싱하는 과정에서 에러가 있다면, 허용하는 값의 길이 제한은 없는 것입니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

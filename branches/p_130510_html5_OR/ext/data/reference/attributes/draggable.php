@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">draggable 속성</h2>
 
@@ -25,7 +25,7 @@
 		<p>속성 값은 true, false, auto 키워드를 갖습니다.</p>
 		<div id="gridAttr"></div>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

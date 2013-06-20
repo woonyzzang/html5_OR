@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">href 속성 (link)</h2>
 
@@ -25,7 +25,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>유효한, 앞뒤로 공백을 허용하고 비어 있지 않은 URL을 사용해야 합니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

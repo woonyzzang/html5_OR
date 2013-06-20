@@ -12,7 +12,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">type 속성 (style)</h2>
 
@@ -24,7 +24,7 @@
 		<h3 class="s_tit">속성 값</h3>
 		<p>값은 스타일 언어를 지칭하는 유효한 MIME 타입이어야 합니다. charset 매개변수는 사용할 수 없습니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
 		<h3 class="s_tit">참고 API</h3>

@@ -1,64 +1,46 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>alt 속성 (img) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>alt 속성 (img) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
-	<section>
-		<h2 class="s_tit">alt 속성 (img)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>alt 속성은 &#34;이미지 대신&#34; 쓸 수 있는 텍스트를 포함해야 합니다. 페이지의 모든 이미지를 alt 속성값으로 지정된 대체텍스트로 교체해도 페이지의 의미가 달라지지 않아야 합니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>alt 속성의 값은 평범한 텍스트를 사용합니다. 이 속성은 비어 있을 수 있습니다.</p>
-	</section>
-	<!-- //태그 설명 -->
+	<!-- 속성 설명 -->
+	<section id="info"><!-- @new Ext.XTemplate --></section>
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
 			<!-- @이미지가 아예 없을 때의 마크업:
 				졸업 앨범을 스캔해서 graduation.jpg라고 저장했습니다. 이 사진 이미지에서 전달받을 수 있는 의미는 “졸업 사진이구나” 입니다. 따라서 이렇게 마크업할 수 있습니다. -->
-			<p>필자의 졸업 사진입니다. 필자는 앞에서 두번째 줄, 왼쪽에서 네번째에 있습니다. 필자가 서 있는 자리에서 오른쪽 두번째 자리에 있는 친구는 졸업한지 20년이 넘게 흐른 지금도 가장 절친한 친구입니다. ...</p>
+			&lt;p&gt;필자의 졸업 사진입니다. 필자는 앞에서 두번째 줄, 왼쪽에서 네번째에 있습니다. 필자가 서 있는 자리에서 오른쪽 두번째 자리에 있는 친구는 졸업한지 20년이 넘게 흐른 지금도 가장 절친한 친구입니다. ...&lt;/p&gt;
 
 			<!-- @주변 문맥이 이미지를 설명하는 경우 -->
-			<p>
+			&lt;p&gt;
 				&lt;img src="graduation.jpg" alt=""&gt;
 				필자의 졸업 사진입니다. 필자는 앞에서 두번째 줄, 왼쪽에서 네번째에 있습니다. 필자가 서 있는 자리에서 오른쪽 두번째 자리에 있는 친구는 졸업한지 20년이 넘게 흐른 지금도 가장 절친한 친구입니다.
 				...
-			</p>
+			&lt;/p&gt;
 
 			<!-- @일반적인 사용 방법 -->
-			<p>
+			&lt;p&gt;
 				&lt;img src="graduation.jpg" alt="필자의 졸업 사진입니다."&gt;
 				필자는 앞에서 두번째 줄, 왼쪽에서 네번째에 있습니다. 필자가 서 있는 자리에서 오른쪽 두번째 자리에 있는 친구는 졸업한지 20년이 넘게 흐른 지금도 가장 절친한 친구입니다.
 				 ...
-			</p>
+			&lt;/p&gt;
 
 			<!-- @좀 더 자세한 의미를 전달하는 이미지:
 				포토샵에서 이미지를 조금 수정해서, 필자의 얼굴 주위에 동그라미를 그리고 “저에요!” 라는 글씨를 이미지에 직접 저장했습니다.
 				이제 이 이미지는 필자가 앞에서 두번째 줄, 왼쪽에서 네번째에 있다는 의미도 함께 전달합니다. 따라서 마크업을 이렇게 바꿀 수 있습니다.-->
-			<p>
+			&lt;p&gt;
 				&lt;img src="graduation.jpg" alt="필자의 졸업 사진입니다. 필자는 앞에서 두번째 줄, 왼쪽에서 네번째에 있습니다."&gt;
 				필자가 서 있는 자리에서 오른쪽 두번째 자리에 있는 친구는 졸업한지 20년이 넘게 흐른 지금도 가장 절친한 친구입니다.
 				...
-			</p>
+			&lt;/p&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -130,6 +112,20 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script>
+Ext.onReady(function(){
+	var tplData2 = {
+		attr: 'alt',
+		meaning: 'img',
+		item: [{
+			desc:'alt 속성은 \"이미지 대신\" 쓸 수 있는 텍스트를 포함해야 합니다. 페이지의 모든 이미지를 alt 속성값으로 지정된 대체텍스트로 교체해도 페이지의 의미가 달라지지 않아야 합니다.'
+		}],
+		txt: 'alt 속성의 값은 평범한 텍스트를 사용합니다. 이 속성은 비어 있을 수 있습니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData2);
+});
+</script>
 </body>
 </html>

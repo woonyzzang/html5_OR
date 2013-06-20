@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">sandbox 속성 (iframe)</h2>
 
@@ -30,7 +30,7 @@
 		<p>공백 문자로 구분되고 순서 없이 유일한 토큰 목록이며 대소문자를 구분하지 않는 아스키 값을 가집니다.</p>
 		<div id="gridAttr"></div>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

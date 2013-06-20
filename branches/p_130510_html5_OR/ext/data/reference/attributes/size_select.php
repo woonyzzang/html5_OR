@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">size 속성 (select)</h2>
 
@@ -29,7 +29,7 @@
 		<p>유효한 양의 정수를 사용합니다.</p>
 		<p>multiple 속성 존재한다면, size 속성의 기본 값은 4입니다. 그렇지 않다면 기본 값은 1입니다.</p>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>

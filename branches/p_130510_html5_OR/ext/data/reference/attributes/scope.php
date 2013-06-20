@@ -16,7 +16,7 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 태그 설명 -->
+	<!-- 속성 설명 -->
 	<section>
 		<h2 class="s_tit">scope 속성</h2>
 
@@ -35,7 +35,7 @@
 		<li>속성을 사용하지 않을 경우 기본 값은 auto 상태이며 셀 집합을 문맥에 기초하여 선택하게 됩니다.</li>
 		</ul>
 	</section>
-	<!-- //태그 설명 -->
+	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
