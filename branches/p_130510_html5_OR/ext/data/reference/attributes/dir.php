@@ -1,37 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>dir 속성 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>dir 속성 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">dir 속성</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>dir 속성은 요소의 텍스트 방향성을 명시합니다.</dd>
-		<dd>bdo 요소에서는 반드시 사용하여야 합니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>나열 속성이며 ltr, rtl, auto 키워드를 갖습니다.</p>
-		<p>bdo 요소는 ltr, rtl 키워드를 사용합니다.</p>
-		<div id="gridAttr"></div>
-		<ul class="lst_type">
-		<li>auto 키워드인 경우 양방향 알고리즘에서 문단 레벨로 방향성을 결정하는 것과 흡사하게, 첫 문자만을 보고 판단합니다. 때문에 방향성을 제대로 알 수 없습니다. 서버쪽에서 사용할 수 있는 더 좋은 알고리즘이 없는 경우에만 사용하기를 권장합니다.</li>
-		<li>dir 속성의 기본값은 없습니다. (요소가 루트 요소이고, dir 속성이 정의되지 않았을 때 요소의 방향성은 ltr 상태가 됩니다.)</li>
-		<li>부모 요소를 갖는 요소에 dir 속성이 없다면, 부모의 방향성을 따릅니다.</li>
-		</ul>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 메모 -->
 	<section>
@@ -51,6 +29,25 @@
 
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		attr: 'dir',
+		item: [{
+			desc:'dir 속성은 요소의 텍스트 방향성을 명시합니다.'
+		},{
+			desc:'bdo 요소에서는 반드시 사용하여야 합니다.'
+		}],
+		txt: '나열 속성이며 ltr, rtl, auto 키워드를 갖습니다.',
+		txt1: 'bdo 요소는 ltr, rtl 키워드를 사용합니다.',
+		grid: true,
+		lst: [
+			{item:'auto 키워드인 경우 양방향 알고리즘에서 문단 레벨로 방향성을 결정하는 것과 흡사하게, 첫 문자만을 보고 판단합니다. 때문에 방향성을 제대로 알 수 없습니다. 서버쪽에서 사용할 수 있는 더 좋은 알고리즘이 없는 경우에만 사용하기를 권장합니다.'},
+			{item:'dir 속성의 기본값은 없습니다. (요소가 루트 요소이고, dir 속성이 정의되지 않았을 때 요소의 방향성은 ltr 상태가 됩니다.)'},
+			{item:'부모 요소를 갖는 요소에 dir 속성이 없다면, 부모의 방향성을 따릅니다.'}
+		]
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['keyword','status','content'],
 		data: {'items':[

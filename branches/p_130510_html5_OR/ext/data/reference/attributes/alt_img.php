@@ -115,7 +115,7 @@
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
-	var tplData2 = {
+	var tplData = {
 		attr: 'alt',
 		meaning: 'img',
 		item: [{
@@ -124,7 +124,7 @@ Ext.onReady(function(){
 		txt: 'alt 속성의 값은 평범한 텍스트를 사용합니다. 이 속성은 비어 있을 수 있습니다.'
 	};
 
-	tpl2.overwrite(Ext.get('info'), tplData2);
+	tpl2.overwrite(Ext.get('info'), tplData);
 });
 </script>
 </body>

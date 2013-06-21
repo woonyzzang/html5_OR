@@ -45,7 +45,7 @@
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
-	var tplData2 = {
+	var tplData = {
 		attr: 'accesskey',
 		item: [{
 			desc:'accesskey 속성은 사용자 에이전트에 의해 요소를 활성화시키거나 포커스를 갖게끔 하는 단축키를 생성하기 위한 가이드로 사용됩니다.'
@@ -53,7 +53,7 @@ Ext.onReady(function(){
 		txt: '공백문자로 구분된 토큰(token)이며, 유니코드 값이어야 합니다.'
 	};
 
-	tpl2.overwrite(Ext.get('info'), tplData2);
+	tpl2.overwrite(Ext.get('info'), tplData);
 
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['browser','windows','mac'],

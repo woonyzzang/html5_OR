@@ -1,40 +1,21 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>contenteditable 속성 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>contenteditable 속성 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">contenteditable 속성</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>contenteditable 속성은 요소를 편집 모드로 변경합니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>빈 문자열, true, false를 나열 타입으로 갖습니다. 빈 문자열은 true 상태입니다. 값을 명시하지 않거나 잘못된 값이 입력된 경우에는 inherit 상태가 됩니다.</p>
-		<div id="gridAttr"></div>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<p contenteditable="true">이 문단은 편집할 수 있습니다.</p>
+			&lt;p contenteditable="true"&gt;이 문단은 편집할 수 있습니다.&lt;/p&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -56,9 +37,20 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		attr: 'contenteditable',
+		item: [{
+			desc:'contenteditable 속성은 요소를 편집 모드로 변경합니다.'
+		}],
+		txt: '빈 문자열, true, false를 나열 타입으로 갖습니다. 빈 문자열은 true 상태입니다. 값을 명시하지 않거나 잘못된 값이 입력된 경우에는 inherit 상태가 됩니다.',
+		grid: true
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['status','desc'],
 		data: {'items':[
@@ -83,7 +75,7 @@ Ext.onReady(function(){
 			{header:'상태', dataIndex:'status'},
 			{header:'내용', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

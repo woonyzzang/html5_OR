@@ -40,7 +40,7 @@
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
-	var tplData2 = {
+	var tplData = {
 		attr: 'aaccept',
 		meaning: 'input',
 		item: [{
@@ -56,7 +56,7 @@ Ext.onReady(function(){
 		txt2: '예약어들은 중복될 수 없습니다. 이 중복을 체크할때는 대소문자를 구분하지 않습니다. (audio\/* 와 Audio\/* 는 중복입니다.)'
 	};
 
-	tpl2.overwrite(Ext.get('info'), tplData2);
+	tpl2.overwrite(Ext.get('info'), tplData);
 });
 </script>
 </body>

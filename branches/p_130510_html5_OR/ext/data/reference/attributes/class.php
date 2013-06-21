@@ -1,29 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>class 속성 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>class 속성 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">class 속성</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>class 속성은 CSS의 셀렉터, DOM의 getElementsByClassNmae() 매서드등을 위한 값을 제공합니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>공백문자로 구분된 토큰 목록입니다. 속성값으로 어떤 것이든 사용할 수 있지만, 표현되는 모양을 설명하는 값보다, 요소의 본질을 설명하는 값을 사용하기를 권장합니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
@@ -34,5 +20,20 @@
 	</section>
 	<!-- //참고 -->
 </article>
+
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'class',
+		item: [{
+			desc:'q 요소 에서의 cite 속성은 인용문의 원본 출처를 표기할 수 있습니다. 다른 원본 페이지에 있던 내용을 인용한 경우에는 cite 속성에 유효한 URL을 선언할 수 있습니다. 유의점으로는 cite 요소요소는 어떤 작품의 제목을 나타내지만, cite 속성은 인용문의 원본출처를 표기한다는 것입니다.'
+		}],
+		txt: 'cite 속성을 사용했다면, 유효한 URL이어야 합니다.',
+		txt1: '상대적으로 해석한 링크를 따라갈 수 있어야 합니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

@@ -36,7 +36,7 @@
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
-	var tplData2 = {
+	var tplData = {
 		attr: 'action',
 		item: [{
 			desc:'action 속성은 서식 값을 제출 하기 위해 사용합니다. action 속성에 값이 있다면 action 값으로 서식 값을 전송하고 값이 없다면 현재 페이지로 전송합니다.'
@@ -44,7 +44,7 @@ Ext.onReady(function(){
 		txt: '서식 값을 전송할 유효한 URL을 입력해야 합니다.'
 	};
 
-	tpl2.overwrite(Ext.get('info'), tplData2);
+	tpl2.overwrite(Ext.get('info'), tplData);
 });
 </script>
 </body>

@@ -38,7 +38,7 @@
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
-	var tplData2 = {
+	var tplData = {
 		attr: 'audio',
 		meaning: 'media',
 		item: [{
@@ -48,7 +48,7 @@ Ext.onReady(function(){
 		grid: true
 	};
 
-	tpl2.overwrite(Ext.get('info'), tplData2);
+	tpl2.overwrite(Ext.get('info'), tplData);
 
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['token','desc'],

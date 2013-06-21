@@ -36,7 +36,7 @@
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
-	var tplData2 = {
+	var tplData = {
 		attr: 'aaccept-charset',
 		item: [{
 			desc:'accept-charset 속성은 서식 제출시 사용할 문자 인코딩을 지정합니다. 문자 인코딩인코딩이 지정되었다면, 그 값은 스페이스로 구분된 순서 있는 예약어들이어야 하며, 각각의 예약어들은 ASCII 코드를 기준으로 대소문자를 구분합니다. 또한 이 값은 IANACharset에 제시된 아스키 호환 문자인코딩의 MIME name과 매치되어야 합니다.'
@@ -44,7 +44,7 @@ Ext.onReady(function(){
 		txt: '문자 인코딩 입니다.'
 	};
 
-	tpl2.overwrite(Ext.get('info'), tplData2);
+	tpl2.overwrite(Ext.get('info'), tplData);
 });
 </script>
 </body>

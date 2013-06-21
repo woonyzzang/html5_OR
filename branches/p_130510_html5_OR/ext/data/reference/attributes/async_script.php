@@ -48,7 +48,7 @@
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
-	var tplData2 = {
+	var tplData = {
 		attr: 'async',
 		meaning: 'script',
 		item: [{
@@ -57,7 +57,7 @@ Ext.onReady(function(){
 		txt: '불리언 속성입니다.'
 	};
 
-	tpl2.overwrite(Ext.get('info'), tplData2);
+	tpl2.overwrite(Ext.get('info'), tplData);
 });
 </script>
 </body>

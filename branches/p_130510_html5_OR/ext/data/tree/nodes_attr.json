@@ -31,7 +31,7 @@
 			{text: 'content (meta)', leaf: true, href: ['content_meta.php']},
 			{text: 'contenteditable', leaf: true, href: ['contenteditable.php']},
 			{text: 'contextmenu', leaf: true, href: ['contextmenu.php']},
-			{text: 'controls_media', leaf: true, href: ['controls_media.php']},
+			{text: 'controls', leaf: true, href: ['controls_media.php']},
 			{text: 'coords', leaf: true, href: ['coords.php']}
 		]},
 		{text: 'D', expanded: false, children: [
