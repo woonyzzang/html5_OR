@@ -39,8 +39,7 @@ Ext.onReady(function(){
 		attr: 'for',
 		meaning: 'label',
 		item: [{
-			desc:'disabled 속성은 option 요소의 레이블을 나타냅니다.'
-		},{
+			desc:'disabled 속성은 option 요소의 레이블을 나타냅니다.',
 			child: [
 				{item:'for 속성을 사용해서 폼 컨트롤을 캡션과 연결할 수 있습니다. 속성의 값은 레이블을 붙일 수 있는 폼 관련 요소의 ID여야 하고, label 요소와 같은 Document에 속해야 합니다.)'},
 				{item:'이 속성은 label 요소 안에 폼 컨트롤을 나타내는 input 요소 등을 넣지 않을 때에 사용합니다.'}

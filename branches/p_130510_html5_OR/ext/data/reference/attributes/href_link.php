@@ -1,30 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>href 속성 (link) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>href 속성 (link) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">href 속성 (link)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>href 속성은 다른 자원과 연결되는 링크의 목적지를 나타냅니다. 이 속성은 반드시 존재해야 됩니다.</dd>
-		<dd>이 속성이 없다면 link 요소는 링크를 정의 하지 않습니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>유효한, 앞뒤로 공백을 허용하고 비어 있지 않은 URL을 사용해야 합니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
@@ -36,5 +21,21 @@
 	<!-- //참고 -->
 </article>
 
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'href',
+		meaning: 'link',
+		item: [{
+			desc:'href 속성은 다른 자원과 연결되는 링크의 목적지를 나타냅니다. 이 속성은 반드시 존재해야 됩니다.'
+		},{
+			desc:'이 속성이 없다면 link 요소는 링크를 정의 하지 않습니다.'
+		}],
+		txt: '유효한, 앞뒤로 공백을 허용하고 비어 있지 않은 URL을 사용해야 합니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

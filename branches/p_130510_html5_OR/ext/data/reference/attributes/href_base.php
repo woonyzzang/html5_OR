@@ -1,34 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>href 속성 (base) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>href 속성 (base) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">href 속성 (base)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>href 속성은 base 요소에서 상대 URL을 해석할 수 있는 베이스 URL을 정의합니다.</dd>
-		<dd>base 요소에 href 속성을 사용 하였다면 속성으로 URL을 갖는 어떤 요소보다도 앞서서 위치해야 합니다. 단, html 요소는 예외(html 요소의 manifest 속성은 base 요소의 영향을 받지 않습니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>href 속성을 사용했다면 값은 반드시 유효한, 앞뒤로 공백을 허용하는 URL을 제공하여야 합니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
@@ -42,7 +23,7 @@
 			&lt;base href="html5_OR.co.kr/index.html" target="_self"&gt;
 			&lt;/head&gt;
 			&lt;body&gt;
-			<p>오탈자나 내용 오류를 <a href="/debug/index.html">신고</a>해주세요.</p>
+			&lt;p&gt;오탈자나 내용 오류를 &lt;a href="/debug/index.html"&gt;신고&lt;/a&gt;해주세요.&lt;/p&gt;
 			&lt;/body&gt;
 			&lt;/html&gt;
 		</pre>
@@ -62,6 +43,22 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'href',
+		meaning: 'base',
+		item: [{
+			desc:'href 속성은 base 요소에서 상대 URL을 해석할 수 있는 베이스 URL을 정의합니다.'
+		},{
+			desc:'base 요소에 href 속성을 사용 하였다면 속성으로 URL을 갖는 어떤 요소보다도 앞서서 위치해야 합니다. 단, html 요소는 예외(html 요소의 manifest 속성은 base 요소의 영향을 받지 않습니다.'
+		}],
+		txt: 'href 속성을 사용했다면 값은 반드시 유효한, 앞뒤로 공백을 허용하는 URL을 제공하여야 합니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

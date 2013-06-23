@@ -27,7 +27,7 @@ $web_path = $base_URL.$relative_path;
 $full_URL = $web_path.$php_filename;
 $full_URI = $base_URL.$_SERVER['REQUEST_URI'];
 
-define(PATH, $base_URL.'/bluewaves/html5_OR/branches/p_130510_html5_OR/ext/');
+define(PATH, $base_URL.' /bluewaves/html5_OR/branches/p_130510_html5_OR/ext/');
 define(RELATIEV_PATH, '../../../');
 
 define(TITLE_REFERENCE, 'HTML5 Open Reference Guide');
