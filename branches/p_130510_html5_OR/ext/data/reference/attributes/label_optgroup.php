@@ -1,26 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>label 속성 (optgroup) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>label 속성 (optgroup) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">label 속성 (optgroup)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>lable 속성은 optgroup 요소의 그룹의 이름으로 사용됩니다. 이 속성은 반드시 작성되어야 합니다.</dd>
-		</dl>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
@@ -31,5 +20,20 @@
 	</section>
 	<!-- //참고 -->
 </article>
+
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'label',
+		meaning: 'optgroup',
+		item: [{
+			desc:'lable 속성은 optgroup 요소의 그룹의 이름으로 사용됩니다. 이 속성은 반드시 작성되어야 합니다.'
+		}],
+		txt: '없음'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

@@ -1,29 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>lang 속성 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>lang 속성 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">lang 속성</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>lang 속성은 요소 내용의 주 언어를 명시합니다. 또한, 속성이 텍스트를 포함하는 경우 속성의 언어를 명시합니다. 이 속성을 생략한다면 속성을 가진 부모 요소의 lang 속성을 따릅니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>속성 값은 BCP 47 언어코드에 정한 내용을 따르거나, 빈 문자열이어야 합니다. 또한, 네임스페이스 없는 lang 속성과 XML 네임스페이스의 lang 속성이 함께 사용된다면 두 속성의 값은 대소문자 구별 없는 동일한 아스키 값이어야 합니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 메모 -->
 	<section>
@@ -40,5 +26,19 @@
 	</section>
 	<!-- //참고 -->
 </article>
+
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'lang',
+		item: [{
+			desc:'lang 속성은 요소 내용의 주 언어를 명시합니다. 또한, 속성이 텍스트를 포함하는 경우 속성의 언어를 명시합니다. 이 속성을 생략한다면 속성을 가진 부모 요소의 lang 속성을 따릅니다.'
+		}],
+		txt: '속성 값은 BCP 47 언어코드에 정한 내용을 따르거나, 빈 문자열이어야 합니다. 또한, 네임스페이스 없는 lang 속성과 XML 네임스페이스의 lang 속성이 함께 사용된다면 두 속성의 값은 대소문자 구별 없는 동일한 아스키 값이어야 합니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

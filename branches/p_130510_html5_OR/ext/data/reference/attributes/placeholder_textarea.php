@@ -1,39 +1,21 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>placeholder 속성 (textarea) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>placeholder 속성 (textarea) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">placeholder 속성 (textarea)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>placeholder 속성은 힌트(한 단어나 짧은 구)를 나타냅니다. 이러한 힌트는 사용자가 데이터를 입력하는데 도움을 주는 목적입니다. 이것은 값의 예가 될수도 있고, 기대하는 형태의 짤막한 설명이 될 수도 있습니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>속성 값은 줄바꿈 문자를 제외한 텍스트입니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<textarea placeholder="비밀번호" title="영문자, 숫자, 특수 기호를 조합한 6자리 이상의 비밀번호를 입력해 주세요."></textarea>
+			&lt;textarea placeholder="비밀번호" title="영문자, 숫자, 특수 기호를 조합한 6자리 이상의 비밀번호를 입력해 주세요."&gt;&lt;/textarea&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -55,6 +37,20 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'placeholder',
+		meaning: 'textarea',
+		item: [{
+			desc:'placeholder 속성은 힌트(한 단어나 짧은 구)를 나타냅니다. 이러한 힌트는 사용자가 데이터를 입력하는데 도움을 주는 목적입니다. 이것은 값의 예가 될수도 있고, 기대하는 형태의 짤막한 설명이 될 수도 있습니다.'
+		}],
+		txt: '속성 값은 줄바꿈 문자를 제외한 텍스트입니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

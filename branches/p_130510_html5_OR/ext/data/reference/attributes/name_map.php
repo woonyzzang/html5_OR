@@ -1,29 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>name 속성 (map) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>name 속성 (map) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">name 속성 (map)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>name 속성은 map 요소에서 맵을 참조할 수 있는 이름을 정의하며, 반드시 사용되야 합니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>공백문자를 포함할 수 없고, 비어있지 않아야 합니다. 동일한 페이지 내에서 다른 map 요소와 같은 name 값을 가질 수 없습니다. map 요소에 id 속성이 있다면 name 속성과 같은 값이어야 합니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 참고 -->
 	<section>
@@ -34,5 +20,20 @@
 	</section>
 	<!-- //참고 -->
 </article>
+
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'name',
+		meaning: 'map',
+		item: [{
+			desc:'name 속성은 map 요소에서 맵을 참조할 수 있는 이름을 정의하며, 반드시 사용되야 합니다.'
+		}],
+		txt: '공백문자를 포함할 수 없고, 비어있지 않아야 합니다. 동일한 페이지 내에서 다른 map 요소와 같은 name 값을 가질 수 없습니다. map 요소에 id 속성이 있다면 name 속성과 같은 값이어야 합니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

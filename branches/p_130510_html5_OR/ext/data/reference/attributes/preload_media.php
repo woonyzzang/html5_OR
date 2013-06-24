@@ -1,38 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>preload 속성 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>preload 속성 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">preload 속성</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>preload 속성은 페이지 저자가 미디어 자원을 전체를 다운로드할 것인지, 메타 정보만 다운로드 할 것인지 아니면 기능을 사용하지 않을 것인지를 결정합니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>나열 속성으로 다음과 같은 키워드를 갖습니다.</p>
-		<div id="gridAttr"></div>
-		<ul class="lst_type">
-		<li>빈 문자열도 가능하며, 이 경우 Automatic 상태가 됩니다.</li>
-		<li>속성 자체를 생략한 경우 명세는 Metadata 상태를 권장합니다. 단, 브라우저마다 다른 기본값을 가질 수 있습니다.</li>
-		</ul>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
@@ -58,9 +35,24 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
 <script>
 Ext.onReady(function(){
+	var tplData = {
+		attr: 'preload',
+		item: [{
+			desc:'preload 속성은 페이지 저자가 미디어 자원을 전체를 다운로드할 것인지, 메타 정보만 다운로드 할 것인지 아니면 기능을 사용하지 않을 것인지를 결정합니다.'
+		}],
+		txt: '나열 속성으로 다음과 같은 키워드를 갖습니다.',
+		grid: true,
+		lst: [
+			{item:'빈 문자열도 가능하며, 이 경우 Automatic 상태가 됩니다.'},
+			{item:'속성 자체를 생략한 경우 명세는 Metadata 상태를 권장합니다. 단, 브라우저마다 다른 기본값을 가질 수 있습니다.'}
+		]
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+
 	var storeData = Ext.create('Ext.data.Store',{
 		fields: ['keyword','status','desc'],
 		data: {'items':[
@@ -86,7 +78,7 @@ Ext.onReady(function(){
 			{header:'상태', dataIndex:'status'},
 			{header:'설명', dataIndex:'desc', flex:1}
 		]
-	})
+	});
 });
 </script>
 </body>

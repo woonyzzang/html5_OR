@@ -1,52 +1,34 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>multiple 속성 (select) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>multiple 속성 (select) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">multiple 속성 (select)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>multiple 속성은 select 요소에서 여러개의 option 요소를 선택할 수 있습니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>불리언 속성입니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<form>
-			<fieldset>
-			<legend>...</legend>
-				<select multiple="multiple">
-				<option value="A-0">A-0</option>
-				<option value="B-0">B-0</option>
-				<optgroup label="C그룹">
-					<option value="C-0">C-0</option>
-					<option value="C-1">C-1</option>
-					<option value="C-2">C-2</option>
-				</optgroup>
-				</select>
-			</fieldset>
-			</form>
+			&lt;form&gt;
+			&lt;fieldset&gt;
+			&lt;legend&gt;...&lt;/legend&gt;
+				&lt;select multiple="multiple"&gt;
+				&lt;option value="A-0"&gt;A-0&lt;/option&gt;
+				&lt;option value="B-0"&gt;B-0&lt;/option&gt;
+				&lt;optgroup label="C그룹"&gt;
+					&lt;option value="C-0"&gt;C-0&lt;/option&gt;
+					&lt;option value="C-1"&gt;C-1&lt;/option&gt;
+					&lt;option value="C-2"&gt;C-2&lt;/option&gt;
+				&lt;/optgroup&gt;
+				&lt;/select&gt;
+			&lt;/fieldset&gt;
+			&lt;/form&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -60,6 +42,20 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'multiple',
+		meaning: 'select',
+		item: [{
+			desc:'multiple 속성은 select 요소에서 여러개의 option 요소를 선택할 수 있습니다.'
+		}],
+		txt: '불리언 속성입니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>
