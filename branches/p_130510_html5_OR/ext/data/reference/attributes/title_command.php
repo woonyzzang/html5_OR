@@ -1,38 +1,22 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>title 속성 (command) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>title 속성 (command) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">title 속성 (command)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>command 요소에 사용 되는 title 속성으로 전역 속성의 title 속성과는 다른 특별한 의미가 있습니다.</dd>
-		<dd>사용자에게 도움이 될 만한, 커맨드를 설명하는 힌트를 제공합니다.</dd>
-		</dl>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
 		<h3 class="s_tit">샘플 코드</h3>
 		<pre class="brush:html">
-			<command label="표" title="표를 삽입합니다. (기본 2행2열 형태)">
-			<command label="차트" title="차트를 삽입합니다.">
+			&lt;command label="표" title="표를 삽입합니다. (기본 2행2열 형태)"&gt;
+			&lt;command label="차트" title="차트를 삽입합니다."&gt;
 		</pre>
 	</section>
 	<!-- //샘플 코드 -->
@@ -46,6 +30,23 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'title',
+		meaning: 'command',
+		item: [{
+			desc:'command 요소에 사용 되는 title 속성으로 전역 속성의 title 속성과는 다른 특별한 의미가 있습니다.'
+		},{
+			desc:'사용자에게 도움이 될 만한, 커맨드를 설명하는 힌트를 제공합니다.'
+		}],
+		txt: 'title 속성은 약어의 축약되지 않은 텍스트를 값으로 가지며, 원형 이외의 다른 텍스트는 포함할 수 없습니다.',
+		txt1: 'title 속성으로 약어에 대한 원형을 제공하더라도 동일 문서 내에 같은 내용을 가진 abbr 요소들에 대해서 동일 값을 가질 필요는 없습니다. 각각의 abbr 요소는 독립적이므로 각 abbr 요소의 title 속성 역시 다른 값을 가질 수 있습니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

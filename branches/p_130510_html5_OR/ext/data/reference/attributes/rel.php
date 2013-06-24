@@ -1,36 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>rel 속성 : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>rel 속성 : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">rel 속성</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>rel 속성은 a 요소, link 요소, area 요소에서 사용되며, 링크된 대상과의 관계를 지정합니다.</dd>
-		<dd>link 요소에서 rel 속성으로 생성한 하이퍼링크는 문서전체에 적용됩니다.</dd>
-		<dd>a 요소, area 요소에서 사용하는 rel 속성은 문서 내에서 링크 위치에 의해 정해지는 문맥에 따라 링크의 타입을 나타냅니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>이 속성은 기본값이 없고, 계층구조를 명시하는 index, up 등과 같이 직접 명시되지 않는한 대부분은 하나의 키워드만 가질 수 있습니다.</p>
-		<p>명세에서 이 속성의 값으로 사용될 수 있는 링크 타입들을 소개하고 있지만, 규범은 아닙니다. 누구든지 원하는 경우 새로운 링크 타입을 생성할 수 있습니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
@@ -94,31 +73,31 @@
 
 			<!-- @author 링크 타입:
 				현재 문서의 저자에 대한 링크입니다. 이것은 mailto: address 일 수도 있고, 페이지 저자에 대한 contact form 링크 일 수도 있습니다. -->
-			<a rel="author" href="mailto://seungwoonjjang@gmail.com">Contact me</a>
+			&lt;a rel="author" href="mailto://seungwoonjjang@gmail.com"&gt;Contact me&lt;/a&gt;
 
 			<!-- @bookmark 링크 타입:
 				bookmark 링크 타입은 퍼머링크(permalink)를 나타낼 수 있습니다. 이경우 title 속성을 활용하여 제목을 써 두는 것이 좋습니다. -->
-			<a rel="bookmark" href="http://example.com" title="HTML5 오픈 레퍼런스">HTML5 Open Reference Guide</a>
+			&lt;a rel="bookmark" href="http://example.com" title="HTML5 오픈 레퍼런스"&gt;HTML5 Open Reference Guide&lt;/a&gt;
 
 			<!-- @external 링크 타입:
 				참조하는 문서가 현재 문서 사이트의 일부가 아님을 나타냅니다. -->
-			<a href="document.html" target="_blank">외부 link</a>
-			<a rel="external" href="document.html">외부 link</a>
+			&lt;a href="document.html" target="_blank"&gt;외부 link&lt;/a&gt;
+			&lt;a rel="external" href="document.html"&gt;외부 link&lt;/a&gt;
 
 			<!-- @license 링크 타입:
 				현재 문서의 주된 컨텐츠가 저작권 라이센스를 갖고 있음을 나타내며, 참조된 문서는 그러한 라이센스를 설명합니다. -->
-			<a rel="license" href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0</a>
+			&lt;a rel="license" href="http://www.apache.org/licenses/LICENSE-2.0"&gt;Apache 2.0&lt;/a&gt;
 
 			<!-- @nofollow 링크 타입:
 				현재 문서의 원래 저자, 혹은 출판자가 참조된 문서를 보증하지 않음을 나타냅니다. -->
-			<a rel="nofollow" href="http://blog.example.com">My blog</a>
+			&lt;a rel="nofollow" href="http://blog.example.com"&gt;My blog&lt;/a&gt;
 
 			<!-- noreferrer 링크 타입:
 				하이퍼링크를 따라갈 경우, 사용자 에이전트가 HTTP Refferer 헤더를 전송하지 않을 것을 요구합니다. -->
-			<a rel="noreferrer" href="http://html5_OR.co.kr/" target="_blank">HTML5 오픈 레퍼런스 사이트 새창으로 열기</a>
+			&lt;a rel="noreferrer" href="http://html5_OR.co.kr/" target="_blank"&gt;HTML5 오픈 레퍼런스 사이트 새창으로 열기&lt;/a&gt;
 
 			<!-- @tag 링크 타입: 현재 문서에 적용되는 태그(주어진 주소에 의해 식별되는)를 제공합니다. -->
-			<a rel="tag" href="http://html5_OR.co.kr">html5</a>
+			&lt;a rel="tag" href="http://html5_OR.co.kr"&gt;html5&lt;/a&gt;
 
 			<!-- @sidebar 링크 타입: 참조된 문서를 가져왔을 경우, 브라우저에 사이드바가 있다면 그곳에 표시될 의도를 가졌음을 나타냅니다. -->
 			<!-- @up 링크 타입: 현재 문서에 대한 문맥을 제공하는 문서로의 링크를 제공합니다. -->
@@ -142,6 +121,24 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'rel',
+		item: [{
+			desc:'rel 속성은 a 요소, link 요소, area 요소에서 사용되며, 링크된 대상과의 관계를 지정합니다.'
+		},{
+			desc:'link 요소에서 rel 속성으로 생성한 하이퍼링크는 문서전체에 적용됩니다.'
+		},{
+			desc:'a 요소, area 요소에서 사용하는 rel 속성은 문서 내에서 링크 위치에 의해 정해지는 문맥에 따라 링크의 타입을 나타냅니다.'
+		}],
+		txt: '이 속성은 기본값이 없고, 계층구조를 명시하는 index, up 등과 같이 직접 명시되지 않는한 대부분은 하나의 키워드만 가질 수 있습니다.',
+		txt1: '명세에서 이 속성의 값으로 사용될 수 있는 링크 타입들을 소개하고 있지만, 규범은 아닙니다. 누구든지 원하는 경우 새로운 링크 타입을 생성할 수 있습니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

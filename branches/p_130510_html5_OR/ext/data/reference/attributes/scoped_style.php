@@ -1,33 +1,15 @@
+<?php require '../../../settings.php'; ?>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>scoped 속성 (style) : HTML5 Open Reference Guide</title>
-<link rel="stylesheet" href="../../resources/css/ext-all.css">
-<link rel="stylesheet" href="../../resources/css/base.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shCore.css">
-<link rel="stylesheet" href="../../syntaxhighlighter_3.0.83/styles/shThemeFadeToGrey.css">
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCore.js"></script>
-<script src="../../syntaxhighlighter_3.0.83/scripts/shAutoloader.js"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
-<script src="../../ext-all-debug.js"></script>
-<script src="../../locale/ext-lang-ko.js"></script>
+<title>scoped 속성 (style) : <?php echo TITLE_REFERENCE; ?></title>
+<?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
 <article id="content_desc">
 	<!-- 속성 설명 -->
-	<section>
-		<h2 class="s_tit">scoped 속성 (style)</h2>
-
-		<dl class="definition">
-		<dt>정의</dt>
-		<dd>scoped 속성은 style 요소가 작성된 부모의 하위 요소에만 스타일을 적용시킬 수 있습니다. scoped 속성을 사용하는 style 요소는 플로우 컨텐츠의 범주에 속하게 되고 플로우 컨텐츠에 사용 할 수 있지만, 다른 style 요소와 요소 간 공백 이외에 다른 플로우 컨텐츠는 허용되지 않습니다.</dd>
-		</dl>
-
-		<h3 class="s_tit">속성 값</h3>
-		<p>불리언 속성입니다.</p>
-	</section>
+	<section id="info"><!-- @new Ext.XTemplate --></section>
 	<!-- //속성 설명 -->
 	<!-- 샘플 코드 -->
 	<section>
@@ -45,18 +27,18 @@
 			&lt;/style&gt;
 			&lt;/head&gt;
 			&lt;body&gt;
-			<section>
-				<h1>HTML</h1>
-				<p>Hyper Text Markup Language의 약자로, 월드와이드웹 문서를 작성하는 마크업 언어 입니다.</p>
-			</section>
-			<section>
-				&lt;style scoped="scoped"&gt;
+			&lt;section&gt;
+				&lt;h1&gt;HTML&lt;/h1&gt;
+				&lt;p&gt;Hyper Text Markup Language의 약자로, 월드와이드웹 문서를 작성하는 마크업 언어 입니다.&lt;/p&gt;
+			&lt;/section&gt;
+			&lt;section&gt;
+				&lt;style scoped&gt;
 				h1{color:#f30}
 				p{line-height:1.7}
 				&lt;/style&gt;
-				<h1>CSS</h1>
-				<p>cascading style sheets의 약자로, 웹문서의 전반적인 스타일을 미리 저장해 둔 스타일시트 언어 입니다.</p>
-			</section>
+				&lt;h1&gt;CSS&lt;/h1&gt;
+				&lt;p&gt;cascading style sheets의 약자로, 웹문서의 전반적인 스타일을 미리 저장해 둔 스타일시트 언어 입니다.&lt;/p&gt;
+			&lt;/section&gt;
 			&lt;/body&gt;
 			&lt;/html&gt;
 		</pre>
@@ -74,6 +56,20 @@
 	<!-- //참고 -->
 </article>
 
-<script src="../../syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
+<script>
+Ext.onReady(function(){
+	var tplData = {
+		attr: 'scoped',
+		meaning: 'style',
+		item: [{
+			desc:'scoped 속성은 style 요소가 작성된 부모의 하위 요소에만 스타일을 적용시킬 수 있습니다. scoped 속성을 사용하는 style 요소는 플로우 컨텐츠의 범주에 속하게 되고 플로우 컨텐츠에 사용 할 수 있지만, 다른 style 요소와 요소 간 공백 이외에 다른 플로우 컨텐츠는 허용되지 않습니다.'
+		}],
+		txt: '불리언 속성입니다.'
+	};
+
+	tpl2.overwrite(Ext.get('info'), tplData);
+});
+</script>
 </body>
 </html>

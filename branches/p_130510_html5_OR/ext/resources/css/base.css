@@ -63,6 +63,7 @@ pre[class^=brush]{display:none}
 #content_desc .category dt{font-weight:bold}
 #content_desc .category dd{margin:0}
 #content_desc .category li{line-height:1.8}
+#content_desc .category.v1 dd{margin-top:15px;line-height:1.6}
 #content_desc .api_ist li{line-height:1.6}
 #content_desc .lst_type li{line-height:1.6}
 
