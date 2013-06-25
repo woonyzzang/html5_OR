@@ -40,7 +40,7 @@ Ext.onReady(function(){
 		},{
 			desc:'type 속성은 참고 정도의 의미밖에 없습니다.'
 		}],
-		txt: '유효한 마임 타입이어야 합니다.'
+		txt: '유효한 MIME 타입이어야 합니다.'
 	};
 
 	tpl2.overwrite(Ext.get('info'), tplData);
