@@ -22,6 +22,9 @@ a.x-tree-node-text{color:#2600f0}
 
 /* =Set Class */
 .blind{visibility:hidden;overflow:hidden;position:absolute;z-index:-1;width:0;height:0;font-size:0;line-height:0}
+.txt_lft{text-align:left}
+.txt_cnt{text-align:center}
+.txt_rgt{text-align:right}
 
 /* =Syntaxhighlighter */
 pre[class^=brush]{display:none}
@@ -50,16 +53,21 @@ pre[class^=brush]{display:none}
 #content_desc section:first-child{margin-top:0;padding-top:0;border-top:0}
 #content_desc .s_tit{margin-top:30px;padding-left:8px;font-weight:bold;font-size:18px;color:#081f5c;border-left:5px solid #06a}/*#081f5c*/
 #content_desc .s_tit:first-child{margin-top:0}
+#content_desc .panel{margin:8px 0;padding:10px;border:1px dotted #000}
+#content_desc .panel.info{border-color:#c8c8c8;background-color:#f7f7f7;color:#555}
+#content_desc .panel.alert{border-color:#d4a9a9;background-color:#f5dede;color:#6a1e00}
+#content_desc .tit_cont{color:#0a63c1}
 #content_desc .definition{padding:15px;background-color:#eef;border-radius:10px}
 #content_desc .definition dt{font-weight:bold;color:#137ca5}
 #content_desc .definition dd{margin:5px 0 0 10px;line-height:1.6}
 #content_desc .markup_rule{}
 #content_desc .markup_rule li{line-height:1.8}
-#content_desc .tb_attr{border-spacing:0;border-collapse:collapse}
-#content_desc .tb_attr caption{visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-height:0}
-#content_desc .tb_attr th,#content_desc .tb_attr td{padding:5px 15px;border:1px solid #ccc}
-#content_desc .tb_attr th{background-color:#eee}
-#content_desc .tb_attr td{background-color:#f7f7f7}
+#content_desc .tb_grid{border-spacing:0;border-collapse:collapse}
+#content_desc .tb_grid caption{padding-bottom:5px}
+#content_desc .tb_grid caption.blind{visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-height:0}
+#content_desc .tb_grid th,#content_desc .tb_grid td{padding:5px 15px;border:1px solid #ccc}
+#content_desc .tb_grid th{background-color:#eee}
+#content_desc .tb_grid td{background-color:#f7f7f7}
 #content_desc .category dt{font-weight:bold}
 #content_desc .category dd{margin:0}
 #content_desc .category li{line-height:1.8}

@@ -4,18 +4,18 @@
 	animate: true,
 	children: [
 		{text: 'Accessibility', expanded: true, children: [
-			{text: 'Intro', cls: 'wikilink', leaf: true, href: ['ext/data/elements/a.php', 'ext/data/elements/a_desc.php'], qtitle: 'elements:a'},
-			{text: '웹 접근성이란?', leaf: true, href: ['ext/data/elements/abbr.php', 'ext/data/elements/abbr_desc.php']},
-			{text: '장애인의 이해', leaf: true, href: ['ext/data/elements/address.php', 'ext/data/elements/address_desc.php']},
-			{text: '디자이너와 기획자가 고려해야 할 웹접근성', leaf: true, href: ['ext/data/elements/area.php', 'ext/data/elements/area_desc.php']}
+			{text: 'Intro', cls: 'wikilink', leaf: true, href: ['a.php', 'a_desc.php'], qtitle: 'elements:a'},
+			{text: '웹 접근성이란?', leaf: true, href: ['abbr.php', 'abbr_desc.php']},
+			{text: '장애인의 이해', leaf: true, href: ['address.php', 'address_desc.php']},
+			{text: '디자이너와 기획자가 고려해야 할 웹접근성', leaf: true, href: ['area.php', 'area_desc.php']}
 		]},
 		{text: 'PC 접근성', expanded: false, children: [
-			{text: 'Intro', leaf: true, href: ['ext/data/elements/b.php', 'ext/data/elements/b_desc.php']},
-			{text: 'PC 접근성 지침', leaf: true, href: ['ext/data/elements/base.php', 'ext/data/elements/base_desc.php']},
-			{text: 'PC 접근성 검사항목', leaf: true, href: ['ext/data/elements/bdi.php', 'ext/data/elements/bdi_desc.php']},
-			{text: 'PC 접근성 지표', leaf: true, href: ['ext/data/elements/bdo.php', 'ext/data/elements/bdo_desc.php']}			
+			{text: 'Intro', leaf: true, href: ['b.php', 'b_desc.php']},
+			{text: 'PC 접근성 지침', leaf: true, href: ['base.php', 'base_desc.php']},
+			{text: 'PC 접근성 검사항목', leaf: true, href: ['bdi.php', 'bdi_desc.php']},
+			{text: 'PC 접근성 지표', leaf: true, href: ['bdo.php', 'bdo_desc.php']}			
 		]},
-		{text: 'Mobile 접근성', leaf: true, href: ['ext/data/elements/a.php', 'ext/data/elements/a_desc.php']},
-		{text: '보조 공학 및 접근성 검사 도구', leaf: true, href: ['ext/data/elements/a.php', 'ext/data/elements/a_desc.php']}
+		{text: 'Mobile 접근성', leaf: true, href: ['a.php', 'a_desc.php']},
+		{text: '보조 공학 및 접근성 검사 도구', leaf: true, href: ['a.php', 'a_desc.php']}
 	]
 }

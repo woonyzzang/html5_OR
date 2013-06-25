@@ -59,12 +59,12 @@ function toggleEft(options){
 }
 
 function init(){
-	blind.hide('convention');
+	//blind.hide('convention');
 	blind.hide('accessiblity');
-	//blind.hide('reference');
+	blind.hide('reference');
 	//blind.disable('side');
 	//blind.disable('support');
-	toggleEft({selecter:['side','support'], visible:'show'});
+	toggleEft({selecter:['side','support'], visible:'hide'});
 }
 </script>
 <script>
@@ -151,10 +151,11 @@ Ext.onReady(function(){
 			rootVisible: false,
 			listeners : {
 				itemclick : function($this, record, item, index, e, eOpts){
-					var path = record.data.href;
+					var path = record.data.href,
+						dir = 'ext/data/convention/html_guide/';
 
 					if(path){
-						fsLoad(path);
+						fsLoad(dir, path);
 					}else{
 						return false;
 					}
@@ -193,10 +194,11 @@ Ext.onReady(function(){
 			rootVisible: false,
 			listeners : {
 				itemclick : function($this, record, item, index, e, eOpts){
-					var path = record.data.href;
+					var path = record.data.href,
+						dir = 'ext/data/convention/css_guide/';
 
 					if(path){
-						fsLoad(path);
+						fsLoad(dir, path);
 					}else{
 						return false;
 					}
