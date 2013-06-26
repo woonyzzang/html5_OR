@@ -30,6 +30,8 @@ $full_URI = $base_URL.$_SERVER['REQUEST_URI'];
 define(PATH, $base_URL.'/bluewaves/html5_OR/branches/p_130510_html5_OR/ext/');
 define(RELATIEV_PATH, '../../../');
 
+define(TITLE_CONVENTION_HTML, 'HTML Guide');
+define(TITLE_CONVENTION_CSS, 'CSS Guide');
 define(TITLE_REFERENCE, 'HTML5 Open Reference Guide');
 //echo($web_path);
 ?>

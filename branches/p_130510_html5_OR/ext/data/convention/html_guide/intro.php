@@ -3,7 +3,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>Intro : HTML Guide</title>
+<title>Intro : <?php echo TITLE_CONVENTION_HTML; ?></title>
 <?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>

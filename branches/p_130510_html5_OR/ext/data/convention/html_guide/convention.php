@@ -3,7 +3,7 @@
 <html lang="ko">
 <head>
 <meta charset="utf-8">
-<title>HTML Convention : HTML Guide</title>
+<title>HTML Convention : <?php echo TITLE_CONVENTION_HTML; ?></title>
 <?php include RELATIEV_PATH.'common_inc.php'; ?>
 </head>
 <body>
@@ -11,6 +11,25 @@
 	<!-- HTML 가이드 -->
 	<section>
 		<h2 class="s_tit">HTML Convention</h2>
+		<div id="docSummary" class="idx_summary on">
+			<a href="#none" class="btn_lst view">목차보기</a>
+			<div class="inner" style="display:block">
+				<strong class="blind">색인</strong>
+				<ul>
+				<li><a href="#summary1" rel="bookmark">DOCTYPE</a></li>
+				<li><a href="#summary2" rel="bookmark">문서 제목</a></li>
+				<li><a href="#summary3" rel="bookmark">Layout Guide</a></li>
+				<li><a href="#summary4" rel="bookmark">색인</a></li>
+				<li><a href="#summary5" rel="bookmark">주석표기</a></li>
+				<li><a href="#summary6" rel="bookmark">들여쓰기</a></li>
+				<li><a href="#summary7" rel="bookmark">Attribute 우선순위</a></li>
+				<li><a href="#summary8" rel="bookmark">Link target</a></li>
+				<li><a href="#summary9" rel="bookmark">Table</a></li>
+				<li><a href="#summary10" rel="bookmark">기타 참고사항</a></li>
+				</ul>
+				<a href="#none" class="btn_lst clse">목차닫기</a>
+			</div>
+		</div>
 
 		<dl class="definition">
 		<dt>DOCTYPE</dt>
@@ -194,7 +213,7 @@
 		<li>H4 : 서브 컨텐츠</li>
 		<li>H5, H6 : 헤딩요소의 파편화를 불러일으킬 여지가 있으므로 가급적 사용하지 않는다.</li>
 		</ul>
-		<img src="<?php echo PATH; ?>resources/img/html_guide_index.png" width="300" height="374" alt="색인화 화면">
+		<img src="<?php echo PATH; ?>resources/img/html_guide_index.png" width="270" height="360" alt="색인화 예시 화면">
 	</section>
 	<!-- //색인 -->
 	<!-- 주석표기 -->
@@ -320,8 +339,270 @@
 		<li>table 엘리먼트의 자식 요소인 caption, colgroup, col, thead, tbody, tfoot, tr, th, td 엘리먼트</li>
 		<li>ul, ol, dl 엘리먼트 자식 요소인 li, dt, dd 엘리먼트</li>
 		</ul>
+		<table class="tb_grid">
+		<caption>[ 들여쓰기 사용 예 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">잘못된 예</th>
+		<th scope="col">올바른 예</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>
+			&lt;table&gt;<br>
+			&lt;caption&gt;...&lt;/caption&gt;<br>
+			&lt;colgroup&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;col&gt;<br>
+			&lt;/colgroup&gt;<br>
+			&lt;thead&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt...&lt;/th&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt<br>
+			&lt;/thead&gt;<br>
+			&lt;tbody&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt...&lt;/td&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt<br>
+			&lt;/tbody&gt;<br>
+			&lt;/table&gt;
+		</td>
+		<td>
+			&lt;table&gt;<br>
+			&lt;caption&gt;...&lt;/caption&gt;<br>
+			&lt;colgroup&gt;<br>
+			&lt;col&gt;<br>
+			&lt;/colgroup&gt;<br>
+			&lt;thead&gt;<br>
+			&lt;tr&gt<br>
+			&lt;th&gt...&lt;/th&gt<br>
+			&lt;/tr&gt<br>
+			&lt;/thead&gt;<br>
+			&lt;tbody&gt;<br>
+			&lt;tr&gt<br>
+			&lt;td&gt...&lt;/td&gt<br>
+			&lt;/tr&gt<br>
+			&lt;/tbody&gt;<br>
+			&lt;/table&gt;
+		</td>
+		</tr>
+		<tr>
+		<td>
+			&lt;ol&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt...&lt;/li&gt<br>
+			&lt;/ol&gt;
+		</td>
+		<td>
+			&lt;ol&gt;<br>
+			&lt;li&gt...&lt;/li&gt<br>
+			&lt;/ol&gt;
+		</td>
+		</tr>
+		<tr>
+		<td>
+			&lt;ul&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt...&lt;/li&gt<br>
+			&lt;/ul&gt;
+		</td>
+		<td>
+			&lt;ul&gt;<br>
+			&lt;li&gt...&lt;/li&gt<br>
+			&lt;/ul&gt;
+		</td>
+		</tr>
+		<tr>
+		<td>
+			&lt;dl&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt...&lt;/dt&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt...&lt;/dd&gt<br>
+			&lt;/dl&gt;
+		</td>
+		<td>
+			&lt;dl&gt;<br>
+			&lt;dt&gt...&lt;/dt&gt<br>
+			&lt;dd&gt...&lt;/dd&gt<br>
+			&lt;/dl&gt;
+		</td>
+		</tr>
+		<tr>
+		<td colspan="2">
+			<strong>[참고] 드림위버와 에디터플러스에서 탭 간격 설정하는 방법</strong>
+			<dl class="category v2">
+			<dt>드림위버:</dt>
+			<dd>Preference &gt Category &gt Code Format &gt Indent &amp; Tab Size &gt Indent width 1 Tabs, Tab size 4</dd>
+			<dt>에디터플러스:</dt>
+			<dd>Tools &gt Preference &gt Categories &gt Files &gt Settings and syntax &amp; Tab&frasl;Indent</dd>
+			</dl>
+		</td>
+		</tr>
+		</tbody>
+		</table>
 	</section>
 	<!-- //들여쓰기 -->
+	<!-- 어트리뷰트 우선순위 -->
+	<section>
+		<h3 class="s_tit">Attribute 우선순위</h3>
+		<p class="panel info">일관성있는 코드를 작성하기 위해 속성 선언시 정해진 우선순위의 규칙을 준수한다.</p>
+
+		<h4 class="tit_cont">Attribute 작성</h4>
+		<p>Attribute 값은 큰따옴표(&#34; &#34;)로 묶는다.</p>
+
+		<h4 class="tit_cont">Attribute 우선순위</h4>
+		<p>Attribute의 우선 순위는 다음 순위를 따른다.</p>
+		<table class="tb_grid">
+		<caption>[ 요소 속성 우선순위 목록 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">우선순위</th>
+		<th scope="col">속성</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>1</td>
+		<td>rel</td>
+		</tr>
+		<tr>
+		<td>2</td>
+		<td>type</td>
+		</tr>
+		<tr>
+		<td>3</td>
+		<td>href, src</td>
+		</tr>
+		<tr>
+		<td>4</td>
+		<td>width, height</td>
+		</tr>
+		<tr>
+		<td>5</td>
+		<td>name</td>
+		</tr>
+		<tr>
+		<td>6</td>
+		<td>id</td>
+		</tr>
+		<tr>
+		<td>7</td>
+		<td>target</td>
+		</tr>
+		<tr>
+		<td>8</td>
+		<td>title, alt, value</td>
+		</tr>
+		<tr>
+		<td>9</td>
+		<td>기타 속성</td>
+		</tr>
+		<tr>
+		<td>10</td>
+		<td>class</td>
+		</tr>
+		<tr>
+		<td>11</td>
+		<td>style</td>
+		</tr>
+		</tbody>
+		</table>
+
+		<p>특정 요소에 class와 style을 선언할 때는 선언 순서를 제일 뒷부분에 선언한다.</p>
+		<pre class="brush:html">
+			&lt;a href="#" id="linkId" target="_blank" title="링크가기" class="link" style="display:block"&gt;링크&lt;/a&gt;
+			&lt;img src="@이미지파일" width="100" height="100" id="imgId" title="이미지툴팁" alt="이미지내용" class="img" style="display:block"&gt;
+			&lt;input type="text" name="tfname" id="tfId" title="입력창" size="10" maxlength="5" class="tf" style="width:100px"&gt;
+		</pre>
+	</section>
+	<!-- //어트리뷰트 우선순위 -->
+	<!-- 테이블 -->
+	<section>
+		<h3 class="s_tit">Table</h3>
+		<dl class="category">
+		<dt>caption</dt>
+		<dd>
+			<ul>
+			<li>표 제목을 표현하는데 사용한다. &lt;caption&gt;요소는 반드시 선언하다.</li>
+			</ul>
+		</dd>
+		<dt>summary</dt>
+		<dd>
+			<ul>
+			<li>일반적으로 레이아웃을 표현하는데 사용하지 않고, 2차원의 격자형 데이터를 표현하는데 사용한다. 표의 요약 내용을 표기해야 할때 summary 속성을 선택적으로 사용할 수 있다.</li>
+			<li>단, HTML5 DTD 선언 시 summary속성은 선언하지 않는다.(HTML5에서 이 속성은 폐기 되었다.)</li>
+			</ul>
+		</dd>
+		<dt>colgroup</dt>
+		<dd>
+			<ul>
+			<li>세로열 전체를 그룹화 할때 선언한다. 이 요소는 선택적으로 할 수 있지만 되도록 사용하는것을 권장한다.</li>
+			</ul>
+		</dd>
+		<dt>col</dt>
+		<dd>
+			<ul>
+			<li>표 각 열의 너비를 지정하기 위해 선언한다. width, span 속성이 있으며 이 속성은 필요에 따라 선택적으로 사용한다.</li>
+			<li>테이블에 border가 없는 경우에는 &lt;col width=&#34;&#34;&gt; 사용을 한다. border가 있는 경우에 크로스브라우징시 1px 밀리는 이슈가 발생할 수 있는데 이럴경우 &lt;col class=""&gt; 를 사용하여 CSS에서 width를 핸들링 한다.</li>
+			<li>단, HTML5 DTD 선언 시 &lt;col&gt; width 속성은 전부 class 속성을 줘서 CSS로 핸들링 하거나 &lt;col style=width:&#34;&#34;&gt; 인라인 style로 핸들링 한다.</li>
+			</ul>
+		</dd>
+		<dt>thead, tbody, tfoot</dt>
+		<dd>
+			<ul>
+			<li>thead 요소는 표 머리글을 그룹으로 나눌 때 선언한다. 이 요소는 &lt;th&gt; 요소만으로 그룹을 나눌 수 없으면 선언하지 않는다.</li>
+			<li>tfoot 요소는 표 바닥글을 그룹으로 나눌 때 선언한다. &lt;thead&gt; 와 &lt;tbody&gt; 요소 사이에 위치해야 하며, 이 요소는 선택적으로 사용한다.</li>
+			<li>tbody 요소는 표 본문을 그룹으로 나누기 위해 선언한다. 테이블의 본문이 하나이고 &lt;thead&gt; 나 &lt;tfoot&gt; 요소가 없으면 생략  수 있다.</li>
+			</ul>
+		</dd>
+		<dt>th</dt>
+		<dd>
+			<ul>
+			<li>scope, abbr, id 순서로 속성을 선언한다.</li>
+			<li>표에 셀 제목이 명시되지 않는 경우에도 &lt;th&gt; 요소를 필수로 선언해서 의미에 맞는 제목을 명시한다.(화면에 표시되지 않도록 CSS로 숨김 처리)</li>
+			<li>scope 속성은 반드시 선언해야 한다.(scope=&#34;col&#34;의 뜻은 세로(column), row는 가로(row) 이다.)</li>
+			<li>abbr과 id 속성은 선택적으로 사용한다.</li>
+			</ul>
+		</dd>
+		</dl>
+	</section>
+	<!-- //테이블 -->
+	<!-- //기타 참고사항 -->
+	<section>
+		<h3 class="s_tit">기타 참고사항</h3>
+		<h4 class="tit_cont">중첩 리스트 적용 지양</h4>
+		<p>단, GNB 및 서브메뉴 등에서는 키보드 사용성 확보를 위해 2depth까지는 제한적 허용함</p>
+
+		<h4 class="tit_cont">dl 요소 안에는 여러개의 dt,dd 구조 적용 가능</h4>
+		<pre class="brush:html">
+			&lt;dl&gt;
+			&lt;dt&gt;제목1&lt;dt&gt;
+			&lt;dd&gt;정의내용1&lt;dd&gt;
+			&lt;dt&gt;제목2&lt;dt&gt;
+			&lt;dd&gt;정의내용2&lt;dd&gt;
+			&lt;dl&gt;
+		</pre>
+
+		<h4 class="tit_cont">title 속성 적용 범위</h4>
+		<p>IR기법을 사용한 링크에서는 title 미적용 : 내용이 중복 제공되는 현상 방지(단, 중요한 내용인 경우에는 사용 가능)</p>
+		<p>단, GNB 및 서브메뉴 등에서는 키보드 사용성 확보를 위해 2depth까지는 제한적 허용함 label로 적용하기 어려운 input 요소에 적용 가능</p>
+
+		<h4 class="tit_cont">layer 페이지 제목요소</h4>
+		<p>페이지내 레이어는 STRONG 요소로 제목 구현함 (단, 레이어가 아닌 별도의 팝업 페이지는 제목을 헤딩으로 구조화 한다.)</p>
+
+		<h4 class="tit_cont">a &amp; strong의 중첩관계</h4>
+		<pre class="brush:html">
+			// 권장사항 (단일 중첨관계일 경우)
+			&lt;strong&gt;&lt;a href="#"&gt;썸네일 타이틀&lt;/a&gt;&lt;/strong&gt;
+
+			// 예외처리 (앵커 안에 많은 요소들을 포함할 때)
+			&lt;a href="#"&gt;
+				&lt;strong&gt;썸네일 타이틀&lt;/strong&gt;
+			&lt;/a&gt;
+		</pre>
+
+		<h4 class="tit_cont">role 속성 적용</h4>
+		<p>HTML5 DTD 적용 시 User Add Custom 속성은 role 속성을 사용해야 한다.</p>
+		<p>이 속성은 HTML5 문서타입 외에서는 적용하지 않는다.(사용시 validation 문법 오류 발생)</p>
+	</section>
+	<!-- //기타 참고사항 -->
 </article>
 
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>

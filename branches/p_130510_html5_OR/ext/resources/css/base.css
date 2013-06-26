@@ -46,6 +46,17 @@ pre[class^=brush]{display:none}
 .svg .cate_metadata.on+text,.svg .cate_phrasing.on+text{fill:#fff}
 .svg .cate_metadata,.svg .cate_phrasing{fill:#000888;stroke:#000064;stroke-width:1px;opacity:.1}
 
+/* =Index Summary */
+.idx_summary{position:relative;margin-bottom:30px;background-color:#f7f7f7;border-top:1px solid #333}
+.idx_summary .inner{padding:10px 0;border:1px solid #333;border-width:0 1px 1px}
+.idx_summary a{text-decoration:none}
+.idx_summary a.btn_lst{position:absolute;left:50%;width:84px;margin-left:-42px;padding:0 0 2px;border:1px solid #333;border-top-width:0;font-size:12px;color:#666 !important;text-align:center}
+.idx_summary a.btn_lst.view{top:-1px;background-color:#fff}
+.idx_summary a.btn_lst.clse{bottom:-16px;background-color:#f7f7f7}
+.idx_summary ul{list-style:square;margin:0}
+.idx_summary li{line-height:1.6}
+.idx_summary li a:hover,.idx_summary li a:focus{text-decoration:underline}
+
 /* =Content Desc */
 #content_desc{padding:15px}
 #content_desc a{color:#08990e}
@@ -72,6 +83,8 @@ pre[class^=brush]{display:none}
 #content_desc .category dd{margin:0}
 #content_desc .category li{line-height:1.8}
 #content_desc .category.v1 dd{margin-top:15px;line-height:1.6}
+#content_desc .category.v2 dt{margin-top:4px}
+#content_desc .category.v2 dd{padding:2px 0 2px 10px}
 #content_desc .api_ist li{line-height:1.6}
 #content_desc .lst_type li{line-height:1.6}
 
