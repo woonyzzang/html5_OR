@@ -6,9 +6,9 @@
 		{text: 'HTML Guide', expanded: true, children: [
 			{text: 'Intro', leaf: true, href: ['intro.php']},
 			{text: 'HTML Convention', leaf: true, href: ['convention.php']},
-			{text: 'HTML Grammar', leaf: true, href: ['bdi.php', 'bdi_desc.php']},
-			{text: '(X)HTML Elements', leaf: true, href: ['bdo.php', 'bdo_desc.php']},
-			{text: 'HTML5 Elements', leaf: true, href: ['blockquote.php', 'blockquote_desc.php']}
+			{text: 'HTML Grammar', leaf: true, href: ['grammar.php']},
+			{text: '(X)HTML Elements', leaf: true, href: ['html_elem.php']},
+			{text: 'HTML5 Elements', leaf: true, href: ['html5_elem.php']}
 		]},
 		{text: 'CSS Guide', expanded: false, children: [
 			{text: 'Intro', leaf: true, href: ['b.php', 'b_desc.php']},

@@ -8,14 +8,9 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 어트리뷰트 우선순위 -->
+	<!-- HTML 요소 -->
 	<section>
-		<h3 class="s_tit">Attribute 우선순위</h3>
-		<p class="panel info">특정 요소에 class와 style을 선언할 때는 선언 순서를 준수한다. 다음과 같이 class와 style은 제일 뒷부분에 선언한다.</p>
-		<pre class="brush:html">&lt;input type="text" name="user" id="user" title="사용자ID" class="ipt_txt" style="width:100px"&gt;</pre>
-
-		<h4 class="tit_cont">Attribute 작성</h4>
-		<p>Attribute 값은 큰따옴표(&#34; &#34;)로 묶는다.</p>
+		<h2 class="s_tit">(X)HTML Elements</h2>
 
 		<h4 class="tit_cont">Attribute 우선순위</h4>
 		<p>Attribute의 우선 순위는 다음 순위를 따른다.</p>
@@ -97,7 +92,7 @@
 		</tbody>
 		</table>
 	</section>
-	<!-- //어트리뷰트 우선순위 -->
+	<!-- //HTML 요소 -->
 </article>
 
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>

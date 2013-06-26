@@ -13,7 +13,7 @@
 		<h2 class="s_tit">HTML Convention</h2>
 		<div id="docSummary" class="idx_summary on">
 			<a href="#none" class="btn_lst view">목차보기</a>
-			<div class="inner" style="display:block">
+			<div class="inner" style="display:none">
 				<strong class="blind">색인</strong>
 				<ul>
 				<li><a href="#summary1" rel="bookmark">DOCTYPE</a></li>
