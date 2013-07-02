@@ -10,45 +10,509 @@
 <article id="content_desc">
 	<!-- HTML 가이드 -->
 	<section>
-		<h2 class="s_tit">HTML Convention</h2>
+		<h1 class="s_tit">HTML Convention</h1>
 		<div id="docSummary" class="idx_summary on">
-			<a href="#none" class="btn_lst view">목차보기</a>
-			<div class="inner" style="display:none">
-				<strong class="blind">색인</strong>
+			<div class="inner" style="display:block">
+				<h2 class="blind">마크업 컨벤션 색인</h2>
 				<ul>
-				<li><a href="#summary1" rel="bookmark">DOCTYPE</a></li>
-				<li><a href="#summary2" rel="bookmark">문서 제목</a></li>
-				<li><a href="#summary3" rel="bookmark">Layout Guide</a></li>
-				<li><a href="#summary4" rel="bookmark">색인</a></li>
-				<li><a href="#summary5" rel="bookmark">주석표기</a></li>
-				<li><a href="#summary6" rel="bookmark">들여쓰기</a></li>
-				<li><a href="#summary7" rel="bookmark">Attribute 우선순위</a></li>
-				<li><a href="#summary8" rel="bookmark">Link target</a></li>
-				<li><a href="#summary9" rel="bookmark">Table</a></li>
-				<li><a href="#summary10" rel="bookmark">기타 참고사항</a></li>
+				<li><a href="#summary1" rel="bookmark">마크업 코드 기본 규칙</a></li>
+				<li><a href="#summary2" rel="bookmark">들여쓰기</a></li>
+				<li><a href="#summary3" rel="bookmark">빈 줄</a></li>
+				<li><a href="#summary4" rel="bookmark">DTD 및 인코딩</a></li>
+				<li><a href="#summary5" rel="bookmark">Attribute 우선순위</a></li>
+				<li><a href="#summary6" rel="bookmark">HTML 요소</a></li>
+				<li><a href="#summary7" rel="bookmark">HEAD 요소</a></li>
+				<li><a href="#summary8" rel="bookmark">META 요소</a></li>
+				<li><a href="#summary9" rel="bookmark">TILTE 요소</a></li>
+				<li><a href="#summary10" rel="bookmark">LINK 요소</a></li>
+				<li><a href="#summary11" rel="bookmark">SCRIPT 요소</a></li>
+				<li><a href="#summary12" rel="bookmark">STYLE 요소</a></li>
+				<li><a href="#summary13" rel="bookmark">BODY 요소</a></li>
+				<li><a href="#summary14" rel="bookmark">H1~H6 요소</a></li>
+				<li><a href="#summary15" rel="bookmark">FORM 요소</a></li>
+				<li><a href="#summary16" rel="bookmark">FIELDSET 요소</a></li>
+				<li><a href="#summary17" rel="bookmark">LEGEND 요소</a></li>
+				<li><a href="#summary18" rel="bookmark">INPUT 요소</a></li>
+				<li><a href="#summary19" rel="bookmark">SELECT 요소</a></li>
+				<li><a href="#summary20" rel="bookmark">LABEL 요소</a></li>
+				<li><a href="#summary21" rel="bookmark">TEXTAREA 요소</a></li>
+				<li><a href="#summary22" rel="bookmark">BUTTON 요소</a></li>
+				<li><a href="#summary23" rel="bookmark">TABLE 요소</a></li>
+				<li><a href="#summary24" rel="bookmark">CAPTION 요소</a></li>
+				<li><a href="#summary25" rel="bookmark">COL 요소</a></li>
+				<li><a href="#summary26" rel="bookmark">THEAD 요소</a></li>
+				<li><a href="#summary27" rel="bookmark">TFOOT 요소</a></li>
+				<li><a href="#summary28" rel="bookmark">TH 요소</a></li>
+				<li><a href="#summary29" rel="bookmark">TBODY 요소</a></li>
+				<li><a href="#summary30" rel="bookmark">A 요소</a></li>
+				<li><a href="#summary31" rel="bookmark">IFRAME 요소</a></li>
+				<li><a href="#summary32" rel="bookmark">IMAGE 요소</a></li>
+				<li><a href="#summary33" rel="bookmark">MAP 요소</a></li>
+				<li><a href="#summary34" rel="bookmark">AREA 요소</a></li>
 				</ul>
 				<a href="#none" class="btn_lst clse">목차닫기</a>
+				<a href="#none" class="btn_lst view">목차보기</a>
 			</div>
 		</div>
 
 		<dl class="definition">
-		<dt>DOCTYPE</dt>
-		<dd>문서타입에 (X)HTML의 버전과 문서형을 지정하는데, 타입은 HTML 4.01, 하위 브라우져 호환성을 위해 Transitional 모드를 권장하고 있다. (Transition 모드를 사용하더라도, 웹표준 준수율의 향상을 위해 가급적 Strict 모드의 문법을 사용하는 것을 권장함) 시스템 식별자를 명시하여 Standards 모드 방식으로 지원해야 하나 예외적으로 메일, 개별카페, 개별블로그 등의 UCC영역에 해당하는 서비스는 과거 비표준 태그 허용을 위해 Quirks 모드로 지원할 수 있다.</dd>
+		<dt>HTML 코드 작성 규칙</dt>
+		<dd>HTML 코드의 기본 작성 규칙과 들여쓰기, 빈 줄 사용, DTD 및 인코딩 선언 방법, HTML 요소 작성 방법, 주석 작성 방법을 설명한다.</dd>
 		</dl>
-
-		<p>HTML4.01 권장</p>
-		<pre class="brush:html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</pre>
-
-		<p>XHTML1.0</p>
-		<pre class="brush:html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</pre>
-
-		<p>HTML5</p>
-		<pre class="brush:html">&lt;!DOCTYPE html&gt;</pre>
 	</section>
 	<!-- //HTML 가이드 -->
-	<!-- 문서 제목 -->
-	<section>
-		<h3 class="s_tit">문서 제목</h3>
+	<!-- 마크업 기본 -->
+	<section id="summary1">
+		<h3 class="s_tit">마크업 코드 기본 규칙</h3>
+		<p class="panel info">HTML 코드를 작성할 때 다음과 같은 기본 규칙을 준수한다.</p>
+
+		<h4 class="tit_cont">W3C Validation</h4>
+		<p>HTML은 해당 DTD의 명세에 맞게 작성하며, W3C Validation을 통과해야 한다. 단, HTML5 DTD 선언 시 다음 오류 내용은 허용한다.</p>
+		<ul class="lst_type">
+		<li>&lt;iframe&gt; 의 frameborder 속성</li>
+		<li>&lt;iframe&gt;의 이슈의 관한 자세한 사항은 <a href="<?php echo BLOG_PATH; ?>archives/829" target="_blank">참조 문서</a>에서 확인할 수 있다.</li>
+		</ul>
+
+		<h4 class="tit_cont">영문 소문자 사용</h4>
+		<p>DTD를 제외한 모든 요소와 속성은 소문자로 작성한다.</p>
+		<table class="tb_grid">
+		<caption>[ 소문자 작성 예 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">잘못된 예</th>
+		<th scope="col">올바른 예</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>&lt;SPAN Class="desc"&gt;간단한 설명&lt;/SPAN&gt;</td>
+		<td>&lt;span class="desc"&gt;간단한 설명&lt;/span&gt;</td>
+		</tr>
+		</tbody>
+		</table>
+
+		<h4 class="tit_cont">속성값 표기</h4>
+		<p>속성값은 큰 따움표(&#34; &#34;)로 묶는다.</p>
+		<table class="tb_grid">
+		<caption>[ 속성값 표기 예 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">잘못된 예</th>
+		<th scope="col">올바른 예</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>&lt;img src='test.gif' width='100' height='100' alt='테스트'&gt;</td>
+		<td>&lt;img src="test.gif" width="100" height="100" alt="테스트"&gt;</td>
+		</tr>
+		</tbody>
+		</table>
+
+		<h4 class="tit_cont">엔티티 코드 사용</h4>
+		<p>특수 기호는 엔티티 이름(entity name)을 사용해서 엔티티 코드(entity code)로 변환한다. 엔티티 번호(entity number)는 사용하지 않는다. 단, 아포스트로피(&#39;)는 엔티티 번호인 &#39;로 선언한다.</p>
+		<ul class="lst_type">
+		<li>엔티티 코드는 ISO-8859-1을 기준으로 하며, 특수기호 엔티티 코드 종류는 <a href="<?php echo BLOG_PATH; ?>archives/703" target="_blank">참조 문서</a>에서 확인할 수 있다.</li>
+		</ul>
+		<table class="tb_grid">
+		<caption>[ 엔티티 코드 사용 예 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">잘못된 예</th>
+		<th scope="col">올바른 예</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>&lt;a href="...&nid=2"&gt;</td>
+		<td>&lt;a href="...&amp;amp;nid=2"&gt;</td>
+		</tr>
+		</tbody>
+		</table>
+		<p class="panel alert">
+			<strong>참고:</strong>
+			&lt;, &gt;, &#39;, &#34;, &amp; 등의 특수기호를 엔티티 코드로 변환하지 않으면 브라우저가 이를 시작 &fral;종료 태그나 속성으로 잘못 해석할 수 있다. 자동으로 생성되는 링크의 경로나 이미지의 alt값에도 엔티티 코드가 바르게 적용되게 한다.
+		</p>
+	</section>
+	<!-- //마크업 기본 -->
+	<!-- 들여쓰기 -->
+	<section id="summary2">
+		<h3 class="s_tit">들여쓰기</h3>
+		<p class="panel info">코드의 가독성을 높이고 HTML 구조를 쉽게 파악하기 위하여 마크업 중첩이 깊어질때 마다 들여쓰기를 사용하며 탭 1개의 크기는 공백 4칸으로 설정한다.</p>
+		<p class="panel alert">마크업의 깊이가 깊어질 때마다 탭 1개만큼 들여쓰지만 다음의 경우 들여쓰지 않는다.</p>
+		<ul class="lst_type">
+		<li>&lt;html&gt; 엘리먼트 의 자식 요소인 &lt;head&gt; 엘리먼트, &lt;body&gt; 엘리먼트</li>
+		<li>&lt;head&gt; 엘리먼트의 자식 요소</li>
+		<li>&lt;body&gt; 엘리먼트의 자식 요소</li>
+		<li>&lt;table&gt; 엘리먼트의 자식 요소인 &lt;caption&gt;, &lt;colgroup&gt;, &lt;col&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt; 엘리먼트</li>
+		<li>&lt;ul&gt;, &lt;ol&gt;, &lt;dl&gt; 엘리먼트 자식 요소인 &lt;li&gt;, &lt;dt&gt;, &lt;dd&gt; 엘리먼트</li>
+		</ul>
+		<table class="tb_grid">
+		<caption>[ 들여쓰기 사용 예 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">잘못된 예</th>
+		<th scope="col">올바른 예</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>
+			&lt;table&gt;<br>
+			&lt;caption&gt;...&lt;/caption&gt;<br>
+			&lt;colgroup&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;col&gt;<br>
+			&lt;/colgroup&gt;<br>
+			&lt;thead&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt...&lt;/th&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt<br>
+			&lt;/thead&gt;<br>
+			&lt;tbody&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt...&lt;/td&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt<br>
+			&lt;/tbody&gt;<br>
+			&lt;/table&gt;
+		</td>
+		<td>
+			&lt;table&gt;<br>
+			&lt;caption&gt;...&lt;/caption&gt;<br>
+			&lt;colgroup&gt;<br>
+			&lt;col&gt;<br>
+			&lt;/colgroup&gt;<br>
+			&lt;thead&gt;<br>
+			&lt;tr&gt<br>
+			&lt;th&gt...&lt;/th&gt<br>
+			&lt;/tr&gt<br>
+			&lt;/thead&gt;<br>
+			&lt;tbody&gt;<br>
+			&lt;tr&gt<br>
+			&lt;td&gt...&lt;/td&gt<br>
+			&lt;/tr&gt<br>
+			&lt;/tbody&gt;<br>
+			&lt;/table&gt;
+		</td>
+		</tr>
+		<tr>
+		<td>
+			&lt;ol&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt...&lt;/li&gt<br>
+			&lt;/ol&gt;
+		</td>
+		<td>
+			&lt;ol&gt;<br>
+			&lt;li&gt...&lt;/li&gt<br>
+			&lt;/ol&gt;
+		</td>
+		</tr>
+		<tr>
+		<td>
+			&lt;ul&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt...&lt;/li&gt<br>
+			&lt;/ul&gt;
+		</td>
+		<td>
+			&lt;ul&gt;<br>
+			&lt;li&gt...&lt;/li&gt<br>
+			&lt;/ul&gt;
+		</td>
+		</tr>
+		<tr>
+		<td>
+			&lt;dl&gt;<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt...&lt;/dt&gt<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt...&lt;/dd&gt<br>
+			&lt;/dl&gt;
+		</td>
+		<td>
+			&lt;dl&gt;<br>
+			&lt;dt&gt...&lt;/dt&gt<br>
+			&lt;dd&gt...&lt;/dd&gt<br>
+			&lt;/dl&gt;
+		</td>
+		</tr>
+		<tr>
+		<td colspan="2">
+			<strong>[참고] 드림위버와 에디터플러스에서 탭 간격 설정하는 방법</strong>
+			<dl class="category v2">
+			<dt>드림위버:</dt>
+			<dd>Preference &gt Category &gt Code Format &gt Indent &amp; Tab Size &gt Indent width 1 Tabs, Tab size 4</dd>
+			<dt>에디터플러스:</dt>
+			<dd>Tools &gt Preference &gt Categories &gt Files &gt Settings and syntax &amp; Tab&frasl;Indent</dd>
+			</dl>
+		</td>
+		</tr>
+		</tbody>
+		</table>
+	</section>
+	<!-- //들여쓰기 -->
+	<!-- //빈 줄 -->
+	<section id="summary3">
+		<h3 class="s_tit">빈 줄</h3>
+		<p class="panel info">의미 있는 객체를 구분하기 위해 코드 그룹 사이에 1줄씩 빈 줄을 만드는 것은 허용한다. 단, 빈 줄 사용 시 간격은 1줄을 넘기지 않는다.</p>
+		<table class="tb_grid">
+		<caption>[ 빈 줄 사용 예 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">잘못된 예</th>
+		<th scope="col">올바른 예</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>
+			&lt;head&gt;<br>
+			내용...<br>
+			&lt;/head&gt;<br>
+			빈 줄<br>
+			빈 줄<br>
+			&lt;body&gt;<br>
+			내용...<br>
+			&lt;/body&gt;
+		</td>
+		<td>
+			&lt;head&gt;<br>
+			내용...<br>
+			&lt;/head&gt;<br>
+			빈 줄<br>
+			&lt;body&gt;<br>
+			내용...<br>
+			&lt;/body&gt;
+		</td>
+		</tr>
+		<tr>
+		<td colspan="2">빈 줄을 사용하는 것은 필수 사항이 아닌 선택 사항이다.</td>
+		</tr>
+		</tbody>
+		</table>
+	</section>
+	<!-- //빈 줄 -->
+	<!-- DTD 및 인코딩 -->
+	<section id="summary4">
+		<h3 class="s_tit">DTD 및 인코딩</h3>
+		<dl class="definition">
+		<dt>DOCTYPE</dt>
+		<dd>문서타입에 (X)HTML의 버전과 문서형을 지정하는데, 신규 HTML 문서를 작성할 때는 기본 DTD로 HTML 4.01, 하위 브라우져 호환성을 위해 Transitional 모드를 사용 한다.(Transition 모드를 사용하더라도, 웹표준 준수율의 향상을 위해 가급적 Strict 모드의 문법을 사용하는 것을 권장함.) HTML4.01 Transitional DTD를 사용하는 이유는 다음과 같다.</dd>
+		<dd>
+			<ul>
+			<li>XHTML만큼 표현 규칙에 맞는(well-formed) 언어다.</li>
+			<li>XHTML을 사용하면 HTML 기준으로 작성된 PC 환경의 자바스크립트 라이브러리와 호환되지 않는다.</li>
+			<li>XHTML에서 <abbr title="Vector Markup Language">VML</abbr>이 바르세 표현되지 않는다.</li>
+			<li>XHTML의 이슈의 관한 자세한 사항은 <a href="<?php echo BLOG_PATH; ?>archives/1352" target="_blank">참조 문서</a>에서 확인할 수 있다.</li>
+			</ul>
+		</dd>
+		</dl>
+
+		<h4 class="tit_cont">DTD 선언</h4>
+		<p>HTML 문서는 반드시 DTD를 선언한다.</p>
+
+		<h4 class="tit_cont">기본 DTD</h4>
+		<dl class="category">
+		<dt>HTML4.01 권장</dt>
+		<dd><pre class="brush:html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</pre></dd>
+		<dt>XHTML1.0</dt>
+		<dd><pre class="brush:html">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</pre></dd>
+		<dt>HTML5</dt>
+		<dd><pre class="brush:html">&lt;!DOCTYPE html&gt;</pre></dd>
+		</dl>
+		<div class="panel alert">
+			<strong>주의</strong>
+			<p>다음과 같은 경우 DTD 설정별 표준 문법으로 작성하더라도 브라우저에서 쿼크 모드로 인식해서 바르게 해석되지 않으므로 주의한다.</p>
+			<dl class="category">
+			<dt>DTD가 선언되지 않은 경우(html 태그로 문서 시작)</dt>
+			<dd><pre class="brush:html">&lt;html&gt;</pre></dd>
+			<dt>선언한 DTD 앞에 다른 문자가 오는 경우</dt>
+			<dd>
+				<pre class="brush:html">
+					<!-- //html 문서 시작 -->
+					&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+				</pre>
+			</dd>
+			<dt>DTD를 선언했지만 제대로 선언되지 않은 경우</dt>
+			<dd>
+				<pre class="brush:html">
+					<!-- //html 문서 시작 -->
+					&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"&gt;
+				</pre>
+			</dd>
+			</dl>
+		</div>
+
+		<h4 class="tit_cont">인코딩 선언</h4>
+		<p class="panel info">HTML 문서는 반드시 인코딩 정보를 선언한다. 인코딩 설정은 <abbr title="Data Base">DB</abbr>의 인코딩 방식과도 관련이 있으므로 반드시 담당 개발자와 협의해서 정해야 한다.</p>
+
+		<h4 class="tit_cont">기본 인코딩</h4>
+		<p>신규 HTML 문서를 작성할 때 기본 인코딩으로 UTF-8을 사용한다. UTF-8은 다국어 지원이 가능하며, EUC-KR보다 표현 가능한 한글(고어, 음절 등)이 더 많다.</p>
+		<dl class="category">
+		<dt>(X)HTML 인코딩 선언</dt>
+		<dd><pre class="brush:html">&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"&gt;</pre></dd>
+		<dt>HTML5 인코딩 선언</dt>
+		<dd><pre class="brush:html">&lt;meta charset="utf-8"&gt;</pre></dd>
+		</dl>
+		<div class="panel alert">
+			<strong>참고:</strong>
+			UTF-8은 다음과 같은 특징이 있다.
+			<ul class="lst_type">
+			<li>한글은 UTF-8에서 3바이트, EUC-KR에서 2바이트를 차지하므로 인코딩을 UTF-8로 지정하면 DB 저장 용량이나 트래픽이 커진다.</li>
+			<li>인터넷 익스플로러7 이상의 버전에서는 링크의 밑줄이 글자와 붙어 보이는 현상이 있다.</li>
+			</ul>
+		</div>
+
+		<h4 class="tit_cont">기타 인코딩</h4>
+		<p>UTF-8 인코딩을 사용할 수 없으면 EUC-KR을 사용한다.</p>
+		<pre class="brush:html">&lt;meta http-equiv="Content-Type" content="text/html;charset=euc-kr"&gt;</pre>
+		<p class="panel alert">HTML, CSS 파일을 저장할 때 반드시 설정한 인코딩을 선택해서 저장한다.</p>
+	</section>
+	<!-- //DTD 및 인코딩 -->
+	<!-- 어트리뷰트 우선순위 -->
+	<section id="summary5">
+		<h3 class="s_tit">Attribute 우선순위</h3>
+		<p class="panel info">일관성있는 코드를 작성하기 위해 속성 선언시 정해진 우선순위의 규칙을 준수한다.</p>
+
+		<h4 class="tit_cont">Attribute 작성</h4>
+		<p>Attribute 값은 큰따옴표(&#34; &#34;)로 묶는다.</p>
+
+		<h4 class="tit_cont">Attribute 우선순위</h4>
+		<p>Attribute의 우선 순위는 다음 순위를 따른다.</p>
+		<table class="tb_grid">
+		<caption>[ 요소 속성 우선순위 목록 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">우선순위</th>
+		<th scope="col">속성</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>1</td>
+		<td>rel</td>
+		</tr>
+		<tr>
+		<td>2</td>
+		<td>type</td>
+		</tr>
+		<tr>
+		<td>3</td>
+		<td>href, src</td>
+		</tr>
+		<tr>
+		<td>4</td>
+		<td>width, height</td>
+		</tr>
+		<tr>
+		<td>5</td>
+		<td>name</td>
+		</tr>
+		<tr>
+		<td>6</td>
+		<td>id</td>
+		</tr>
+		<tr>
+		<td>7</td>
+		<td>target</td>
+		</tr>
+		<tr>
+		<td>8</td>
+		<td>title, alt, value</td>
+		</tr>
+		<tr>
+		<td>9</td>
+		<td>기타 속성</td>
+		</tr>
+		<tr>
+		<td>10</td>
+		<td>class</td>
+		</tr>
+		<tr>
+		<td>11</td>
+		<td>style</td>
+		</tr>
+		</tbody>
+		</table>
+
+		<p>특정 요소에 class와 style을 선언할 때는 선언 순서를 제일 뒷부분에 선언한다.</p>
+		<pre class="brush:html">
+			&lt;a href="#" id="linkId" target="_blank" title="링크가기" class="link" style="display:block"&gt;링크&lt;/a&gt;
+			&lt;img src="@이미지파일" width="100" height="100" id="imgId" title="이미지툴팁" alt="이미지내용" class="img" style="display:block"&gt;
+			&lt;input type="text" name="tfname" id="tfId" title="입력창" size="10" maxlength="5" class="tf" style="width:100px"&gt;
+		</pre>
+	</section>
+	<!-- //어트리뷰트 우선순위 -->
+	<!-- HTML 요소 -->
+	<section id="summary6">
+		<h3 class="s_tit">html</h3>
+		<p class="panel info">lang 속성은 휴먼랭귀지로 User Agent가 언어를 올바로 해석할 수 있게 도와주며, 검색과 음성장치(speech synthesizers)에 활용된다. 언어 코드는 모든 요소에 사용할 수 있지만 HTML 요소에 해당 문서의 주 언어 코드만 선언한다.</p>
+		<p>다음과 같이 lang 속성을 선언한다. class 속성은 선언하지 않는다.</p>
+		<dl class="category">
+		<dt>HTML 경우</dt>
+		<dd><pre class="brush:html">&lt;html lang="ko"&gt;</pre></dd>
+		<dt>XHTML 경우</dt>
+		<dd><pre class="brush:html">&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"&gt;</pre></dd>
+		</dl>
+		<p>자주 사용하는 국가코드는 ko(한국어), en(영어), ja(일본어), zh-cn(중국어)이다.</p>
+	</section>
+	<!-- //HTML 요소 -->
+	<!-- Head 요소 -->
+	<section id="summary7">
+		<h3 class="s_tit">head</h3>
+		<p class="panel info">meta, title, link, script, style 순서로 요소를 선언한다.</p>
+		<dl class="category">
+		<dt>HTML 경우</dt>
+		<dd>
+			<pre class="brush:html">
+				&lt;head&gt;
+				&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"&gt;
+				&lt;title&gt;타이틀&lt;/title&gt;
+				&lt;link rel="stylesheet" type="text/css" href="@CSS파일 문서경로"&gt;
+				&lt;script type="text/javascript" src="@JS파일 문서경로"&gt;&lt;/script&gt;
+				&lt;/style type="text/css"&gt;
+				[stuff]
+				&lt;/style&gt;
+				&lt;/head&gt;
+			</pre>
+		</dd>
+		<dt>HTML5 경우</dt>
+		<dd>
+			<pre class="brush:html">
+				&lt;head&gt;
+				&lt;meta charset="utf-8"&gt;
+				&lt;title&gt;타이틀&lt;/title&gt;
+				&lt;link rel="stylesheet" href="@CSS파일 문서경로"&gt;
+				&lt;script src="@JS파일 문서경로"&gt;&lt;/script&gt;
+				&lt;/style&gt;
+				[stuff]
+				&lt;/style&gt;
+				&lt;/head&gt;
+			</pre>
+		</dd>
+		</dl>
+	</section>
+	<!-- //Head 요소 -->
+	<!-- Meta 요소 -->
+	<section id="summary8">
+		<h3 class="s_tit">meta</h3>
+		<p class="panel info">문서의 기본 인코딩, 뷰포트, 스크립트 형식, 스타일 형식 순으로 요소를 선언한다. 뷰포트는 모바일 브라우저에 대응하는 HTML의 경우에만 선언한다.</p>
+		<ul class="lst_type">
+		<li>검색 엔진 최적화를 위하여 meta 요소를 이용하여 문서 제목을 추가 명시한다.</li>
+		<li>컨텐츠 상세 페이지에서는 컨텐츠 제목 만을 표기한다.</li>
+		<li>서비스홈에서는 서비스명 만을 표기, 서브 섹션홈에서는 하위섹션명 : 서비스명 을 표기한다</li>
+		<li>컨텐츠 제목의 특수기호가 들어갈시 엔티티코드로 변환가능한 기호는 반드시 escape 되어야 한다.</li>
+		</ul>
+		<pre class="brush:html">
+			&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"&gt; (필수 사항)
+			&lt;meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,target-densitydpi=medium-dpi"&gt; (모바일 대응)
+			&lt;meta http-equiv="Content-Script-Type" content="text/javascript"&gt; (선택 사항)
+			&lt;meta http-equiv="Content-Style-Type" content="text/css"&gt; (선택 사항)
+			&lt;meta name="title" content="Bluewaves"&gt; (선택 사항)
+			&lt;meta name="title" content="Web&frasl;Mobile Integration : Bluewaves"&gt; (선택 사항)
+			&lt;meta name="title" content="Overview"&gt; (선택 사항)
+		</pre>
+	</section>
+	<!-- //Meta 요소 -->
+	<!-- Title 요소 -->
+	<section id="summary9">
+		<h3 class="s_tit">title</h3>
 		<p class="panel info">각 페이지마다 서로 다른 규칙으로 사용중인 문서 제목 (title 요소) 규칙을 일관성 있게 일원화함으로써, 서비스 통일성을 및 검색 엔진에 대한 최적화를 높인다. 또한 문서 제목에 컨텐츠 제목을 포함시킴으로써, 외부 검색서비스에서 해당 컨텐츠의 노출이 더 용이해진다.</p>
 
 		<h4 class="tit_cont">기본 규칙</h4>
@@ -118,21 +582,190 @@
 			</pre>
 		</dd>
 		</dl>
-
-		<h4 class="tit_cont">Meta title 요소</h4>
-		<ul class="lst_type">
-		<li>검색 엔진 최적화를 위하여 meta 요소를 이용하여 문서 제목을 추가 명시한다.</li>
-		<li>컨텐츠 상세 페이지에서는 컨텐츠 제목 만을 표기한다.</li>
-		<li>서비스홈에서는 서비스명 만을 표기, 서브 섹션홈에서는 하위섹션명 : 서비스명 을 표기한다</li>
-		<li>컨텐츠 제목의 특수기호가 들어갈시 엔티티코드로 변환가능한 기호는 반드시 escape 되어야 한다.</li>
-		</ul>
+	</section>
+	<!-- //Title 요소 -->
+	<!-- Link 요소 -->
+	<section id="summary10">
+		<h3 class="s_tit">link</h3>
+		<p class="panel info">rel, type, href 순서로 속성을 선언한다.</p>
+		<pre class="brush:html">&lt;link rel="stylesheet" type="text/css" href="@CSS파일 문서경로"&gt;</pre>
+	</section>
+	<!-- //Link 요소 -->
+	<!-- Script 요소 -->
+	<section id="summary11">
+		<h3 class="s_tit">script</h3>
+		<p class="panel info">type, src 순서로 속성을 선언한다.</p>
+		<pre class="brush:html">&lt;script type="text/javascript" src="@JS파일 문서경로"&gt;&lt;/script&gt;</pre>
+		<p>script는 &lt;head&gt; 요소 내에 선언하는 것을 원칙으로 한다. 단, 성능 이슈가 있을 시 개발 부서와 협의해서 선언 위치를 변경할 수 있다.</p>
+		<p class="panel alert">
+			<strong>참고:</strong>
+			language 속성은 HTML4 이전 버전의 하위 호환성을 위해 사용하는 비표준 속성이므로 사용하지 않는다.
+		</p>
+	</section>
+	<!-- //Script 요소 -->
+	<!-- Script 요소 -->
+	<section id="summary12">
+		<h3 class="s_tit">style</h3>
+		<p class="panel info">type 속성을 선언한다.</p>
 		<pre class="brush:html">
-			&lt;meta name="title" content="Bluewaves"&gt;
-			&lt;meta name="title" content="Web&frasl;Mobile Integration : Bluewaves"&gt;
-			&lt;meta name="title" content="Overview"&gt;
+			&lt;style type="text/javascript"&gt;
+			[stuff]
+			&lt;/style&gt;
 		</pre>
 	</section>
-	<!-- //문서 제목 -->
+	<!-- //Script 요소 -->
+	<!-- Body 요소 -->
+	<section id="summary13">
+		<h3 class="s_tit">body</h3>
+		<p class="panel info">class 속성은 웹 페이지의 스킨셋을 변경해야 할 때 선택적으로 사용한다.</p>
+		<pre class="brush:html">&lt;body class="s"&gt;</pre>
+	</section>
+	<!-- //Body 요소 -->
+	<!-- H1~H6 요소 -->
+	<section id="summary14">
+		<h3 class="s_tit">H1~H6 요소</h3>
+		<p class="panel info">일반 문서를 HTML로 다음과 같은 규칙에 맞게 색인화 한다.</p>
+		<ul class="lst_type">
+		<li>H1 : 서비스명</li>
+		<li>H2 : 메인메뉴, 본문, 이용약관 등</li>
+		<li>H3 : 세부 컨텐츠, 핵심 컨텐츠 등</li>
+		<li>H4 : 서브 컨텐츠</li>
+		<li>H5, H6 : 헤딩요소의 파편화를 불러일으킬 여지가 있으므로 가급적 사용하지 않는다.</li>
+		</ul>
+		<img src="<?php echo PATH; ?>resources/img/html_guide_index.png" width="270" height="360" alt="색인화 예시 화면">
+	</section>
+	<!-- //H1~H6 요소 -->
+	<!-- Form 요소 -->
+	<section id="summary15">
+		<h3 class="s_tit">form</h3>
+		<p class="panel info">폼 컨트롤 요소를 작성할 떄 form, fieldset, legend 요소를 다음과 같이 선언한다. 단, 필요에 따라 개별적으로 사용할 수 있다.</p>
+		<pre class="brush:html">
+			&lt;form action=""&gt;
+			&lt;fieldset&gt;
+			&lt;legend&gt;@타이틀&lt;/legend&gt;
+				[form control element here]
+			&lt;/fieldset&gt;
+			&lt;/form&gt;
+		</pre>
+		<p class="panel alert">
+			<strong>참고:</strong>
+			form 요소는 마크업시 기본적으로 사용 하지 않는다. 만약 form 요소를 넣어야 할 경우 action 속성은 서버 쪽 폼 핸들러이나 필수 선언 속성이므로 마크업 단계에서 선언 한다.
+		</p>
+	</section>
+	<!-- //Form 요소 -->
+	<!-- Fieldset 요소 -->
+	<section id="summary16">
+		<h3 class="s_tit">fieldset</h3>
+		<p class="panel info">form 요소의 자식 노드로 선언해서 폼 제어 요소를 그룹으로 나눈다.</p>
+		<pre class="brush:html">
+			&lt;fieldset&gt;
+			&lt;legend&gt;@타이틀&lt;/legend&gt;
+				[form control element here]
+			&lt;/fieldset&gt;
+		</pre>
+	</section>
+	<!-- //Fieldset 요소 -->
+	<!-- Legend 요소 -->
+	<section id="summary17">
+		<h3 class="s_tit">legend</h3>
+		<p class="panel info">폼 제어 그룹인 fieldset의 자식 요소로서 폼 컨트롤 요소의 그룹 이름을 표현하기 위해 선언한다.</p>
+		<pre class="brush:html">
+			&lt;fieldset&gt;
+			&lt;legend&gt;@타이틀&lt;/legend&gt;
+				[form control element here]
+			&lt;/fieldset&gt;
+		</pre>
+	</section>
+	<!-- //Legend 요소 -->
+	<!-- Input 요소 -->
+	<section id="summary18">
+		<h3 class="s_tit">input</h3>
+		<p class="panel info">label 요소, title 속성, alt 속성을 통해 스크린리더 사용자는 주변 맥락에 대한 이해 없이 각 요소에 독립적으로 접근해도 폼을 이해할수 있다.</p>
+		<pre class="brush:html">
+			&lt;label for="uid"&gt;아이디&lt;/label&gt; &lt;input type="text" id="uid" name="id"&gt;
+
+			&lt;input type="image" src="@이미지경로" alt="확인"&gt;
+
+			&lt;label for="tel"&gt;유선전화&lt;/label&gt; &lt;input type="text" id="tel" name="tel" title="지역번호"&gt;
+		</pre>
+
+		<p>다음과 같이 type 값에 따라 속성을 선언한다.</p>
+		<dl class="category">
+		<dt>type이 text인 경우: type, id, title, value, accesskey 순서로 속성을 선언한다.</dt>
+		<dd><pre class="brush:html">&lt;input type="text" id="uid" title="사용자 ID" value="아이디를 입력하세요." accesskey="l"&gt;</pre>
+			<ul>
+			<li>동일한 스타일의 텍스트 필드나 너비값이 다르면 style 속성을 이용해 width 값을 제어한다.</li>
+			<li>텍스트 필드에 가이드를 위한 내용이 들어가면 value 속성을 선택적으로 사용할 수 있다.</li>
+			<li>label 요소 또는 title 속성을 반드시 선언한다.</li>
+			</ul>
+		</dd>
+		<dt>type이 raido, checkbox 경우: type, name, id, checked 순서로 속성을 선언한다.</dt>
+		<dd>
+			<pre class="brush:html">
+				&lt;input type="raido" name="vt_align" id="alignLft" checked="checked"&gt; &lt;label for="alignLft"&gt;왼쪽정렬&lt;/label&gt;
+				&lt;input type="raido" name="vt_align" id="alignCnt"&gt;&lt;label for="alignCnt"&gt;가운데정렬&lt;/label&gt;
+				&lt;input type="raido" name="vt_align" id="alignRgt"&gt;&lt;label for="alignRgt"&gt;오른쪽정렬&lt;/label&gt;
+
+				&lt;input type="checkbox" name="sports" id="soccer" checked="checked"&gt; &lt;label for="soccer"&gt;축구&lt;/label&gt;
+				&lt;input type="checkbox" name="sports" id="basketBall"&gt;&lt;label for="basketBall"&gt;농구&lt;/label&gt;
+				&lt;input type="checkbox" name="sports" id="tennis"&gt;&lt;label for="tennis"&gt;테니스&lt;/label&gt;
+			</pre>
+			<ul>
+			<li>필요하면 선택적으로 name 속성을 이용해 항목을 그룹으로 나눈다.</li>
+			<li>기본적으로 선택된 값임을 표시하려면 checked=&#34;checked&#34;라고 표기한다.</li>
+			<li>label 요소와 반드시 함께 사용하며 title 속성은 선언하지 않는다.</li>
+			</ul>
+		</dd>
+		<dt>type이 image 경우: type, src, alt 순서로 속성을 선언한다. alt 속성은 반드시 선언한다.</dt>
+		<dd><pre class="brush:html">&lt;input type="image" src="@이미지경로" alt="확인"&gt;</pre></dd>
+		<dt>type이 submit, button, reset인 경우: type 속성을 선언한다. label 요소 또는 title 속성을 선언하지 않는다.</dt>
+		<dd><pre class="brush:html">&lt;input type="button"&gt;</pre></dd>
+		</dl>
+	</section>
+	<!-- //Input 요소 -->
+	<!-- Select 요소 -->
+	<section id="summary19">
+		<h3 class="s_tit">select</h3>
+		<p class="panel info">동일한 스타일의 선택 목록이나 너비값이 다르면 선택적으로 style 속성을 이용해 width 값을 제어한다.</p>
+		<pre class="brush:html">
+			&lt;select style="width:100px"&gt;
+			&lt;option&gt;등급&lt;/option&gt;
+			&lt;/select&gt;
+		</pre>
+	</section>
+	<!-- //Select 요소 -->
+	<!-- Label 요소 -->
+	<section id="summary20">
+		<h3 class="s_tit">label</h3>
+		<p class="panel info">라디오 버튼, 체크 박스는 for 속성을 부여해 해당 요소의 id 값과 동일한 이름으로(coupling)한다.</p>
+		<pre class="brush:html">
+			&lt;input type="raido" name="vt_align" id="alignLft"&gt; &lt;label for="alignLft"&gt;왼쪽정렬&lt;/label&gt;
+			&lt;input type="checkbox" name="sports" id="soccer"&gt; &lt;label for="soccer"&gt;축구&lt;/label&gt;
+		</pre>
+		<p></p>
+	</section>
+	<!-- //Label 요소 -->
+	<!-- Label 요소 -->
+	<section id="summary21">
+		<h3 class="s_tit">textarea</h3>
+		<p class="panel info">cols, rows 순으로 속성을 선언한다. CSS를 정상적으로 불러오지 못한 상황에서도 사용하는데 문제가 없도록 cols 속성값은 최소 30, rows 속성값은 최소 5로 선언한다.</p>
+		<pre class="brush:html">&lt;textarea cols="30" rows="5"&gt;&lt;/textarea&gt;</pre>
+	</section>
+	<!-- //Label 요소 -->
+	<!-- Button 요소 -->
+	<section id="summary22">
+		<h3 class="s_tit">button</h3>
+		<p class="panel info">type 속성을 선언한다.</p>
+		<ul class="lst_type">
+		<li>type 속성을 button으로 선언해서 열기&frasl;닫기, 접기&frasl;펼치기 등의 UI를 제어한다.</li>
+		<li>폼 전송 역활을 하는 버튼은 submit 타입을 사용한다.</li>
+		</ul>
+		<pre class="brush:html">
+			&lt;button type="button"&gt;열기&lt;/button&gt;
+			&lt;button type="submit"&gt;전송&lt;/button&gt;
+		</pre>
+	</section>
+	<!-- //Button 요소 -->
 	<!-- 레이아웃 가이드 -->
 	<section>
 		<h3 class="s_tit">Layout Guide</h3>
@@ -202,20 +835,6 @@
 		</ul>
 	</section>
 	<!-- //레이아웃 가이드 -->
-	<!-- 색인 -->
-	<section>
-		<h3 class="s_tit">색인</h3>
-		<p class="panel info">일반 문서를 HTML로 다음과 같은 규칙에 맞게 색인화 한다.</p>
-		<ul class="lst_type">
-		<li>H1 : 서비스명</li>
-		<li>H2 : 메인메뉴, 본문, 이용약관 등</li>
-		<li>H3 : 세부 컨텐츠, 핵심 컨텐츠 등</li>
-		<li>H4 : 서브 컨텐츠</li>
-		<li>H5, H6 : 헤딩요소의 파편화를 불러일으킬 여지가 있으므로 가급적 사용하지 않는다.</li>
-		</ul>
-		<img src="<?php echo PATH; ?>resources/img/html_guide_index.png" width="270" height="360" alt="색인화 예시 화면">
-	</section>
-	<!-- //색인 -->
 	<!-- 주석표기 -->
 	<section>
 		<h3 class="s_tit">주석 표기</h3>
@@ -327,193 +946,7 @@
 		</pre>
 	</section>
 	<!-- //주석표기 -->
-	<!-- 들여쓰기 -->
-	<section>
-		<h3 class="s_tit">들여쓰기</h3>
-		<p class="panel info">코드의 가독성을 높이고 HTML 구조를 쉽게 파악하기 위하여 들여쓰기를 사용하며 탭 1개의 크기는 공백 4칸으로 설정한다.</p>
-		<p class="panel alert">마크업의 깊이가 깊어질 때마다 탭 1개만큼 들여쓰지만 다음의 경우 들여쓰지 않는다.</p>
-		<ul class="lst_type">
-		<li>html 엘리먼트 의 자식 요소인 head 엘리먼트, body 엘리먼트</li>
-		<li>head 엘리먼트의 자식 요소</li>
-		<li>body 엘리먼트의 자식 요소</li>
-		<li>table 엘리먼트의 자식 요소인 caption, colgroup, col, thead, tbody, tfoot, tr, th, td 엘리먼트</li>
-		<li>ul, ol, dl 엘리먼트 자식 요소인 li, dt, dd 엘리먼트</li>
-		</ul>
-		<table class="tb_grid">
-		<caption>[ 들여쓰기 사용 예 ]</caption>
-		<thead>
-		<tr>
-		<th scope="col">잘못된 예</th>
-		<th scope="col">올바른 예</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>
-			&lt;table&gt;<br>
-			&lt;caption&gt;...&lt;/caption&gt;<br>
-			&lt;colgroup&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;col&gt;<br>
-			&lt;/colgroup&gt;<br>
-			&lt;thead&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt...&lt;/th&gt<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt<br>
-			&lt;/thead&gt;<br>
-			&lt;tbody&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt...&lt;/td&gt<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt<br>
-			&lt;/tbody&gt;<br>
-			&lt;/table&gt;
-		</td>
-		<td>
-			&lt;table&gt;<br>
-			&lt;caption&gt;...&lt;/caption&gt;<br>
-			&lt;colgroup&gt;<br>
-			&lt;col&gt;<br>
-			&lt;/colgroup&gt;<br>
-			&lt;thead&gt;<br>
-			&lt;tr&gt<br>
-			&lt;th&gt...&lt;/th&gt<br>
-			&lt;/tr&gt<br>
-			&lt;/thead&gt;<br>
-			&lt;tbody&gt;<br>
-			&lt;tr&gt<br>
-			&lt;td&gt...&lt;/td&gt<br>
-			&lt;/tr&gt<br>
-			&lt;/tbody&gt;<br>
-			&lt;/table&gt;
-		</td>
-		</tr>
-		<tr>
-		<td>
-			&lt;ol&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt...&lt;/li&gt<br>
-			&lt;/ol&gt;
-		</td>
-		<td>
-			&lt;ol&gt;<br>
-			&lt;li&gt...&lt;/li&gt<br>
-			&lt;/ol&gt;
-		</td>
-		</tr>
-		<tr>
-		<td>
-			&lt;ul&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt...&lt;/li&gt<br>
-			&lt;/ul&gt;
-		</td>
-		<td>
-			&lt;ul&gt;<br>
-			&lt;li&gt...&lt;/li&gt<br>
-			&lt;/ul&gt;
-		</td>
-		</tr>
-		<tr>
-		<td>
-			&lt;dl&gt;<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dt&gt...&lt;/dt&gt<br>
-			&nbsp;&nbsp;&nbsp;&nbsp;&lt;dd&gt...&lt;/dd&gt<br>
-			&lt;/dl&gt;
-		</td>
-		<td>
-			&lt;dl&gt;<br>
-			&lt;dt&gt...&lt;/dt&gt<br>
-			&lt;dd&gt...&lt;/dd&gt<br>
-			&lt;/dl&gt;
-		</td>
-		</tr>
-		<tr>
-		<td colspan="2">
-			<strong>[참고] 드림위버와 에디터플러스에서 탭 간격 설정하는 방법</strong>
-			<dl class="category v2">
-			<dt>드림위버:</dt>
-			<dd>Preference &gt Category &gt Code Format &gt Indent &amp; Tab Size &gt Indent width 1 Tabs, Tab size 4</dd>
-			<dt>에디터플러스:</dt>
-			<dd>Tools &gt Preference &gt Categories &gt Files &gt Settings and syntax &amp; Tab&frasl;Indent</dd>
-			</dl>
-		</td>
-		</tr>
-		</tbody>
-		</table>
-	</section>
-	<!-- //들여쓰기 -->
-	<!-- 어트리뷰트 우선순위 -->
-	<section>
-		<h3 class="s_tit">Attribute 우선순위</h3>
-		<p class="panel info">일관성있는 코드를 작성하기 위해 속성 선언시 정해진 우선순위의 규칙을 준수한다.</p>
-
-		<h4 class="tit_cont">Attribute 작성</h4>
-		<p>Attribute 값은 큰따옴표(&#34; &#34;)로 묶는다.</p>
-
-		<h4 class="tit_cont">Attribute 우선순위</h4>
-		<p>Attribute의 우선 순위는 다음 순위를 따른다.</p>
-		<table class="tb_grid">
-		<caption>[ 요소 속성 우선순위 목록 ]</caption>
-		<thead>
-		<tr>
-		<th scope="col">우선순위</th>
-		<th scope="col">속성</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>1</td>
-		<td>rel</td>
-		</tr>
-		<tr>
-		<td>2</td>
-		<td>type</td>
-		</tr>
-		<tr>
-		<td>3</td>
-		<td>href, src</td>
-		</tr>
-		<tr>
-		<td>4</td>
-		<td>width, height</td>
-		</tr>
-		<tr>
-		<td>5</td>
-		<td>name</td>
-		</tr>
-		<tr>
-		<td>6</td>
-		<td>id</td>
-		</tr>
-		<tr>
-		<td>7</td>
-		<td>target</td>
-		</tr>
-		<tr>
-		<td>8</td>
-		<td>title, alt, value</td>
-		</tr>
-		<tr>
-		<td>9</td>
-		<td>기타 속성</td>
-		</tr>
-		<tr>
-		<td>10</td>
-		<td>class</td>
-		</tr>
-		<tr>
-		<td>11</td>
-		<td>style</td>
-		</tr>
-		</tbody>
-		</table>
-
-		<p>특정 요소에 class와 style을 선언할 때는 선언 순서를 제일 뒷부분에 선언한다.</p>
-		<pre class="brush:html">
-			&lt;a href="#" id="linkId" target="_blank" title="링크가기" class="link" style="display:block"&gt;링크&lt;/a&gt;
-			&lt;img src="@이미지파일" width="100" height="100" id="imgId" title="이미지툴팁" alt="이미지내용" class="img" style="display:block"&gt;
-			&lt;input type="text" name="tfname" id="tfId" title="입력창" size="10" maxlength="5" class="tf" style="width:100px"&gt;
-		</pre>
-	</section>
-	<!-- //어트리뷰트 우선순위 -->
-	<!-- 테이블 -->
+	<!-- Table -->
 	<section>
 		<h3 class="s_tit">Table</h3>
 		<dl class="category">
@@ -563,7 +996,7 @@
 		</dd>
 		</dl>
 	</section>
-	<!-- //테이블 -->
+	<!-- //Table -->
 	<!-- //기타 참고사항 -->
 	<section>
 		<h3 class="s_tit">기타 참고사항</h3>

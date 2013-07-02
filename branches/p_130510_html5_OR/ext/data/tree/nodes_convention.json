@@ -18,7 +18,7 @@
 			{text: 'IR기법', leaf: true, href: ['blockquote.php', 'blockquote_desc.php']},
 			{text: 'CSS3 Attribute', leaf: true, href: ['body.php', 'body_desc.php']}
 		]},
-		{text: 'Naming Guide', leaf: true, href: ['a.php', 'a_desc.php']},
+		{text: 'Naming Guide', leaf: true, href: ['naming.php']},
 		{text: 'Image Guide', leaf: true, href: ['a.php', 'a_desc.php']},
 		{text: '체크리스트', leaf: true, href: ['a.php', 'a_desc.php']}
 	]

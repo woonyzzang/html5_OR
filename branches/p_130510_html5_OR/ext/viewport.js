@@ -65,15 +65,15 @@ Ext.onReady(function(){
 		height: 27,
 		xtype: 'toolbar',
 		items: [{
-			html: '<strong>Web Standards Guide API</strong>',
+			html: '<strong>Web Standards Developer Guide API</strong>',
 			handler: function(e){
 				e.disable();
 			}
 		},'->',{
 			xtype: 'button',
-			text: '문서 메뉴',
+			text: '가이드 문서 메뉴',
 			menu: [{
-				text: 'HTML&amp;CSS',
+				text: '마크업 컨벤션',
 				handler: function(e){
 					blind.show('convention');
 					blind.hide('accessiblity');
@@ -81,7 +81,7 @@ Ext.onReady(function(){
 					toggleEft({selecter:['side','support'], visible:'hide'});
 				}
 			},{
-				text: 'Accessiblity',
+				text: '웹 접근성',
 				handler: function(e){
 					blind.hide('convention');
 					blind.show('accessiblity');
@@ -89,7 +89,7 @@ Ext.onReady(function(){
 					toggleEft({selecter:['side','support'], visible:'hide'});
 				}
 			},{
-				text: 'HTML5 Open Reference',
+				text: 'HTML5 오픈 레퍼런스',
 				handler: function(e){
 					blind.hide('convention');
 					blind.hide('accessiblity');
@@ -97,7 +97,7 @@ Ext.onReady(function(){
 					toggleEft({selecter:['side','support'], visible:'show'});
 				}
 			},{
-				text: 'Blog',
+				text: '블로그',
 				handler: function(e){
 					alert('블로그');
 				}
@@ -124,7 +124,7 @@ Ext.onReady(function(){
 		},
 		items: [{
 			xtype: 'treepanel',
-			title: '마크업 코딩 컨벤션',
+			title: '마크업 컨벤션',
 			flex: 1,
 			store: Ext.create('Ext.data.TreeStore', {
 				autoLoad: true,
