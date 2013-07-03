@@ -3,20 +3,20 @@
 	expanded: false,
 	animate: true,
 	children: [		
-		{text: 'HTML Guide', expanded: true, children: [
-			{text: 'Intro', leaf: true, href: ['intro.php']},
-			{text: 'HTML Convention', leaf: true, href: ['convention.php']},
-			{text: 'HTML Grammar', leaf: true, href: ['grammar.php']},
-			{text: '(X)HTML Elements', leaf: true, href: ['html_elem.php']},
-			{text: 'HTML5 Elements', leaf: true, href: ['html5_elem.php']}
+		{text: 'HTML Guide', expanded: false, children: [
+			{text: 'Intro', leaf: true, href: ['html_guide/intro.php']},
+			{text: 'HTML Convention', leaf: true, href: ['html_guide/convention.php']},
+			{text: 'HTML Grammar', leaf: true, href: ['html_guide/grammar.php']},
+			{text: '(X)HTML Elements', leaf: true, href: ['html_guide/html_elem.php']},
+			{text: 'HTML5 Elements', leaf: true, href: ['html_guide/html5_elem.php']}
 		]},
-		{text: 'CSS Guide', expanded: false, children: [
-			{text: 'Intro', leaf: true, href: ['b.php', 'b_desc.php']},
-			{text: 'CSS Convention', leaf: true, href: ['base.php', 'base_desc.php']},
-			{text: 'CSS Grammar', leaf: true, href: ['bdi.php', 'bdi_desc.php']},
-			{text: 'CSS Attribute', leaf: true, href: ['bdo.php', 'bdo_desc.php']},
-			{text: 'IR기법', leaf: true, href: ['blockquote.php', 'blockquote_desc.php']},
-			{text: 'CSS3 Attribute', leaf: true, href: ['body.php', 'body_desc.php']}
+		{text: 'CSS Guide', expanded: true, children: [
+			{text: 'Intro', leaf: true, href: ['css_guide/intro.php']},
+			{text: 'CSS Convention', leaf: true, href: ['css_guide/convention.php']},
+			{text: 'CSS Grammar', leaf: true, href: ['css_guide/grammar.php']},
+			{text: 'CSS Attribute', leaf: true, href: ['css_guide/attr.php']},
+			{text: 'IR기법', leaf: true, href: ['css_guide/attr.php']},
+			{text: 'CSS3 Attribute', leaf: true, href: ['css_guide/attr.php']}
 		]},
 		{text: 'Naming Guide', leaf: true, href: ['naming.php']},
 		{text: 'Image Guide', leaf: true, href: ['a.php', 'a_desc.php']},

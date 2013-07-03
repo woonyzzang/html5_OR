@@ -141,7 +141,7 @@ Ext.onReady(function(){
 			listeners : {
 				itemclick : function($this, record, item, index, e, eOpts){
 					var path = record.data.href,
-						dir = 'ext/data/convention/html_guide/';
+						dir = 'ext/data/convention/';
 
 					if(path){
 						fsLoad(dir, path);
@@ -184,7 +184,7 @@ Ext.onReady(function(){
 			listeners : {
 				itemclick : function($this, record, item, index, e, eOpts){
 					var path = record.data.href,
-						dir = 'ext/data/convention/css_guide/';
+						dir = 'ext/data/accessibility/';
 
 					if(path){
 						fsLoad(dir, path);

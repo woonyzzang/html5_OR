@@ -8,14 +8,30 @@
 </head>
 <body>
 <article id="content_desc">
-	<!-- 기본 규칙 -->
+	<!-- HTML Grammar 가이드 -->
 	<section>
-		<h2 class="s_tit">HTML Grammar</h2>
-		<dl class="definition">
-		<dt>기본 규칙</dt>
-		<dd>HTML 코드를 작성할 때 다은과 같은 기본 규칙을 준수한다.</dd>
-		</dl>
+		<h1 class="s_tit">HTML Grammar</h1>
+		<div id="docSummary" class="idx_summary on">
+			<div class="inner" style="display:block">
+				<h2 class="blind">HTML 규칙 색인</h2>
+				<ul>
+				<li><a href="#summary1" rel="bookmark">일반</a></li>
+				<li><a href="#summary2" rel="bookmark">블록요소, 인라인요소</a></li>
+				</ul>
+				<a href="#none" class="btn_lst clse">목차닫기</a>
+				<a href="#none" class="btn_lst view">목차보기</a>
+			</div>
+		</div>
 
+		<dl class="definition">
+		<dt>HTML 일반 규칙</dt>
+		<dd>HTML 코드를 작성할 때 일반적인 기본 문법, 규칙, 사용을 설명한다.</dd>
+		</dl>
+	</section>
+	<!-- //HTML Grammar 가이드 -->
+	<!-- //일반 규칙 -->
+	<section id="summary1">
+		<h3 class="s_tit">일반</h3>
 		<dl class="category">
 		<dt>(X)HTML&frasl;CSS&frasl;SCRIPT 분리</dt>
 		<dd>
@@ -48,7 +64,7 @@
 			&lt;!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
 			&lt;html lang="ko"&gt;
 			&lt;head&gt;
-			&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;
+			&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"&gt;
 			&lt;title&gt;서비스명&lt;/title&gt;
 			&lt;/head&gt;
 			&lt;body&gt;
@@ -61,7 +77,7 @@
 			&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
 			&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"&gt;
 			&lt;head&gt;
-			&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8" /&gt;
+			&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8" /&gt;
 			&lt;title&gt;서비스명&lt;/title&gt;
 			&lt;/head&gt;
 			&lt;body&gt;
@@ -151,7 +167,30 @@
 		</pre>
 		<p class="panel alert">&lt;, &#34;, &amp;, &gt; 와 같은 특수기호는 &amp;lt; , &amp;quot;, &amp;amp;, &amp;gt; 엔티티 코드로 escape 시킨다.</p>
 	</section>
-	<!-- //기본 규칙 -->
+	<!-- //일반 규칙 -->
+	<!-- 블록요소, 인라인요소 -->
+	<section id="summary2">
+		<h3 class="s_tit">블록요소, 인라인요소</h3>
+		<dl class="category">
+		<dt>블록요소 (Block Element)</dt>
+		<dd>
+			<ul>
+			<li>줄을 바꿔 각각 독립된 줄에 표시된다.</li>
+			<li>별도의 CSS 컨트롤이 없다면 해당 문서 크기만큼의 너비를 가지며, 문서의 위에서부터 차곡차곡 쌓이는 형태로 표시된다.</li>
+			<li>인라인 요소와 텍스트 혹은 또 다른 블록요소를 포함 할 수 있다.</li>
+			</ul>
+		</dd>
+		<dt>인라인요소 (Inline Element)</dt>
+		<dd>
+			<ul>
+			<li>다른 인라인 요소와 같은 줄에 표시된다.</li>
+			<li>별도의 CSS컨트롤이 없다면 해당 문서의 좌측부터 우측으로 나열되는 형태로 표시된다.</li>
+			<li>또 다른 인라인 요소와 텍스트를 포함 할 수 있으나, 블록요소를 포함할 수는 없다.</li>
+			</ul>
+		</dd>
+		</dl>
+	</section>
+	<!-- //블록요소, 인라인요소 -->
 </article>
 
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>

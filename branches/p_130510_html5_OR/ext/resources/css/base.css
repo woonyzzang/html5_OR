@@ -80,7 +80,7 @@ pre[class^=brush]{display:none}
 #content_desc .tb_grid{border-spacing:0;border-collapse:collapse}
 #content_desc .tb_grid caption{padding:0 0 5px 5px;color:#049bc9;text-align:left}
 #content_desc .tb_grid caption.blind{visibility:hidden;overflow:hidden;width:0;height:0;font-size:0;line-height:0}
-#content_desc .tb_grid th,#content_desc .tb_grid td{padding:5px 15px;border:1px solid #ccc}
+#content_desc .tb_grid th,#content_desc .tb_grid td{padding:5px 15px;border:1px solid #ccc;vertical-align:top}
 #content_desc .tb_grid th{background-color:#eee}
 #content_desc .tb_grid td{background-color:#fcfcfc}
 #content_desc .category dt{font-weight:bold}
