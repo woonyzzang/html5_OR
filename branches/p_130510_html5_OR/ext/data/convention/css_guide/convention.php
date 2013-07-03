@@ -550,29 +550,90 @@
 			<li>right, bottom: 100%</li>
 			</ul>
 		</div>
+
+		<h4 class="tit_cont">약식 속성 사용 범위</h4>
+		<p>border와 background는 약식 속성을 우선적으로 사용하고, font 약식 속성은 사용하지 않는다.</p>
+		<dl class="category v2">
+		<dt>border</dt>
+		<dd>속성값은 border-width, border-style, border-color 순으로 선언한다. 테두리 스타일 속성을 초기 선언할 때는 반드시 border 단일 속성을 사용하고, 이후 테두리의 부분적인 속성이 변경되면 border 관련 속성(border-width, border-style, border-color)을 선언한다.
+			<pre class="brush:html">
+				.class{border:1px solid #ccc}
+				.class_v1{border-color:#666}
+				.class_v2{border-style:dotted}
+
+				.class2{border-top:1px solid #ccc}
+				.class2_v1{border-top-color:#666}
+				.class2_v2{border-top-style:dotted}
+			</pre>
+		테두리의 상, 우, 하, 좌 스타일이 2개이상 다르면 공통 스타일을 약식 속성으로 선언한 후 다른 부분은 관련 속성으로 선언한다.</dd>
+		<dt>background</dt>
+		<dd>속성값은 background-color, background-image, background-repeat, background-position, background-size, background-attachment, background-origin, background-clip 순서로 선언한다. 배경 스타일 속성을 초기 선언할 때는 반드시 background 단일 속성을 사용하고, 이후 배경의 부분적인 속성이 변경되면 background 관련속성(background-color, background-image, background-repeat, background-position, background-size, background-attachment, background-origin, background-clip)을 선언한다.
+			<pre class="brush:html">
+				.class{background:#ccc url(bg.gif) no-repeat}
+				.class_v1{backgrond-position:0 -50px}
+				.class_v2{backgrond-position:0 -100px}
+			</pre>
+			<table class="tb_grid">
+			<caption>[ 테두리 스타일이 2개 이상 다를 경우 약식 속성 선언의 예 ]</caption>
+			<thead>
+			<tr>
+			<th scope="col">잘못된 예</th>
+			<th scope="col">올바른 예</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td>.class{border:1px solid #ddd;border-bottom:1px solid #eee;border-left:1px solid #eee}</td>
+			<td>.class{border:1px solid;border-color:#ddd #eee #eee}</td>
+			</tr>
+			<tr>
+			<td>.class{border-top:1px solid #ddd;border-right:1px dotted #ddd;border-bottom:1px solid #eee;border-left:1px dotted #eee}</td>
+			<td>.class{border:1px;solid-style:solid dotted;border-color:#ddd #ddd #eee #eee}</td>
+			</tr>
+			</tbody>
+			</table>
+		</dd>
+		<dt>font</dt>
+		<dd>글꼴 스타일은 약식 속성으로 선언하지 않는다. 예를 들어 다음과 같이 약식 속성으로 선언하면 font-weight:bold는 상속되지 않고 font 속성의 기본값인 font-weight:normal로 변경되기 때문에 불필요한 속성값을 선언해야 하는 문제가 있다.
+			<pre class="brush:html">
+				.class{font-weight:bold;font-size:12px;font-family:dotum}
+				.class p{font:15px gulim}
+			</pre>
+		</dd>
+		<dd>결국, .class p의 글꼴 스타일은 다음과 같아진다.
+			<pre class="brush:html">.class{font-family:gulim;font-style:normal;font-variant:normal;font-weight:normal;font-size:15px;line-height:normal}</pre>
+		</dd>
+		</dl>
+
+		<h4 class="tit_cont">한글 글꼴 선언</h4>
+		<p>한글 글꼴을 선언할 때 한글이나 영문 이름 중 하나로만 표기하면 특정 브라우저에서 글꼴을 올바르게 출력하지 못하는 경우가 있으므로 반드시 한글과 영문 이름을 모두 선언한다.</p>
+		<table class="tb_grid">
+			<caption>[ 글꼴 선언 예 ]</caption>
+			<thead>
+			<tr>
+			<th scope="col">잘못된 예</th>
+			<th scope="col">올바른 예</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+			<td rowspan="2">font-family:&#39돋움&#39</td>
+			<td>font-family:&#39돋움&#39,dotum</td>
+			</tr>
+			<tr>
+			<td>font-family:dotum</td>
+			</tr>
+			</tbody>
+			</table>
 	</section>
 	<!-- //속성 -->
-	<!-- META 요소 -->
+	<!-- z-index -->
 	<section id="summary8">
-		<h3 class="s_tit">meta</h3>
-		<p class="panel info">문서의 기본 인코딩, 뷰포트, 스크립트 형식, 스타일 형식 순으로 요소를 선언한다. 뷰포트는 모바일 브라우저에 대응하는 HTML의 경우에만 선언한다.</p>
-		<ul class="lst_type">
-		<li>검색 엔진 최적화를 위하여 meta 요소를 이용하여 문서 제목을 추가 명시한다.</li>
-		<li>컨텐츠 상세 페이지에서는 컨텐츠 제목 만을 표기한다.</li>
-		<li>서비스홈에서는 서비스명 만을 표기, 서브 섹션홈에서는 하위섹션명 : 서비스명 을 표기한다</li>
-		<li>컨텐츠 제목의 특수기호가 들어갈시 엔티티코드로 변환가능한 기호는 반드시 escape 되어야 한다.</li>
-		</ul>
-		<pre class="brush:html">
-			&lt;meta http-equiv="Content-Type" content="text/html;charset=utf-8"&gt; (필수 사항)
-			&lt;meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,target-densitydpi=medium-dpi"&gt; (모바일 대응)
-			&lt;meta http-equiv="Content-Script-Type" content="text/javascript"&gt; (선택 사항)
-			&lt;meta http-equiv="Content-Style-Type" content="text/css"&gt; (선택 사항)
-			&lt;meta name="title" content="Bluewaves"&gt; (선택 사항)
-			&lt;meta name="title" content="Web&frasl;Mobile Integration : Bluewaves"&gt; (선택 사항)
-			&lt;meta name="title" content="Overview"&gt; (선택 사항)
-		</pre>
+		<h3 class="s_tit">z-index</h3>
+		<p class="panel info">z-index 속성값의 범위는 최소 10, 최고 1000이며, 10 단위로 증감한다.</p>
+		<p class="panel alert">단, 10 단위 사이의 예외 변수가 발생하면 1 단위값을 지정할 수 있다.</p>
 	</section>
-	<!-- //META 요소 -->
+	<!-- //z-index -->
 	<!-- TITLE 요소 -->
 	<section id="summary9">
 		<h3 class="s_tit">title</h3>

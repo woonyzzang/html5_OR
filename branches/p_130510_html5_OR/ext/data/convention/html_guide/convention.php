@@ -23,7 +23,7 @@
 				<li><a href="#summary6" rel="bookmark">HTML 요소</a></li>
 				<li><a href="#summary7" rel="bookmark">HEAD 요소</a></li>
 				<li><a href="#summary8" rel="bookmark">META 요소</a></li>
-				<li><a href="#summary9" rel="bookmark">TILTE 요소</a></li>
+				<li><a href="#summary9" rel="bookmark">TITLE 요소</a></li>
 				<li><a href="#summary10" rel="bookmark">LINK 요소</a></li>
 				<li><a href="#summary11" rel="bookmark">SCRIPT 요소</a></li>
 				<li><a href="#summary12" rel="bookmark">STYLE 요소</a></li>
@@ -644,7 +644,7 @@
 		<ul class="lst_type">
 		<li>검색 엔진 최적화를 위하여 meta 요소를 이용하여 문서 제목을 추가 명시한다.</li>
 		<li>컨텐츠 상세 페이지에서는 컨텐츠 제목 만을 표기한다.</li>
-		<li>서비스홈에서는 서비스명 만을 표기, 서브 섹션홈에서는 하위섹션명 : 서비스명 을 표기한다</li>
+		<li>서비스홈에서는 서비스명 만을 표기, 서브 섹션홈에서는 하위섹션명 : 서비스명 을 표기한다.</li>
 		<li>컨텐츠 제목의 특수기호가 들어갈시 엔티티코드로 변환가능한 기호는 반드시 escape 되어야 한다.</li>
 		</ul>
 		<pre class="brush:html">
