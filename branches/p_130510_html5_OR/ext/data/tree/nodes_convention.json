@@ -20,6 +20,6 @@
 		]},
 		{text: 'Naming Guide', leaf: true, href: ['naming.php']},
 		{text: 'Image Guide', leaf: true, href: ['image.php']},
-//		{text: '체크리스트', leaf: true, href: ['chk_lst.php']}
+//		{text: '체크리스트', leaf: true, href: ['check_list.php']}
 	]
 }
