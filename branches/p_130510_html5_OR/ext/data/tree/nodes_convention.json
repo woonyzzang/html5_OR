@@ -14,12 +14,12 @@
 			{text: 'Intro', leaf: true, href: ['css_guide/intro.php']},
 			{text: 'CSS Convention', leaf: true, href: ['css_guide/convention.php']},
 			{text: 'CSS Grammar', leaf: true, href: ['css_guide/grammar.php']},
-			{text: 'CSS Attribute', leaf: true, href: ['css_guide/attr.php']},
-			{text: 'IR기법', leaf: true, href: ['css_guide/attr.php']},
-			{text: 'CSS3 Attribute', leaf: true, href: ['css_guide/attr.php']}
+//			{text: 'CSS Attribute', leaf: true, href: ['css_guide/attr.php']},
+			{text: 'IR기법', leaf: true, href: ['css_guide/ir_technic.php']},
+//			{text: 'CSS3 Attribute', leaf: true, href: ['css_guide/attr2.php']}
 		]},
 		{text: 'Naming Guide', leaf: true, href: ['naming.php']},
-		{text: 'Image Guide', leaf: true, href: ['a.php', 'a_desc.php']},
-		{text: '체크리스트', leaf: true, href: ['a.php', 'a_desc.php']}
+		{text: 'Image Guide', leaf: true, href: ['image.php']},
+//		{text: '체크리스트', leaf: true, href: ['chk_lst.php']}
 	]
 }

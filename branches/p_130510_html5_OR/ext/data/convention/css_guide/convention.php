@@ -13,14 +13,21 @@
 		<h1 class="s_tit">CSS Convention</h1>
 		<div id="docSummary" class="idx_summary on">
 			<div class="inner" style="display:block">
-				<h2 class="blind">마크업 컨벤션 색인</h2>
+				<h2 class="blind">CSS 컨벤션 색인</h2>
 				<ul>
-				<li><a href="#summary1" rel="bookmark">기본정책</a></li>
-				<li><a href="#summary2" rel="bookmark">링크영역 규칙</a></li>
-				<li><a href="#summary3" rel="bookmark">주석 규칙</a></li>
-				<li><a href="#summary4" rel="bookmark">스타일선언 규칙</a></li>
-				<li><a href="#summary5" rel="bookmark">필터규칙</a></li>
-				<li><a href="#summary6" rel="bookmark">공통 스타일시트</a></li>
+				<li><a href="#summary1" rel="bookmark">CSS 코드 기본 규칙</a></li>
+				<li><a href="#summary2" rel="bookmark">들여쓰기</a></li>
+				<li><a href="#summary3" rel="bookmark">공백</a></li>
+				<li><a href="#summary4" rel="bookmark">주석</a></li>
+				<li><a href="#summary5" rel="bookmark">빈 줄</a></li>
+				<li><a href="#summary6" rel="bookmark">줄 바꿈</a></li>
+				<li><a href="#summary7" rel="bookmark">선택자</a></li>
+				<li><a href="#summary8" rel="bookmark">속성 선언 순서</a></li>
+				<li><a href="#summary9" rel="bookmark">z-index</a></li>
+				<li><a href="#summary10" rel="bookmark">important</a></li>
+				<li><a href="#summary11" rel="bookmark">핵</a></li>
+				<li><a href="#summary12" rel="bookmark">미디어 타입</a></li>
+				<li><a href="#summary13" rel="bookmark">초기 스타일시트</a></li>
 				</ul>
 				<a href="#none" class="btn_lst clse">목차닫기</a>
 				<a href="#none" class="btn_lst view">목차보기</a>
@@ -40,6 +47,17 @@
 
 		<h4 class="tit_cont">W3C Validation</h4>
 		<p>모바일에서 CSS는 사용 가능한 핵(hack)과 CSS3 속성을 제외하고는 W3C Validation을 통과해야 한다.</p>
+
+		<h4 class="tit_cont">CSS 로드</h4>
+		<ul class="lst_type">
+		<li>CSS 데이터를 로딩할 경우 @import 방식은 사용하지 않는다. (일부 브라우저에서 이미지 로딩 후 적용되는 이슈 등이 있다.)</li>
+		<li>External방식에서는 인코딩 선언인 charset은 반드시 표기한다.</li>
+		</ul>
+
+		<h4 class="tit_cont">인코딩</h4>
+		<p>글꼴 이름이 영문이 아닐 때 브라우저에서 컨텐츠를 바르게 표시하고, HTML에서 불러온 스타일을 제대로 렌더링 하려면 반드시 CSS 인코딩을 선언해야 한다. HTML과 동일한 인코딩을 문서 첫줄에 공백 없이 선언한다.</p>
+		<pre class="brush:html">@charset "utf-8"</pre>
+		<p class="panel alert">파일을 저장할 때는 반드시 선언한 인코딩과 동일한 인코딩을 선택한다.</p>
 
 		<h4 class="tit_cont">영문 소문자 사용</h4>
 		<p>모든 속성은 영문 소문자로만 작성한다.</p>
@@ -212,8 +230,57 @@
 		</table>
 	</section>
 	<!-- //공백 -->
+	<!-- 주석 -->
+	<section id="summary4">
+		<h3 class="s_tit">주석</h3>
+		<h4 class="tit_cont">기본 형식</h4>
+		<p class="panel info">CSS 주석은 다음과 같이 표기하며, 기본 형식에 맞게 작성한다.</p>
+		<pre class="brush:html">
+			/* =주석내용 */ (한글일 경우)
+
+			/* =List Type */ (영문일 경우)
+		</pre>
+		<ul class="lst_type">
+		<li>주석 기호와 주석 사이에는 반드시 공백 한 칸이 있어야 한다.</li>
+		<li>주석 기호와 주석 내용 사이의 줄 바꿈은 허용하지 않는다. 단, 주석 내용 간 줄바꿈은 허용한다.</li>
+		<li>종료 주석은 사용하지 않는다.</li>
+		<li>주석 작성시 접두어(prifix)로 = 기호를 표기해서 작성한다.</li>
+		<li>주석을 영문으로 작성할때는 카멜 표기법으로 작성한다.</li>
+		</ul>
+		<p class="panel info">유지보수 시 추가 및 수정이 되어 주석을 기입하는 경우 해당 수정날짜(YYMMDD 형식)로 시작하며, 한 줄일 경우 해당 선언 마지막 뒤에 표시한다.</p>
+		<pre class="brush:html">
+			/* =130625 GNB 수정 */
+			.gnb_comm {overflow:hidden;width:978px;clear:both}
+			.gnb_comm li {float:left;height:38px}
+			.gnb_comm .menu {display:block;overflow:hidden;height:38px}
+			.gnb_comm .home {width:79px}
+			.gnb_comm .roadmap {width:98px}
+			.gnb_comm .on .menu {margin:0 -1px}
+
+			.news .on .menu {margin:0 -1px} /* =130625 수정 */
+		</pre>
+		<p class="panel alert">
+			<strong>주의:</strong>
+			마크업과 개발의 편의를 위해 작성한 주석 및 불필요한 주석은 실제 서비스를 적용할 때 반드시 삭제한다. 단, 작성자 정보는 삭제하지 않는다.
+		</p>
+
+		<h4 class="tit_cont">작성자 정보 표기</h4>
+		<p class="panel info">작성자 정보에는 소속 부서, 영문 이름 이니셜, CSS 파일 생성 날짜(YYMMDD 형식)를 작성하며, 유지보수만 담당하는 경우라도 모두 기입한다. 작성자 정보 및에는 빈줄을 한 둘 둬서 스타일을 선언한 문장돠 구분되게 한다.</p>
+
+		<pre class="brush:html">
+			/* BlueWaves Web Standard Group JSW 130628, HSJ 130707 */
+
+			/* =Reset */
+			...
+		</pre>
+		<p class="panel alert">
+			<strong>참고:</strong>
+			작성자 정보 주석일 경우에는 접두어(prifix) = 기호를 작성하지 않는다.
+		</p>
+	</section>
+	<!-- //주석 -->
 	<!-- //빈 줄 -->
-	<section id="summary3">
+	<section id="summary5">
 		<h3 class="s_tit">빈 줄</h3>
 		<p class="panel info">의미 있는 객체를 구분할 목적으로 코드 그룹 사이에 빈 줄을 넣을 수 있다. 단, 빈 줄은 한 줄을 넘지 않게 한다. 빈줄의 사용은 선택 사항이다.</p>
 		<table class="tb_grid" style="width:800px">
@@ -259,11 +326,11 @@
 	</section>
 	<!-- //빈 줄 -->
 	<!-- //줄 바꿈 -->
-	<section id="summary4">
+	<section id="summary6">
 		<h3 class="s_tit">줄 바꿈</h3>
 		<p class="panel info">선택자와 속성, 속성값 사이 줄 바꿈은 허용하지 않는다.</p>
 		<table class="tb_grid" style="width:910px">
-		<caption>[ 빈 줄 사용 예 ]</caption>
+		<caption>[ 줄 바꿈 사용 예 ]</caption>
 		<thead>
 		<tr>
 		<th scope="col">잘못된 예</th>
@@ -299,16 +366,8 @@
 		</table>
 	</section>
 	<!-- //줄 바꿈 -->
-	<!-- 인코딩 -->
-	<section id="summary5">
-		<h3 class="s_tit">인코딩</h3>
-		<p class="panel info">글꼴 이름이 영문이 아닐 때 브라우저에서 컨텐츠를 바르게 표시하고, HTML에서 불러온 스타일을 제대로 렌더링 하려면 반드시 CSS 인코딩을 선언해야 한다. HTML과 동일한 인코딩을 문서 첫줄에 공백 없이 선언한다. 작성 예는 다음과 같다.</p>
-		<pre class="brush:html">@charset "utf-8"</pre>
-		<p class="panel alert">파일을 저장할 때는 반드시 선언한 인코딩과 동이한 인코딩을 선택한다.</p>
-	</section>
-	<!-- //인코딩 -->
 	<!-- 선택자 -->
-	<section id="summary6">
+	<section id="summary7">
 		<h3 class="s_tit">선택자</h3>
 		<h4 class="tit_cont">공통 선택자 사용 지양</h4>
 		<p>공통 선택자(*)는 웹페이지의 성능을 떨어뜨리고, 인터넷 익스플로러에서는 주석에도 영향을 줄 수 있으므로 사용하지 않는다.</p>
@@ -335,9 +394,9 @@
 		</div>
 	</section>
 	<!-- //선택자 -->
-	<!-- 속성 -->
-	<section id="summary7">
-		<h3 class="s_tit">속성</h3>
+	<!-- 속성 선언 순서 -->
+	<section id="summary8">
+		<h3 class="s_tit">속성 선언 순서</h3>
 		<h4 class="tit_cont">공통 선택자 사용 지양</h4>
 		<p>속성은 레이아웃과 관련이 큰 것부터 선언한다. 관련 속성은 대표되는 속성 다음으로 선언하며, 다음 표에 표기된 순서대로 선언한다.</p>
 		<table class="tb_grid">
@@ -545,7 +604,7 @@
 		<div class="panel alert">
 			<strong>참고:</strong>
 			문자로 표현된 위치값을 숫자로 변환할 때 다음과 같이 한다.
-			<ul>
+			<ul class="lst_type">
 			<li>top, left: 0</li>
 			<li>right, bottom: 100%</li>
 			</ul>
@@ -555,7 +614,8 @@
 		<p>border와 background는 약식 속성을 우선적으로 사용하고, font 약식 속성은 사용하지 않는다.</p>
 		<dl class="category v2">
 		<dt>border</dt>
-		<dd>속성값은 border-width, border-style, border-color 순으로 선언한다. 테두리 스타일 속성을 초기 선언할 때는 반드시 border 단일 속성을 사용하고, 이후 테두리의 부분적인 속성이 변경되면 border 관련 속성(border-width, border-style, border-color)을 선언한다.
+		<dd>
+			속성값은 border-width, border-style, border-color 순으로 선언한다. 테두리 스타일 속성을 초기 선언할 때는 반드시 border 단일 속성을 사용하고, 이후 테두리의 부분적인 속성이 변경되면 border 관련 속성(border-width, border-style, border-color)을 선언한다.
 			<pre class="brush:html">
 				.class{border:1px solid #ccc}
 				.class_v1{border-color:#666}
@@ -565,9 +625,11 @@
 				.class2_v1{border-top-color:#666}
 				.class2_v2{border-top-style:dotted}
 			</pre>
-		테두리의 상, 우, 하, 좌 스타일이 2개이상 다르면 공통 스타일을 약식 속성으로 선언한 후 다른 부분은 관련 속성으로 선언한다.</dd>
+			테두리의 상, 우, 하, 좌 스타일이 2개이상 다르면 공통 스타일을 약식 속성으로 선언한 후 다른 부분은 관련 속성으로 선언한다.
+		</dd>
 		<dt>background</dt>
-		<dd>속성값은 background-color, background-image, background-repeat, background-position, background-size, background-attachment, background-origin, background-clip 순서로 선언한다. 배경 스타일 속성을 초기 선언할 때는 반드시 background 단일 속성을 사용하고, 이후 배경의 부분적인 속성이 변경되면 background 관련속성(background-color, background-image, background-repeat, background-position, background-size, background-attachment, background-origin, background-clip)을 선언한다.
+		<dd>
+			속성값은 background-color, background-image, background-repeat, background-position, background-size, background-attachment, background-origin, background-clip 순서로 선언한다. 배경 스타일 속성을 초기 선언할 때는 반드시 background 단일 속성을 사용하고, 이후 배경의 부분적인 속성이 변경되면 background 관련속성(background-color, background-image, background-repeat, background-position, background-size, background-attachment, background-origin, background-clip)을 선언한다.
 			<pre class="brush:html">
 				.class{background:#ccc url(bg.gif) no-repeat}
 				.class_v1{backgrond-position:0 -50px}
@@ -594,13 +656,15 @@
 			</table>
 		</dd>
 		<dt>font</dt>
-		<dd>글꼴 스타일은 약식 속성으로 선언하지 않는다. 예를 들어 다음과 같이 약식 속성으로 선언하면 font-weight:bold는 상속되지 않고 font 속성의 기본값인 font-weight:normal로 변경되기 때문에 불필요한 속성값을 선언해야 하는 문제가 있다.
+		<dd>
+			글꼴 스타일 선언시 font-style &gt; font-variant &gt; font-weight &gt; font-size &gt; line-height &gt; font-family 순서로 선언하며, 약식 속성으로 선언하지 않는다. 예를 들어 다음과 같이 약식 속성으로 선언하면 font-weight:bold는 상속되지 않고 font 속성의 기본값인 font-weight:normal로 변경되기 때문에 불필요한 속성값을 선언해야 하는 문제가 있다.
 			<pre class="brush:html">
 				.class{font-weight:bold;font-size:12px;font-family:dotum}
 				.class p{font:15px gulim}
 			</pre>
 		</dd>
-		<dd>결국, .class p의 글꼴 스타일은 다음과 같아진다.
+		<dd>
+			결국, .class p의 글꼴 스타일은 다음과 같아진다.
 			<pre class="brush:html">.class{font-family:gulim;font-style:normal;font-variant:normal;font-weight:normal;font-size:15px;line-height:normal}</pre>
 		</dd>
 		</dl>
@@ -608,807 +672,207 @@
 		<h4 class="tit_cont">한글 글꼴 선언</h4>
 		<p>한글 글꼴을 선언할 때 한글이나 영문 이름 중 하나로만 표기하면 특정 브라우저에서 글꼴을 올바르게 출력하지 못하는 경우가 있으므로 반드시 한글과 영문 이름을 모두 선언한다.</p>
 		<table class="tb_grid">
-			<caption>[ 글꼴 선언 예 ]</caption>
-			<thead>
-			<tr>
-			<th scope="col">잘못된 예</th>
-			<th scope="col">올바른 예</th>
-			</tr>
-			</thead>
-			<tbody>
-			<tr>
-			<td rowspan="2">font-family:&#39돋움&#39</td>
-			<td>font-family:&#39돋움&#39,dotum</td>
-			</tr>
-			<tr>
-			<td>font-family:dotum</td>
-			</tr>
-			</tbody>
-			</table>
+		<caption>[ 글꼴 선언 예 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">잘못된 예</th>
+		<th scope="col">올바른 예</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td rowspan="2">font-family:&#39돋움&#39</td>
+		<td>font-family:&#39돋움&#39,dotum</td>
+		</tr>
+		<tr>
+		<td>font-family:dotum</td>
+		</tr>
+		</tbody>
+		</table>
 	</section>
-	<!-- //속성 -->
+	<!-- //속성 선언 순서 -->
 	<!-- z-index -->
-	<section id="summary8">
+	<section id="summary9">
 		<h3 class="s_tit">z-index</h3>
-		<p class="panel info">z-index 속성값의 범위는 최소 10, 최고 1000이며, 10 단위로 증감한다.</p>
+		<div class="panel info">
+			<ul class="lst_type">
+			<li>z-index 속성값의 수치 간격은 10 단위로 증감한다.</li>
+			<li>z-index 속성값의 최소범위(기본값)는 10 으로 지정한다.</li>
+			<li>z-index 속성값의 최고범위 1000 까지 사용할 수 있다.</li>
+			<li>팝업레이어의 경우는 z-index 속성값 1000부터 시작한다.</li>
+			</ul>
+		</div>
 		<p class="panel alert">단, 10 단위 사이의 예외 변수가 발생하면 1 단위값을 지정할 수 있다.</p>
 	</section>
 	<!-- //z-index -->
-	<!-- TITLE 요소 -->
-	<section id="summary9">
-		<h3 class="s_tit">title</h3>
-		<p class="panel info">각 페이지마다 서로 다른 규칙으로 사용중인 문서 제목 (title 요소) 규칙을 일관성 있게 일원화함으로써, 서비스 통일성을 및 검색 엔진에 대한 최적화를 높인다. 또한 문서 제목에 컨텐츠 제목을 포함시킴으로써, 외부 검색서비스에서 해당 컨텐츠의 노출이 더 용이해진다.</p>
-
-		<h4 class="tit_cont">기본 규칙</h4>
-		<pre class="brush:html">&lt;title&gt;@컨텐츠 제목 &gt; @하위섹션명 : @서비스명&lt;/title&gt;</pre>
-
-		<h4 class="tit_cont">문서제목 기본 요소</h4>
-		<p>문서 제목에 포함되는 기본 요소를 정의한다.</p>
-
-		<dl class="category">
-		<dt>@서비스명</dt>
-		<dd>
-			<ul class="lst_type">
-			<li>브랜드 서비스명</li>
-			</ul>
-		</dd>
-		<dt>@컨텐츠 제목</dt>
-		<dd>
-			<ul class="lst_type">
-			<li>서비스에서 제공하는 컨텐츠의 제목</li>
-			</ul>
-		</dd>
-		<dt>@하위 섹션명</dt>
-		<dd>
-			<ul class="lst_type">
-			<li>하나의 서비스내 하위 섹션명 (보통 서비스별 GNB에서 TAB으로 표현되는 구분)</li>
-			</ul>
-		</dd>
-		</dl>
-
-		<h4 class="tit_cont">각 요소별 상세규칙</h4>
-		<dl class="category">
-		<dt>서비스 명</dt>
-		<dd>
-			<ul class="lst_type">
-			<li>모든 서비스는 문서 제목에 서비스명을 표기하는 것을 원칙으로 한다.</li>
-			<li>서비스명은 문서 제목에서 가장 뒷부분에 위치한다.</li>
-			</ul>
-		</dd>
-		<dd>
-			<pre class="brush:html">&lt;title&gt;Bluewaves&lt;/title&gt;</pre>
-		</dd>
-		<dt>컨텐츠 제목</dt>
-		<dd>
-			<ul class="lst_type">
-			<li>하나의 컨텐츠를 대표하는 페이지의 경우, 반드시 해당 컨텐츠 제목을 문서 제목에 표기한다.</li>
-			<li>컨텐츠 제목은 문서 제목에서 가장 앞부분에 위치한다.</li>
-			<li>컨텐츠 제목과 서비스명 간의 구분자는 반드시 &#39; : &#39; 기호를 사용한다.</li>
-			<li>컨텐츠 제목의 특수기호가 들어갈시 엔티티코드로 변환가능한 기호는 반드시 escape 되어야 한다.</li>
-			</ul>
-		</dd>
-		<dd>
-			<pre class="brush:html">&lt;title&gt;Web&frasl;Mobile Integration : Bluewaves&lt;/title&gt;</pre>
-		</dd>
-		<dt>하위 섹션명</dt>
-		<dd>
-			<ul class="lst_type">
-			<li>하위섹션명은 서비스명 앞에 표기한다.</li>
-			<li>하위섹션명의 구분자는 &#39; &gt; &#39; (&amp;gt;) 를 사용한다.</li>
-			<li>하위섹션명은 필수 요소는 아니다.</li>
-			</ul>
-		</dd>
-		<dd>
-			<pre class="brush:html">
-				&lt;title&gt;Web&frasl;Mobile Integration &gt; Overview : Bluewaves&lt;/title&gt;
-				&lt;title&gt;Web&frasl;Mobile Integration &gt; Web : Bluewaves&lt;/title&gt;
-				&lt;title&gt;Web&frasl;Mobile Integration &gt; Mobile : Bluewaves&lt;/title&gt;
-			</pre>
-		</dd>
-		</dl>
-	</section>
-	<!-- //TITLE 요소 -->
-	<!-- LINK 요소 -->
+	<!-- Important 필터 -->
 	<section id="summary10">
-		<h3 class="s_tit">link</h3>
-		<p class="panel info">rel, type, href 순서로 속성을 선언한다.</p>
-		<pre class="brush:html">&lt;link rel="stylesheet" type="text/css" href="@CSS파일 문서경로"&gt;</pre>
+		<h3 class="s_tit">important</h3>
+		<p class="panel alert">!important 필터는 사용시 유지보수 시 문제나 렌더링 이슈가 있으므로 최대한 자제해서 사용한다.</p>
 	</section>
-	<!-- //LINK 요소 -->
-	<!-- SCRIPT 요소 -->
+	<!-- //Important 필터 -->
+	<!-- 핵 필터 -->
 	<section id="summary11">
-		<h3 class="s_tit">script</h3>
-		<p class="panel info">type, src 순서로 속성을 선언한다.</p>
-		<pre class="brush:html">&lt;script type="text/javascript" src="@JS파일 문서경로"&gt;&lt;/script&gt;</pre>
-		<p>script는 &lt;head&gt; 요소 내에 선언하는 것을 원칙으로 한다. 단, 성능 이슈가 있을 시 개발 부서와 협의해서 선언 위치를 변경할 수 있다.</p>
-		<p class="panel alert">
-			<strong>참고:</strong>
-			language 속성은 HTML4 이전 버전의 하위 호환성을 위해 사용하는 비표준 속성이므로 사용하지 않는다.
-		</p>
+		<h3 class="s_tit">핵</h3>
+		<p class="panel info">핵(hack)을 사용해야 할 경우에는 다음 표에 제시된 핵을 사용할 수 있다.</p>
+		<table class="tb_grid">
+		<caption>[ 사용 가능한 브라우저 핵 ]</caption>
+		<thead>
+		<tr>
+		<th scope="col">브라우저</th>
+		<th colspan="3" scope="col">표준 DTD</th>
+		<th colspan="3" scope="col">쿼크모드</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+		<td>인테넷 익스플로러6</td>
+		<td rowspan="2">S{*P:V}</td>
+		<td>S{_P:V}</td>
+		<td>&nbsp;</td>
+		<td rowspan="3">S{_P:V}</td>
+		<td>&nbsp;</td>
+		<td rowspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+		<td>인테넷 익스플로러7</td>
+		<td>S,x:-moz-any-link,x:default{P:V}</td>
+		<td>*+html S{P:V}</td>
+		<td>S,x:-moz-any-link,x:default{P:V}</td>
+		</tr>
+		<tr>
+		<td>인테넷 익스플로러8</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+		<td>인테넷 익스플로러9</td>
+		<td rowspan="4">:root S{P:V}</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td>&nbsp;</td>
+		<td rowspan="4">:root S{P:V}</td>
+		</tr>
+		<tr>
+		<td>파이어폭스</td>
+		<td>S,x:-moz-any-link,x:default{P:V}</td>
+		<td rowspan="3">&nbsp;</td>
+		<td rowspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+		<td>크롬&frasl;'사파리</td>
+		<td rowspan="2">&nbsp;</td>
+		<td rowspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+		<td>오페라</td>
+		</tr>
+		</tbody>
+		</table>
+		<p class="panel alert">핵(hack)은 가능한 사용하지 않는다. 불가피하게 사용해야 할 경우에만 제시된 핵을 사용하는 것을 원칙으로한다.</p>
+		<p>브라우저 핵(hack)에 대한 자세한 사항은 <a href="<?php echo BLOG_PATH; ?>archives/1110" target="_blank">참조 문서</a>에서 확인할 수 있다.</p>
 	</section>
-	<!-- //SCRIPT 요소 -->
-	<!-- STYLE 요소 -->
+	<!-- //핵 필터 -->
+	<!-- 미디어 타입 -->
 	<section id="summary12">
-		<h3 class="s_tit">style</h3>
-		<p class="panel info">type 속성을 선언한다.</p>
+		<h3 class="s_tit">미디어 타입</h3>
+		<p class="panel info">미디어 타입 선언을 위한 명령문(중괄호 포함)은 다음과 같이 세부 스타일을 지정하는 명령문과 줄로 구분한다. 인쇄를 위한 미디어 타입은 기본 CSS파일의 가장 아랫부분에 선언하며 별도의 CSS생성은 허용하지 않는다.</p>
 		<pre class="brush:html">
-			&lt;style type="text/javascript"&gt;
-			[stuff]
-			&lt;/style&gt;
+			...
+			...
+			/* =For Print */
+			@media print{
+			#header,.snb,.aside{display:none}
+			}
 		</pre>
+		<div class="panel alert">
+			<strong>참고:</strong>
+			미디어 타입은 각종 미디어(프린트, 모바일, 보조공학기기 등)에 대응하는 별도의 CSS 코드를 작성할 수 있게 한다. CSS2.1 명세(Sprecification)에 따라 대응 가능한 미디어 타입은 다음과 같으며, 가장 범용적으로 사용하는 타입은 print 타입이다.
+			<ul class="lst_type">
+			<li>all(모든 출력 장치)</li>
+			<li>aural(음성 출력)</li>
+			<li>braille(점자 출력)</li>
+			<li>handheld(포켓, 모바일)</li>
+			<li>print(인쇄)</li>
+			<li>projection(투사 장치)</li>
+			</ul>
+		</div>
 	</section>
-	<!-- //STYLE 요소 -->
-	<!-- BODY 요소 -->
+	<!-- //미디어 타입 -->
+	<!-- 초기 스타일시트 -->
 	<section id="summary13">
-		<h3 class="s_tit">body</h3>
-		<p class="panel info">class 속성은 웹 페이지의 스킨셋을 변경해야 할 때 선택적으로 사용한다.</p>
-		<pre class="brush:html">&lt;body class="s"&gt;</pre>
-	</section>
-	<!-- //BODY 요소 -->
-	<!-- H1~H6 요소 -->
-	<section id="summary14">
-		<h3 class="s_tit">H1~H6</h3>
-		<p class="panel info">일반 문서를 HTML로 다음과 같은 규칙에 맞게 색인화 한다.</p>
-		<ul class="lst_type">
-		<li>H1 : 서비스명</li>
-		<li>H2 : 메인메뉴, 본문, 이용약관 등</li>
-		<li>H3 : 세부 컨텐츠, 핵심 컨텐츠 등</li>
-		<li>H4 : 서브 컨텐츠</li>
-		<li>H5, H6 : 헤딩요소의 파편화를 불러일으킬 여지가 있으므로 가급적 사용하지 않는다.</li>
-		</ul>
-		<img src="<?php echo PATH; ?>resources/img/html_guide_index.png" width="270" height="360" alt="색인화 예시 화면">
-	</section>
-	<!-- //H1~H6 요소 -->
-	<!-- FORM 요소 -->
-	<section id="summary15">
-		<h3 class="s_tit">form</h3>
-		<p class="panel info">폼 컨트롤 요소를 작성할 떄 form, fieldset, legend 요소를 다음과 같이 선언한다. 단, 필요에 따라 개별적으로 사용할 수 있다.</p>
+		<h3 class="s_tit">초기 스타일시트</h3>
+		<p class="panel info">크로스브라우징을 위해 각 태그관련 속성을 초기화 시켜주는 CSS로 PC와 Mobile에서의 환경을 고려하여 각각 초기 스타일 시트 파일을 사용한다. 각 프로젝트나 서비스 개편시 해당 문서를 활용하여 초기화시켜준다. 그리고 기능적으로 공통적으로 자주 사용되는 속성은 Global Class로 정의하여 선택적으로 사용한다.</p>
+
+		<h4 class="tit_cont">PC - CSS 초기 문서</h4>
 		<pre class="brush:html">
-			&lt;form action=""&gt;
-			&lt;fieldset&gt;
-			&lt;legend&gt;@타이틀&lt;/legend&gt;
-				[form control element here]
-			&lt;/fieldset&gt;
-			&lt;/form&gt;
+			@charset "utf-8";
+			/* BlueWaves Web Standard Group JSW 130628 */
+
+			/* =Common */
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+			fieldset,img{border:0 none}
+			dl,ul,ol,menu,li{list-style:none}
+			blockquote,q{quotes: none}
+			blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+			input,select,textarea,button{vertical-align:middle}
+			button{border:0 none;background-color:transparent;cursor:pointer}
+			body{background:#fff}
+			body,th,td,input,select,textarea,button{font-size:12px;line-height:1.5;font-family:'돋움',dotum,sans-serif;color:#333} /* color값은 디자인가이드에 맞게사용 */
+			a{color:#333;text-decoration:none}
+			a:active,a:hover{text-decoration:underline}
+			address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+		</pre>
+
+		<h4 class="tit_cont">Mobile - CSS 초기 문서</h4>
+		<pre class="brush:html">
+			@charset "utf-8";
+			/* BlueWaves Web Standard Group JSW 130628 */
+
+			/* =Common */
+			body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button{margin:0;padding:0}
+			fieldset,img{border:0 none}
+			dl,ul,ol,menu,li{list-style:none}
+			blockquote,q{quotes:none}
+			blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+			input,select,textarea,button{font-size:100%;vertical-align:middle}
+			button{border:0 none;background-color:transparent;cursor:pointer}
+			table{border-collapse:collapse;border-spacing:0}
+			body{-webkit-text-size-adjust:none} /* 뷰표트 변환시 폰트크기 자동확대 방지 */
+			input[type=text],input[type=password],input[type=submit],input[type=search]{-webkit-appearance:none;border-radius:0}
+			input:checked[type=checkbox]{background-color:#666;-webkit-appearance:checkbox}
+			button,input[type=button],input[type=submit],input[type=reset],input[type=file]{-webkit-appearance:button;border-radius:0}
+			input[type=search]::-webkit-search-cancel-button{-webkit-appearance:none}
+			body{background-color:#fff}
+			body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:'Malgun Gothic','맑은 고딕',sans-serif;color:#333} /* color값은 디자인가이드에 맞게사용 */
+			a{color:#333;text-decoration:none}
+			a:active,a:hover{text-decoration:none}
+			address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+		</pre>
+
+		<h4 class="tit_cont">PC&frasl;Mobile - Global Class (선택적 사용)</h4>
+		<pre class="brush:html">
+			/* =Set Class */
+			#skipNav{overflow:hidden;position:absolute;left:-9999px;width:0;height:1px;margin:0;padding:0} /* 스킵네비게이션 */
+			.ir_pm{display:block;overflow:hidden;font-size:0px;line-height:0;text-indent:-9999px} /* 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+			.ir_wa{display:block;overflow:hidden;position:relative;z-index:-10;width:100%;height:100%} /* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+			.screen_out{display:block;overflow:hidden;position:absolute;left:-9999px;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px} /* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+			.screen_hide{font-size:0;line-height:0;visibility:hidden} /* screen_out클래스를 사용할 수 없으며, 해당 텍스트를 숨겨야 할때 */
+			.show{display:block}
+			.hide{display:none}
+			.fl{float:left}
+			.fr{float:right}
+			.clb{width:0;height:0;font-size:0;line-height:0;clear:both}
+			.tbl{border-collapse:collapse;border-spacing:0}
 		</pre>
 		<p class="panel alert">
 			<strong>참고:</strong>
-			form 요소는 마크업시 기본적으로 사용 하지 않는다. 만약 form 요소를 넣어야 할 경우 action 속성은 서버 쪽 폼 핸들러이나 필수 선언 속성이므로 마크업 단계에서 선언 한다.
+			각 프로젝트나 작업시 상황에 따라 CSS 초기 문서는 약간씩 변경해서 사용될 수 있다.
 		</p>
 	</section>
-	<!-- //FORM 요소 -->
-	<!-- FIELDSET 요소 -->
-	<section id="summary16">
-		<h3 class="s_tit">fieldset</h3>
-		<p class="panel info">form 요소의 자식 노드로 선언해서 폼 제어 요소를 그룹으로 나눈다.</p>
-		<pre class="brush:html">
-			&lt;fieldset&gt;
-			&lt;legend&gt;@타이틀&lt;/legend&gt;
-				[form control element here]
-			&lt;/fieldset&gt;
-		</pre>
-	</section>
-	<!-- //FIELDSET 요소 -->
-	<!-- LEGEND 요소 -->
-	<section id="summary17">
-		<h3 class="s_tit">legend</h3>
-		<p class="panel info">폼 제어 그룹인 fieldset의 자식 요소로서 폼 컨트롤 요소의 그룹 이름을 표현하기 위해 선언한다.</p>
-		<pre class="brush:html">
-			&lt;fieldset&gt;
-			&lt;legend&gt;@타이틀&lt;/legend&gt;
-				[form control element here]
-			&lt;/fieldset&gt;
-		</pre>
-	</section>
-	<!-- //LEGEND 요소 -->
-	<!-- INPUT 요소 -->
-	<section id="summary18">
-		<h3 class="s_tit">input</h3>
-		<p class="panel info">label 요소, title 속성, alt 속성을 통해 스크린리더 사용자는 주변 맥락에 대한 이해 없이 각 요소에 독립적으로 접근해도 폼을 이해할수 있다.</p>
-		<pre class="brush:html">
-			&lt;label for="uid"&gt;아이디&lt;/label&gt; &lt;input type="text" id="uid" name="id"&gt;
-
-			&lt;input type="image" src="@이미지경로" alt="확인"&gt;
-
-			&lt;label for="tel"&gt;유선전화&lt;/label&gt; &lt;input type="text" id="tel" name="tel" title="지역번호"&gt;
-		</pre>
-
-		<p>다음과 같이 type 값에 따라 속성을 선언한다.</p>
-		<dl class="category">
-		<dt>type이 text인 경우: type, id, title, value, accesskey 순서로 속성을 선언한다.</dt>
-		<dd><pre class="brush:html">&lt;input type="text" id="uid" title="사용자 ID" value="아이디를 입력하세요." accesskey="l"&gt;</pre>
-			<ul>
-			<li>동일한 스타일의 텍스트 필드나 너비값이 다르면 style 속성을 이용해 width 값을 제어한다.</li>
-			<li>텍스트 필드에 가이드를 위한 내용이 들어가면 value 속성을 선택적으로 사용할 수 있다.</li>
-			<li>label 요소 또는 title 속성을 반드시 선언한다.</li>
-			</ul>
-		</dd>
-		<dt>type이 raido, checkbox 경우: type, name, id, checked 순서로 속성을 선언한다.</dt>
-		<dd>
-			<pre class="brush:html">
-				&lt;input type="raido" name="vt_align" id="alignLft" checked="checked"&gt; &lt;label for="alignLft"&gt;왼쪽정렬&lt;/label&gt;
-				&lt;input type="raido" name="vt_align" id="alignCnt"&gt;&lt;label for="alignCnt"&gt;가운데정렬&lt;/label&gt;
-				&lt;input type="raido" name="vt_align" id="alignRgt"&gt;&lt;label for="alignRgt"&gt;오른쪽정렬&lt;/label&gt;
-
-				&lt;input type="checkbox" name="sports" id="soccer" checked="checked"&gt; &lt;label for="soccer"&gt;축구&lt;/label&gt;
-				&lt;input type="checkbox" name="sports" id="basketBall"&gt;&lt;label for="basketBall"&gt;농구&lt;/label&gt;
-				&lt;input type="checkbox" name="sports" id="tennis"&gt;&lt;label for="tennis"&gt;테니스&lt;/label&gt;
-			</pre>
-			<ul>
-			<li>필요하면 선택적으로 name 속성을 이용해 항목을 그룹으로 나눈다.</li>
-			<li>기본적으로 선택된 값임을 표시하려면 checked=&#34;checked&#34;라고 표기한다.</li>
-			<li>label 요소와 반드시 함께 사용하며 title 속성은 선언하지 않는다.</li>
-			</ul>
-		</dd>
-		<dt>type이 image 경우: type, src, alt 순서로 속성을 선언한다. alt 속성은 반드시 선언한다.</dt>
-		<dd><pre class="brush:html">&lt;input type="image" src="@이미지경로" alt="확인"&gt;</pre></dd>
-		<dt>type이 submit, button, reset인 경우: type 속성을 선언한다. label 요소 또는 title 속성을 선언하지 않는다.</dt>
-		<dd><pre class="brush:html">&lt;input type="button"&gt;</pre></dd>
-		</dl>
-	</section>
-	<!-- //INPUT 요소 -->
-	<!-- SELECT 요소 -->
-	<section id="summary19">
-		<h3 class="s_tit">select</h3>
-		<p class="panel info">동일한 스타일의 선택 목록이나 너비값이 다르면 선택적으로 style 속성을 이용해 width 값을 제어한다.</p>
-		<pre class="brush:html">
-			&lt;select style="width:100px"&gt;
-			&lt;option&gt;등급&lt;/option&gt;
-			&lt;/select&gt;
-		</pre>
-	</section>
-	<!-- //SELECT 요소 -->
-	<!-- LABEL 요소 -->
-	<section id="summary20">
-		<h3 class="s_tit">label</h3>
-		<p class="panel info">라디오 버튼, 체크 박스는 for 속성을 부여해 해당 요소의 id 값과 동일한 이름으로(coupling)한다.</p>
-		<pre class="brush:html">
-			&lt;input type="raido" name="vt_align" id="alignLft"&gt; &lt;label for="alignLft"&gt;왼쪽정렬&lt;/label&gt;
-			&lt;input type="checkbox" name="sports" id="soccer"&gt; &lt;label for="soccer"&gt;축구&lt;/label&gt;
-		</pre>
-		<p></p>
-	</section>
-	<!-- //LABEL 요소 -->
-	<!-- TEXTAREA 요소 -->
-	<section id="summary21">
-		<h3 class="s_tit">textarea</h3>
-		<p class="panel info">cols, rows 순으로 속성을 선언한다. CSS를 정상적으로 불러오지 못한 상황에서도 사용하는데 문제가 없도록 cols 속성값은 최소 30, rows 속성값은 최소 5로 선언한다.</p>
-		<pre class="brush:html">&lt;textarea cols="30" rows="5"&gt;&lt;/textarea&gt;</pre>
-	</section>
-	<!-- //TEXTAREA 요소 -->
-	<!-- BUTTON 요소 -->
-	<section id="summary22">
-		<h3 class="s_tit">button</h3>
-		<p class="panel info">type 속성을 선언한다.</p>
-		<ul class="lst_type">
-		<li>type 속성을 button으로 선언해서 열기&frasl;닫기, 접기&frasl;펼치기 등의 UI를 제어한다.</li>
-		<li>폼 전송 역활을 하는 버튼은 submit 타입을 사용한다.</li>
-		</ul>
-		<pre class="brush:html">
-			&lt;button type="button"&gt;열기&lt;/button&gt;
-			&lt;button type="submit"&gt;전송&lt;/button&gt;
-		</pre>
-	</section>
-	<!-- //BUTTON 요소 -->
-	<!-- TABLE 요소 -->
-	<section id="summary23">
-		<h3 class="s_tit">table</h3>
-		<p class="panel info">일반적으로 레이아웃을 표현하는데 사용하지 않고, 2차원의 격자형 데이터를 표현하는데 사용한다. 표의 요약 내용을 표기해야할 때 summary 속성을 선택적으로 사용할 수 있다.</p>
-		<pre class="brush:html">
-			&lt;table summary="표 요약 정보 제공"&gt;
-		</pre>
-		<p class="panel alert">HTML5 DTD 선언시 summary 속성은 사용하지 않는다.(HTML5에서 이 속성은 폐기 되었다.)</p>
-
-		<p>표는 다음과 같이 배치한다.</p>
-		<dl class="category">
-		<dt>HTML 경우</dt>
-		<dd>
-			<pre class="brush:html">
-				&lt;table summary="짬뽕은 자장면보다 500원 비까고 열량이 50kcal 높다"&gt;
-				&lt;caption&gt;자장면과 짬뽕의 가격과 열량 비교&lt;/caption&gt;
-				&lt;colgroup&gt;
-				&lt;col width="30%"&gt;
-				&lt;col width="70%"&gt;
-				&lt;/colgroup&gt;
-				&lt;thead&gt;
-				&lt;tr&gt;
-				&lt;th scope="col" abbr="가격"&gt;가격(won)&lt;/th&gt;
-				&lt;th scope="col" abbr="열량"&gt;열량(kcal)&lt;/th&gt;
-				&lt;/tr&gt;
-				&lt;/thead&gt;
-				&lt;tfoot&gt;
-				&lt;tr&gt;
-				&lt;th&gt;계&lt;/th&gt;
-				&lt;td&gt;6,500&lt;/td&gt;
-				&lt;td&gt;650&lt;/td&gt;
-				&lt;/tr&gt;
-				&lt;/tfoot&gt;
-				&lt;tbody&gt;
-				&lt;tr&gt;
-				&lt;th scope="row"&gt;자장면&lt;/th&gt;
-				&lt;td&gt;3,000&lt;/td&gt;
-				&lt;td&gt;300&lt;/td&gt;
-				&lt;/tr&gt;
-				&lt;tr&gt;
-				&lt;th scope="row"&gt;짬뽕&lt;/th&gt;
-				&lt;td&gt;3,500&lt;/td&gt;
-				&lt;td&gt;350&lt;/td&gt;
-				&lt;/tr&gt;
-				&lt;/tbody&gt;
-				&lt;/table&gt;
-			</pre>
-		</dd>
-		<dt>HTML5 경우</dt>
-		<dd>
-			<pre class="brush:html">
-				&lt;table&gt;
-				&lt;caption&gt;자장면과 짬뽕의 가격과 열량 비교&lt;/caption&gt;
-				&lt;colgroup&gt;
-				&lt;col style="width:30%"&gt;
-				&lt;col style="width:70%"&gt;
-				&lt;/colgroup&gt;
-				&lt;thead&gt;
-				&lt;tr&gt;
-				&lt;th scope="col" abbr="가격"&gt;가격(won)&lt;/th&gt;
-				&lt;th scope="col" abbr="열량"&gt;열량(kcal)&lt;/th&gt;
-				&lt;/tr&gt;
-				&lt;/thead&gt;
-				&lt;tfoot&gt;
-				&lt;tr&gt;
-				&lt;th&gt;계&lt;/th&gt;
-				&lt;td&gt;6,500&lt;/td&gt;
-				&lt;td&gt;650&lt;/td&gt;
-				&lt;/tr&gt;
-				&lt;/tfoot&gt;
-				&lt;tbody&gt;
-				&lt;tr&gt;
-				&lt;th scope="row"&gt;자장면&lt;/th&gt;
-				&lt;td&gt;3,000&lt;/td&gt;
-				&lt;td&gt;300&lt;/td&gt;
-				&lt;/tr&gt;
-				&lt;tr&gt;
-				&lt;th scope="row"&gt;짬뽕&lt;/th&gt;
-				&lt;td&gt;3,500&lt;/td&gt;
-				&lt;td&gt;350&lt;/td&gt;
-				&lt;/tr&gt;
-				&lt;/tbody&gt;
-				&lt;/table&gt;
-			</pre>
-		</dd>
-		</dl>
-	</section>
-	<!-- //TABLE 요소 -->
-	<!-- CAPTION 요소 -->
-	<section id="summary24">
-		<h3 class="s_tit">caption</h3>
-		<p class="panel info">표 제목을 표현하는데 사용한다. &lt;caption&gt; 요소는 반드시 선언한다.</p>
-		<pre class="brush:html">&lt;caption&gt;자장면과 짬뽕의 가격과 열량 비교&lt;/caption&gt;</pre>
-		<p class="panel alert">표 윗부분의 헤딩 요서가 표 제목 역활을 할 때는 생략할 수 있다.</p>
-	</section>
-	<!-- //CAPTION 요소 -->
-	<!-- COLGROUP 요소 -->
-	<section id="summary25">
-		<h3 class="s_tit">colgroup</h3>
-		<p class="panel info">col 요소를 그룹으로 나누고 세로열 전체를 그룹화 할때 선언한다. 이 요소는 선택적으로 할 수 있지만 되도록 사용하는것을 권장한다.</p>
-		<dl class="category">
-		<dt>HTML 경우</dt>
-		<dd>
-			<pre class="brush:html">
-				&lt;colgroup&gt;
-				&lt;col width="100"&gt;
-				&lt;/colgroup&gt;
-
-				&lt;colgroup&gt;
-				&lt;col width="100" span="2"&gt;
-				&lt;/colgroup&gt;
-			</pre>
-		</dd>
-		<dt>HTML5 경우</dt>
-		<dd>
-			<pre class="brush:html">
-				&lt;colgroup&gt;
-				&lt;col style="width:100px"&gt;
-				&lt;/colgroup&gt;
-
-				&lt;colgroup&gt;
-				&lt;col stype="width:100px" span="2"&gt;
-				&lt;/colgroup&gt;
-			</pre>
-		</dd>
-		</dl>
-	</section>
-	<!-- //COLGROUP 요소 -->
-	<!-- COL 요소 -->
-	<section id="summary26">
-		<h3 class="s_tit">col</h3>
-		<p class="panel info">표 각 열의 너비를 지정하기 위해 선언한다. width, span 속성을 다음과 같은 순서로 선언한다.</p>
-		<ul class="lst_type">
-		<li>표 각 열의 너비를 지정하기 위해 선언한다. width, span 속성이 있으며 이 속성은 필요에 따라 선택적으로 사용한다.</li>
-		<li>테이블에 border가 없는 경우에는 &lt;col width=&#34;&#34;&gt; 사용을 한다. border가 있는 경우에 크로스브라우징시 1px 밀리는 이슈가 발생할 수 있는데 이럴경우 &lt;col class=""&gt; 를 사용하여 CSS에서 width를 핸들링 한다.</li>
-		<li>단, HTML5 DTD 선언 시 &lt;col&gt; width 속성은 전부 class 속성을 줘서 CSS로 핸들링 하거나 &lt;col style=width:&#34;&#34;&gt; 인라인 style로 핸들링 한다.</li>
-		</ul>
-		<dl class="category">
-		<dt>HTML 경우</dt>
-		<dd>
-			<pre class="brush:html">
-				&lt;col width="100" span="2"&gt;
-				&lt;col width="100"&gt;&lt;col width="100"&gt;
-				&lt;col width="100"&gt;&lt;col width="*"&gt;
-				&lt;col width="50%"&gt;&lt;col width="50%"&gt;
-			</pre>
-		</dd>
-		<dt>HTML5 경우</dt>
-		<dd>
-			<pre class="brush:html">
-				&lt;col style="width:100px" span="2"&gt;
-				&lt;col style="width:100px"&gt;&lt;col style="width:100px"&gt;
-				&lt;col style="width:100px"&gt;&lt;col&gt;
-				&lt;col style="width:50%"&gt;&lt;col style="width:50%"&gt;
-			</pre>
-		</dd>
-		</dl>
-	</section>
-	<!-- //COL 요소 -->
-	<!-- THEAD 요소 -->
-	<section id="summary27">
-		<h3 class="s_tit">thead</h3>
-		<p class="panel info">표 머리글을 그룹으로 나눌 때 선언한다. 이 요소는 th 요소만으로 그룹을 나눌 수 없으면 선언하지 않는다.</p>
-		<pre class="brush:html">
-			&lt;thead&gt;
-			&lt;tr&gt;
-			&lt;th&gt;구분&lt;/th&gt;
-			&lt;th scope="col" abbr="가격"&gt;가격(won)&lt;/th&gt;
-			&lt;th scope="col" abbr="열량"&gt;열량(kcal)&lt;/th&gt;
-			&lt;/tr&gt;
-		</pre>
-	</section>
-	<!-- //THEAD 요소 -->
-	<!-- TFOOT 요소 -->
-	<section id="summary28">
-		<h3 class="s_tit">tfoot</h3>
-		<p class="panel info">표 바닥글을 그룹으로 나눌 때 선언한다. 이 요소는 선택적으로 사용한다.</p>
-		<pre class="brush:html">
-			&lt;thead&gt;
-			...
-			&lt;/thead&gt;
-			&lt;tfoot&gt;
-			&lt;tr&gt;
-			&lt;th&gt;계&lt;/th&gt;
-			&lt;td&gt;6,500&lt;/td&gt;
-			&lt;td&gt;650&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;/tfoot&gt;
-			&lt;tbody&gt;
-			...
-			&lt;/tbody&gt;
-		</pre>
-		<p class="panel alert">tfoot 요소 사용 시 반드시 thead 와 tbody 요소 사이에 위치해야 한다.</p>
-	</section>
-	<!-- //TFOOT 요소 -->
-	<!-- TH 요소 -->
-	<section id="summary29">
-		<h3 class="s_tit">th</h3>
-		<p class="panel info">scope, abbr, id 순서로 속성을 선언한다.</p>
-		<ul class="lst_type">
-		<li>표에 셀 제목이 명시되지 않은 경우에도 th 요소를 필수로 선언해서 의미에 맞는 제목을 명시한다.(화면에 표시되지 않도록 CSS로 숨김 처리)</li>
-		<li>scope 속성은 반드시 선언해야 한다.(scope=&#34;col&#34;의 뜻은 세로(column), scope=&#34;row&#34;는 가로(row) 이다.)</li>
-		<li>abbr과 id 속성은 선택적으로 사용한다.</li>
-		</ul>
-		<pre class="brush:html">&lt;th scope="col" abbr="가격"&gt;음식의 가격(won)&lt;/th&gt;</pre>
-	</section>
-	<!-- //TH 요소 -->
-	<!-- TBODY 요소 -->
-	<section id="summary30">
-		<h3 class="s_tit">tbody</h3>
-		<p class="panel info">표 본문을 그룹으로 나누기 위해 선언한다. 테이블의 본문(body)이 하나이고 thead 나 tfoot 요소가 없으면 생략할 수 있다.</p>
-		<pre class="brush:html">
-			&lt;tbody&gt;
-			&lt;tr&gt;
-			&lt;th scope="row"&gt;자장면&lt;/th&gt;
-			&lt;td&gt;3,000&lt;/td&gt;
-			&lt;td&gt;300&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;/tbody&gt;
-		</pre>
-	</section>
-	<!-- //TBODY 요소 -->
-	<!-- A 요소 -->
-	<section id="summary31">
-		<h3 class="s_tit">a</h3>
-		<p class="panel info">href, target, title 순서로 속성을 선언한다.</p>
-		<ul class="lst_type">
-		<li>새 창으로 페이지를 표시해야 할 때 target 속성을 선택적으로 사용한다.</li>
-		<li>title 속성은 예고 없이 새 창을 표시해야 하거나 이동 경로를 정확히 알 수 없을때 또는 브라우저에 독립적으로 툴팁을 표시할때 사용한다.</li>
-		</ul>
-		<pre class="brush:html">&lt;a href="#" target="_blank" title="새창"&gt;인쇄하기&lt;/a&gt;</pre>
-		<div class="panel alert">
-			<strong>HTML5에서는 다음과 같이 사용할 수 있다.</strong>
-			<ul class="lst_type">
-			<li>a 요소 안에 블록 속성의 요소를 포함할 수 있다.</li>
-			<li>href 속성 없이 단독으로 a 요소를 사용할 수 있다.</li>
-			</ul>
-		</div>
-	</section>
-	<!-- //A 요소 -->
-	<!-- IFRAME 요소 -->
-	<section id="summary32">
-		<h3 class="s_tit">iframe</h3>
-		<p class="panel info">iframe 요소를 사용하면 다음과 같은 문제점이 있다.</p>
-		<ul class="lst_type">
-		<li>iframe 요소를 포함하는 페이지의 도메인과 iframe 요소에서 불러오는 페이지의 도메인이 다르면 크로스 도메인 설정을 위해 별도의 소스 코드가 추가되어 성능에 영향을 줄 수 있다.</li>
-		<li>iframe 요소의 높이값을 콘텐츠에 따라 유동적으로 지정해야 한다면 별도의 자바스크립트 코드가 추가되어 성능에 영향을 줄 수 있다.</li>
-		<li>검색 엔진에서 iframe 요소의 내용만 추출해서  표시하면 전체 페이지의 레이아웃이 비정상적으로 보일 수 있으며, 주변 맥락(머리글, 바닥글, 메뉴)이 노출되지 않아 검색 엔진 최적화(SEO) 관점에서도 적합하지 않다.</li>
-		<li>iframe 요소는 마지막에 로드되지 때문에 페이지 로딩 초기에는 화면이 비어 보일 수 있다.</li>
-		<li>모바일에서는 iframe 요소의 스크롤에 대한 렌더링이 브라우저별로 다르며, CSS 말 줄임이 동작하지 않는 브라우저가 있다.</li>
-		</ul>
-
-		<p class="panel info">이와 같은 이유로 아이프에임은 가급적 사용하지 않도록 권장한다. 부득이하게 사용해야 할 때는 다음 규칙을 준수한다.</p>
-		<ul class="lst_type">
-		<li>src, width, height, title, frameborder, marginwidth, marginheight, scrolling 순서로 속성을 선언한다.</li>
-		<li>스크린리더 사용자를 위해 title 속성에 제목을 표기한다. 단 iframe 요소 윗부분의 헤딩 요소가 아이프레임의 제목 역활을 할 때는 title 속성을 생략할 수 있다.</li>
-		</ul>
-		<pre class="brush:html">&lt;iframe src="@문서경로" width="400" height="600" title="공지사항 게시판" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"&gt;&lt;/a&gt;</pre>
-		<div class="panel alert">
-			HTML5 DTD 선언할 때 frameborder, marginwidth, marginheight, scrolling 속성은 사용할 수 없다. 단, frmaeborder 속성은 CSS 속성으로 제어 할 수 없으므로 허용하는 경우가 있다.
-			<pre class="brush:html">&lt;iframe src="@문서경로" width="400" height="600" title="공지사항 게시판" frameborder="0"&gt;&lt;/a&gt;</pre>
-		</div>
-	</section>
-	<!-- //IFRAME 요소 -->
-	<!-- IMG 요소 -->
-	<section id="summary33">
-		<h3 class="s_tit">img</h3>
-		<p class="panel info">src, width, height, title, alt, usemap 순서로 속성을 선언한다.</p>
-		<ul class="lst_type">
-		<li>이미지 내용과 동일한 값을 alt 속성에 표기해서 이미지를 볼 수 없는 환경(스크린리더, 이미지, 서버장애, 이미지 표시 하지 않음 설정)에서도 내용을 확인할 수 있게 한다.</li>
-		<li>title 속성을 선언한 경우에도 alt 속성을 함께 선언한다.</li>
-		<li>title 속성은 alt 속성값을 축약하거나 브라우저에 독립적으로 툴팁을 표현하는데 사용한다.</li>
-		</ul>
-		<pre class="brush:html">&lt;img src="@이미지경로" width="25" height="25" title="고객센터" alt="고객센터, 모든 궁금증이 해결되는 곳" usemap="#help"&gt;</pre>
-	</section>
-	<!-- //IMG 요소 -->
-	<!-- MAP 요소 -->
-	<section id="summary34">
-		<h3 class="s_tit">map</h3>
-		<p class="panel info">map 요소의 name 속성을 선언해서 img 요소의 usemap 속성과 같은 이름으로 연결(coupling)한다.</p>
-		<pre class="brush:html">
-			&lt;img src="@이미지경로" width="650" height="200" title="한글날 이벤트" alt="한글날 이벤트, 한글을 글꼴로 나눕니다." usemap="#evt"&gt;
-			&lt;map name="evt"&gt;
-			&lt;area shape="rect" coords="506,48,608,139" href="#" target="_blank" title="고객센터" alt="고객센터, 모든 궁금증이 해결되는 곳"&gt;
-			&lt;/map&gt;
-		</pre>
-	</section>
-	<!-- //MAP 요소 -->
-	<!-- AREA 요소 -->
-	<section id="summary35">
-		<h3 class="s_tit">area</h3>
-		<p class="panel info">shape, coords, href, target, title, alt 순서로 속성을 선언한다.</p>
-		<ul class="lst_type">
-		<li>title 속성을 선언한 경우에도 alt 속성을 함께 선언한다.</li>
-		<li>target 속성은 새 창으로 페이지를 표시해야 할 때 사용한다.</li>
-		<li>title 속성은 예고 없이 새 창을 표시해야 하거나 이동 경로를 정확히 알수 없을 때, alt 속성값을 축약하거나, 브라우저에 독립적으로 툴팁을 표현할 때 사용한다.</li>
-		</ul>
-		<pre class="brush:html">&lt;area shape="rect" coords="506,48,608,139" href="#" target="_blank" title="고객센터" alt="고객센터, 모든 궁금증이 해결되는 곳"&gt;</pre>
-	</section>
-	<!-- //AREA 요소 -->
-	<!-- 주석표기 -->
-	<section id="summary36">
-		<h3 class="s_tit">주석 표기</h3>
-		<p class="panel info">HTML 주석의 시작과 종료는 다음과 같이 표기하며, 기본 형식에 맞게 작성한다.</p>
-		<pre class="brush:html">
-			@기본 형식
-			시작 주석: <!-- 주석 내용-->
-			종료 주석: <!-- //주석 내용 -->
-		</pre>
-		<ul class="lst_type">
-		<li>주석기호와 주석 내용 사이에는 반드시 공백이 한 칸 있어야 한다.</li>
-		<li>주석 기호와 주석 내용 사이의 줄 바꿈은 허용하지 않는다. 단, 주석 내용 사이의 줄바꿈은 허용한다.</li>
-		<li>시작과 종료 주석의 주석 내용은 동일해야 한다.</li>
-		</ul>
-		<table class="tb_grid">
-		<caption>[ 주석 기본 형식 예 ]</caption>
-		<thead>
-		<tr>
-		<th scope="col">잘못된 예</th>
-		<th scope="col">올바른 예</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>&lt;!--GNB--&gt;</td>
-		<td rowspan="4">&lt;!-- GNB --&gt;<br>···<br>&lt;!-- //GNB --&gt;</td>
-		</tr>
-		<tr>
-		<td>&lt;!--* GNB *--&gt;</td>
-		</tr>
-		<tr>
-		<td>&lt;!-- GNB<br>--&gt;</td>
-		</tr>
-		<tr>
-		<td>&lt;!-- GNB 시작 --&gt;<br>···<br>&lt;!-- //GNB 끝 --&gt;</td>
-		</tr>
-		<tr>
-		<td colspan="2"><strong>마크업과 개발의 편위를 위해 작성한 주석은 실제 서비스를 적용할 때 반드시 삭제한다.</strong></td>
-		</tr>
-		</tbody>
-		</table>
-		<div class="panel alert">
-			 <strong>주의사항</strong>
-			 <ul class="lst_type">
-			 <li>공통 : 너무 많은 주석은 유령문자버그를 생성하므로 되도록 자제 한다.</li>
-			 <li>HTML : 시작하는 구분자(&#34;&lt;!&#34;)와 주석을 시작하는 구분자(&#34;--&#34;) 사이에는 공백 문자(white space)가 올 수 없다.</li>
-			 <li>XHTML : 주석으로 감싼 내용 안에 "--"가 오거나, 파라미터 엔터티 참조가 인식되서는 안된다.</li>
-			 </ul>
-		</div>
-
-		<h4 class="tit_cont">레이아웃 및 콘텐츠 영역의 주석 표기</h4>
-		<p>&#34;wrap&#34;을 제외한 레이아웃과 독립된 컨텐츠 영역의 시작과 끝에 주석을 표기하며, 레이아웃은 id 값과 동일하게 주석을 넣는다. 독립된 콘텐츠 영역의 주석 표기는 선택 사항이다. HTML 코드와 주석은 줄을 바꿔서 작성한다.</p>
-		<pre class="brush:html">
-			<!-- content -->
-			&lt;div id="content"&gt;
-				<!-- 네임카드 -->
-				&lt;div class="namecard"&gt;...&lt;/div&gt;
-				<!-- //네임카드 -->
-			&lt;/div&gt;
-			<!-- //content -->
-		</pre>
-
-		<h4 class="tit_cont">개발 적용과 관련된 주석 표기</h4>
-		<p>개발 적용과 관련된 주석은 해당되는 영역 위에 표기하며, 종료 주석은 표기하지 않는다. 주석 앞에는 [D]라는 말머리를 사용해서 담당 개발자가 반드시 확인할 수 있게 한다. 주석이 두줄 이상이 되더라도 주석 기호는 한 번만 표기한다.</p>
-		<table class="tb_grid">
-		<caption>[ 개발 적용 관련 주석 표기 예 ]</caption>
-		<thead>
-		<tr>
-		<th scope="col">잘못된 예</th>
-		<th scope="col">올바른 예</th>
-		</tr>
-		</thead>
-		<tbody>
-		<tr>
-		<td>&lt;!-- 케이스별 클래스 변화 --&gt;<br>&lt;!-- 활성화 클래스: on<br>비활성화 클래스: off --&gt;</td>
-		<td>&lt;!-- [D] 케이스별 클래스 변화<br>활성화 클래스: on<br>비활성화 클래스: off --&gt;</td>
-		</tr>
-		<tr>
-		<td>
-			&lt;img src="@tmp_btn.gif" width="25" height="25" alt="버튼"&gt;<br>
-			&lt;!-- 숨김처리<br>
-			&lt;img src="@tmp_btn_on.gif" width="25" height="25" alt="버튼"&gt;<br>
-			//숨김처리 --&gt;
-		</td>
-		<td>
-			&lt;img src="@tmp_btn.gif" width="25" height="25" alt="버튼"&gt;<br>
-			&lt;!-- [D] 활성화된 버튼은 파일명에 _on추가 요망<br>
-			&lt;img src="@tmp_btn_on.gif" width="25" height="25" alt="버튼"&gt;<br>
-			--&gt;
-		</td>
-		</tr>
-		</tbody>
-		</table>
-
-		<h4 class="tit_cont">Script 엘리먼트 주석 표기</h4>
-		<p>HTML</p>
-		<pre class="brush:html">
-			&lt;script type="text/javascript"&gt;
-				alert('확인');
-			&lt;/script&gt;
-		</pre>
-		<p>XHTML</p>
-		<pre class="brush:html">
-			&lt;script type="text/javascript"&gt;
-			<![CDATA[
-				alert('확인');
-			]]>
-			&lt;/script&gt;
-		</pre>
-	</section>
-	<!-- //주석표기 -->
-	<!-- 레이아웃 가이드 -->
-	<section id="summary37">
-		<h3 class="s_tit">Layout Guide</h3>
-		<h4 class="tit_cont">HTML4.01&frasl;XHTML 1.0 기본 레이아웃</h4>
-		<p>신규 HTML문서를 작성할 때는 다음과 같은 기본 HTML문서 구조를 따른다.</p>
-		<pre class="brush:html">
-			&lt;body&gt;
-			<!-- skip -->
-			&lt;div id="skip"&gt;
-				&lt;a href="#"&gt;본문 바로가기&lt;/a&gt;
-				&lt;a href="#"&gt;메뉴 바로가기&lt;/a&gt;
-			&lt;/div&gt;
-			<!-- //skip -->
-			&lt;div id="wrap"&gt;
-				<!-- header -->
-				&lt;div id="header"&gt;헤더 영역&lt;/div&gt;
-				<!-- //header -->
-				<!-- container -->
-				&lt;div id="container"&gt;
-					<!-- content -->
-					&lt;div id="content"&gt;콘텐츠 영역&lt;/div&gt;
-					<!-- //content -->
-				&lt;/div&gt;
-				<!-- //container -->
-				<!-- footer -->
-				&lt;div id="footer"&gt;푸터 영역&lt;/div&gt;
-				<!-- //footer -->
-			&lt;/div&gt;
-			&lt;/body&gt;
-		</pre>
-		<ul class="lst_type">
-		<li>스킵네비게이션 바로가기(목차) 위치는 가장 상단에 위치시킨다.</li>
-		<li>레이아웃은 전체를 &#34;wrap&#34;으로 감싸고 &#34;header&#34;, &#34;container&#34;, &#34;footer&#34; 로 나눈다.</li>
-		<li>h1(서비스명), h2(메인메뉴,본문,이용약관...), h3(세부컨텐츠, 핵심컨텐츠), h4(서브컨텐츠) , h5~h6(될 수 있으면 안쓴다.)</li>
-		</ul>
-
-		<h4 class="tit_cont">HTML5 기본 레이아웃</h4>
-		<p>HTML5 DTD를 선언할시에는 다음과 같은 구조를 따른다.</p>
-		<pre class="brush:html">
-			&lt;body&gt;
-			<!-- skip -->
-			&lt;div id="skip"&gt;
-				&lt;a href="#"&gt;본문 바로가기&lt;/a&gt;
-				&lt;a href="#"&gt;메뉴 바로가기&lt;/a&gt;
-			&lt;/div&gt;
-			<!-- //skip -->
-			&lt;div id="wrap"&gt;
-				<!-- header -->
-				&lt;header&gt;헤더 영역&lt;/header&gt;
-				<!-- //header -->
-				<!-- container -->
-				&lt;div id="container"&gt;
-					<!-- content -->
-					&lt;article id="content"&gt;콘텐츠 영역&lt;/article&gt;
-					<!-- //content -->
-				&lt;/div&gt;
-				<!-- //container -->
-				<!-- footer -->
-				&lt;footer&gt;푸터 영역&lt;/footer&gt;
-				<!-- //footer -->
-			&lt;/div&gt;
-			&lt;/body&gt;
-		</pre>
-		<ul class="lst_type">
-		<li>article : 태그 자체로 완전한 하나의 개별 컨텐츠 article은 그 안에 section을 가질 수 있음</li>
-		<li>section : 제목 태그(Heading Tag)를 지닌 영역 구분</li>
-		</ul>
-	</section>
-	<!-- //레이아웃 가이드 -->
-	<!-- //기타 참고사항 -->
-	<section id="summary38">
-		<h3 class="s_tit">기타 참고사항</h3>
-		<h4 class="tit_cont">중첩 리스트 적용 지양</h4>
-		<p>단, GNB 및 서브메뉴 등에서는 키보드 사용성 확보를 위해 2depth까지는 제한적 허용함</p>
-
-		<h4 class="tit_cont">dl 요소 안에는 여러개의 dt,dd 구조 적용 가능</h4>
-		<pre class="brush:html">
-			&lt;dl&gt;
-			&lt;dt&gt;제목1&lt;dt&gt;
-			&lt;dd&gt;정의내용1&lt;dd&gt;
-			&lt;dt&gt;제목2&lt;dt&gt;
-			&lt;dd&gt;정의내용2&lt;dd&gt;
-			&lt;dl&gt;
-		</pre>
-
-		<h4 class="tit_cont">title 속성 적용 범위</h4>
-		<p>IR기법을 사용한 링크에서는 title 미적용 : 내용이 중복 제공되는 현상 방지(단, 중요한 내용인 경우에는 사용 가능)</p>
-		<p>단, GNB 및 서브메뉴 등에서는 키보드 사용성 확보를 위해 2depth까지는 제한적 허용함 label로 적용하기 어려운 input 요소에 적용 가능</p>
-
-		<h4 class="tit_cont">layer 페이지 제목요소</h4>
-		<p>페이지내 레이어는 STRONG 요소로 제목 구현함 (단, 레이어가 아닌 별도의 팝업 페이지는 제목을 헤딩으로 구조화 한다.)</p>
-
-		<h4 class="tit_cont">a &amp; strong의 중첩관계</h4>
-		<pre class="brush:html">
-			// 권장사항 (단일 중첨관계일 경우)
-			&lt;strong&gt;&lt;a href="#"&gt;썸네일 타이틀&lt;/a&gt;&lt;/strong&gt;
-
-			// 예외처리 (앵커 안에 많은 요소들을 포함할 때)
-			&lt;a href="#"&gt;
-				&lt;strong&gt;썸네일 타이틀&lt;/strong&gt;
-			&lt;/a&gt;
-		</pre>
-
-		<h4 class="tit_cont">role 속성 적용</h4>
-		<p>HTML5 DTD 적용 시 User Add Custom 속성은 role 속성을 사용해야 한다.</p>
-		<p>이 속성은 HTML5 문서타입 외에서는 적용하지 않는다.(사용시 validation 문법 오류 발생)</p>
-	</section>
-	<!-- //기타 참고사항 -->
+	<!-- //초기 스타일시트 -->
 </article>
 
 <script src="<?php echo PATH; ?>syntaxhighlighter_3.0.83/scripts/shCustom.js"></script>
