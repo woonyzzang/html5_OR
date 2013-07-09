@@ -9,3 +9,4 @@
 <script src="<?php echo PATH; ?>ext-all-debug.js"></script>
 <script src="<?php echo PATH; ?>locale/ext-lang-ko.js"></script>
 <script src="<?php echo PATH; ?>infoXTemplate.js"></script>
+<script src="<?php echo PATH; ?>resources/js/custom.js"></script>

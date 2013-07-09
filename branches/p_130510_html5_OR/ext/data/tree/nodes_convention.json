@@ -3,23 +3,23 @@
 	expanded: false,
 	animate: true,
 	children: [		
-		{text: 'HTML Guide', expanded: false, children: [
-			{text: 'Intro', leaf: true, href: ['html_guide/intro.php']},
-			{text: 'HTML Convention', leaf: true, href: ['html_guide/convention.php']},
-			{text: 'HTML Grammar', leaf: true, href: ['html_guide/grammar.php']},
-			{text: '(X)HTML Elements', leaf: true, href: ['html_guide/html_elem.php']},
-			{text: 'HTML5 Elements', leaf: true, href: ['html_guide/html5_elem.php']}
+		{text: 'HTML Guide', expanded: true, children: [
+			{text: '개요', leaf: true, href: ['html_guide/intro.php']},
+			{text: 'HTML 컨벤션 규칙', leaf: true, href: ['html_guide/convention.php']},
+			{text: 'HTML 일반 규칙', leaf: true, href: ['html_guide/grammar.php']},
+			{text: '(X)HTML 엘리먼트', leaf: true, href: ['html_guide/html_elem.php']},
+			{text: 'HTML5 엘리먼트', leaf: true, href: ['html_guide/html5_elem.php']}
 		]},
 		{text: 'CSS Guide', expanded: true, children: [
-			{text: 'Intro', leaf: true, href: ['css_guide/intro.php']},
-			{text: 'CSS Convention', leaf: true, href: ['css_guide/convention.php']},
-			{text: 'CSS Grammar', leaf: true, href: ['css_guide/grammar.php']},
-//			{text: 'CSS Attribute', leaf: true, href: ['css_guide/attr.php']},
+			{text: '개요', leaf: true, href: ['css_guide/intro.php']},
+			{text: 'CSS 컨벤션 규칙', leaf: true, href: ['css_guide/convention.php']},
+			{text: 'CSS 일반 규칙', leaf: true, href: ['css_guide/grammar.php']},
+//			{text: 'CSS 속성', leaf: true, href: ['css_guide/attr.php']},
 			{text: 'IR기법', leaf: true, href: ['css_guide/ir_technic.php']},
-//			{text: 'CSS3 Attribute', leaf: true, href: ['css_guide/attr2.php']}
+//			{text: 'CSS3 속성', leaf: true, href: ['css_guide/attr2.php']}
 		]},
-		{text: 'Naming Guide', leaf: true, href: ['naming.php']},
-		{text: 'Image Guide', leaf: true, href: ['image.php']},
+		{text: '네이밍 가이드', leaf: true, href: ['naming.php']},
+		{text: '이미지 가이드', leaf: true, href: ['image.php']},
 //		{text: '체크리스트', leaf: true, href: ['check_list.php']}
 	]
 }

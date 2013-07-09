@@ -11,8 +11,8 @@
 	<!-- CSS 가이드 -->
 	<section>
 		<h1 class="s_tit">CSS Convention</h1>
-		<div id="docSummary" class="idx_summary on">
-			<div class="inner" style="display:block">
+		<div id="docSummary" class="idx_summary">
+			<div class="inner" style="display:none">
 				<h2 class="blind">CSS 컨벤션 색인</h2>
 				<ul>
 				<li><a href="#summary1" rel="bookmark">CSS 코드 기본 규칙</a></li>
@@ -29,9 +29,9 @@
 				<li><a href="#summary12" rel="bookmark">미디어 타입</a></li>
 				<li><a href="#summary13" rel="bookmark">초기 스타일시트</a></li>
 				</ul>
-				<a href="#none" class="btn_lst clse">목차닫기</a>
-				<a href="#none" class="btn_lst view">목차보기</a>
+				<a href="#none" data-btn="smr" class="btn_lst clse">목차닫기</a>
 			</div>
+			<a href="#none" data-btn="smr" class="btn_lst open">목차보기</a>
 		</div>
 
 		<dl class="definition">

@@ -20,11 +20,11 @@
 		<h2 class="s_tit">가이드 파일 정의</h2>
 		<p class="panel info">CSS 가이드에서는 세 가지의 개별단위로 나뉘어지는데, 각 항목은 다음과 같다.</p>
 		<ul class="lst_type">
-		<li>CSS Convention : CSS 개발 가이드를 모아놓은 문서 (웹브라우저 및 기술향상 또는 내부지침 버전 향상 등으로 지속적으로 업데이트 될 수 있다.)</li>
-		<li>CSS Grammar : 일반적인 CSS 사용 문법을 정리한 문서</li>
-		<li>CSS Attribute : CSS의 속성들의 설명 및 정리된 문서</li>
+		<li>CSS 컨벤션 규칙 : CSS 개발 가이드를 모아놓은 문서 (웹브라우저 및 기술향상 또는 내부지침 버전 향상 등으로 지속적으로 업데이트 될 수 있다.)</li>
+		<li>CSS 일반 문법 규칙 : 일반적인 CSS 사용 문법을 정리한 문서</li>
+		<li>CSS 속성 : CSS의 속성들의 설명 및 정리된 문서</li>
+		<li>CSS3 속성: CSS Level3 대한 소개와 문법을 정리한 문서</li>
 		<li>IR기법: 이미지 대치기법으로 널리 알려진 다양한 기법들이 소개 및 정리된 문서</li>
-		<li>CSS3 Attribute: CSS Level3 대한 소개와 문법을 정리한 문서</li>
 		</ul>
 	</section>
 	<!-- //HTML 가이드 설명 -->

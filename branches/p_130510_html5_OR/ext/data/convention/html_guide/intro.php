@@ -20,10 +20,10 @@
 		<h2 class="s_tit">가이드 파일 정의</h2>
 		<p class="panel info">마크업 컨벤션에서는 세 가지의 개별단위로 나뉘어지는데, 각 항목은 다음과 같다.</p>
 		<ul class="lst_type">
-		<li>HTML Convention : 마크업 개발 가이드를 모아놓은 문서</li>
-		<li>HTML Grammar : 일반적이고 범용적인 HTML 사용문법들을 모아 정리한 문서</li>
-		<li>(X)HTML Elements : (X)HTML HTML4.01&frasl;XHTML 1.0 의 각 Elements들에 대한 소개와 개별 문법, 사용 사례 등이 정리된 부분의 문서</li>
-		<li>HTML5 Elements : HTML5를 구성하는 컨텐츠들에 대한 소개와, 새로 추가된 Elements들의 문법과 사용 사례들을 정리한 문서</li>
+		<li>HTML 컨벤션 규칙 : 마크업 개발 가이드를 모아놓은 문서</li>
+		<li>HTML 일반 문법 규칙 : 일반적이고 범용적인 HTML 사용문법들을 모아 정리한 문서</li>
+		<li>(X)HTML 엘리먼트 : (X)HTML HTML4.01&frasl;XHTML 1.0 의 각 Elements들에 대한 소개와 개별 문법, 사용 사례 등이 정리된 부분의 문서</li>
+		<li>HTML5 엘리먼트 : HTML5를 구성하는 컨텐츠들에 대한 소개와, 새로 추가된 Elements들의 문법과 사용 사례들을 정리한 문서</li>
 		</ul>
 	</section>
 	<!-- //HTML 가이드 설명 -->

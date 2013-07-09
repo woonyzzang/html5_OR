@@ -11,8 +11,8 @@
 	<!-- Image 가이드 설명 -->
 	<section>
 		<h1 class="s_tit">Image Guide</h1>
-		<div id="docSummary" class="idx_summary on">
-			<div class="inner" style="display:block">
+		<div id="docSummary" class="idx_summary">
+			<div class="inner" style="display:none">
 				<h2 class="blind">네이밍 색인</h2>
 				<ul>
 				<li><a href="#summary1" rel="bookmark">이미지 기본 규칙</a></li>
@@ -20,9 +20,9 @@
 				<li><a href="#summary3" rel="bookmark">이미지 용량 및 크기</a></li>
 				<li><a href="#summary4" rel="bookmark">이미지 품질 관리</a></li>
 				</ul>
-				<a href="#none" class="btn_lst clse">목차닫기</a>
-				<a href="#none" class="btn_lst view">목차보기</a>
+				<a href="#none" data-btn="smr" class="btn_lst clse">목차닫기</a>
 			</div>
+			<a href="#none" data-btn="smr" class="btn_lst open">목차보기</a>
 		</div>
 
 		<dl class="definition">

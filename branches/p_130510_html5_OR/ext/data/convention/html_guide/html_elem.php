@@ -11,8 +11,8 @@
 	<!-- (X)HTML Element 가이드 -->
 	<section>
 		<h1 class="s_tit">(X)HTML Elements</h1>
-		<div id="docSummary" class="idx_summary on">
-			<div class="inner" style="display:block">
+		<div id="docSummary" class="idx_summary">
+			<div class="inner" style="display:none">
 				<h2 class="blind">(X)HTML 엘리먼트 색인</h2>
 				<ul>
 				<li><a href="#summary1" rel="bookmark">전역 구조화 Element</a></li>
@@ -24,9 +24,9 @@
 				<li><a href="#summary7" rel="bookmark">그룹</a></li>
 				<li><a href="#summary8" rel="bookmark">폼</a></li>
 				</ul>
-				<a href="#none" class="btn_lst clse">목차닫기</a>
-				<a href="#none" class="btn_lst view">목차보기</a>
+				<a href="#none" data-btn="smr" class="btn_lst clse">목차닫기</a>
 			</div>
+			<a href="#none" data-btn="smr" class="btn_lst open">목차보기</a>
 		</div>
 
 		<dl class="definition">

@@ -1,9 +1,10 @@
 function path(){
 	var args = arguments,
-		result = [];
+		result = [],
+		locationOrigin = window.location.origin + '/bluewaves/html5_OR/branches/p_130510_html5_OR/ext';
 
 	for(var i = 0; i<args.length; i++){
-		result.push(args[i].replace('@', '../../../syntaxhighlighter_3.0.83/scripts/'));
+		result.push(args[i].replace('@', locationOrigin + '/syntaxhighlighter_3.0.83/scripts/'));
 	}
 
 	return result;

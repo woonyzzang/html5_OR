@@ -11,8 +11,8 @@
 	<!-- IR 기법 가이드 -->
 	<section>
 		<h1 class="s_tit">IR 기법</h1>
-		<div id="docSummary" class="idx_summary on">
-			<div class="inner" style="display:block">
+		<div id="docSummary" class="idx_summary">
+			<div class="inner" style="display:none">
 				<h2 class="blind">IR 기법 색인</h2>
 				<ul>
 				<li><a href="#summary1" rel="bookmark">Phark Method (권장)</a></li>
@@ -24,9 +24,9 @@
 				<li><a href="#summary7" rel="bookmark">span padding : applied Method</a></li>
 				<li><a href="#summary8" rel="bookmark">script replace Method</a></li>
 				</ul>
-				<a href="#none" class="btn_lst clse">목차닫기</a>
-				<a href="#none" class="btn_lst view">목차보기</a>
+				<a href="#none" data-btn="smr" class="btn_lst clse">목차닫기</a>
 			</div>
+			<a href="#none" data-btn="smr" class="btn_lst open">목차보기</a>
 		</div>
 
 		<dl class="definition">
@@ -414,9 +414,9 @@
 			<pre class="brush:html">
 				function replaceImg(){
 					replaceImgBtn = document.getElementById("btn");
-					replaceImgBtn.innerHTML = "<img src=\"" + replaceImgBtn.className + ".gif\" alt=\"" + replaceImgBtn.innerHTML + "\" />";
+					replaceImgBtn.innerHTML = "&lt;img src=\"" + replaceImgBtn.className + ".gif\" alt=\"" + replaceImgBtn.innerHTML + "\" /&gt;";
 					replaceImgA = document.getElementById("btnA");
-					replaceImgA.innerHTML = "<img src=\"" + replaceImgA.className + ".gif\" alt=\"" + replaceImgA.innerHTML + "\" />";
+					replaceImgA.innerHTML = "&lt;img src=\"" + replaceImgA.className + ".gif\" alt=\"" + replaceImgA.innerHTML + "\" /&gt;";
 				}
 
 				window.onload = replaceImg;

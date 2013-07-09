@@ -53,10 +53,10 @@ pre[class^=brush]{display:none}
 .idx_summary a{text-decoration:none;border-radius:0 0 5px 5px}
 .idx_summary a.btn_lst:hover,.idx_summary a.btn_lst:focus{color:#f60 !important}
 .idx_summary a.btn_lst{position:absolute;left:50%;width:84px;margin-left:-42px;padding:0 0 2px;border:1px solid #333;border-top-width:0;font-size:12px;color:#666 !important;text-align:center}
-.idx_summary a.btn_lst.view{top:-1px;background-color:#fff}
+.idx_summary a.btn_lst.open{top:-1px;background-color:#fff}
 .idx_summary a.btn_lst.clse{bottom:-16px;background-color:#f7f7f7}
-.idx_summary ul{list-style:square;margin:0}
-.idx_summary li{line-height:1.6}
+.idx_summary ul{overflow:hidden;list-style:square;margin:0;zoom:1}
+.idx_summary li{float:left;width:25%;line-height:1.6}
 .idx_summary li a:hover,.idx_summary li a:focus{text-decoration:underline}
 
 /* =Content Desc */
